@@ -955,7 +955,7 @@ After attaching a pull request to the Task, the tokens will be distributed betwe
 
 **Author** - the person who executes the Task.  
 **Reviewer** - the person who checks the correctness of the Task.  
-**Manager** - the person who makes the decision to complete the Task.
+**Manager** - the person who manages the Task execution process.
 
 !!! info
     The number of authors, areviewers and managers is set at your choice.  
@@ -966,7 +966,7 @@ After attaching a pull request to the Task, the tokens will be distributed betwe
 
 Select vesting and lock periods. 
 
-**Lock (Cliif)** - The period in which the tokens are locked up.  
+**Lock (Cliif)** - the period after which the reward payments will begin. the countdown will start at the moment of making a decision about completing the Task  
 **Vesting** - rules for transferring the fixed part of the tokens to the disposal of the contractor.
 
 For example, lock - 12 months, vesting - 2 months.  
@@ -998,7 +998,8 @@ After accepting the proposal, the Task will appear in the list on the **Tasks** 
 When the Author has completed the Task, he adds it to the commit.
 
 !!! info
-    If you need to make several commits to complete a Task, do **Select task**  in the last one, to create the proposal to the pull request.
+    If you need to make several commits to complete a Task,, create a separate branch.  
+    And do **Select task** when creating the proposal to the pull request.
 
 ![](../images/gosh_web_Readme_md_03_data_commit.jpg)
 
@@ -1019,7 +1020,12 @@ When the pull request is accepted, the Task status will change to **Confirmed**.
 
 ![](../images/gosh_web_Task_15_task_status_confirmed.jpg)
 
-To receive a reward, the participant of the Task needs to go to the **Tasks** tab into the completed Task and click **Claim reward**.  
-The tokens will be transferred to the wallets of the participants of the completed Task.
+To receive a reward, the participant of the Task, after the expiration of the Lock period, must go to the **Tasks tab** and in the completed Task and click **Claim reward**.
+
+!!! note
+    If Lock and Vesting are zero values, then you can click **Claim reward** immediately.
+
+Tokens will begin to be transferred to the wallets of the participants of the completed Task in accordance with the vesting scheme when the lock period ends.
+
 
 ![](../images/gosh_web_Task_16_claim_reward.jpg)
