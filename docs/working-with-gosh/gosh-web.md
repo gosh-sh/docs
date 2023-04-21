@@ -1015,17 +1015,19 @@ If the reviewer was specified during the commit, the event will wait for verific
 
 ![](../images/gosh_web_Task_14_event%20review.jpg)
 
-After the reviewer send the solution, it will be possible to vote for the proposal.  
+Then, after the reviewer send the solution, it will be possible to vote for the proposal.  
 When the pull request is accepted, the Task status will change to **Confirmed**.
 
 ![](../images/gosh_web_Task_15_task_status_confirmed.jpg)
 
-To receive a reward, the participant of the Task, after the expiration of the Lock period, must go to the **Tasks tab** and in the completed Task and click **Claim reward**.
+After the lock period ends, the participants of the Task can receive a reward.
+To do this, go to the **Tasks** tab in the completed Task and click **Claim reward**.
 
 !!! note
-    If Lock and Vesting are zero values, then you can click **Claim reward** immediately.
-
-Tokens will begin to be transferred to the wallets of the participants of the completed Task in accordance with the vesting scheme when the lock period ends.
-
+    If Lock period (cliff) has been set to zero, then you can click **Claim reward** immediately after accepting the pull request.
 
 ![](../images/gosh_web_Task_16_claim_reward.jpg)
+
+Thus the tokens will begin to be transferred to the wallets of the participants of the completed Task in accordance with the vesting scheme when the lock period ends.
+
+
