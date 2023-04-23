@@ -806,6 +806,34 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 
 ### __Delete Members from the DAO__
 
+To delete a member from the DAO, go to the **Members** tab and click on the cross to the desired member.
+
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+![](../images/gosh_web_memeber_delete_01.jpg)
+
+Confirm the deletion by clicking OK.
+
+![](../images/gosh_web_memeber_delete_02_confirm.jpg)
+
+As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_memeber_delete_03_event.jpg)
+
+The details of the multi proposl can be seen by going to it.
+
+![](../images/gosh_web_memeber_delete_04_event_detal.jpg)
+
+After voting and accepting multi proposal, the user will be deleted from the list of members of the DAO. 
+
+![](../images/gosh_web_memeber_delete_05_list_without_user.jpg)
+
+The Karma of the deleted user will be equal to 0.  
+But the tokens, if they were, will stay on the balance of the user's wallet.
+
+![](../images/gosh_web_memeber_delete_06_balance_user.jpg)
+
 
 
 
