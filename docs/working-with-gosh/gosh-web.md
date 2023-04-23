@@ -836,6 +836,18 @@ But the tokens, if they were, will stay on the balance of the user's wallet.
 
 
 
+Then click **Save changes and create proposal**.  
+As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_memeber_change_karma_02_event.jpg)
+
+Inside the event, you can get details of Multi proposal.
+
+![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
+
+After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab
+
+![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
 
 ### __Delete Members from the DAO__
 
