@@ -837,6 +837,11 @@ But the tokens, if they were, will stay on the balance of the user's wallet.
 
 
 
+### __Delete Members from the DAO__
+
+
+
+
 ### __What's next?__
 
 <!-- TODO
