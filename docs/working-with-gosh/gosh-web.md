@@ -635,8 +635,6 @@ Once a majority has been reached early, or the voting period ended and the soft 
 ## **Working with DAO Members**
 
 
-
-
 ### __Adding Members to DAO__
 
 Membership in the DAO can be obtained in several ways.
@@ -780,13 +778,31 @@ searching for users by DAO
 ### __Change DAO member Karma__
 
 
+Any member of the DAO can send a request to change Karma.  
+To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
 
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+![](../images/gosh_web_memeber_change_karma_01_request.jpg)
 
 !!! Warning
-    Be careful when distributing karma among the members of the DAO.
-    Avoid the possibility of a preponderance in the votes of one of the DAO members.
-    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
+    Be careful when distributing karma among the members of the DAO.  
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.  
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
 
+Then click **Save changes and create proposal**.  
+As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_memeber_change_karma_02_event.jpg)
+
+Inside the event, you can get details of Multi proposal.
+
+![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
+
+After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab
+
+![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
 
 ### __Delete Members from the DAO__
 
@@ -1054,9 +1070,10 @@ And click to **Delete task**
 
 ![](../images/gosh_web_Task_delete_01.jpg)
 
-After creating a proposal to delete a Task, you will be redirected to the event page **Dao**.
+After creating a proposal about deleting a Task, you will be redirected to the event page **Dao**.
 
 ![](../images/gosh_web_Task_delete_02_event.jpg)
 
-When the proposal is accepted, the Task will be deleted.
+When the proposal is accepted, the Task will be deleted.  
+The tokens allocated for this Task will be returned to the DAO reserve.
 
