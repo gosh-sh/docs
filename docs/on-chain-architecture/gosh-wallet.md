@@ -1,6 +1,6 @@
 # GOSH Wallet
 
-GOSH exists on-chain as a system of interconnected smart contracts. Every repository, every file and commit are smart contracts, where data is written to the blockchain.
+The GOSH blockchain is a system of interconnected smart contracts. Every repository, every file, and commit are smart contracts, where data is written to the blockchain.
 
 Writing data to the blockchain requires cryptographic signatures and fees.
 
