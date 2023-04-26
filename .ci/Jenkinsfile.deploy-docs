@@ -44,7 +44,7 @@ pipeline {
                         }
                         echo "http://${BUCKET_NAME}.s3-website.eu-west-2.amazonaws.com"
                     }
-                    /**timeout(15) {
+                    /*timeout(15) {
                         waitUntil {
                             def r = sh script: "sleep 10 && curl -s --retry-connrefused --retry 100 --retry-delay 5 https://docs.gosh.sh > /dev/null", returnStatus: true
                             return r == 0
