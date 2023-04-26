@@ -1,26 +1,34 @@
 pipeline {
-    triggers {
-       githubPush()
-    }
     agent {
         node {
             label 'jenkins-main'
         }
     }
-    parameters {
+    /*parameters {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'sha1', type: 'PT_BRANCH', quickFilterEnabled: true
-    }
+    }*/
     stages {
         stage('Docs: deploy') {
             steps {
-                git branch: "${sha1}", url: 'https://github.com/gosh-sh/docs.git'
+                echo "${BRANCH_NAME}"
+                script {
+
+                    if (env.BRANCH_NAME = "dev") {
+                        env.BUCKET_NAME = "staging-docs-gosh"
+                        
+                    } else if (env.BRANCH_NAME = "main") {
+                        env.BUCKET_NAME = 'docs-gosh'
+                    }
+                }
+                echo "${BRANCH_NAME}"
+                git branch: "${env.BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
-                    env.BUCKET_NAME = 'docs-gosh'
+
                     dir('site') {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
                         if (status == 0) {
-                            echo 'Bucket already exists. Just syncing.'
+                            echo 'Bucket already exists! Just syncing.'
                             sh "aws s3 sync . s3://${BUCKET_NAME}"
                         } else {
                             sh """
@@ -32,13 +40,14 @@ pipeline {
                                 sed "s/BUCKET_NAME/\$BUCKET_NAME/g" ../.ci/nginx/proxy.s3.conf.template >> /opt/nginx/s3-proxy.conf
                             """
                         }
+                        echo "http://${BUCKET_NAME}.s3-website.eu-west-2.amazonaws.com"
                     }
-                    timeout(15) {
+                    /*timeout(15) {
                         waitUntil {
                             def r = sh script: "sleep 10 && curl -s --retry-connrefused --retry 100 --retry-delay 5 https://docs.gosh.sh > /dev/null", returnStatus: true
                             return r == 0
                         }
-                    }
+                    }*/
                 }
             }
             post {
