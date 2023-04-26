@@ -17,6 +17,7 @@ pipeline {
                     } else if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
+                    currentBuild.displayName = "${BUILD_NUMBER}_${env.CURRENT_BRANCH_NAME}"
                     echo "${env.CURRENT_BRANCH_NAME}"
                     env.TRIMMED_BRANCH_NAME = env.CURRENT_BRANCH_NAME.replace("refs/heads/", "")
                     echo "${TRIMMED_BRANCH_NAME}"
