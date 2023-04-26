@@ -19,7 +19,8 @@ pipeline {
                     }
                 }
                 echo "${env.CURRENT_BRANCH_NAME}"
-                git branch: "dev", url: 'https://github.com/gosh-sh/docs.git'
+                def trimmedBranchName = env.CURRENT_BRANCH_NAME.replace("refs/heads/", "")
+                git branch: "${env.trimmedBranchName}", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
 
