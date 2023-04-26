@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Docs: deploy') {
             steps {
+                echo "${BRANCH_NAME}"
                 script {
                     if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = "staging-docs-gosh"
