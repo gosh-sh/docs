@@ -4,9 +4,9 @@ pipeline {
             label 'jenkins-main'
         }
     }
-    parameters {
+    /*parameters {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'sha1', type: 'PT_BRANCH', quickFilterEnabled: true
-    }
+    }*/
     stages {
         stage('Docs: deploy') {
             steps {
