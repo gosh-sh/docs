@@ -19,7 +19,7 @@ pipeline {
                     }
                 }
                 echo "${env.CURRENT_BRANCH_NAME}"
-                git branch: "${env.CURRENT_BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
+                git branch: "dev", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
 
