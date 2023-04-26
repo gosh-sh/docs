@@ -11,15 +11,15 @@ pipeline {
         stage('Docss: deploy') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == "dev") {
+                    if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = "staging-docs-gosh"
                         
-                    } else if (env.BRANCH_NAME == "main") {
+                    } else if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
                 }
-                echo "${env.BRANCH_NAME}"
-                git branch: "${env.BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
+                echo "${env.CURRENT_BRANCH_NAME}"
+                git branch: "${env.CURRENT_BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
 
