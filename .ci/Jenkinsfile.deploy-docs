@@ -10,12 +10,13 @@ pipeline {
     stages {
         stage('Docs: deploy') {
             steps {
+                echo "${BRANCH_NAME}"
                 script {
 
                     if (env.BRANCH_NAME = "dev") {
                         env.BUCKET_NAME = "staging-docs-gosh"
                         
-                    } else if (env.BRANCH_NAME = "dev") {
+                    } else if (env.BRANCH_NAME = "main") {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
                 }
