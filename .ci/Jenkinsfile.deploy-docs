@@ -8,7 +8,7 @@ pipeline {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'sha1', type: 'PT_BRANCH', quickFilterEnabled: true
     }*/
     stages {
-        stage('Docss: deploy') {
+        stage('Docs: deploy') {
             steps {
                 script {
                     if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
