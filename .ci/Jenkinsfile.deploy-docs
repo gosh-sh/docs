@@ -17,12 +17,10 @@ pipeline {
                     } else if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
-                }
-                echo "${env.CURRENT_BRANCH_NAME}"
-                def trimmedBranchName = env.CURRENT_BRANCH_NAME.replace("refs/heads/", "")
-                git branch: "${env.trimmedBranchName}", url: 'https://github.com/gosh-sh/docs.git'
-                checkout scm
-                script {
+                    echo "${env.CURRENT_BRANCH_NAME}"
+                    def trimmedBranchName = env.CURRENT_BRANCH_NAME.replace("refs/heads/", "")
+                    git branch: "${env.trimmedBranchName}", url: 'https://github.com/gosh-sh/docs.git'
+                    checkout scm
 
                     dir('site') {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
