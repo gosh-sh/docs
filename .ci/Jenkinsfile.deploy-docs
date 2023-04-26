@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Docs: deploy') {
             steps {
-                echo "${BRANCH_NAME}"
+                echo "${env.BRANCH_NAME}"
                 script {
                     if (env.BRANCH_NAME == "dev") {
                         env.BUCKET_NAME = "staging-docs-gosh"
@@ -19,7 +19,6 @@ pipeline {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
                 }
-                echo "${BRANCH_NAME}"
                 git branch: "${env.BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
