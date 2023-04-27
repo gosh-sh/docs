@@ -439,7 +439,7 @@ You will be taken to the DAO page with events.
 
 ![](../images/gosh_web_upgrade_03_proposal.jpg)
 
-After the completion of [voting for the proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote), the procedure for updating your DAO will begin.
+After accepting the proposal, the procedure for updating your DAO will begin.
 
 Then you need to update all the Repositories.
 
@@ -460,7 +460,7 @@ On the DAO tab, vote for the proposal to create a repository
 
 Tasks were added in contracts version 2.
 
-Uninitialized Tasks will not be migrated to the new version.
+Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
 
 !!! warning
     Before starting the update make sure that there are commits in the Tasks.
@@ -469,15 +469,24 @@ Go to the Settings tab or follow the link in the upgrade message.
 
 ![](../images/gosh_web_upgrade_05_msg_v2tov3.jpg)
 
-Select the version you want to update.
+Select the version you want to update and click **Create proposal for DAO upgrade**
 
 ![](../images/gosh_web_upgrade_06_settings_v2tov3.jpg)
 
+You will be taken to the DAO page with events.
+
+![](../images/gosh_web_upgrade_07_proposal_v2tov3.jpg)
+
+
+![](../images/gosh_web_upgrade_07_proposal_v2tov3.jpg)
 
 
 * __From version 1 to version 3__
 
 * __From version 3 to version 4__
+
+* __From version 1 to version 4__
+
 
 <!-- short description of DAO located in the _index repository
 
@@ -503,7 +512,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Add branch protection**
 * **Remove branch protection**
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
-* **Remove DAO member**
+* [**Remove DAO member**](gosh-web.md#delete-members-from-the-dao)
 * [**Upgrade DAO**](gosh-web.md#upgrade)
 * [**Delete task**](gosh-web.md#deleting-task)
 * [**Create task**](gosh-web.md#create-task)
@@ -511,10 +520,10 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Add voting tokens**
 * **Add regular tokens**
 * **Mint DAO tokens**
-* **Add DAO tag**
-* **Remove DAO tag**
+<!-- * **Add DAO tag**
+* **Remove DAO tag** -->
 * **Disable minting DAO tokens**
-* [**Change DAO member Karma**](gosh-web.md#change-dao-member-karma)
+* **Change DAO member Karma**
 
 <!-- !!! Warning
     Be careful when distributing karma among the members of the TAO.
@@ -527,13 +536,13 @@ Actions that require a DAO vote are performed by creating a proposal.
     For example: [adding members to the DAO by another DAO member](gosh-web.md#add-members-to-dao)
 
 
-* **Add repository tag**
+<!-- * **Add repository tag**
 * **Remove repository tag**
-* **Update repository description**
+* **Update repository description** -->
 * **Allow event discussions**
 * **Show event progress**
-* **Upgrade repository tags**
-* [**Ask DAO membership**](gosh-web.md#request-dao-membership)
+<!-- * **Upgrade repository tags** -->
+* [**Ask DAO membership allowance**](gosh-web.md#request-dao-membership)
 
 <!-- 
 
@@ -775,7 +784,7 @@ searching for users by DAO
 ![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
 
 
-### __Change DAO member Karma__
+### __Working with tokens and Karma__
 
 
 Any member of the DAO can send a request to change Karma.  
@@ -1011,14 +1020,12 @@ Then you need to evaluate the Task.
 
 After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
 
-**Author** - the person who executes the Task.  
+**Commit author** - the person who executes the Task.  
 **Reviewer** - the person who checks the correctness of the Task.  
 **Manager** - the person who manages the Task execution process.
 
 !!! info
     The number of authors, areviewers and managers is set at your choice.  
-    <!-- If, when forming a Task, you assign rewards for the reviewer and the manager, and the Task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.  
-    All non-rewards will be returned to the DAO Reserve. -->
 
 ![](../images/gosh_web_Task_04_cost_distrb.jpg)
 
@@ -1052,13 +1059,19 @@ In the table you can see the period since which month and in what parts the paym
 
 After accepting the proposal, the Task will appear in the list on the **Tasks** tab with the status *Awaiting commits*.
 
+!!! info
+    When creating a Task the tokens (Task cost) from the DAO-reserve are written off and reserved on the Task-contract.
+
 ![](../images/gosh_web_Task_10_list_tasks.jpg)
 
 When the Author has completed the Task, he adds it to the commit.
 
 !!! info
     If you need to make several commits to complete a Task,, create a separate branch.  
-    And do **Select task** when creating the proposal to the pull request.
+
+And do **Select task** when creating the proposal to the pull request.
+
+Select the Task performed(s), reviewer(s), manager(s) if they worked on the task. The allocated shares of those who were not specified will be returned to the DAO-reserve.
 
 ![](../images/gosh_web_Readme_md_03_data_commit.jpg)
 
