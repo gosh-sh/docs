@@ -520,10 +520,10 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Add voting tokens**
 * **Add regular tokens**
 * **Mint DAO tokens**
-* **Add DAO tag**
-* **Remove DAO tag**
+<!-- * **Add DAO tag**
+* **Remove DAO tag** -->
 * **Disable minting DAO tokens**
-* [**Change DAO member Karma**](gosh-web.md#change-dao-member-karma)
+* **Change DAO member Karma**
 
 <!-- !!! Warning
     Be careful when distributing karma among the members of the TAO.
@@ -536,13 +536,13 @@ Actions that require a DAO vote are performed by creating a proposal.
     For example: [adding members to the DAO by another DAO member](gosh-web.md#add-members-to-dao)
 
 
-* **Add repository tag**
+<!-- * **Add repository tag**
 * **Remove repository tag**
-* **Update repository description**
+* **Update repository description** -->
 * **Allow event discussions**
 * **Show event progress**
-* **Upgrade repository tags**
-* [**Ask DAO membership**](gosh-web.md#request-dao-membership)
+<!-- * **Upgrade repository tags** -->
+* [**Ask DAO membership allowance**](gosh-web.md#request-dao-membership)
 
 <!-- 
 
