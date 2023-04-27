@@ -527,8 +527,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#change-dao-member-karma" class="md-nav__link">
-    Change DAO member Karma
+  <a href="#working-with-tokens-and-karma" class="md-nav__link">
+    Working with tokens and Karma
   </a>
   
 </li>
@@ -822,8 +822,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#change-dao-member-karma" class="md-nav__link">
-    Change DAO member Karma
+  <a href="#working-with-tokens-and-karma" class="md-nav__link">
+    Working with tokens and Karma
   </a>
   
 </li>
@@ -1266,7 +1266,7 @@ and an invitation to update in the DAO.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_02_in_settings.jpg" /></p>
 <p>You will be taken to the DAO page with events.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_03_proposal.jpg" /></p>
-<p>After the completion of <a href="./#proposals-and-voting-in-smv-soft-majority-vote">voting for the proposal</a>, the procedure for updating your DAO will begin.</p>
+<p>After accepting the proposal, the procedure for updating your DAO will begin.</p>
 <p>Then you need to update all the Repositories.</p>
 <p>To do this, go to their tab and click <strong>Get repositories</strong></p>
 <p><img alt="" src="../../images/gosh_web_upgrade_04_1_get_repo.jpg" /></p>
@@ -1278,21 +1278,27 @@ and an invitation to update in the DAO.</p>
 <li><strong>From version 2 to version 3</strong></li>
 </ul>
 <p>Tasks were added in contracts version 2.</p>
-<p>Uninitialized Tasks will not be migrated to the new version.</p>
+<p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Before starting the update make sure that there are commits in the Tasks.</p>
 </div>
 <p>Go to the Settings tab or follow the link in the upgrade message.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_05_msg_v2tov3.jpg" /></p>
-<p>Select the version you want to update.</p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
 <p><img alt="" src="../../images/gosh_web_upgrade_06_settings_v2tov3.jpg" /></p>
+<p>You will be taken to the DAO page with events.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_proposal_v2tov3.jpg" /></p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_proposal_v2tov3.jpg" /></p>
 <ul>
 <li>
 <p><strong>From version 1 to version 3</strong></p>
 </li>
 <li>
 <p><strong>From version 3 to version 4</strong></p>
+</li>
+<li>
+<p><strong>From version 1 to version 4</strong></p>
 </li>
 </ul>
 <!-- short description of DAO located in the _index repository
@@ -1316,7 +1322,7 @@ check mark on the permission for additional token issuance - individual proposal
 <li><strong>Add branch protection</strong></li>
 <li><strong>Remove branch protection</strong></li>
 <li><a href="./#add-members-to-dao"><strong>Add DAO member</strong></a></li>
-<li><strong>Remove DAO member</strong></li>
+<li><a href="./#delete-members-from-the-dao"><strong>Remove DAO member</strong></a></li>
 <li><a href="./#upgrade"><strong>Upgrade DAO</strong></a></li>
 <li><a href="./#deleting-task"><strong>Delete task</strong></a></li>
 <li><a href="./#create-task"><strong>Create task</strong></a></li>
@@ -1324,10 +1330,12 @@ check mark on the permission for additional token issuance - individual proposal
 <li><strong>Add voting tokens</strong></li>
 <li><strong>Add regular tokens</strong></li>
 <li><strong>Mint DAO tokens</strong></li>
-<li><strong>Add DAO tag</strong></li>
-<li><strong>Remove DAO tag</strong></li>
+</ul>
+<!-- * **Add DAO tag**
+* **Remove DAO tag** -->
+<ul>
 <li><strong>Disable minting DAO tokens</strong></li>
-<li><a href="./#change-dao-member-karma"><strong>Change DAO member Karma</strong></a></li>
+<li><strong>Change DAO member Karma</strong></li>
 </ul>
 <!-- !!! Warning
     Be careful when distributing karma among the members of the TAO.
@@ -1339,15 +1347,17 @@ check mark on the permission for additional token issuance - individual proposal
 <p><strong>Multi proposal</strong> - includes several offers at once. </p>
 <p>For example: <a href="./#add-members-to-dao">adding members to the DAO by another DAO member</a></p>
 </li>
-<li>
-<p><strong>Add repository tag</strong></p>
-</li>
-<li><strong>Remove repository tag</strong></li>
-<li><strong>Update repository description</strong></li>
+</ul>
+<!-- * **Add repository tag**
+* **Remove repository tag**
+* **Update repository description** -->
+<ul>
 <li><strong>Allow event discussions</strong></li>
 <li><strong>Show event progress</strong></li>
-<li><strong>Upgrade repository tags</strong></li>
-<li><a href="./#request-dao-membership"><strong>Ask DAO membership</strong></a></li>
+</ul>
+<!-- * **Upgrade repository tags** -->
+<ul>
+<li><a href="./#request-dao-membership"><strong>Ask DAO membership allowance</strong></a></li>
 </ul>
 <!-- 
 
@@ -1533,7 +1543,7 @@ add a cross-reference to the karma change propos -->
 searching for users by DAO
 ![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
 
-<h3 id="change-dao-member-karma"><strong>Change DAO member Karma</strong></h3>
+<h3 id="working-with-tokens-and-karma"><strong>Working with tokens and Karma</strong></h3>
 <p>Any member of the DAO can send a request to change Karma.<br />
 To do this, go to the <strong>Members</strong> tab and change the number of Karma and token balance of one or more DAO members, including for yourself.</p>
 <div class="admonition warning">
@@ -1672,13 +1682,12 @@ Scroll down and copy them.</p>
 <p>The members of the DAO agree between themselves how to evaluate the Tasks.</p>
 </div>
 <p>After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.</p>
-<p><strong>Author</strong> - the person who executes the Task.<br />
+<p><strong>Commit author</strong> - the person who executes the Task.<br />
 <strong>Reviewer</strong> - the person who checks the correctness of the Task.<br />
 <strong>Manager</strong> - the person who manages the Task execution process.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The number of authors, areviewers and managers is set at your choice.<br />
-<!-- If, when forming a Task, you assign rewards for the reviewer and the manager, and the Task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.<br />All non-rewards will be returned to the DAO Reserve. --></p>
+<p>The number of authors, areviewers and managers is set at your choice.  </p>
 </div>
 <p><img alt="" src="../../images/gosh_web_Task_04_cost_distrb.jpg" /></p>
 <p>Select vesting and lock periods. </p>
@@ -1701,13 +1710,18 @@ In the table you can see the period since which month and in what parts the paym
 
 <p><img alt="" src="../../images/gosh_web_Task_09_event_details.jpg" /></p>
 <p>After accepting the proposal, the Task will appear in the list on the <strong>Tasks</strong> tab with the status <em>Awaiting commits</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When creating a Task the tokens (Task cost) from the DAO-reserve are written off and reserved on the Task-contract.</p>
+</div>
 <p><img alt="" src="../../images/gosh_web_Task_10_list_tasks.jpg" /></p>
 <p>When the Author has completed the Task, he adds it to the commit.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If you need to make several commits to complete a Task,, create a separate branch.<br />
-And do <strong>Select task</strong> when creating the proposal to the pull request.</p>
+<p>If you need to make several commits to complete a Task,, create a separate branch.  </p>
 </div>
+<p>And do <strong>Select task</strong> when creating the proposal to the pull request.</p>
+<p>Select the Task performed(s), reviewer(s), manager(s) if they worked on the task. The allocated shares of those who were not specified will be returned to the DAO-reserve.</p>
 <p><img alt="" src="../../images/gosh_web_Readme_md_03_data_commit.jpg" /></p>
 <p>After that a proposal to the pull request will be created.  </p>
 <p><img alt="" src="../../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg" /></p>
