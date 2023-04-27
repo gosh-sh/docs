@@ -15,7 +15,7 @@ pipeline {
                         env.BUCKET_NAME = "staging-docs-gosh"
                         
                     } else if (env.CURRENT_BRANCH_NAME == "refs/heads/main") {
-                        env.BUCKET_NAME = 'docs-gosh'
+                        env.BUCKET_NAME = 'docs-gosh-1'
                     }
                     currentBuild.displayName = "${BUILD_NUMBER}_${env.CURRENT_BRANCH_NAME}"
                     echo "${env.CURRENT_BRANCH_NAME}"
@@ -28,7 +28,8 @@ pipeline {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
                         if (status == 0) {
                             echo 'Bucket already exists! Just syncing.'
-                            sh "aws s3 cp . s3://${BUCKET_NAME} --recursive --cache-control no-cache,no-store,must-revalidate"
+                            //sh "aws s3 cp . s3://${BUCKET_NAME} --recursive --cache-control no-cache,no-store,must-revalidate"
+                            sh "aws s3 sync . s3://${BUCKET_NAME}"
                             sh "aws cloudfront create-invalidation --distribution-id E38B49XVCTNRVX --paths '/*'"
                         } else {
                             sh """
