@@ -28,7 +28,7 @@ pipeline {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
                         if (status == 0) {
                             echo 'Bucket already exists! Just syncing.'
-                            sh "aws s3 cp . s3://${BUCKET_NAME} --recursive --cache-control public,max-age=0"
+                            sh "aws s3 cp . s3://${BUCKET_NAME} --recursive --cache-control no-cache,no-store,must-revalidate"
                         } else {
                             sh """
                                 aws s3api create-bucket --bucket ${BUCKET_NAME} --region eu-west-2 --acl public-read --create-bucket-configuration LocationConstraint=eu-west-2
