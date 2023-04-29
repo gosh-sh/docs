@@ -408,7 +408,7 @@ Then add a comment on changing the settings for other members of the DAO and cli
 
 ### __Upgrade__
 
-
+#### __Basic information__
 When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
 
 The upgrade is initiated by the [proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
@@ -489,9 +489,13 @@ Inside the event, you can get acquainted with the details of the proposal.
 After accepting the proposals, the DAO update process will begin.  
 Before continuing, you need to transfer your tokens.
 
-To do this, go to the **Overview** page in the **Your wallet balance** section and click **Transfer from previous version**.
+To do this, go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
 
 ![](../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
+
+You can also do this on the **Members** tab.
+
+![](../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg)
 
 Then you need to update the DAO repositories and tags.  
 To do this, click **upgrade** in the information message
@@ -533,17 +537,92 @@ You will be taken to the DAO tab with events.
 
 ![](../images/gosh_web_upgrade_07_12_event.jpg)
 
-After accepting the proposal, the tasks will be transferred from the previous version.
-
+After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 3 will be completed.
 
 <!-- !!! info
     The history of events from the previous version will not be transferred. -->
 
+#### __From version 3 to version 4__
+
+Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
+
+!!! warning
+    Before starting the update make sure that there are commits in the Tasks.
+
+Go to the Settings tab or follow the link in the upgrade message.
+
+![](../images/gosh_web_upgrade_08_01_msg_v3tov4.jpg)
+
+Select the version you want to update and click **Create proposal for DAO upgrade**
+
+![](../images/gosh_web_upgrade_08_02_settings_v3tov4.jpg)
+
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_08_03_proposal.jpg)
+
+Inside the event, you can get acquainted with the details of the proposal.
+
+![](../images/gosh_web_upgrade_08_04_event_datails.jpg)
+
+After accepting the proposals, the DAO update process will begin.  
+Before continuing, you need to transfer your tokens.
+
+To do this, go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
+
+![](../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
+
+You can also do this on the **Members** tab.
+
+![](../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg)
+
+Then you need to update the DAO repositories and tags.  
+To do this, click **upgrade** in the information message
+
+![](../images/gosh_web_upgrade_08_05_DAO_v3_msg_upgr_repo.jpg)
+
+and go to the repository uprade page.  
+Click **Get repositories**.
+
+![](../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg)
+
+Then click **Start repositories upgrade** to create a proposal.
+
+![](../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg)
+
+The process will be displayed below:
+
+![](../images/gosh_web_upgrade_07_7_process.jpg)
+
+As a result, you will be redirected to the DAO events page.
+
+![](../images/gosh_web_upgrade_07_8_event.jpg)
+
+The details of the Multi proposal can be found at the event.
+
+![](../images/gosh_web_upgrade_07_8_MP_details.jpg)
+
+Then click **tasks upgrade page** in the information message
+
+![](../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg)
+
+and click **Start tasks upgrade** on the page that opens.
+
+![](../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg)
+
+![](../images/gosh_web_upgrade_07_11_process.jpg)
+
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_07_12_event.jpg)
+
+After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 3 will be completed.
+
+
+
+
+
 #### __From version 1 to version 3__
-
-
-
-* __From version 3 to version 4__
 
 * __From version 1 to version 4__
 
