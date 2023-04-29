@@ -424,11 +424,14 @@ and an invitation to update in the DAO.
 
 Depending on which version you currently have, choose the appropriate update method.
 
-* __From version 1 to version 2__
+!!! info
+    It is recommended to upgrade to the latest version.
+
+#### __From version 1 to version 2__
+
+You can switch to the **Upgrade** section from the new version message or go to the **Settings** tab.
 
 ![](../images/gosh_web_upgrade_01_msg_v1tov2.jpg)
-
-You can go to the **Upgrade** section from the new version message or go to the **Settings** tab.
 
 Select the version you want to upgrade and click **Create proposal for DAO upgrade**:
 
@@ -446,18 +449,21 @@ To do this, go to their tab and click **Get repositories**
 
 ![](../images/gosh_web_upgrade_04_1_get_repo.jpg)
 
-and then click **Start repositories upgrade** to create a proposal
+and then click **Start repositories upgrade** to create a proposal.
 
 ![](../images/gosh_web_upgrade_04_2_upgr_repo.jpg)
 
-On the DAO tab, vote for the proposal to create a repository
+On the DAO tab, vote for the proposal to create a repository.
 
 ![](../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg)
 
+After the proposal is accepted, the contract version will be upgraded.
 
-* __From version 2 to version 3__
+![](../images/gosh_web_upgrade_04_4_DAO_v2.jpg)
 
-Tasks were added in contracts version 2.
+#### __From version 2 to version 3__
+
+The Tasks were added in contracts version 2.
 
 Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
 
@@ -480,9 +486,62 @@ Inside the event, you can get acquainted with the details of the proposal.
 
 ![](../images/gosh_web_upgrade_07_2_proposal_details_v2tov3.jpg)
 
+After accepting the proposals, the DAO update process will begin.  
+Before continuing, you need to transfer your tokens.
+
+To do this, go to the **Overview** page in the **Your wallet balance** section and click **Transfer from previous version**.
+
+![](../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
+
+Then you need to update the DAO repositories and tags.  
+To do this, click **upgrade** in the information message
+
+![](../images/gosh_web_upgrade_07_3_DAO_v3_msg_upgr_repo.jpg)
+
+and go to the repository uprade page.  
+Click **Get repositories**.
+
+![](../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg)
+
+Then click **Start repositories upgrade** to create a proposal.
+
+![](../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg)
+
+The process will be displayed below:
+
+![](../images/gosh_web_upgrade_07_7_process.jpg)
+
+As a result, you will be redirected to the DAO events page.
+
+![](../images/gosh_web_upgrade_07_8_event.jpg)
+
+The details of the Multi proposal can be found at the event.
+
+![](../images/gosh_web_upgrade_07_8_MP_details.jpg)
+
+Then click **tasks upgrade page** in the information message
+
+![](../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg)
+
+and click **Start tasks upgrade** on the page that opens.
+
+![](../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg)
+
+![](../images/gosh_web_upgrade_07_11_process.jpg)
+
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_07_12_event.jpg)
+
+After accepting the proposal, the tasks will be transferred from the previous version.
 
 
-* __From version 1 to version 3__
+<!-- !!! info
+    The history of events from the previous version will not be transferred. -->
+
+#### __From version 1 to version 3__
+
+
 
 * __From version 3 to version 4__
 
