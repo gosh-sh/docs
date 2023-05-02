@@ -616,15 +616,12 @@ You will be taken to the DAO tab with events.
 
 ![](../images/gosh_web_upgrade_07_12_event.jpg)
 
-After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 3 will be completed.
+After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 4 will be completed.
 
 
+<!-- #### __From version 1 to version 3__ -->
 
-
-
-#### __From version 1 to version 3__
-
-* __From version 1 to version 4__
+#### __From version 1 to version 4__
 
 
 <!-- short description of DAO located in the _index repository
@@ -784,6 +781,9 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 #### Additional minting of tokens for DAO
 
+!!! warning
+    The option allowing the minting of DAO tokens must be enabled on the **Settings** tab in the **Token Settings section**.
+
 Click on the **Mint** button on the right on the **Overview** tab in the **DAO Reserve** section.
 You will create an proposal to mint additional tokens for this DAO.
 
@@ -803,7 +803,7 @@ After the proposal is accepted, the changes will take effect.
 
 ![](../images/gosh_web_OVERVIEW_mint_04_reserve.jpg)
 
-#### Additional voiting tokens 
+#### Additional voiting tokens and Karma
 
 Any member of the DAO can send a request to change Karma.  
 To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
@@ -827,11 +827,46 @@ Inside the event, you can get details of Multi proposal.
 
 ![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
 
-After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab
+After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab.
 
 ![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
 
 
+#### Transfer of tokens to a DAO member from DAO reserve
+
+Tokens can be sent from the DAO reserve to
+
+* a member of this DAO;
+* any GOSH user;
+* or another DAO.
+
+To do this, on the **Overview** tab in the **DAO reserve** section, click **Send**.
+
+![](../images/gosh_web_send_token_01_overview.jpg)
+
+In the window that opens, enter the name of the GOSH user or the name of the DAO and the number of tokens to send.
+
+If you want the recipient's Karma to increase jointly with the token balance, then check this box.  
+Also write a description for the token transfer. This will help the DAO members to make a decision when voting.
+
+!!! Warning
+    Be careful when distributing karma among the members of the DAO.  
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.  
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
+
+Then click **Create proposal to send tokens**
+
+![](../images/gosh_web_send_token_02_window_send.jpg)
+
+After creating the offer, you will be redirected to the **DAO** page with events.
+
+![](../images/gosh_web_send_token_03_event.jpg)
+
+Inside the event, you can see detailed information about the proposal.
+
+![](../images/gosh_web_send_token_04_detaol_event.jpg)
+
+After the proposal is accepted, the tokens will be transferred to the balance wallet of the GOSH user or DAO.
 
 
 
@@ -839,7 +874,9 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 ## **Working with DAO Members**
 
 
+
 ### __Adding Members to DAO__
+
 
 Membership in the DAO can be obtained in several ways.
 
