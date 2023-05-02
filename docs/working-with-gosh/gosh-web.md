@@ -424,8 +424,13 @@ and an invitation to update in the DAO.
 
 Depending on which version you currently have, choose the appropriate update method.
 
-!!! info
+!!! warning ""
     It is recommended to upgrade to the latest version.
+
+!!! info
+    All token holders after upgrading the DAO must transfer their tokens from previous versions.
+<!-- TODO
+transfer tokens from previous versions to a separate item and make a link -->
 
 #### __From version 1 to version 2__
 
@@ -832,19 +837,19 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 ![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
 
 
-#### Transfer of tokens to a DAO member from DAO reserve
+#### Transfer of tokens from DAO reserve
 
 Tokens can be sent from the DAO reserve to
 
 * a member of this DAO;
-* any GOSH user;
-* or another DAO.
+* any GOSH user, who has visited this DAO at least once.
+<!-- * or another DAO. -->
 
 To do this, on the **Overview** tab in the **DAO reserve** section, click **Send**.
 
 ![](../images/gosh_web_send_token_01_overview.jpg)
 
-In the window that opens, enter the name of the GOSH user or the name of the DAO and the number of tokens to send.
+In the window that opens, enter the name of the GOSH user or the name of the DAO and the amount of tokens to send.
 
 If you want the recipient's Karma to increase jointly with the token balance, then check this box.  
 Also write a description for the token transfer. This will help the DAO members to make a decision when voting.
@@ -868,6 +873,28 @@ Inside the event, you can see detailed information about the proposal.
 
 After the proposal is accepted, the tokens will be transferred to the balance wallet of the GOSH user or DAO.
 
+#### Transfer of tokens from user's wallet
+
+Tokens can be sent from the DAO reserve to
+
+* a member of this DAO;
+* any GOSH user, who has visited this DAO at least once.
+
+!!! info
+    Only regular tokens are transferred. You will not be able to vote with such tokens.
+
+To send tokens from your wallet to the DAO, go to the **Overview** or **DAO** tab on the **Your wallet balance** section and click **Send**.
+
+![](../images/gosh_web_send_token_05_from_wallet_overview.jpg)
+
+In the window that opens, enter the name of the member of the DAO and the amount of tokens to send.
+Then click **Send tokens**
+
+![](../images/gosh_web_send_token_06_window_send.jpg)
+
+After that, the tokens will be transferred to the recipient's wallet balance.
+
+![](../images/gosh_web_send_token_07_balans_resipient.jpg)
 
 
 
