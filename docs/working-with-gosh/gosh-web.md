@@ -212,7 +212,6 @@ Click **Сreate new DAO** button in the Organizations section.
 
 On the DAO settings page that opens, input:
 
-
 * __Organization name__
 
     !!! warning
@@ -229,7 +228,7 @@ On the DAO settings page that opens, input:
 
 * __Description__
 
-    A short description that can be seen on the DAO page under the heading.
+    A short description that can be seen on the DAO tab under the heading.
 
     The extended description can be added to the Readme file into _index system repository from the [Overview page](gosh-web.md#overview-of-the-dao) after creating the DAO.
 
@@ -253,7 +252,7 @@ Click **Create organization**.
 
 ![](../images/gosh_web_Create_ORG_02_set_up_DAO.jpg)
 
-The DAO page will open after its creation.
+The DAO tab will open after its creation.
 
 
 ### __Overview of the DAO__
@@ -269,11 +268,10 @@ Information about DAO assets is displayed on the right.
 
 * **DAO reserve** - unallocated tokens.
 
-    Push on the **SEND** button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
+    Push on the **Send** button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
     <!-- TODO -->
 
-    Push on the **Mint** button, you will create an proposal to issue additional tokens for this DAO.
-    <!-- TODO -->
+    Push on the **Mint** button, you will [create an proposal to mint additional tokens](gosh-web.md#additional-minting-of-tokens-for-dao) for this DAO.
 
 ![](../images/gosh_web_OVERVIEW_01_total_suply.jpg)
 
@@ -304,7 +302,7 @@ Information about DAO assets is displayed on the right.
 * **Recent proposals**
 
 Information and status of the recent proposals will be displayed  in this section. 
-Click on the name of the proposal you can go to the event page and [vote](gosh-web.md#voting-in-smv-soft-majority-vote).
+Click on the name of the proposal you can go to the event page and [vote](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
 
 ![](../images/gosh_web_OVERVIEW_05_recent_proposals.jpg)
 
@@ -410,36 +408,45 @@ Then add a comment on changing the settings for other members of the DAO and cli
 
 ### __Upgrade__
 
-
+#### __Basic information__
 When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
 
 The upgrade is initiated by the [proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
 
+!!! warning
+    Make sure that the proposal for such an update has not yet been created.
 
 !!! info
     Complete all proposle before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.
-
 
 You can see a message about the availability of a new version 
 and an invitation to update in the DAO.
 
 Depending on which version you currently have, choose the appropriate update method.
 
-* __From version 1 to version 2__
+!!! warning ""
+    It is recommended to upgrade to the latest version.
+
+!!! info
+    All token holders after upgrading the DAO must transfer their tokens from previous versions.
+<!-- TODO
+transfer tokens from previous versions to a separate item and make a link -->
+
+#### __From version 1 to version 2__
+
+You can switch to the **Upgrade** section from the new version message or go to the **Settings** tab.
 
 ![](../images/gosh_web_upgrade_01_msg_v1tov2.jpg)
-
-You can go to the **Upgrade** section from the new version message or go to the **Settings** tab.
 
 Select the version you want to upgrade and click **Create proposal for DAO upgrade**:
 
 ![](../images/gosh_web_upgrade_02_in_settings.jpg)
 
-You will be taken to the DAO page with events.
+You will be taken to the DAO tab with events.
 
 ![](../images/gosh_web_upgrade_03_proposal.jpg)
 
-After the completion of [voting for the proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote), the procedure for updating your DAO will begin.
+After accepting the proposal, the procedure for updating your DAO will begin.
 
 Then you need to update all the Repositories.
 
@@ -447,20 +454,23 @@ To do this, go to their tab and click **Get repositories**
 
 ![](../images/gosh_web_upgrade_04_1_get_repo.jpg)
 
-and then click **Start repositories upgrade** to create a proposal
+and then click **Start repositories upgrade** to create a proposal.
 
 ![](../images/gosh_web_upgrade_04_2_upgr_repo.jpg)
 
-On the DAO tab, vote for the proposal to create a repository
+On the DAO tab, vote for the proposal to create a repository.
 
 ![](../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg)
 
+After the proposal is accepted, the contract version will be upgraded.
 
-* __From version 2 to version 3__
+![](../images/gosh_web_upgrade_04_4_DAO_v2.jpg)
 
-Tasks were added in contracts version 2.
+#### __From version 2 to version 3__
 
-Uninitialized Tasks will not be migrated to the new version.
+The Tasks were added in contracts version 2.
+
+Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
 
 !!! warning
     Before starting the update make sure that there are commits in the Tasks.
@@ -469,15 +479,155 @@ Go to the Settings tab or follow the link in the upgrade message.
 
 ![](../images/gosh_web_upgrade_05_msg_v2tov3.jpg)
 
-Select the version you want to update.
+Select the version you want to update and click **Create proposal for DAO upgrade**
 
 ![](../images/gosh_web_upgrade_06_settings_v2tov3.jpg)
 
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_07_proposal_v2tov3.jpg)
+
+Inside the event, you can get acquainted with the details of the proposal.
+
+![](../images/gosh_web_upgrade_07_2_proposal_details_v2tov3.jpg)
+
+After accepting the proposals, the DAO update process will begin.  
+Before continuing, you need to transfer your tokens.
+
+To do this, go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
+
+![](../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
+
+You can also do this on the **Members** tab.
+
+![](../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg)
+
+Then you need to update the DAO repositories and tags.  
+To do this, click **upgrade** in the information message
+
+![](../images/gosh_web_upgrade_07_3_DAO_v3_msg_upgr_repo.jpg)
+
+and go to the repository uprade page.  
+Click **Get repositories**.
+
+![](../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg)
+
+Then click **Start repositories upgrade** to create a proposal.
+
+![](../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg)
+
+The process will be displayed below:
+
+![](../images/gosh_web_upgrade_07_7_process.jpg)
+
+As a result, you will be redirected to the DAO events page.
+
+![](../images/gosh_web_upgrade_07_8_event.jpg)
+
+The details of the Multi proposal can be found at the event.
+
+![](../images/gosh_web_upgrade_07_8_MP_details.jpg)
+
+Then click **tasks upgrade page** in the information message
+
+![](../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg)
+
+and click **Start tasks upgrade** on the page that opens.
+
+![](../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg)
+
+![](../images/gosh_web_upgrade_07_11_process.jpg)
+
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_07_12_event.jpg)
+
+After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 3 will be completed.
+
+<!-- !!! info
+    The history of events from the previous version will not be transferred. -->
+
+#### __From version 3 to version 4__
+
+Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
+
+!!! warning
+    Before starting the update make sure that there are commits in the Tasks.
+
+Go to the Settings tab or follow the link in the upgrade message.
+
+![](../images/gosh_web_upgrade_08_01_msg_v3tov4.jpg)
+
+Select the version you want to update and click **Create proposal for DAO upgrade**
+
+![](../images/gosh_web_upgrade_08_02_settings_v3tov4.jpg)
+
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_08_03_proposal.jpg)
+
+Inside the event, you can get acquainted with the details of the proposal.
+
+![](../images/gosh_web_upgrade_08_04_event_datails.jpg)
+
+After accepting the proposals, the DAO update process will begin.  
+Before continuing, you need to transfer your tokens.
+
+To do this, go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
+
+![](../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
+
+You can also do this on the **Members** tab.
+
+![](../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg)
+
+Then you need to update the DAO repositories and tags.  
+To do this, click **upgrade** in the information message
+
+![](../images/gosh_web_upgrade_08_05_DAO_v3_msg_upgr_repo.jpg)
+
+and go to the repository uprade page.  
+Click **Get repositories**.
+
+![](../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg)
+
+Then click **Start repositories upgrade** to create a proposal.
+
+![](../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg)
+
+The process will be displayed below:
+
+![](../images/gosh_web_upgrade_07_7_process.jpg)
+
+As a result, you will be redirected to the DAO events page.
+
+![](../images/gosh_web_upgrade_07_8_event.jpg)
+
+The details of the Multi proposal can be found at the event.
+
+![](../images/gosh_web_upgrade_07_8_MP_details.jpg)
+
+Then click **tasks upgrade page** in the information message
+
+![](../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg)
+
+and click **Start tasks upgrade** on the page that opens.
+
+![](../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg)
+
+![](../images/gosh_web_upgrade_07_11_process.jpg)
+
+You will be taken to the DAO tab with events.
+
+![](../images/gosh_web_upgrade_07_12_event.jpg)
+
+After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 4 will be completed.
 
 
-* __From version 1 to version 3__
+<!-- #### __From version 1 to version 3__ -->
 
-* __From version 3 to version 4__
+#### __From version 1 to version 4__
+
 
 <!-- short description of DAO located in the _index repository
 
@@ -503,7 +653,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Add branch protection**
 * **Remove branch protection**
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
-* **Remove DAO member**
+* [**Remove DAO member**](gosh-web.md#delete-members-from-the-dao)
 * [**Upgrade DAO**](gosh-web.md#upgrade)
 * [**Delete task**](gosh-web.md#deleting-task)
 * [**Create task**](gosh-web.md#create-task)
@@ -511,10 +661,10 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Add voting tokens**
 * **Add regular tokens**
 * **Mint DAO tokens**
-* **Add DAO tag**
-* **Remove DAO tag**
+<!-- * **Add DAO tag**
+* **Remove DAO tag** -->
 * **Disable minting DAO tokens**
-* [**Change DAO member Karma**](gosh-web.md#change-dao-member-karma)
+* **Change DAO member Karma**
 
 <!-- !!! Warning
     Be careful when distributing karma among the members of the TAO.
@@ -527,13 +677,13 @@ Actions that require a DAO vote are performed by creating a proposal.
     For example: [adding members to the DAO by another DAO member](gosh-web.md#add-members-to-dao)
 
 
-* **Add repository tag**
+<!-- * **Add repository tag**
 * **Remove repository tag**
-* **Update repository description**
+* **Update repository description** -->
 * **Allow event discussions**
 * **Show event progress**
-* **Upgrade repository tags**
-* [**Ask DAO membership**](gosh-web.md#request-dao-membership)
+<!-- * **Upgrade repository tags** -->
+* [**Ask DAO membership allowance**](gosh-web.md#request-dao-membership)
 
 <!-- 
 
@@ -631,11 +781,129 @@ Once a majority has been reached early, or the voting period ended and the soft 
 <!-- ![](../images/docker_ext_Voiting_SMV_03_result.jpg) -->
 
 
+### __Working with tokens and Karma__
+
+
+#### Additional minting of tokens for DAO
+
+!!! warning
+    The option allowing the minting of DAO tokens must be enabled on the **Settings** tab in the **Token Settings section**.
+
+Click on the **Mint** button on the right on the **Overview** tab in the **DAO Reserve** section.
+You will create an proposal to mint additional tokens for this DAO.
+
+In the window that appears, enter the amount of tokens to emission and add a description of the DAO members. Then click **Create proposal to mint tokens**
+
+![](../images/gosh_web_OVERVIEW_mint_01_create_proposal.jpg)
+
+After creating the proposal, you will be redirected to the **DAO** tab with events.
+
+![](../images/gosh_web_OVERVIEW_mint_02_event.jpg)
+
+Inside the event, you can get details of proposal.
+
+![](../images/gosh_web_OVERVIEW_mint_03_proposal_details.jpg)
+
+After the proposal is accepted, the changes will take effect.
+
+![](../images/gosh_web_OVERVIEW_mint_04_reserve.jpg)
+
+#### Additional voiting tokens and Karma
+
+Any member of the DAO can send a request to change Karma.  
+To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
+
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+![](../images/gosh_web_memeber_change_karma_01_request.jpg)
+
+!!! Warning
+    Be careful when distributing karma among the members of the DAO.  
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.  
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
+
+Then click **Save changes and create proposal**.  
+As a result, a Multi proposal will be created and you will be redirected to the event tab **Dao**.
+
+![](../images/gosh_web_memeber_change_karma_02_event.jpg)
+
+Inside the event, you can get details of Multi proposal.
+
+![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
+
+After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab.
+
+![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
+
+
+#### Transfer of tokens from DAO reserve
+
+Tokens can be sent from the DAO reserve to
+
+* a member of this DAO;
+* any GOSH user, who has visited this DAO at least once.
+<!-- * or another DAO. -->
+
+To do this, on the **Overview** tab in the **DAO reserve** section, click **Send**.
+
+![](../images/gosh_web_send_token_01_overview.jpg)
+
+In the window that opens, enter the name of the GOSH user or the name of the DAO and the amount of tokens to send.
+
+If you want the recipient's Karma to increase jointly with the token balance, then check this box.  
+Also write a description for the token transfer. This will help the DAO members to make a decision when voting.
+
+!!! Warning
+    Be careful when distributing karma among the members of the DAO.  
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.  
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
+
+Then click **Create proposal to send tokens**
+
+![](../images/gosh_web_send_token_02_window_send.jpg)
+
+After creating the offer, you will be redirected to the **DAO** page with events.
+
+![](../images/gosh_web_send_token_03_event.jpg)
+
+Inside the event, you can see detailed information about the proposal.
+
+![](../images/gosh_web_send_token_04_detaol_event.jpg)
+
+After the proposal is accepted, the tokens will be transferred to the balance wallet of the GOSH user or DAO.
+
+#### Transfer of tokens from user's wallet
+
+Tokens can be sent from the DAO reserve to
+
+* a member of this DAO;
+* any GOSH user, who has visited this DAO at least once.
+
+!!! info
+    Only regular tokens are transferred. You will not be able to vote with such tokens.
+
+To send tokens from your wallet to the DAO, go to the **Overview** or **DAO** tab on the **Your wallet balance** section and click **Send**.
+
+![](../images/gosh_web_send_token_05_from_wallet_overview.jpg)
+
+In the window that opens, enter the name of the member of the DAO and the amount of tokens to send.
+Then click **Send tokens**
+
+![](../images/gosh_web_send_token_06_window_send.jpg)
+
+After that, the tokens will be transferred to the recipient's wallet balance.
+
+![](../images/gosh_web_send_token_07_balans_resipient.jpg)
+
+
 
 ## **Working with DAO Members**
 
 
+
 ### __Adding Members to DAO__
+
 
 Membership in the DAO can be obtained in several ways.
 
@@ -748,7 +1016,7 @@ You can create a membership request in the DAO yourself. To do this, you need to
 !!!info
     Only a registered user will be able to create a membership request.
 
-Follow this link and you will see the overview page of the DAO you are interested in.
+Follow this link and you will see the overview tab of the DAO you are interested in.
 
 Click **Request membership**.
 
@@ -775,36 +1043,8 @@ searching for users by DAO
 ![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
 
 
-### __Change DAO member Karma__
-
-
-Any member of the DAO can send a request to change Karma.  
-To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
-
-!!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
-
-![](../images/gosh_web_memeber_change_karma_01_request.jpg)
-
-!!! Warning
-    Be careful when distributing karma among the members of the DAO.  
-    Avoid the possibility of a preponderance in the votes of one of the DAO members.  
-    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
-
-Then click **Save changes and create proposal**.  
-As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
-
-![](../images/gosh_web_memeber_change_karma_02_event.jpg)
-
-Inside the event, you can get details of Multi proposal.
-
-![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
-
-After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab
-
-![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
-
 ### __Delete Members from the DAO__
+
 
 To delete a member from the DAO, go to the **Members** tab and click on the cross to the desired member.
 
@@ -817,7 +1057,7 @@ Confirm the deletion by clicking OK.
 
 ![](../images/gosh_web_memeber_delete_02_confirm.jpg)
 
-As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+As a result, a Multi proposal will be created and you will be redirected to the event tab **Dao**.
 
 ![](../images/gosh_web_memeber_delete_03_event.jpg)
 
@@ -833,6 +1073,23 @@ The Karma of the deleted user will be equal to 0.
 But the tokens, if they were, will stay on the balance of the user's wallet.
 
 ![](../images/gosh_web_memeber_delete_06_balance_user.jpg)
+
+
+
+Then click **Save changes and create proposal**.  
+As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_memeber_change_karma_02_event.jpg)
+
+Inside the event, you can get details of Multi proposal.
+
+![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
+
+After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab
+
+![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
+
+### __Delete Members from the DAO__
 
 
 
@@ -951,7 +1208,10 @@ After scroll down and enter commit info:
 
 ![](../images/gosh_web_Create_file_03_commit_data.jpg)
 
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote) will be initiated.
+
+<!-- TODO
+If the branch is protect -->
 
 Commit status will be displayed below.
 
@@ -973,7 +1233,61 @@ The branches will be compared. Review the changes, set up the pull request and c
 !!! info
     **Note**: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
 
-    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
+    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote) on.
+
+
+### __Add protection for a branch__
+
+
+If you want the changes to be added to the branch based on the voting results, then add protection to the branch.
+
+This can be done by creating an appropriate proposal.
+
+To do this, go from the **Repositories** tab to the repository you need.
+
+![](../images/gosh_web_Protect_branch_01_repos.jpg)
+
+Then, on the Branches tab, click the **Protect** button for the branch to which you want to add protection.
+
+![](../images/gosh_web_Protect_branch_02_branches.jpg)
+
+After creating the proposal, you will be redirected to the **DAO** page with events.
+
+![](../images/gosh_web_Protect_branch_03_events.jpg)
+
+Inside the event, you can get details of proposal.
+
+![](../images/gosh_web_Protect_branch_04_details_proposal.jpg)
+
+After the proposal is accepted the branch is marked as protected.  
+A commit can be made to it only by voting.
+
+![](../images/gosh_web_Protect_branch_05_branches_protect.jpg)
+
+### __Remove protection for a branch__
+
+If the branch no longer needs protection, you can remove it by initiating appropriate proposals.
+
+To do this, go from the **Repositories** tab to the repository you need.
+
+![](../images/gosh_web_Protect_branch_01_repos.jpg)
+
+Then, on the Branches tab, click the **Unprotect** button for the branch to which you want to add protection.
+
+![](../images/gosh_web_Protect_branch_remove_01_branches.jpg)
+
+A vote will be created and you will be redirected to the **DAO** page with events.
+
+![](../images/gosh_web_Protect_branch_remove_02_event.jpg)
+
+Inside the event, you can get details of proposal.
+
+![](../images/gosh_web_Protect_branch_remove_03_details_proposal.jpg)
+
+After accepting the proposal, the protection mark will be removed from the branch.  
+Now everyone can upload changes to the branch without voting.
+
+![](../images/gosh_web_Protect_branch_remove_04_branch_unprotect.jpg)
 
 
 
@@ -1011,14 +1325,12 @@ Then you need to evaluate the Task.
 
 After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
 
-**Author** - the person who executes the Task.  
+**Commit author** - the person who executes the Task.  
 **Reviewer** - the person who checks the correctness of the Task.  
 **Manager** - the person who manages the Task execution process.
 
 !!! info
     The number of authors, areviewers and managers is set at your choice.  
-    <!-- If, when forming a Task, you assign rewards for the reviewer and the manager, and the Task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.  
-    All non-rewards will be returned to the DAO Reserve. -->
 
 ![](../images/gosh_web_Task_04_cost_distrb.jpg)
 
@@ -1031,7 +1343,7 @@ The countdown will start after accepting the proposal about completing the Task.
 For example, lock - 12 months, vesting - 2 months.  
 
 !!! warning
-    In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the participants of the task must be a multiple of the number of months of investment.
+    In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the members of the task must be a multiple of the number of months of investment.
 
 ![](../images/gosh_web_Task_05_lock_vesting.jpg)
 
@@ -1039,12 +1351,12 @@ Add a comment the token distribution rules and click **Create task and start pro
 
 ![](../images/gosh_web_Task_06_comment.jpg)
 
-After creating the proposal, you will be taken to the DAO page with events.
+After creating the proposal, you will be taken to the **DAO** tab with events.
 
 ![](../images/gosh_web_Task_07_event.jpg)
 
 Inside the proposal you will be able to see all the conditions of the Task.  
-In the table you can see the period since which month and in what parts the payments will be made to the participants of the Task.
+In the table you can see the period since which month and in what parts the payments will be made to the members of the Task.
 
 <!-- ![](../images/gosh_web_Task_08_proposal.jpg) -->
 
@@ -1052,13 +1364,19 @@ In the table you can see the period since which month and in what parts the paym
 
 After accepting the proposal, the Task will appear in the list on the **Tasks** tab with the status *Awaiting commits*.
 
+!!! info
+    When creating a Task the tokens (Task cost) from the DAO-reserve are written off and reserved on the Task-contract.
+
 ![](../images/gosh_web_Task_10_list_tasks.jpg)
 
 When the Author has completed the Task, he adds it to the commit.
 
 !!! info
     If you need to make several commits to complete a Task,, create a separate branch.  
-    And do **Select task** when creating the proposal to the pull request.
+
+And do **Select task** when creating the proposal to the pull request.
+
+Select the Task performed(s), reviewer(s), manager(s) if they worked on the task. The allocated shares of those who were not specified will be returned to the DAO-reserve.
 
 ![](../images/gosh_web_Readme_md_03_data_commit.jpg)
 
@@ -1079,7 +1397,7 @@ When the pull request is accepted, the Task status will change to **Confirmed**.
 
 ![](../images/gosh_web_Task_15_task_status_confirmed.jpg)
 
-After the lock period ends, the participants of the Task can receive a reward.
+After the lock period ends, the members of the Task can receive a reward.
 To do this, go to the **Tasks** tab in the completed Task and click **Claim reward**.
 
 !!! note
@@ -1087,7 +1405,7 @@ To do this, go to the **Tasks** tab in the completed Task and click **Claim rewa
 
 ![](../images/gosh_web_Task_16_claim_reward.jpg)
 
-Thus the tokens will begin to be transferred to the wallets of the participants of the completed Task in accordance with the vesting scheme when the lock period ends.
+Thus the tokens will begin to be transferred to the wallets of the members of the completed Task in accordance with the vesting scheme when the lock period ends.
 
 
 ### __Deletе Task__
@@ -1098,7 +1416,7 @@ And click to **Delete task**
 
 ![](../images/gosh_web_Task_delete_01.jpg)
 
-After creating a proposal about deleting a Task, you will be redirected to the event page **Dao**.
+After creating a proposal about deleting a Task, you will be redirected to the event tab **Dao**.
 
 ![](../images/gosh_web_Task_delete_02_event.jpg)
 
