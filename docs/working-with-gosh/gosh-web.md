@@ -302,7 +302,7 @@ Information about DAO assets is displayed on the right.
 * **Recent proposals**
 
 Information and status of the recent proposals will be displayed  in this section. 
-Click on the name of the proposal you can go to the event page and [vote](gosh-web.md#voting-in-smv-soft-majority-vote).
+Click on the name of the proposal you can go to the event page and [vote](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
 
 ![](../images/gosh_web_OVERVIEW_05_recent_proposals.jpg)
 
@@ -796,7 +796,7 @@ In the window that appears, enter the amount of tokens to emission and add a des
 
 ![](../images/gosh_web_OVERVIEW_mint_01_create_proposal.jpg)
 
-After creating the proposal, you will be redirected to the DAO tab with events.
+After creating the proposal, you will be redirected to the **DAO** tab with events.
 
 ![](../images/gosh_web_OVERVIEW_mint_02_event.jpg)
 
@@ -1191,7 +1191,10 @@ After scroll down and enter commit info:
 
 ![](../images/gosh_web_Create_file_03_commit_data.jpg)
 
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote) will be initiated.
+
+<!-- TODO
+If the branch is protect -->
 
 Commit status will be displayed below.
 
@@ -1213,7 +1216,61 @@ The branches will be compared. Review the changes, set up the pull request and c
 !!! info
     **Note**: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
 
-    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
+    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote) on.
+
+
+### __Add protection for a branch__
+
+
+If you want the changes to be added to the branch based on the voting results, then add protection to the branch.
+
+This can be done by creating an appropriate proposal.
+
+To do this, go from the **Repositories** tab to the repository you need.
+
+![](../images/gosh_web_Protect_branch_01_repos.jpg)
+
+Then, on the Branches tab, click the **Protect** button for the branch to which you want to add protection.
+
+![](../images/gosh_web_Protect_branch_02_branches.jpg)
+
+After creating the proposal, you will be redirected to the **DAO** page with events.
+
+![](../images/gosh_web_Protect_branch_03_events.jpg)
+
+Inside the event, you can get details of proposal.
+
+![](../images/gosh_web_Protect_branch_04_details_proposal.jpg)
+
+After the proposal is accepted the branch is marked as protected.  
+A commit can be made to it only by voting.
+
+![](../images/gosh_web_Protect_branch_05_branches_protect.jpg)
+
+### __Remove protection for a branch__
+
+If the branch no longer needs protection, you can remove it by initiating appropriate proposals.
+
+To do this, go from the **Repositories** tab to the repository you need.
+
+![](../images/gosh_web_Protect_branch_01_repos.jpg)
+
+Then, on the Branches tab, click the **Unprotect** button for the branch to which you want to add protection.
+
+![](../images/gosh_web_Protect_branch_remove_01_branches.jpg)
+
+A vote will be created and you will be redirected to the **DAO** page with events.
+
+![](../images/gosh_web_Protect_branch_remove_02_event.jpg)
+
+Inside the event, you can get details of proposal.
+
+![](../images/gosh_web_Protect_branch_remove_03_details_proposal.jpg)
+
+After accepting the proposal, the protection mark will be removed from the branch.  
+Now everyone can upload changes to the branch without voting.
+
+![](../images/gosh_web_Protect_branch_remove_04_branch_unprotect.jpg)
 
 
 
@@ -1277,7 +1334,7 @@ Add a comment the token distribution rules and click **Create task and start pro
 
 ![](../images/gosh_web_Task_06_comment.jpg)
 
-After creating the proposal, you will be taken to the DAO tab with events.
+After creating the proposal, you will be taken to the **DAO** tab with events.
 
 ![](../images/gosh_web_Task_07_event.jpg)
 
