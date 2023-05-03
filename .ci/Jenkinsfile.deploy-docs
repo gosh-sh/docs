@@ -29,7 +29,7 @@ pipeline {
                         if (status == 0) {
                             echo 'Bucket already exists! Just syncing.'
                             sh "aws s3 sync . s3://${BUCKET_NAME}"
-                            } if (env.CURRENT_BRANCH_NAME == "refs/heads/main") {
+                            if (env.CURRENT_BRANCH_NAME == "refs/heads/main") {
                                 sh "aws cloudfront create-invalidation --distribution-id E38B49XVCTNRVX --paths '/*'"
                             }
                         } else {
