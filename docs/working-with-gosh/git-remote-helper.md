@@ -14,9 +14,27 @@ If you have macOS or Linux, you can use this installation method.
 wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
 ```
 
-If you have Windows, you can use the installation methods below.
+[Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+
+
+### __Install helper using the installation package__
+
+
+If you have a Debian-based system, use the installation from the package:
+
+```
+wget https://github.com/gosh-sh/gosh/releases/download/4.1.20/git-remote-gosh-amd64.deb
+```
+
+then
+
+```
+sudo dpkg -i git-remote-gosh-amd64.deb
+```
 
 [Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+
+If you have Windows, you can use the installation methods below.
 
 
 ### __Install helper from binary releases__
