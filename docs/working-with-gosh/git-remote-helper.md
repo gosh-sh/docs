@@ -56,6 +56,13 @@ and download the version of the Git Remote Helper for the required operating sys
 
 ### __Install helper from source__
 
+!!! info
+    There are 3 sources from where you can get the code.
+    * Github 
+    * GOSH
+    * app.gosh.sh (visually)
+    Auditing any file in each of the source will help make sure that the code is secure.
+
 
 1. Prerequisites:
 
