@@ -478,11 +478,43 @@
 
 
 <h1 id="gosh-wallet">GOSH Wallet</h1>
-<p>The GOSH blockchain is a system of interconnected smart contracts. Every repository, every file, and commit are smart contracts, where data is written to the blockchain.</p>
+<p>The GOSH blockchain is a system of interconnected smart contracts. Every repository, every file and commit are smart contracts, where data is written to the blockchain.</p>
 <p>Writing data to the blockchain requires cryptographic signatures and fees.</p>
-<p>For this reason every GOSH user needs to have a wallet and a pair of cryptographic keys.</p>
-<p>GOSH wallets are specially written to facilitate open-source development - following certain rules  the GOSH blockchain giver will fund all actions in an open-source repository, and development will be free.</p>
-<p>Refer to <a href="../../working-with-gosh/gosh-web/">GOSH Web</a> or <a href="../../working-with-gosh/docker-extension/">Docker Extension</a> sections to find out how to create your wallet and get started with GOSH, depending on where you're coming to GOSH from.</p>
+<p>For this reason every GOSH user needs to have a wallet and a pair of cryptographic keys. </p>
+<p>Every operation on GOSH is carried out by user wallets.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>GOSH wallets are written with the express purpose of facilitating open-source development.</p>
+<p>Fees on GOSH are not paid to Validators but are instead transferred to the Free Software Giver — Which funds the GOSH Free Service Area  — these fees are used to replenish the Special User Wallet contracts to automatically pay for gas fees of other contracts in the Free Service Area.</p>
+<p>These contracts can only transfer tokens between other contracts within the Area and are not transferable outside, meaning they are pure Utility Tokens. These tokens are SHELL coins, here used as a Unit of Account for Payment Gateways.</p>
+<p><strong>So in effect this means any developer can use the GOSH blockchain for free, without paying any gas, and sell their services using Fiat Payment Gateways without a need to KYC/AML.</strong> This payment Gateway is built into GOSH.</p>
+</div>
+<p>There are two types of wallets GOSH users can deploy:</p>
+<ul>
+<li>
+<p><strong>A DAO Member Wallet</strong>, which is deployed to a GOSH user after they become a member of a DAO. This wallet stores both voting and non-voting tokens</p>
+</li>
+<li>
+<p><strong>A Limited Wallet</strong> (for non-DAO members), which is deployed to a GOSH user when they view any DAO or if non-voting tokens of any DAO were transferred to them.</p>
+<p>A user with a Limited Wallet in the DAO can:</p>
+<ul>
+<li>
+<p><a href="../../working-with-gosh/gosh-web/#request-dao-membership">create a proposal to add yourself to the DAO</a> (if it <a href="../../working-with-gosh/gosh-web/#dao-set-up">is allowed in the dao</a>);</p>
+</li>
+<li>
+<p>can be assigned as a reviewer to the <a href="../../working-with-gosh/gosh-web/#working-with-task">Task</a>;</p>
+</li>
+<li>
+<p>can create a proposal on PR (coming soon).</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For a DAO member, not one wallet is deployed, but a whole system of 64 wallet contracts. This allows for parallelization when sending external messages.</p>
+</div>
+<p>Refer to <a href="../../working-with-gosh/gosh-web/">GOSH Web</a> or <a href="../../working-with-gosh/docker-extension/">Docker Extension</a> sections to find out how to create your account and get started with GOSH.</p>
 
 
 
