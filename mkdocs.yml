@@ -15,6 +15,7 @@ nav:
       # - Settings: empty.md
     - Docker Extension: working-with-gosh/docker-extension.md
     - Git Remote Helper: working-with-gosh/git-remote-helper.md
+    - Anytree: working-with-gosh/anytree.md
     #- Build and Sign Images: working-with-gosh/build-and-sign-images.md
     #- Verify Images in Docker Extension: working-with-gosh/verify-images-in-docker-extension.md
   - Links: links.md
