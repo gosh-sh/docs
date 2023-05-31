@@ -19,7 +19,7 @@
     
     
       
-        <title>Anytree - GOSH</title>
+        <title>AnyTree - GOSH</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Anytree
+              AnyTree
             
           </span>
         </div>
@@ -428,12 +428,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Anytree
+          AnyTree
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Anytree
+        AnyTree
       </a>
       
         
@@ -459,9 +459,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-start-for-linux" class="md-nav__link">
-    Quick start for Linux
+  <a href="#quick-start" class="md-nav__link">
+    Quick start
   </a>
+  
+    <nav class="md-nav" aria-label="Quick start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-linux" class="md-nav__link">
+    for Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -496,6 +509,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-a-gosh-account" class="md-nav__link">
+    Setup a GOSH account
+  </a>
   
 </li>
       
@@ -597,9 +617,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-start-for-linux" class="md-nav__link">
-    Quick start for Linux
+  <a href="#quick-start" class="md-nav__link">
+    Quick start
   </a>
+  
+    <nav class="md-nav" aria-label="Quick start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-linux" class="md-nav__link">
+    for Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -634,6 +667,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-a-gosh-account" class="md-nav__link">
+    Setup a GOSH account
+  </a>
   
 </li>
       
@@ -696,33 +736,35 @@ It then uses <strong>GOSH Build</strong> to safely build reproducible containers
 <p>On AnyTree, whatever apps developers distribute or use, are delivered exactly as they are supposed to be — what code developers didn’t write is never included.</p>
 <p>AnyTree Packages can be downloaded from Docker Hub, GOSH Docker Desktop Extension.</p>
 <p>AnyTree utilizes standard Docker Containers secured by GOSH Builder and is currently available as Beta on Linux and is coming soon to Windows and macOS.</p>
-<h2 id="quick-start-for-linux"><strong>Quick start for Linux</strong></h2>
-<ol>
-<li>Install <a href="working-with-gosh.md#git-remote-helper"><strong>Git Remote Helper</strong></a> using the installation script</li>
-</ol>
+<h2 id="quick-start"><strong>Quick start</strong></h2>
+<h3 id="for-linux"><strong>for Linux</strong></h3>
+<p>1.<strong>Install <a href="../git-remote-helper/#install-helper-using-the-installation-script"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
 <pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
 </code></pre>
-<ol>
-<li>Install <strong>AnyTree</strong> using the installation script</li>
-</ol>
+<p><a href="../git-remote-helper/#verifying-the-installation-result">Checking</a> the installation results.</p>
+<p>2.<strong>Install </strong>AnyTree<strong> using the installation script</strong></p>
 <pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
 </code></pre>
-<ol>
-<li>Setup a GOSH account</li>
-</ol>
+<p>You can check installation by running:</p>
+<pre><code>which gosh
+</code></pre>
+<p>3.<strong>Setup a GOSH account</strong></p>
+<p>Go to GOSH-repository (<code>Dockerfile</code> should exists)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you haven't GOSH-repository then  go to <a href="https://app.gosh.sh/">GOSH Web</a> and <a href="../gosh-web/#create-repository">create it</a></p>
+</div>
+<p>and run:</p>
 <pre><code>gosh init
 </code></pre>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>As a result of the onboarding process, a Gosh.yaml file is created</p>
-</div>
-<ol>
-<li>Set the desired image</li>
-</ol>
-<pre><code>gosh install ......
+<p>As a result of the onboarding process, a Gosh.yaml file will be created</p>
+<p>4.<strong>Now you are ready to build an image</strong></p>
+<pre><code>gosh build
 </code></pre>
+<p>As a result of execution, the hash of the created docker image will be returned and the SBOM-file (<a href="https://cyclonedx.org/specification/overview/">sbom.spdx.json</a>) will be generated. </p>
+<p>The developer can put the generated SBOM-file in his repository for further verification.</p>
 <h2 id="installation"><strong>Installation</strong></h2>
-<p>Before installing AnyTree, you must already have the <a href="working-with-gosh.md#git-remote-helper"><strong>Git Remote Helper</strong></a> installed.</p>
+<p>Before installing AnyTree, you must already have the <a href="../git-remote-helper/"><strong>Git Remote Helper</strong></a> installed.</p>
 <p>If you have Linux, you can use these installation methods.</p>
 <h3 id="install-anytree-using-the-installation-script"><strong>Install AnyTree using the installation script</strong></h3>
 <pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
@@ -730,18 +772,17 @@ It then uses <strong>GOSH Build</strong> to safely build reproducible containers
 <h3 id="install-anytree-from-binary-releases"><strong>Install AnyTree from binary releases</strong></h3>
 <ol>
 <li>
-<p>Follow the <a href="github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.0">link</a> and download the GOSH for the required operating system.</p>
+<p>Follow the <a href="https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.0">link</a> and download the GOSH for the required operating system.</p>
 </li>
 <li>
-<p>Extract files from tar-file
+<p>Extract files from tar-file<br />
 (e.g. for Linux x64):</p>
 </li>
 </ol>
 <pre><code>tar xzvf gosh-linux-amd64.tar.gz
 </code></pre>
-<ol>
-<li>Move binary files to any searchable path</li>
-</ol>
+<p>3.Move binary files to any searchable path<br />
+e.g.:</p>
 <pre><code>sudo mv gosh /usr/local/bin
 </code></pre>
 <h3 id="install-anytree-from-source"><strong>Install AnyTree from source</strong></h3>
@@ -761,38 +802,58 @@ It then uses <strong>GOSH Build</strong> to safely build reproducible containers
 <p>Clone <a href="https://github.com/gosh-sh/gosh-build-tools.git">gosh-build-tools</a> repository</p>
 </li>
 <li>
-<p>Go to the gosh-build-tools directory</p>
+<p>Go to the <code>gosh-build-tools</code> directory</p>
 </li>
 </ol>
 <pre><code>cd gosh-build-tools &amp;&amp; make install
 </code></pre>
-<p>Then you need to go through the onboarding process on GOSH using:</p>
-<pre><code>- the [web](https://app.gosh.sh/onboarding)
-</code></pre>
-<p>or
-    - </p>
+<h2 id="setup-a-gosh-account"><strong>Setup a GOSH account</strong></h2>
+<p>Go to GOSH-repository (<code>Dockerfile</code> should exists)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you haven't GOSH-repository then go to <a href="https://app.gosh.sh/">GOSH Web</a> and <a href="../gosh-web/#create-repository">create it</a></p>
+</div>
+<p>and then run:</p>
 <pre><code>gosh init
 </code></pre>
-<!-- Log in to your GOSH account or create a [new one](working-with-gosh/gosh-web.md#create-account) -->
+<p>As a result of the onboarding process, a Gosh.yaml file will be created.</p>
+<!-- 
+Then you need to go through the onboarding process on GOSH using:
+
+the [web](https://app.gosh.sh/onboarding)
+
+or
+
+
+<pre><code>gosh init
+</code></pre>
+
+ -->
+
+<!-- Log in to your GOSH account or create a [new one](gosh-web.md#create-account) -->
 
 <h2 id="working-with-anytree"><strong>Working with AnyTree</strong></h2>
+<p>Prerequisites:</p>
+<ul>
+<li>Docker</li>
+</ul>
 <h3 id="install-image"><strong>Install image</strong></h3>
 <p>(WIP)</p>
 <h3 id="build-image"><strong>Build image</strong></h3>
-<p>Gosh build builds the docker container and works with the SBOM file (creation and validation).</p>
-<p>gosh build can work in 2 modes:</p>
+<p>AnyTree builds the Docker-container and works with the SBOM-file (creation and validation).</p>
+<p>Gosh build can work in 2 modes:</p>
 <ul>
-<li><strong>with a local codebase</strong></li>
+<li><strong>with a local code base</strong></li>
 </ul>
-<p>It is also possible to work in 2 modes: building a Docker image with the generation of an SBOM file and building an image with subsequent validation (option --validate) using an existing SBOM file.</p>
+<p>It is also possible to work in 2 modes: building a Docker image with the generation of an SBOM-file and building an image with subsequent validation (option <code>--validate</code>) using an existing SBOM-file.</p>
 <ul>
 <li><strong>with a repository on GOSH</strong></li>
 </ul>
-<p>Then, at the end of the build, mandatory validation is performed using the SBOM file from the repository.</p>
-<p>The main task is to check that the result of the builder's work corresponds to the SBOM file recorded on the blockchain.</p>
+<p>At the end of the build, mandatory validation is performed using the SBOM-file from the repository.</p>
+<p>The main point is to check that the result of the builder's work corresponds to the SBOM-file stored on the blockchain.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For more information about the <a href="">options</a>, see the Help section:</p>
+<p>For more information about the <a href="./#options">options</a>, see the Help section:</p>
 <p><code>gosh build --help</code></p>
 </div>
 <p>Before starting, you need to set docker's context in to default:</p>
@@ -801,22 +862,22 @@ It then uses <strong>GOSH Build</strong> to safely build reproducible containers
 <p>To work with the local code base, run:</p>
 <pre><code>gosh build
 </code></pre>
-<p>To work with the repository on GOSH, enter its address (a specific folder/file/comit):</p>
+<p>To work with the repository on GOSH, enter its address :</p>
+<!-- 
+(a specific folder/file/comit) -->
+
 <pre><code>gosh build [gosh://0:...]
 </code></pre>
-<p>As a result of execution, the hash of the created docker image will be returned and the SBOM file (sbom.spdx.json) will be generated</p>
-<!-- TODO
-scrinshot -->
-
+<p>As a result of execution, the hash of the created docker image will be returned and the SBOM-file (<a href="https://cyclonedx.org/specification/overview/">sbom.spdx.json</a>) will be generated.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>the developer can put the generated specification in his repository for further verification.</p>
+<p>The developer can put the generated specification in his repository for further verification.</p>
 </div>
 <h3 id="options"><strong>Options</strong></h3>
 <p>Suppress output - outputs only the resulting hash of the image or an error</p>
 <pre><code>-q, --quiet
 </code></pre>
-<p>Validate the result image - start checking the correctness of the built image (comparison of SBOM files)</p>
+<p>Validate the result image - start checking the correctness of the built image (comparison of SBOM-files)</p>
 <pre><code>--validate
 </code></pre>
 <p>Socket address for the SBOM proxy server [default: 127.0.0.1:6054]</p>
@@ -828,7 +889,7 @@ scrinshot -->
 <p>Print help</p>
 <pre><code>-h, --help
 </code></pre>
-<!-- ## __Examples__
+<!-- ## **Examples**
 
 
 

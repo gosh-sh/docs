@@ -14,7 +14,7 @@ If you have macOS or Linux, you can use this installation method.
 wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
 ```
 
-[Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+[Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
 
 ### __Install helper using the installation package__
@@ -32,7 +32,7 @@ then
 sudo dpkg -i git-remote-gosh-amd64.deb
 ```
 
-[Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+[Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
 If you have Windows, you can use the installation methods below.
 
@@ -69,7 +69,7 @@ and download the version of the Git Remote Helper for the required operating sys
     mkdir ~/.gosh || mv dispatcher.ini ~/.gosh/
     ```
 
-[Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+[Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
 
 ### __Install helper from source__
@@ -176,7 +176,7 @@ If the Git Remote Helper is not available, then add path with `git-remote-gosh`
 for availability via `$PATH`:
 
 ```
-export PATH="~/.cargo/bin:$PATH"
+export PATH=~/.gosh:$PATH
 ```
 
 
