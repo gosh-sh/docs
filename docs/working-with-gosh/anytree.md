@@ -417,6 +417,5 @@ Rest assured, we are committed to promptly resolving this issue. Our dedicated t
 
 ### __Contact us__
 
-In case of any issues, or to receive assistance when working with AnyTree please contact help@gosh.sh
 If you have any questions or issues using GOSH AnyTree, please email us at [help@gosh.sh](mailto:help@gosh.sh)
 
