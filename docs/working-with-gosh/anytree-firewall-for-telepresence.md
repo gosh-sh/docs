@@ -6,7 +6,7 @@
 
 
 
-The GOSH AnyTree Firewall integration with [**Telepresence**](https://www.getambassador.io/docs/telepresence) is designed to make sure everything developed with Telepresence for Docker will be identically reproduced with every build, regardless of other changes made in the development process. The integration tool provides an additional security measure, so  developers can build software faster and with confidence.
+The GOSH AnyTree Firewall integration with [**Telepresence**](https://www.getambassador.io/products/telepresence) is designed to make sure everything developed with Telepresence for Docker will be identically reproduced with every build, regardless of other changes made in the development process. The integration tool provides an additional security measure, so  developers can build software faster and with confidence.
 
 Part of the GOSH AnyTree Firewall is the ‘Deep SBOM’ -  a tool describing not only what, but also how something was built, and uses [**GOSH Anytree Builder**](anytree.md#quick-start-gosh-anytree-builder) to safely build reproducible containers in an isolated environment.
 
