@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -598,27 +600,45 @@
 <p>GOSH AnyTree Firewall is currently in Beta testing stages on Linux only, but will be available on other platforms and Docker Desktop in the near future.</p>
 <h2 id="quick-start"><strong>Quick start</strong></h2>
 <h3 id="for-linux"><strong>for Linux</strong></h3>
-<p>1.<strong>Install <a href="../git-remote-helper/#installation"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
-</code></pre>
+<ol>
+<li>
+<p><strong>Install <a href="../git-remote-helper/#installation"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-s
+</span></code></pre></div>
 <p><a href="../git-remote-helper/#verifying-the-installation-result">Checking</a> the installation results.</p>
-<p>2.<strong>Install <a href="../anytree/#installation"><strong>GOSH AnyTree</strong></a> using the installation script</strong></p>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-</code></pre>
+</li>
+<li>
+<p><strong>Install <a href="../anytree/#installation"><strong>GOSH AnyTree</strong></a> using the installation script</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-s
+</span></code></pre></div>
 <p>You can check installation by running:</p>
-<pre><code>gosh anytree --help
-</code></pre>
-<p>3.<strong>Install <a href="https://kubernetes.io">Kubernetes</a> with <a href="https://www.getambassador.io/docs/telepresence/latest/quick-start">Telepresence the Traffic Manager</a></strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>--help
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Install <a href="https://kubernetes.io">Kubernetes</a> with <a href="https://www.getambassador.io/docs/telepresence/latest/quick-start">Telepresence the Traffic Manager</a></strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>We need to return docker's context to default.</p>
-<p><code>docker context use default</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker context use default
+</span></code></pre></div>
 <p>To see all available docker's contexts type:</p>
-<p><code>docker context list</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker context list
+</span></code></pre></div>
 </div>
-<p>4.<strong>Start Telepresence with AnyTree Firewall</strong></p>
-<pre><code>telepresence intercept [OPTIONS] --docker-build gosh://0:0d5c0.....8e92c/&lt;your_dao&gt;/&lt;your_repo&gt;#&lt;git_hash or git_branch or git_tag&gt; &lt;k8s pod name&gt;
-</code></pre>
+</li>
+<li>
+<p><strong>Start Telepresence with AnyTree Firewall</strong></p>
+<div class="language-sh no-copy highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>telepresence<span class="w"> </span>intercept<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>--docker-build<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span>gosh://0:0d5...e92c/&lt;your_dao&gt;/&lt;your_repo&gt;#&lt;commit_or_branch_or_tag&gt;<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span>&lt;k8s_pod_name&gt;
+</span></code></pre></div>
+</li>
+</ol>
 
 
 
@@ -656,7 +676,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
