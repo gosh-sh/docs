@@ -20,44 +20,50 @@ GOSH AnyTree Firewall is currently in Beta testing stages on Linux only, but wil
 ###  __for Linux__
 
 
-1.**Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
+1. **Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+      https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh \
+      | bash -s
+    ```
 
-[Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
+    [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
-2.**Install [**GOSH AnyTree**](anytree.md#installation) using the installation script**
+2. **Install [**GOSH AnyTree**](anytree.md#installation) using the installation script**
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+      https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
+      | bash -s
+    ```
 
-You can check installation by running:
+    You can check installation by running:
 
-```
-gosh anytree --help
-```
+    ``` sh
+    gosh anytree --help
+    ```
 
-3.**Install [Kubernetes](https://kubernetes.io) with [Telepresence the Traffic Manager](https://www.getambassador.io/docs/telepresence/latest/quick-start)**
+3. **Install [Kubernetes](https://kubernetes.io) with [Telepresence the Traffic Manager](https://www.getambassador.io/docs/telepresence/latest/quick-start)**
 
 
-!!! Warning
-      We need to return docker's context to default.
+    !!! Warning
+        We need to return docker's context to default.
 
-      ```
-      docker context use default
-      ```
+        ```
+        docker context use default
+        ```
 
-      To see all available docker's contexts type:
+        To see all available docker's contexts type:
 
-      ```
-      docker context list
-      ```
+        ```
+        docker context list
+        ```
 
-4.**Start Telepresence with AnyTree Firewall**
+4. **Start Telepresence with AnyTree Firewall**
 
-```
-telepresence intercept [OPTIONS] --docker-build gosh://0:0d5c0.....8e92c/<your_dao>/<your_repo>#<git_hash or git_branch or git_tag> <k8s pod name>
-```
+    ``` {.sh .no-copy}
+    telepresence intercept [OPTIONS] --docker-build \
+      gosh://0:0d5...e92c/<your_dao>/<your_repo>#<commit_or_branch_or_tag> \
+      <k8s_pod_name>
+    ```

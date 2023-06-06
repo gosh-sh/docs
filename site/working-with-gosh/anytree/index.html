@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -892,17 +894,27 @@ It then uses <strong>GOSH AnyTree Builder</strong> to safely build reproducible 
 <h2 id="quick-start"><strong>Quick start</strong></h2>
 <h3 id="gosh-anytree-builder"><strong>GOSH AnyTree Builder</strong></h3>
 <h4 id="for-linux"><strong>for Linux</strong></h4>
-<p>1.<strong>Install <a href="../git-remote-helper/#installation"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
-</code></pre>
+<ol>
+<li>
+<p><strong>Install <a href="../git-remote-helper/#installation"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-s
+</span></code></pre></div>
 <p><a href="../git-remote-helper/#verifying-the-installation-result">Checking</a> the installation results.</p>
-<p>2.<strong>Install <a href="./#installation"><strong>GOSH AnyTree</strong></a> using the installation script</strong></p>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-</code></pre>
+</li>
+<li>
+<p><strong>Install <a href="./#installation"><strong>GOSH AnyTree</strong></a> using the installation script</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-s
+</span></code></pre></div>
 <p>You can check installation by running:</p>
-<pre><code>gosh anytree --help
-</code></pre>
-<p>3.<strong>Setup a GOSH project</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>--help
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Setup a GOSH project</strong></p>
 <p>You need a GOSH repository.<br />
 If you haven't used a GOSH-repository you can upload your github-repository to GOSH through <a href="https://app.gosh.sh/onboarding">onboarding</a> or create a <a href="https://app.gosh.sh/">GOSH-account</a> and <a href="../gosh-web/#create-repository">create a new one</a>.</p>
 <p>Go to your GOSH-repository</p>
@@ -911,20 +923,20 @@ If you haven't used a GOSH-repository you can upload your github-repository to G
 <p>There should already exist a working <code>Dockerfile</code> in it.</p>
 </div>
 <p>and run:</p>
-<pre><code>gosh init
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gosh<span class="w"> </span>init
+</span></code></pre></div>
 <p>As a result of the onboarding process a <code>Gosh.yaml</code> file will be created.</p>
-<pre><code>$ cat Gosh.yaml
----
-dockerfile:
-  path: Dockerfile
-tag: your-image-tag
-
-</code></pre>
-<p>4.<strong>Now you are ready to build an image</strong></p>
-<p>Run:</p>
-<pre><code>gosh anytree build
-</code></pre>
+<div class="language-yaml highlight"><span class="filename">Gosh.yaml</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nn">---</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">dockerfile</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your-image-tag</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Now you are ready to build an image</strong></p>
+<p>Run:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>build
+</span></code></pre></div></p>
 <p>As a result of execution, the hash of the created docker image will be returned and the SBOM-file <code>sbom.spdx.json</code> will be generated. </p>
 <p>The SBOM-file follows <a href="https://cyclonedx.org/specification/overview/">CycloneDX object model</a>.</p>
 <p>The developer can put the generated SBOM-file in his repository for further verification.</p>
@@ -932,42 +944,70 @@ tag: your-image-tag
 <p class="admonition-title">Tip</p>
 <p>Place the SBOM-file in the same folder where <code>GOSH.yaml</code> is located.</p>
 </div>
+</li>
+</ol>
 <h3 id="gosh-anytree-installer"><strong>GOSH AnyTree Installer</strong></h3>
 <h4 id="for-linux_1"><strong>for Linux</strong></h4>
-<p>1.<strong>Install <a href="../git-remote-helper/#install-helper-using-the-installation-script"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
-</code></pre>
+<ol>
+<li>
+<p><strong>Install <a href="../git-remote-helper/#install-helper-using-the-installation-script"><strong>Git Remote Helper</strong></a> using the installation script</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-s
+</span></code></pre></div>
 <p><a href="../git-remote-helper/#verifying-the-installation-result">Checking</a> the installation results.</p>
-<p>2.<strong>Install </strong>GOSH AnyTree<strong> using the installation script</strong></p>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-</code></pre>
+</li>
+<li>
+<p><strong>Install </strong>GOSH AnyTree<strong> using the installation script</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>wget<span class="w"> </span>-O<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">|</span><span class="w"> </span>bash<span class="w"> </span>-s
+</span></code></pre></div>
 <p>You can check installation by running:</p>
-<pre><code>gosh anytree --help
-</code></pre>
-<p>3.<strong>Using GOSH AnyTree Installer</strong></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>--help
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Using GOSH AnyTree Installer</strong></p>
 <p>Specify the address of the repository from which you want to perform the installation:</p>
-<pre><code>gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>gosh://0:1fa4...4af1/example_dao/example_repo_name
+</span></code></pre></div>
 <p>or you can specify a commit or branch (else there will be a default branch):</p>
-<pre><code>gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+</span></code></pre></div>
 <p>The result of the execution will be what is described in your Dockerfile.</p>
+</li>
+</ol>
 <h2 id="installation"><strong>Installation</strong></h2>
 <p>Before installing AnyTree, you must already have the <a href="../git-remote-helper/"><strong>Git Remote Helper</strong></a> installed.</p>
 <p>If you have Linux you can use these installation methods:</p>
 <h3 id="install-anytree-using-the-installation-script"><strong>Install AnyTree using the installation script</strong></h3>
-<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code>``` sh
+wget -O - \
+https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
+| bash -s
+```
+</code></pre></div>
 <h3 id="install-anytree-from-binary-releases"><strong>Install AnyTree from binary releases</strong></h3>
-<p>1.Follow the <a href="https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1">link</a> and download GOSH for the required operating system.</p>
-<p>2.Extract files from tar-file<br />
-for example, for Linux x64, run:</p>
-<pre><code>tar xzvf gosh-linux-amd64.tar.gz
-</code></pre>
-<p>3.Move binary files to any searchable path<br />
-for example:</p>
-<pre><code>sudo mv gosh /usr/local/bin
-</code></pre>
+<ol>
+<li>
+<p>Follow the <a href="https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1">link</a> and download GOSH AnyTree for the required operating system.</p>
+</li>
+<li>
+<p>Extract files from tar-file</p>
+<p>for example, for Linux x64, run:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>tar<span class="w"> </span>xzvf<span class="w"> </span>gosh-linux-amd64.tar.gz
+</span></code></pre></div>
+</li>
+<li>
+<p>Move binary files to any searchable path<br />
+    for example:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>sudo<span class="w"> </span>mv<span class="w"> </span>gosh<span class="w"> </span>/usr/local/bin
+</span></code></pre></div>
+</li>
+</ol>
 <h3 id="install-anytree-from-source"><strong>Install AnyTree from source</strong></h3>
 <ol>
 <li>
@@ -984,10 +1024,10 @@ for example:</p>
 </li>
 <li>
 <p>Go to the <code>gosh-build-tools</code> directory</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nb">cd</span><span class="w"> </span>gosh-build-tools<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+</span></code></pre></div>
 </li>
 </ol>
-<pre><code>cd gosh-build-tools &amp;&amp; make install
-</code></pre>
 <h2 id="setup-a-gosh-project"><strong>Setup a GOSH project</strong></h2>
 <p>You need a GOSH repository.<br />
 If you haven't used a GOSH-repository you can upload your github-repository to GOSH through <a href="https://app.gosh.sh/onboarding">onboarding</a> or create a <a href="https://app.gosh.sh/">GOSH-account</a> and <a href="../gosh-web/#create-repository">create a new one</a>.</p>
@@ -997,31 +1037,14 @@ If you haven't used a GOSH-repository you can upload your github-repository to G
 <p>There should already exist a working <code>Dockerfile</code> in it.</p>
 </div>
 <p>and run:</p>
-<pre><code>gosh init
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>gosh<span class="w"> </span>init
+</span></code></pre></div>
 <p>As a result of the onboarding process a <code>Gosh.yaml</code> file will be created.</p>
-<pre><code>$ cat Gosh.yaml
----
-dockerfile:
-  path: Dockerfile
-tag: your-image-tag
-
-</code></pre>
-<!-- 
-Then you need to go through the onboarding process on GOSH using:
-
-the [web](https://app.gosh.sh/onboarding)
-
-or
-
-
-<pre><code>gosh init
-</code></pre>
-
- -->
-
-<!-- Log in to your GOSH account or create a [new one](gosh-web.md#create-account) -->
-
+<div class="language-yaml highlight"><span class="filename">Gosh.yaml</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nn">---</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nt">dockerfile</span><span class="p">:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your-image-tag</span>
+</span></code></pre></div>
 <h2 id="working-with-anytree"><strong>Working with AnyTree</strong></h2>
 <p>Prerequisites:</p>
 <ul>
@@ -1029,16 +1052,20 @@ or
 </ul>
 <h3 id="install-image"><strong>Install image</strong></h3>
 <p>Specify the address of the repository from which you want to perform the installation:</p>
-<pre><code>gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w">  </span>gosh://0:1fa4...4af1/example_dao/example_repo_name
+</span></code></pre></div>
 <p>or you can specify a commit or branch (else there will be a default branch):</p>
-<pre><code>gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-</code></pre>
-<p>The result of the execution will be what is described in your Dockerfile.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span>gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+</span></code></pre></div>
+<p>During the installation process, the SBOM-file will be checked.</p>
+<p>And as a result of the installation, an artifact will appear that will be installed on your computer.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information about the <a href="./#install"><code>install</code> options</a>, see the Help section:</p>
-<p><code>gosh anytree install --help</code></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>install<span class="w"> </span>--help
+</span></code></pre></div>
 </div>
 <!-- 
 TODO 
@@ -1048,23 +1075,24 @@ for example install AnyTree for using Telepresence
 <h3 id="build-image"><strong>Build image</strong></h3>
 <p>AnyTree builds the Docker-image and works with the SBOM-file (creation and validation).</p>
 <p>Before starting set docker's context to default:</p>
-<pre><code>docker context use default
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>docker<span class="w"> </span>context<span class="w"> </span>use<span class="w"> </span>default
+</span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For more information about the <a href="./#build"><code>build</code> options</a>, see the Help section:</p>
-<p><code>gosh anytree build --help</code></p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>build<span class="w"> </span>--help
+</span></code></pre></div>
 </div>
 <p><u>GOSH AnyTree Builder can work in 2 modes: </u></p>
 <ul>
 <li><strong>with a local code base</strong></li>
 </ul>
 <p>To work with the local code base, run:</p>
-<pre><code>gosh anytree build [options]
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>build<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</span></code></pre></div>
 <p>After making changes to the codebase, you can check the correctness of the SBOM-file by running:</p>
-<pre><code>gosh anytree build --validate
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>build<span class="w"> </span>--validate
+</span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Instead of creating an SBOM-file, a check will be run to make sure that the new SBOM-file matches the last generated file.</p>
@@ -1075,11 +1103,13 @@ for example install AnyTree for using Telepresence
 <p>At the end of the build, mandatory validation is performed using the SBOM-file from the repository.</p>
 <p>The main point is to check that the result of the builder's work corresponds to the SBOM-file stored on the blockchain.</p>
 <p>To work with the repository on GOSH, specify its address:</p>
-<pre><code>gosh anytree build [options] gosh://0:1fa4...4af1/example_dao/example_repo_name
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>build<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span>gosh://0:1fa4...4af1/example_dao/example_repo_name
+</span></code></pre></div>
 <p>or you can specify a commit or branch (else there will be a default branch):</p>
-<pre><code>gosh anytree build [options] gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>gosh<span class="w"> </span>anytree<span class="w"> </span>build<span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">  </span>gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+</span></code></pre></div>
 <p>As a result of execution, the hash of the created docker image will be returned and the SBOM-file (<a href="https://cyclonedx.org/specification/overview/"><code>sbom.spdx.json</code></a>) will be generated.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1088,30 +1118,33 @@ for example install AnyTree for using Telepresence
 <h3 id="options"><strong>Options</strong></h3>
 <h4 id="install"><strong>install</strong></h4>
 <p>Socket address for the SBOM proxy server [default: 127.0.0.1:6054]</p>
-<pre><code>-s, --socket &lt;IP:PORT&gt;
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>-s,<span class="w"> </span>--socket<span class="w"> </span>&lt;IP:PORT&gt;
+</span></code></pre></div>
 <p>Config path (in case of GOSH url context it should be relative to the root) [default: <code>Gosh.yaml</code>]</p>
-<pre><code>-c, --config &lt;PATH&gt;
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>-c,<span class="w"> </span>--config<span class="w"> </span>&lt;PATH&gt;
+</span></code></pre></div>
 <p>Print help</p>
-<pre><code>-h, --help
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>-h,<span class="w"> </span>--help
+</span></code></pre></div>
 <h4 id="build"><strong>build</strong></h4>
 <p>Suppress output - outputs only the resulting hash of the image or an error</p>
-<pre><code>-q, --quiet
-</code></pre>
-<p>Validate the result image - start checking the correctness of the built image (comparison of SBOM-files)</p>
-<pre><code>--validate
-</code></pre>
-<p>Socket address for the SBOM proxy server [default: 127.0.0.1:6054]</p>
-<pre><code>-s, --socket &lt;IP:PORT&gt;
-</code></pre>
-<p>Config path (in case of GOSH url context it should be relative to the root) [default: <code>Gosh.yaml</code>]</p>
-<pre><code>-c, --config &lt;PATH&gt;
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>-q,<span class="w"> </span>--quiet
+</span></code></pre></div>
+<p>Validate the result image - start checking the correctness of the built image<br />
+(comparison of SBOM-files)</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>--validate
+</span></code></pre></div>
+<p>Socket address for the SBOM proxy server<br />
+[default: 127.0.0.1:6054]</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>-s,<span class="w"> </span>--socket<span class="w"> </span>&lt;IP:PORT&gt;
+</span></code></pre></div>
+<p>Config path (in case of GOSH url context it should be relative to the root)<br />
+[default: <code>Gosh.yaml</code>]</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>-c,<span class="w"> </span>--config<span class="w"> </span>&lt;PATH&gt;
+</span></code></pre></div>
 <p>Print help</p>
-<pre><code>-h, --help
-</code></pre>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>-h,<span class="w"> </span>--help
+</span></code></pre></div>
 <h3 id="known-issues"><strong>Known issues</strong></h3>
 <p>We would like to bring to your attention a memory limitation concern that has been identified when working with large repositories. Under certain circumstances, you might encounter memory depletion issues which could potentially affect your work efficiency and system performance. We deeply apologize for any inconvenience this may cause.</p>
 <p>Rest assured, we are committed to promptly resolving this issue. Our dedicated team of developers has already initiated efforts to address this, with an anticipated resolution targeted within the next two weeks. We appreciate your patience and understanding as we continue to enhance and streamline our services.</p>
@@ -1154,7 +1187,7 @@ for example install AnyTree for using Telepresence
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
