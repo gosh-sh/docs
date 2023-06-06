@@ -1290,6 +1290,48 @@ Now everyone can upload changes to the branch without voting.
 ![](../images/gosh_web_Protect_branch_remove_04_branch_unprotect.jpg)
 
 
+### __Adding comments to file__
+
+You can add a comment to any line in the file.
+
+!!! info
+    Comments are linked to a specific comment.
+
+
+To do this, open the file and hover over a line or block of lines and click on the blue icon that appears on the left.
+
+In the window that opens, enter your comment and click on the blue circle with an arrow to send it.
+
+![](../images/gosh_web_Comments_01.jpg)
+
+The comment line will be marked with a red icon on the left.
+
+![](../images/gosh_web_Comments_02.jpg)
+
+A thread of comments and replies to them will open on the right.
+
+![](../images/gosh_web_Comments_03.jpg)
+
+The discussion can be resolved. To do this, click the appropriate button:
+
+![](../images/gosh_web_Comments_04_resolve.jpg)
+
+!!! info
+    The discussion can be resumed if a new comment has been added to it.
+
+Up to 3 discussions can be expanded in one line.
+You can switch between them.
+
+![](../images/gosh_web_Comments_05_more_comments.jpg)
+
+
+### __Adding comments to Pull Request__
+
+You can also add comments to Pull Request.
+To do this, go from the **DAO** events page to the **Pull Request** vote in the **Pull request diff** section.
+you can leave comments on any line or block of lines in the same way as in [commenting on a file](gosh-web.md#adding-comments-to-file).
+
+![](../images/gosh_web_Comments_06_for_PR.jpg)
 
 ## __Working with Task__
 
