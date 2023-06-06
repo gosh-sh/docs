@@ -9,9 +9,11 @@
 **AnyTree** — the first software deployment system secured by the blockchain.
 
 
-<!-- AnyTree has 2 subcommands: -->
+AnyTree has 2 subcommands:
 
-Read about [GOSH AnyTree Builder](anytree.md#quick-start-anytree-builder) and [GOSH AnyTree Installer](anytree.md#quick-start-anytree-installer)
+* [build](anytree.md#gosh-anytree-builder)
+* [install](anytree.md#gosh-anytree-installer)
+
 
 Software distributed through AnyTree is secured at the source, with all its dependencies, build and compiler environments, built in isolation and cryptographically signed and timestamped, and based on **Deep SBOM** technology pioneered by GOSH.
 
@@ -20,24 +22,24 @@ It then uses **GOSH AnyTree Builder** to safely build reproducible containers in
 
 On AnyTree, whatever apps developers distribute or use, are delivered exactly as they are supposed to be — what code developers didn’t write is never included.
 
-AnyTree secures the delivery of any package you use today. AnyTree works with almost any package manager, (including NPM, MAVEN,... ) user or server applications.
+AnyTree secures the delivery of any package you use today. AnyTree works with almost any package manager, user or server applications (including PIP, NPM, Brew, Maven...).
 
-<!-- 
-AnyTree Packages can be downloaded from Docker Hub, GOSH Docker Desktop Extension and AnyTree native applications (coming soon).
- -->
 
 AnyTree utilizes standard Docker Containers secured by **GOSH AnyTree Builder** and is currently available as Beta on Linux and is coming soon to Windows and macOS.
 
 
 
-##  **Quick start GOSH AnyTree Builder**
+## **Quick start**
 
 
 
-###  __for Linux and WSL__
+### **GOSH AnyTree Builder**
 
 
-1.**Install [**Git Remote Helper**](git-remote-helper.md#install-helper-using-the-installation-script) using the installation script**
+#### __for Linux__
+
+
+1.**Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
 
 ```
 wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
@@ -45,7 +47,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -
 
 [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
-2.**Install **GOSH AnyTree** using the installation script**
+2.**Install [**GOSH AnyTree**](anytree.md#installation) using the installation script**
 
 ```
 wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
@@ -54,7 +56,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install
 You can check installation by running:
 
 ```
-gosh anytree --version
+gosh anytree --help
 ```
 
 3.**Setup a GOSH project**
@@ -103,12 +105,10 @@ The developer can put the generated SBOM-file in his repository for further veri
 
 
 
-##  **Quick start GOSH AnyTree Installer**
+### **GOSH AnyTree Installer**
 
 
-
-
-###  __for Linux and WSL__
+#### __for Linux__
 
 
 1.**Install [**Git Remote Helper**](git-remote-helper.md#install-helper-using-the-installation-script) using the installation script**
@@ -128,7 +128,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install
 You can check installation by running:
 
 ```
-gosh anytree --version
+gosh anytree --help
 ```
 
 3.**Using GOSH AnyTree Installer**
@@ -155,7 +155,7 @@ The result of the execution will be what is described in your Dockerfile.
 
 Before installing AnyTree, you must already have the [**Git Remote Helper**](git-remote-helper.md) installed.
 
-If you have Linux or WSL, you can use these installation methods.
+If you have Linux you can use these installation methods:
 
 
 ### __Install AnyTree using the installation script__
@@ -168,7 +168,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install
 ### __Install AnyTree from binary releases__
 
 
-1.Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.0) and download GOSH for the required operating system.
+1.Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1) and download GOSH for the required operating system.
 
 2.Extract files from tar-file  
 for example, for Linux x64, run:
@@ -286,8 +286,6 @@ The result of the execution will be what is described in your Dockerfile.
 <!-- 
 TODO 
 for example install AnyTree for using Telepresence
-
-gosh install gosh://0:0d5c05d7a63f438b57ede179b7110d3e903f5be3b5f543d3d6743d774698e92c/awnion/telepresence-build-gosh#main:os/ubuntu
 -->
 
 
@@ -409,11 +407,16 @@ Print help
 -h, --help
 ```
 
+ 
+### __Known issues__
+
+We would like to bring to your attention a memory limitation concern that has been identified when working with large repositories. Under certain circumstances, you might encounter memory depletion issues which could potentially affect your work efficiency and system performance. We deeply apologize for any inconvenience this may cause.
+
+Rest assured, we are committed to promptly resolving this issue. Our dedicated team of developers has already initiated efforts to address this, with an anticipated resolution targeted within the next two weeks. We appreciate your patience and understanding as we continue to enhance and streamline our services.
 
 
+### __Contact us__
 
-<!-- ## **Examples**
+In case of any issues, or to receive assistance when working with AnyTree please contact help@gosh.sh
+If you have any questions or issues using GOSH AnyTree, please email us at [help@gosh.sh](mailto:help@gosh.sh)
 
-
-
-### __Telepresents__ -->
