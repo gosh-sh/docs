@@ -10,8 +10,10 @@ Git Remote Helper (this is a standard mechanism for working with non-standard co
 
 If you have macOS or Linux, you can use this installation method.
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
+``` sh
+wget -O - \
+  https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh \
+  | bash -s
 ```
 
 [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
@@ -28,7 +30,7 @@ wget https://github.com/gosh-sh/gosh/releases/download/4.1.20/git-remote-gosh-am
 
 then
 
-```
+``` sh
 sudo dpkg -i git-remote-gosh-amd64.deb
 ```
 

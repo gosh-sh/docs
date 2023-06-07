@@ -40,6 +40,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -559,76 +561,76 @@
 <p>Instead of a dockerfile, this Buildkit uses a special <a href="./#2.-write-goshfile.yaml-this-specification-is-a-work-in-progress-and-subject-to-change">goshfile</a> to ensure code is taken from GOSH.</p>
 <h2 id="how-to-build-from-gosh">How to build from GOSH</h2>
 <h4 id="1-setup-environment-variables-with-your-wallet">1. Setup environment variables with your wallet</h4>
-<pre><code>export WALLET=...
-export WALLET_PUBLIC=...
-export WALLET_SECRET=...
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>export WALLET=...
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>export WALLET_PUBLIC=...
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>export WALLET_SECRET=...
+</span></code></pre></div>
 <p>You received these when creating your account in <a href="../gosh-web/">GOSH Web</a> or <a href="../docker-extension/">Docker Extension</a>.</p>
 <h4 id="2-create-goshfileyaml-this-specification-is-a-work-in-progress-and-subject-to-change">2. Create <code>goshfile.yaml</code> (this specification is a work in progress and subject to change)</h4>
-<pre><code># syntax=teamgosh/goshfile
-
-apiVersion: 1
-image: bash:latest
-steps:
-  - name: print date
-    run:
-      command: [&quot;/usr/local/bin/bash&quot;]
-      args:
-        - -c
-        - &gt;-
-          (date +'%s %H:%M:%S %Z'; echo &quot;Hi there&quot;) | tee /message.txt
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># syntax=teamgosh/goshfile
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>apiVersion: 1
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>image: bash:latest
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>steps:
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  - name: print date
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    run:
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      command: [&quot;/usr/local/bin/bash&quot;]
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      args:
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        - -c
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        - &gt;-
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>          (date +&#39;%s %H:%M:%S %Z&#39;; echo &quot;Hi there&quot;) | tee /message.txt
+</span></code></pre></div>
 <h4 id="3-now-to-build-an-image">3. Now to build an image</h4>
-<pre><code>TARGET_IMAGE=&quot;my-target-super-image&quot;
-
-docker buildx build \
-    --push \
-    --label WALLET_PUBLIC=&quot;$WALLET_PUBLIC&quot; \
-    -f goshfile.yaml \
-    -t &quot;$TARGET_IMAGE&quot; \
-    .
-
-## OR more complicated way via buildctl directly
-# # run buildkitd containered
-# docker run -d --name buildkitd --privileged moby/buildkit:latest
-# # build image
-# buildctl --addr=docker-container://buildkitd build \
-#         --frontend gateway.v0 \
-#         --local dockerfile=. \
-#         --local context=. \
-#         --opt source=teamgosh/goshfile \
-#         --opt filename=goshfile.yaml \
-#         --opt wallet_public=&quot;$WALLET_PUBLIC&quot; \
-#         --output type=image,name=&quot;$TARGET_IMAGE&quot;,push=true
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>TARGET_IMAGE=&quot;my-target-super-image&quot;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>docker buildx build \
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    --push \
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    --label WALLET_PUBLIC=&quot;$WALLET_PUBLIC&quot; \
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    -f goshfile.yaml \
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    -t &quot;$TARGET_IMAGE&quot; \
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    .
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>## OR more complicated way via buildctl directly
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a># # run buildkitd containered
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a># docker run -d --name buildkitd --privileged moby/buildkit:latest
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a># # build image
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a># buildctl --addr=docker-container://buildkitd build \
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>#         --frontend gateway.v0 \
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>#         --local dockerfile=. \
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>#         --local context=. \
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>#         --opt source=teamgosh/goshfile \
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>#         --opt filename=goshfile.yaml \
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>#         --opt wallet_public=&quot;$WALLET_PUBLIC&quot; \
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>#         --output type=image,name=&quot;$TARGET_IMAGE&quot;,push=true
+</span></code></pre></div>
 <p>Here we parameterize the image build process with our wallet credentials.</p>
 <h4 id="4-sign-the-image-wip-will-be-part-of-build-image-process">4. Sign the image (WIP: will be part of build image process)</h4>
-<pre><code>docker pull $TARGET_IMAGE # buildkit push image directly to the registry and it doesn't persist locally
-
-# my-target-super-image's sha256
-TARGET_IMAGE_SHA=`docker inspect --format='{{index (split (index .RepoDigests 0) &quot;@&quot;) 1}}' $TARGET_IMAGE`
-
-docker run --rm teamgosh/sign-cli sign \
-    -n &lt;blockchain_network e.g. https://gra01.net.everos.dev&gt; \
-    -g $WALLET \
-    -s $WALLET_SECRET \
-    $WALLET_SECRET \  # signer secret can be different
-    $TARGET_IMAGE_SHA
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker pull $TARGET_IMAGE # buildkit push image directly to the registry and it doesn&#39;t persist locally
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a># my-target-super-image&#39;s sha256
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>TARGET_IMAGE_SHA=`docker inspect --format=&#39;{{index (split (index .RepoDigests 0) &quot;@&quot;) 1}}&#39; $TARGET_IMAGE`
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>docker run --rm teamgosh/sign-cli sign \
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    -n &lt;blockchain_network e.g. https://gra01.net.everos.dev&gt; \
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    -g $WALLET \
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    -s $WALLET_SECRET \
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    $WALLET_SECRET \  # signer secret can be different
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    $TARGET_IMAGE_SHA
+</span></code></pre></div>
 <p>Now you have signed the image.</p>
 <h3 id="you-can-check-the-image-signature-with-your-public-key">You can check the image signature with your public key</h3>
-<pre><code>TARGET_IMAGE=&quot;my-target-super-image&quot;
-# or IMAGE_NAME=&quot;my_repo:5000/library/my-target-super-image:latest@sha256:...&quot;
-
-WALLET_PUBLIC=$(docker inspect --format='{{.Config.Labels.WALLET_PUBLIC}}' $TARGET_IMAGE)
-
-TARGET_IMAGE_SHA=$(docker inspect --format='{{index (split (index .RepoDigests 0) &quot;@&quot;) 1}}' $TARGET_IMAGE)
-
-docker run --rm teamgosh/sign-cli check \
-    -n &lt;blockchain_network e.g. https://gra01.net.everos.dev&gt; \
-    $WALLET_PUBLIC \
-    $TARGET_IMAGE_SHA
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>TARGET_IMAGE=&quot;my-target-super-image&quot;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a># or IMAGE_NAME=&quot;my_repo:5000/library/my-target-super-image:latest@sha256:...&quot;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>WALLET_PUBLIC=$(docker inspect --format=&#39;{{.Config.Labels.WALLET_PUBLIC}}&#39; $TARGET_IMAGE)
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>TARGET_IMAGE_SHA=$(docker inspect --format=&#39;{{index (split (index .RepoDigests 0) &quot;@&quot;) 1}}&#39; $TARGET_IMAGE)
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>docker run --rm teamgosh/sign-cli check \
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    -n &lt;blockchain_network e.g. https://gra01.net.everos.dev&gt; \
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    $WALLET_PUBLIC \
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    $TARGET_IMAGE_SHA
+</span></code></pre></div>
 <p><strong>NOTE</strong>: Anyone who has the image can <a href="../verify-images-in-docker-extension/">validate</a> it. The image has label WALLET_PUBLIC and image's sha256 also publicly available.</p>
 <p>Additionally, <a href="https://github.com/tonlabs/gosh/tree/main/content-signature">signer tool</a> can deploy a proof contract to GOSH blockchain that will be publicly available to all wanting to verify the image they pull from dockerhub.</p>
 <h3 id="examples">Examples</h3>
@@ -670,7 +672,7 @@ docker run --rm teamgosh/sign-cli check \
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>

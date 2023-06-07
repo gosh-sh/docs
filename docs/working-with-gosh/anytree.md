@@ -39,69 +39,72 @@ AnyTree utilizes standard Docker Containers secured by **GOSH AnyTree Builder** 
 #### __for Linux__
 
 
-1.**Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
+1. **Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+      https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh \
+      | bash -s
+    ```
 
-[Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
+    [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
-2.**Install [**GOSH AnyTree**](anytree.md#installation) using the installation script**
+2. **Install [**GOSH AnyTree**](anytree.md#installation) using the installation script**
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+      https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
+      | bash -s
+    ```
 
-You can check installation by running:
+    You can check installation by running:
 
-```
-gosh anytree --help
-```
+    ``` sh
+    gosh anytree --help
+    ```
 
-3.**Setup a GOSH project**
+3. **Setup a GOSH project**
 
-You need a GOSH repository.  
-If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding) or create a [GOSH-account](https://app.gosh.sh/) and [create a new one](gosh-web.md#create-repository).
+    You need a GOSH repository.  
+    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding) or create a [GOSH-account](https://app.gosh.sh/) and [create a new one](gosh-web.md#create-repository).
 
-Go to your GOSH-repository
+    Go to your GOSH-repository
 
-!!! Warning
-    There should already exist a working `Dockerfile` in it.
+    !!! Warning
+        There should already exist a working `Dockerfile` in it.
 
-and run:
+    and run:
 
-```
-gosh init
-```
+    ``` sh
+    gosh init
+    ```
 
-As a result of the onboarding process a `Gosh.yaml` file will be created.
+    As a result of the onboarding process a `Gosh.yaml` file will be created.
 
-```
-$ cat Gosh.yaml
----
-dockerfile:
-  path: Dockerfile
-tag: your-image-tag
+    ``` yaml title="Gosh.yaml"
+    ---
+    dockerfile:
+      path: Dockerfile
+    tag: your-image-tag
 
-```
+    ```
 
-4.**Now you are ready to build an image**
+4. **Now you are ready to build an image**
 
-Run:
-```
-gosh anytree build
-```
+    Run:
+    ``` sh
+    gosh anytree build
+    ```
 
-As a result of execution, the hash of the created docker image will be returned and the SBOM-file `sbom.spdx.json` will be generated. 
+    As a result of execution, the hash of the created docker image will be returned and the SBOM-file `sbom.spdx.json` will be generated. 
 
-The SBOM-file follows [CycloneDX object model](https://cyclonedx.org/specification/overview/).
+    The SBOM-file follows [CycloneDX object model](https://cyclonedx.org/specification/overview/).
 
 
-The developer can put the generated SBOM-file in his repository for further verification.
+    The developer can put the generated SBOM-file in his repository for further verification.
 
-!!! Tip
-    Place the SBOM-file in the same folder where `GOSH.yaml` is located.
+    !!! Tip
+        Place the SBOM-file in the same folder where `GOSH.yaml` is located.
 
 
 
@@ -111,41 +114,47 @@ The developer can put the generated SBOM-file in his repository for further veri
 #### __for Linux__
 
 
-1.**Install [**Git Remote Helper**](git-remote-helper.md#install-helper-using-the-installation-script) using the installation script**
+1. **Install [**Git Remote Helper**](git-remote-helper.md#install-helper-using-the-installation-script) using the installation script**
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+    https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh \
+    | bash -s
+    ```
 
-[Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
+    [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
 
-2.**Install **GOSH AnyTree** using the installation script**
+2. **Install **GOSH AnyTree** using the installation script**
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+    https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
+    | bash -s
+    ```
 
-You can check installation by running:
+    You can check installation by running:
 
-```
-gosh anytree --help
-```
+    ``` sh
+    gosh anytree --help
+    ```
 
-3.**Using GOSH AnyTree Installer**
+3. **Using GOSH AnyTree Installer**
 
-Specify the address of the repository from which you want to perform the installation:
+    Specify the address of the repository from which you want to perform the installation:
 
-```
-gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name
-```
+    ``` sh
+    gosh anytree install [options] \
+    gosh://0:1fa4...4af1/example_dao/example_repo_name
+    ```
 
-or you can specify a commit or branch (else there will be a default branch):
+    or you can specify a commit or branch (else there will be a default branch):
 
-```
-gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-```
+    ``` sh
+    gosh anytree install [options] \
+    gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+    ```
 
-The result of the execution will be what is described in your Dockerfile.
+    The result of the execution will be what is described in your Dockerfile.
 
 
 
@@ -161,28 +170,31 @@ If you have Linux you can use these installation methods:
 ### __Install AnyTree using the installation script__
 
 
-```
-wget -O - https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh | bash -s
-```
+    ``` sh
+    wget -O - \
+    https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
+    | bash -s
+    ```
 
 ### __Install AnyTree from binary releases__
 
 
-1.Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1) and download GOSH for the required operating system.
+1. Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1) and download GOSH AnyTree for the required operating system.
 
-2.Extract files from tar-file  
-for example, for Linux x64, run:
+2. Extract files from tar-file
 
-```
-tar xzvf gosh-linux-amd64.tar.gz
-```
+    for example, for Linux x64, run:
 
-3.Move binary files to any searchable path  
-for example:
+    ``` sh
+    tar xzvf gosh-linux-amd64.tar.gz
+    ```
 
-```
-sudo mv gosh /usr/local/bin
-```
+3. Move binary files to any searchable path  
+    for example:
+
+    ``` sh
+    sudo mv gosh /usr/local/bin
+    ```
 
 
 ### __Install AnyTree from source__
@@ -199,9 +211,9 @@ sudo mv gosh /usr/local/bin
 
 3. Go to the `gosh-build-tools` directory
 
-```
-cd gosh-build-tools && make install
-```
+    ``` sh
+    cd gosh-build-tools && make install
+    ```
 
 
 
@@ -219,33 +231,19 @@ Go to your GOSH-repository
 
 and run:
 
-```
+``` sh
 gosh init
 ```
 
 As a result of the onboarding process a `Gosh.yaml` file will be created.
 
-```
-$ cat Gosh.yaml
+``` yaml title="Gosh.yaml"
 ---
 dockerfile:
-  path: Dockerfile
+    path: Dockerfile
 tag: your-image-tag
 
 ```
-<!-- 
-Then you need to go through the onboarding process on GOSH using:
-
-the [web](https://app.gosh.sh/onboarding)
-
-or
-
-```
-gosh init
-```
- -->
-
-<!-- Log in to your GOSH account or create a [new one](gosh-web.md#create-account) -->
 
 
 
@@ -263,22 +261,26 @@ Prerequisites:
 
 Specify the address of the repository from which you want to perform the installation:
 
-```
-gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name
+``` sh
+gosh anytree install [options] \
+  gosh://0:1fa4...4af1/example_dao/example_repo_name
 ```
 
 or you can specify a commit or branch (else there will be a default branch):
 
-```
-gosh anytree install [options] gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+``` sh
+gosh anytree install [options] \
+  gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
 ```
 
-The result of the execution will be what is described in your Dockerfile.
+During the installation process, the SBOM-file will be checked.
+
+And as a result of the installation, an artifact will appear that will be installed on your computer.
 
 !!! info
     For more information about the [`install` options](anytree.md#install), see the Help section:
 
-    ```
+    ``` sh
     gosh anytree install --help
     ```
 
@@ -296,14 +298,14 @@ AnyTree builds the Docker-image and works with the SBOM-file (creation and valid
 
 Before starting set docker's context to default:
 
-```
+``` sh
 docker context use default
 ```
 
 !!! info
     For more information about the [`build` options](anytree.md#build), see the Help section:
 
-    ```
+    ``` sh
     gosh anytree build --help
     ```
 
@@ -313,13 +315,13 @@ docker context use default
 
 To work with the local code base, run:
 
-```
+``` sh
 gosh anytree build [options]
 ```
 
 After making changes to the codebase, you can check the correctness of the SBOM-file by running:
 
-```
+``` sh
 gosh anytree build --validate
 ```
 
@@ -335,14 +337,16 @@ The main point is to check that the result of the builder's work corresponds to 
 
 To work with the repository on GOSH, specify its address:
 
-```
-gosh anytree build [options] gosh://0:1fa4...4af1/example_dao/example_repo_name
+``` sh
+gosh anytree build [options] \
+  gosh://0:1fa4...4af1/example_dao/example_repo_name
 ```
 
 or you can specify a commit or branch (else there will be a default branch):
 
-```
-gosh anytree build [options] gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+``` sh
+gosh anytree build [options] \
+  gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
 ```
 
 As a result of execution, the hash of the created docker image will be returned and the SBOM-file ([`sbom.spdx.json`](https://cyclonedx.org/specification/overview/)) will be generated.
@@ -359,19 +363,19 @@ As a result of execution, the hash of the created docker image will be returned 
 
 Socket address for the SBOM proxy server [default: 127.0.0.1:6054]
 
-```
+``` sh
 -s, --socket <IP:PORT>
 ```
 
 Config path (in case of GOSH url context it should be relative to the root) [default: `Gosh.yaml`]
 
-```
+``` sh
 -c, --config <PATH>
 ```
 
 Print help
 
-```
+``` sh
 -h, --help
 ```
 
@@ -379,31 +383,34 @@ Print help
 
 Suppress output - outputs only the resulting hash of the image or an error
 
-```
+``` sh
 -q, --quiet
 ```
 
-Validate the result image - start checking the correctness of the built image (comparison of SBOM-files)
+Validate the result image - start checking the correctness of the built image  
+(comparison of SBOM-files)
 
-```
+``` sh
 --validate
 ```
 
-Socket address for the SBOM proxy server [default: 127.0.0.1:6054]
+Socket address for the SBOM proxy server  
+[default: 127.0.0.1:6054]
 
-```
+``` sh
 -s, --socket <IP:PORT>
 ```
 
-Config path (in case of GOSH url context it should be relative to the root) [default: `Gosh.yaml`]
+Config path (in case of GOSH url context it should be relative to the root)  
+[default: `Gosh.yaml`]
 
-```
+``` sh
 -c, --config <PATH>
 ```
 
 Print help
 
-```
+``` sh
 -h, --help
 ```
 
