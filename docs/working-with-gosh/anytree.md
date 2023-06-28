@@ -11,14 +11,20 @@
 
 AnyTree has 2 subcommands:
 
+<!-- AnyTree can be used as a builder and also as an installer. -->
+
 * [build](anytree.md#gosh-anytree-builder)
 * [install](anytree.md#gosh-anytree-installer)
 
 
-Software distributed through AnyTree is secured at the source, with all its dependencies, build and compiler environments, built in isolation and cryptographically signed and timestamped, and based on **Deep SBOM** technology pioneered by GOSH.
+Software distributed through [**GOSH AnyTree Installer**](anytree.md#install-image) is secured at the source, with all its dependencies, build and compiler environments, built in isolation and cryptographically signed and timestamped, and based on **Deep SBOM** technology pioneered by GOSH.
 
+<!-- 
 Deep SBOM by GOSH is describing not only what, but also how something was built.
-It then uses **GOSH AnyTree Builder** to safely build reproducible containers in an isolated environment.
+Then **GOSH AnyTree Builder** uses it to safely build reproducible containers in an isolated environment. -->
+
+[**GOSH AnyTree Builder**](anytree.md#build-image) creates reproducible containers in an isolated environment. Also, the result of his work will be the creation of a `SBOM file`. It is describing not only what, but also how something was built.
+
 
 On AnyTree, whatever apps developers distribute or use, are delivered exactly as they are supposed to be — what code developers didn’t write is never included.
 
@@ -32,11 +38,14 @@ AnyTree utilizes standard Docker Containers secured by **GOSH AnyTree Builder** 
 ## **Quick start**
 
 
+<!-- ### **GOSH AnyTree Builder** -->
+### **Building an image**
 
-### **GOSH AnyTree Builder**
+!!! info
+    The current version of AnyTree only supports Linux.
 
 
-#### __for Linux__
+<!-- #### __[for Linux]__ -->
 
 
 1. **Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
@@ -108,10 +117,11 @@ AnyTree utilizes standard Docker Containers secured by **GOSH AnyTree Builder** 
 
 
 
-### **GOSH AnyTree Installer**
+<!-- ### **GOSH AnyTree Installer** -->
+### **Installing the image**
 
 
-#### __for Linux__
+<!-- #### **for Linux** -->
 
 
 1. **Install [**Git Remote Helper**](git-remote-helper.md#install-helper-using-the-installation-script) using the installation script**
@@ -158,7 +168,7 @@ AnyTree utilizes standard Docker Containers secured by **GOSH AnyTree Builder** 
 
 
 
-## __Installation__
+## __Installation AnyTree__
 
 
 
@@ -167,14 +177,15 @@ Before installing AnyTree, you must already have the [**Git Remote Helper**](git
 If you have Linux you can use these installation methods:
 
 
-### __Install AnyTree using the installation script__
+### **Install AnyTree using the installation script**
 
 
-    ``` sh
-    wget -O - \
-    https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
-    | bash -s
-    ```
+``` sh
+wget -O - \
+https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
+| bash -s
+```
+
 
 ### __Install AnyTree from binary releases__
 
@@ -255,43 +266,7 @@ Prerequisites:
 
 * Docker
 
-
-### __Install image__
-
-
-Specify the address of the repository from which you want to perform the installation:
-
-``` sh
-gosh anytree install [options] \
-  gosh://0:1fa4...4af1/example_dao/example_repo_name
-```
-
-or you can specify a commit or branch (else there will be a default branch):
-
-``` sh
-gosh anytree install [options] \
-  gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-```
-
-During the installation process, the SBOM-file will be checked.
-
-And as a result of the installation, an artifact will appear that will be installed on your computer.
-
-!!! info
-    For more information about the [`install` options](anytree.md#install), see the Help section:
-
-    ``` sh
-    gosh anytree install --help
-    ```
-
-
-<!-- 
-TODO 
-for example install AnyTree for using Telepresence
--->
-
-
-### __Build image__
+### __Building image__
 
 
 AnyTree builds the Docker-image and works with the SBOM-file (creation and validation).
@@ -355,29 +330,46 @@ As a result of execution, the hash of the created docker image will be returned 
 !!! info
     The developer can put the generated specification in his repository for further verification.
 
+### __Installing image__
+
+The GOSH AnyTree Installer does not generate an SBOM file. It is assumed that the SBOM file already exists.
+
+Its main tasks is to download the image, check the correctness of the SBOM file and install everything as specified in the docker file.
+
+So, first specify the address of the repository from which you want to perform the installation:
+
+``` sh
+gosh anytree install [options] \
+  gosh://0:1fa4...4af1/example_dao/example_repo_name
+```
+
+or you can specify a commit or branch (else there will be a default branch):
+
+``` sh
+gosh anytree install [options] \
+  gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+```
+
+During the installation process, the SBOM-file will be checked.
+
+And as a result of the installation, an artifact will appear that will be installed on your computer.
+
+!!! info
+    For more information about the [`install` options](anytree.md#install), see the Help section:
+
+    ``` sh
+    gosh anytree install --help
+    ```
+
+
+<!-- 
+TODO 
+for example install AnyTree for using Telepresence or another case
+-->
+
 
 ### __Options__
 
-
-#### __install__
-
-Socket address for the SBOM proxy server [default: 127.0.0.1:6054]
-
-``` sh
--s, --socket <IP:PORT>
-```
-
-Config path (in case of GOSH url context it should be relative to the root) [default: `Gosh.yaml`]
-
-``` sh
--c, --config <PATH>
-```
-
-Print help
-
-``` sh
--h, --help
-```
 
 #### __build__
 
@@ -413,6 +405,27 @@ Print help
 ``` sh
 -h, --help
 ```
+
+#### __install__
+
+Socket address for the SBOM proxy server [default: 127.0.0.1:6054]
+
+``` sh
+-s, --socket <IP:PORT>
+```
+
+Config path (in case of GOSH url context it should be relative to the root) [default: `Gosh.yaml`]
+
+``` sh
+-c, --config <PATH>
+```
+
+Print help
+
+``` sh
+-h, --help
+```
+
 
  
 ### __Known issues__

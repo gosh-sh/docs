@@ -503,13 +503,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#from-version-1-to-version-4" class="md-nav__link">
-    From version 1 to version 4
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -946,13 +939,6 @@
           <li class="md-nav__item">
   <a href="#from-version-3-to-version-4" class="md-nav__link">
     From version 3 to version 4
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#from-version-1-to-version-4" class="md-nav__link">
-    From version 1 to version 4
   </a>
   
 </li>
@@ -1614,7 +1600,15 @@ Click <strong>Get repositories</strong>.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_08_04_event_datails.jpg" /></p>
 <p>After accepting the proposals, the DAO update process will begin.<br />
 Before continuing, you need to transfer your tokens.</p>
-<p>To do this, go to the <strong>Overview</strong> tab in the <strong>Your wallet balance</strong> section and click <strong>Transfer from previous version</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Starting from the 5th version, tokens are transferred automatically.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If, at the time of the upgrade, you still have tokens that were locked into voting in previous versions of the DAO, then these tokens will be transferred only after the expiration of the proposal.</strong></p>
+</div>
+<p>If you have a DAO version lower than the 4th inclusive, then to transfer tokens go to the <strong>Overview</strong> tab in the <strong>Your wallet balance</strong> section and click <strong>Transfer from previous version</strong>.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg" /></p>
 <p>You can also do this on the <strong>Members</strong> tab.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg" /></p>
@@ -1640,9 +1634,8 @@ Click <strong>Get repositories</strong>.</p>
 <p>You will be taken to the DAO tab with events.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_07_12_event.jpg" /></p>
 <p>After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 4 will be completed.</p>
-<!-- #### __From version 1 to version 3__ -->
+<!-- #### __From version 1 to version 5 (recommended)__ -->
 
-<h4 id="from-version-1-to-version-4"><strong>From version 1 to version 4</strong></h4>
 <!-- short description of DAO located in the _index repository
 
 You can leave a comment on the proposal.
@@ -1995,10 +1988,13 @@ As a result, a Multi proposal will be created and you will be redirected to the 
 <!-- TODO
 change -->
 
-<p>Set up <a href="../git-remote-helper/">Git Remote Helper</a> and continue working with your repository.</p>
-<p>You'll need your wallet credentials. Go to the main page of your account and click <a href="https://app.gosh.sh/a/settings"><strong>Settings</strong></a>.
-Scroll down and copy them.</p>
+<p>Set up <a href="../git-remote-helper/"><strong>Git Remote Helper</strong></a> and continue working with your repository.</p>
+<p>You'll need your wallet credentials. Go to the main page of your account and click <a href="https://app.gosh.sh/a/settings"><strong>User Settings</strong></a>.</p>
+<p>Scroll down to the <strong>Git remote config</strong> section, click <strong>Show</strong> and unlock with PIN code</p>
 <p><img alt="" src="../../images/gosh_web_Whats_next_01.jpg" /></p>
+<p>Download the configuration file by clicking on the icon<br />
+and save it to folder <code>~/.gosh</code></p>
+<p><img alt="" src="../../images/gosh_web_Whats_next_01_config.jpg" /></p>
 <p>To view the command to clone your repo, click the <strong>Clone</strong> button on your repo page.</p>
 <p><img alt="" src="../../images/gosh_web_Whats_next_02.jpg" /></p>
 <h2 id="working-with-repository"><strong>Working with Repository</strong></h2>
