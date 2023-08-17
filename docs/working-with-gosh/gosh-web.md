@@ -573,7 +573,15 @@ Inside the event, you can get acquainted with the details of the proposal.
 After accepting the proposals, the DAO update process will begin.  
 Before continuing, you need to transfer your tokens.
 
-To do this, go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
+
+!!! info
+    Starting from the 5th version, tokens are transferred automatically.
+
+!!! warning
+    **If, at the time of the upgrade, you still have tokens that were locked into voting in previous versions of the DAO, then these tokens will be transferred only after the expiration of the proposal.**
+
+
+If you have a DAO version lower than the 4th inclusive, then to transfer tokens go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
 
 ![](../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
 
@@ -624,9 +632,7 @@ You will be taken to the DAO tab with events.
 After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 4 will be completed.
 
 
-<!-- #### __From version 1 to version 3__ -->
-
-#### __From version 1 to version 4__
+<!-- #### __From version 1 to version 5 (recommended)__ -->
 
 
 <!-- short description of DAO located in the _index repository
@@ -1099,12 +1105,19 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 <!-- TODO
 change -->
 
-Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
+Set up [**Git Remote Helper**](git-remote-helper.md) and continue working with your repository.
 
-You'll need your wallet credentials. Go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
-Scroll down and copy them.
+You'll need your wallet credentials. Go to the main page of your account and click [**User Settings**](https://app.gosh.sh/a/settings).
+
+Scroll down to the **Git remote config** section, click **Show** and unlock with PIN code
 
 ![](../images/gosh_web_Whats_next_01.jpg)
+
+Download the configuration file by clicking on the icon  
+and save it to folder `~/.gosh`
+
+![](../images/gosh_web_Whats_next_01_config.jpg)
+
 
 To view the command to clone your repo, click the **Clone** button on your repo page.
 

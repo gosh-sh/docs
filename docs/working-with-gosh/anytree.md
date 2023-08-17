@@ -1,164 +1,27 @@
 # **AnyTree**
 
 
-
 ## **Overview**
 
 
+GOSH introduces **AnyTree** — a software deployment system built to guarantee the security of your software supply chain
 
-**AnyTree** — the first software deployment system secured by the blockchain.
+With AnyTree, any mutations of your code, down to every dependency, as well as operations, including builds and every artifact, are logged, timestamped, signed, and verified when used on GOSH
 
+Deep SBOM extends the SBOM surface to include all build environments. It is impossible to inject malicious commits backwards on GOSH and miss dependency tampering during the CI/CD process when using Deep SBOM. Integrating GOSH Builder with AnyTree proves builds on a developer machine and a server (or a cloud) are identical
 
-AnyTree has 2 subcommands:
+<!-- creates reproducible containers in an isolated environment.  -->
 
-* [build](anytree.md#gosh-anytree-builder)
-* [install](anytree.md#gosh-anytree-installer)
+AnyTree utilizes standard Docker Containers secured by [**GOSH AnyTree Builder**](anytree.md#build-image) and is currently available as Beta on Linux and is coming soon to Windows and macOS.
 
+As the result of his work will be the creation of a binary file of project. It is describing not only what, but also how something was built.
 
-Software distributed through AnyTree is secured at the source, with all its dependencies, build and compiler environments, built in isolation and cryptographically signed and timestamped, and based on **Deep SBOM** technology pioneered by GOSH.
+!!! info
+    The current version of AnyTree only supports Linux.
 
-Deep SBOM by GOSH is describing not only what, but also how something was built.
-It then uses **GOSH AnyTree Builder** to safely build reproducible containers in an isolated environment.
 
-On AnyTree, whatever apps developers distribute or use, are delivered exactly as they are supposed to be — what code developers didn’t write is never included.
 
-AnyTree secures the delivery of any package you use today. AnyTree works with almost any package manager, user or server applications (including PIP, NPM, Brew, Maven...).
-
-
-AnyTree utilizes standard Docker Containers secured by **GOSH AnyTree Builder** and is currently available as Beta on Linux and is coming soon to Windows and macOS.
-
-
-
-## **Quick start**
-
-
-
-### **GOSH AnyTree Builder**
-
-
-#### __for Linux__
-
-
-1. **Install [**Git Remote Helper**](git-remote-helper.md#installation) using the installation script**
-
-    ``` sh
-    wget -O - \
-      https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh \
-      | bash -s
-    ```
-
-    [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
-
-2. **Install [**GOSH AnyTree**](anytree.md#installation) using the installation script**
-
-    ``` sh
-    wget -O - \
-      https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
-      | bash -s
-    ```
-
-    You can check installation by running:
-
-    ``` sh
-    gosh anytree --help
-    ```
-
-3. **Setup a GOSH project**
-
-    You need a GOSH repository.  
-    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding) or create a [GOSH-account](https://app.gosh.sh/) and [create a new one](gosh-web.md#create-repository).
-
-    Go to your GOSH-repository
-
-    !!! Warning
-        There should already exist a working `Dockerfile` in it.
-
-    and run:
-
-    ``` sh
-    gosh init
-    ```
-
-    As a result of the onboarding process a `Gosh.yaml` file will be created.
-
-    ``` yaml title="Gosh.yaml"
-    ---
-    dockerfile:
-      path: Dockerfile
-    tag: your-image-tag
-
-    ```
-
-4. **Now you are ready to build an image**
-
-    Run:
-    ``` sh
-    gosh anytree build
-    ```
-
-    As a result of execution, the hash of the created docker image will be returned and the SBOM-file `sbom.spdx.json` will be generated. 
-
-    The SBOM-file follows [CycloneDX object model](https://cyclonedx.org/specification/overview/).
-
-
-    The developer can put the generated SBOM-file in his repository for further verification.
-
-    !!! Tip
-        Place the SBOM-file in the same folder where `GOSH.yaml` is located.
-
-
-
-### **GOSH AnyTree Installer**
-
-
-#### __for Linux__
-
-
-1. **Install [**Git Remote Helper**](git-remote-helper.md#install-helper-using-the-installation-script) using the installation script**
-
-    ``` sh
-    wget -O - \
-    https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh \
-    | bash -s
-    ```
-
-    [Checking](git-remote-helper.md#verifying-the-installation-result) the installation results.
-
-2. **Install **GOSH AnyTree** using the installation script**
-
-    ``` sh
-    wget -O - \
-    https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
-    | bash -s
-    ```
-
-    You can check installation by running:
-
-    ``` sh
-    gosh anytree --help
-    ```
-
-3. **Using GOSH AnyTree Installer**
-
-    Specify the address of the repository from which you want to perform the installation:
-
-    ``` sh
-    gosh anytree install [options] \
-    gosh://0:1fa4...4af1/example_dao/example_repo_name
-    ```
-
-    or you can specify a commit or branch (else there will be a default branch):
-
-    ``` sh
-    gosh anytree install [options] \
-    gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-    ```
-
-    The result of the execution will be what is described in your Dockerfile.
-
-
-
-## __Installation__
+## __Installation AnyTree__
 
 
 
@@ -167,17 +30,16 @@ Before installing AnyTree, you must already have the [**Git Remote Helper**](git
 If you have Linux you can use these installation methods:
 
 
-### __Install AnyTree using the installation script__
+### **Install AnyTree using the installation script**
 
 
-    ``` sh
-    wget -O - \
-    https://raw.githubusercontent.com/gosh-sh/gosh-build-tools/dev/install.sh \
-    | bash -s
-    ```
+``` sh
+wget -O - https://raw.githubusercontent.com/gosh-sh/anytree/dev/install.sh | bash -s
+```
 
+
+<!-- 
 ### __Install AnyTree from binary releases__
-
 
 1. Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1) and download GOSH AnyTree for the required operating system.
 
@@ -195,7 +57,7 @@ If you have Linux you can use these installation methods:
     ``` sh
     sudo mv gosh /usr/local/bin
     ```
-
+ -->
 
 ### __Install AnyTree from source__
 
@@ -207,13 +69,16 @@ If you have Linux you can use these installation methods:
       - `git`
       - `make`
 
-2. Clone [gosh-build-tools](https://github.com/gosh-sh/gosh-build-tools.git) repository
+2. Clone [AnyTree](https://github.com/gosh-sh/anytree) repository
 
-3. Go to the `gosh-build-tools` directory
+3. Run make install to build GOSH `anytree tool`
+
+<!-- Go to the `gosh-build-tools` directory
 
     ``` sh
     cd gosh-build-tools && make install
-    ```
+    ``` -->
+
 
 
 
@@ -224,10 +89,7 @@ If you have Linux you can use these installation methods:
 You need a GOSH repository.  
 If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding) or create a [GOSH-account](https://app.gosh.sh/) and [create a new one](gosh-web.md#create-repository).
 
-Go to your GOSH-repository
-
-!!! Warning
-    There should already exist a working `Dockerfile` in it.
+Go to your GOSH-repository you project
 
 and run:
 
@@ -235,15 +97,98 @@ and run:
 gosh init
 ```
 
-As a result of the onboarding process a `Gosh.yaml` file will be created.
+## **Generation `SBOM file`**
 
-``` yaml title="Gosh.yaml"
----
-dockerfile:
-    path: Dockerfile
-tag: your-image-tag
+AnyTree builds the artifacts uses `SBOM file` that allows developers to see what they built and why and reproduce the same result.
+
+To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclones.org/docs/1.5/json/)
+
+!!! info
+    The example file can be viewed here:
+    https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
+
+If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py)  
+(*scripts for other programming languages will coming soon*)
+
+
+!!! Note
+    either copy script to your cargo project and run `python3 generate-sbom.py` or check and configure variables in script
+
+    ![](../images/anytree_config_script.jpg)
+
+
+Prerequisites:
+
+* Docker
+* Python3 with pip (required to generate a `SBOM-file`)
+
+
+To generate a `SBOM file` for a Rust project, you can use the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py)
+
+!!! info
+    If necessary, install the dependencies for the script to work.  
+    Run in the folder where the script is located:
+
+    ```
+    pip3 install -r requirements.txt
+    ```
+
+**Possible options are described in the *help*:**
 
 ```
+python3 generate-sbom.py --help
+```
+
+```
+usage: generate-sbom.py [-h] [--cargo-lock CARGO_LOCK_PATH] [--cargo-toml CARGO_TOML_PATH] [--initial-sbom INITIAL_SBOM_PATH]
+                        [--sbom-output SBOM_OUTPUT_PATH] [--project-src PROJECT_SRC_PATH] [--project-commit PROJECT_COMMIT]
+                        [--project-url PROJECT_URL]
+
+Generate software bill of materials (SBOM) for Rust project
+
+options:
+-h, --help            show this help message and exit
+--cargo-lock CARGO_LOCK_PATH
+                        Path to Cargo.lock file. Default - ./Cargo.lock
+--cargo-toml CARGO_TOML_PATH
+                        Path to Cargo.toml file. Default - ./Cargo.toml
+--initial-sbom INITIAL_SBOM_PATH
+                        Optional. Path to initial SBOM JSON file if need to append existing SBOM. Default - initial-sbom.json. Will ignore
+                        if file doesn't exist.
+--sbom-output SBOM_OUTPUT_PATH
+                        Path to output SBOM JSON file. Default - sbom.json
+--project-src PROJECT_SRC_PATH
+                        Path to the Rust project source if not in root git directory. Not relates to local file system path. Relates to
+                        path inside repo structure. For example we can use v5_x/v5.1.0/git-remote-gosh which means https://github.com/gosh-
+                        sh/gosh/v5_x/v5.1.0/git-remote-gosh
+--project-commit PROJECT_COMMIT
+                        Commit of the project. Default - commit parsed with 'git rev-parse HEAD' command in dir where Cargo.lock is
+                        located.
+--project-url PROJECT_URL
+                        URL of the project's repository. Default - project URL parsed with 'git config --get remote.origin.url' command in
+                        dir where Cargo.lock is located.
+```
+
+!!! For_example
+    Run the generation of the `SBOM-file` for the rust project `Git Remote Helper` latest version:
+
+    ```
+    python3 ~/gs/generate-sbom.py --cargo-lock ~/gosh/v5_x/v5.1.0/git-remote-gosh/Cargo.lock --cargo-toml ~/gosh/v5_x/v5.1.0/git-remote-gosh/Cargo.toml --sbom-output ~/gosh/v5_x/v5.1.0/git-remote-gosh/sbom.json --project-src v5_x/v5.1.0/git-remote-gosh
+    ```
+
+    The script downloads all dependencies specified in `cargo.lock`, counts all hashes and the generated sbom.json will be placed in the root folder of the project.
+
+    After running the script you should get the following output at the end:
+
+    ```
+    Updated SBOM written to /home/user/gosh/v5_x/v5.1.0/git-remote-gosh/sbom.json
+    ```
+
+    And generated `sbom.json` file in the following format  
+    https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
+
+
+    <!-- ![](../images/anytree_sbom_written_to.jpg) -->
 
 
 
@@ -251,106 +196,32 @@ tag: your-image-tag
 
 
 
-Prerequisites:
+run:
 
-* Docker
-
-
-### __Install image__
-
-
-Specify the address of the repository from which you want to perform the installation:
-
-``` sh
-gosh anytree install [options] \
-  gosh://0:1fa4...4af1/example_dao/example_repo_name
+```
+anytree build sbom.json
 ```
 
-or you can specify a commit or branch (else there will be a default branch):
+As a result, a binary file of project will be created
+and you should get similar output at the end:
 
-``` sh
-gosh anytree install [options] \
-  gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
+```
+Successfully copied 15.8MB to /home/user/.cache/anytree/builder/anytree-builder-5aba4439-2642-4b7f-bc3c-affd8c9839fd/target
 ```
 
-During the installation process, the SBOM-file will be checked.
+And your artifacts will be accessible in this folder
 
-And as a result of the installation, an artifact will appear that will be installed on your computer.
+**If the hash that was calculated when creating the SBOM file differs from the hash that AnyTree checks, an error like this will be output:**
+
+![](../images/anytree_error_wrong_hash.jpg)
+
 
 !!! info
-    For more information about the [`install` options](anytree.md#install), see the Help section:
+    For more information about the [options](anytree.md#build), see the Help section:
 
     ``` sh
-    gosh anytree install --help
+    anytree --help
     ```
-
-
-<!-- 
-TODO 
-for example install AnyTree for using Telepresence
--->
-
-
-### __Build image__
-
-
-AnyTree builds the Docker-image and works with the SBOM-file (creation and validation).
-
-Before starting set docker's context to default:
-
-``` sh
-docker context use default
-```
-
-!!! info
-    For more information about the [`build` options](anytree.md#build), see the Help section:
-
-    ``` sh
-    gosh anytree build --help
-    ```
-
-<u>GOSH AnyTree Builder can work in 2 modes: </u>
-
-* **with a local code base**
-
-To work with the local code base, run:
-
-``` sh
-gosh anytree build [options]
-```
-
-After making changes to the codebase, you can check the correctness of the SBOM-file by running:
-
-``` sh
-gosh anytree build --validate
-```
-
-!!! info
-    Instead of creating an SBOM-file, a check will be run to make sure that the new SBOM-file matches the last generated file.
-
-
-* **with a repository on GOSH**
-
-At the end of the build, mandatory validation is performed using the SBOM-file from the repository.
-
-The main point is to check that the result of the builder's work corresponds to the SBOM-file stored on the blockchain.
-
-To work with the repository on GOSH, specify its address:
-
-``` sh
-gosh anytree build [options] \
-  gosh://0:1fa4...4af1/example_dao/example_repo_name
-```
-
-or you can specify a commit or branch (else there will be a default branch):
-
-``` sh
-gosh anytree build [options] \
-  gosh://0:1fa4...4af1/example_dao/example_repo_name#commit_or_branch_hash:dir/in/git/repo
-```
-
-As a result of execution, the hash of the created docker image will be returned and the SBOM-file ([`sbom.spdx.json`](https://cyclonedx.org/specification/overview/)) will be generated.
-
 
 !!! info
     The developer can put the generated specification in his repository for further verification.
@@ -359,59 +230,18 @@ As a result of execution, the hash of the created docker image will be returned 
 ### __Options__
 
 
-#### __install__
-
-Socket address for the SBOM proxy server [default: 127.0.0.1:6054]
-
-``` sh
--s, --socket <IP:PORT>
-```
-
-Config path (in case of GOSH url context it should be relative to the root) [default: `Gosh.yaml`]
-
-``` sh
--c, --config <PATH>
-```
-
-Print help
-
-``` sh
--h, --help
-```
-
 #### __build__
 
-Suppress output - outputs only the resulting hash of the image or an error
-
-``` sh
--q, --quiet
-```
-
-Validate the result image - start checking the correctness of the built image  
-(comparison of SBOM-files)
-
-``` sh
---validate
-```
-
-Socket address for the SBOM proxy server  
-[default: 127.0.0.1:6054]
-
-``` sh
--s, --socket <IP:PORT>
-```
-
-Config path (in case of GOSH url context it should be relative to the root)  
-[default: `Gosh.yaml`]
-
-``` sh
--c, --config <PATH>
-```
-
 Print help
 
 ``` sh
 -h, --help
+```
+
+Print version
+
+``` sh
+-V, --version
 ```
 
  
