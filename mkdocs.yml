@@ -20,6 +20,9 @@ nav:
     - GOSH AI: working-with-gosh/gosh-ai.md
     #- Build and Sign Images: working-with-gosh/build-and-sign-images.md
     #- Verify Images in Docker Extension: working-with-gosh/verify-images-in-docker-extension.md
+  - AnyTree: anytree-all.md
+    #- Working with AnyTree: working-with-gosh/anytree.md
+    #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
   - Links: links.md
 
 markdown_extensions:
