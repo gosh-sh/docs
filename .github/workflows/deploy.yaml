@@ -28,7 +28,6 @@ jobs:
           output_file: site/policy.json
 
       - name: Check if S3 Bucket Exists
-        shell: bash
         working-directory: site
         run: |
           if aws s3api head-bucket --bucket "$BUCKET_NAME" ; then
@@ -38,8 +37,10 @@ jobs:
             aws s3 website s3://"$BUCKET_NAME" --index-document index.html --error-document index.html
             aws s3api put-bucket-policy --bucket "$BUCKET_NAME" --policy file://policy.json
           fi
+        shell: bash
 
       - name: Sync with S3 Bucket
+        working-directory: site
         run: aws s3 sync . s3://"$BUCKET_NAME"
 
       - name: Create invalidation
