@@ -1,0 +1,11 @@
+server {
+
+    listen 80;
+    server_name {{ env['BUCKET_NAME'] }}.gosh.sh;
+
+	location / {
+		proxy_pass              http://{{ env['BUCKET_NAME'] }}.s3-website.{{ env['AWS_DEFAULT_REGION'] }}.amazonaws.com;
+		proxy_intercept_errors on;
+    }
+
+}
