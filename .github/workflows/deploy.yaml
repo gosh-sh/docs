@@ -10,7 +10,7 @@ on:
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_DEFAULT_REGION: eu-west-2
+  AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
 
 jobs:
   deploy:
@@ -31,7 +31,7 @@ jobs:
         run: echo "BUCKET_NAME=docs-gosh" >> $GITHUB_ENV
 
       - name: Display Branch Name
-        run: echo "${{ github.ref }}" goes to $BUCKET_NAME
+        run: echo "${{ github.ref }}" goes to $AWS_DEFAULT_REGION / $BUCKET_NAME
 
       - name: Check if S3 Bucket Exists
         run: aws s3api head-bucket --bucket $BUCKET_NAME || echo "Bucket does not exist"
