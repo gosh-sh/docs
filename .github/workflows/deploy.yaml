@@ -1,0 +1,89 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - ci
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: eu-west-2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: If CI
+        run: echo "BUCKET_NAME=ci-docs-gosh" >> $GITHUB_ENV
+
+      - name: If Staging
+        if: github.ref == 'refs/heads/dev'
+        run: echo "BUCKET_NAME=staging-docs-gosh" >> $GITHUB_ENV
+
+      - name: If Prod
+        if: github.ref == 'refs/heads/main'
+        run: echo "BUCKET_NAME=docs-gosh" >> $GITHUB_ENV
+
+      - name: Display Branch Name
+        run: echo "${{ github.ref }}" goes to $BUCKET_NAME
+
+      - name: Check if S3 Bucket Exists
+        run: aws s3api head-bucket --bucket $BUCKET_NAME || echo "Bucket does not exist"
+
+      # - name: Create S3 Bucket
+      #   if: steps.check-s3-bucket.run == "Bucket does not exist"
+      #   run: |
+      #     aws s3api create-bucket --bucket ${{ env.BUCKET_NAME }} --region eu-west-2 --acl public-read --create-bucket-configuration LocationConstraint=eu-west-2
+      #     aws s3 website s3://${{ env.BUCKET_NAME }} --index-document index.html --error-document index.html
+      #     sed 's/BUCKET_NAME/${{ env.BUCKET_NAME }}/g' .ci/s3/policy.json.template > policy.json
+      #     aws s3api put-bucket-policy --bucket ${{ env.BUCKET_NAME }} --policy file://policy.json
+
+      # - name: Sync with S3 Bucket
+      #   run: aws s3 sync . s3://${{ env.BUCKET_NAME }}
+
+      # - name: Invalidate CloudFront Cache
+      #   if: ${{ github.ref == 'refs/heads/main' }}
+      #   run: aws cloudfront create-invalidation --distribution-id E38B49XVCTNRVX --paths '/*'
+
+      # - name: Display S3 URL
+      #   run: echo "http://${{ env.BUCKET_NAME }}.s3-website.eu-west-2.amazonaws.com"
+
+                    # if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
+                    #     env.BUCKET_NAME = "staging-docs-gosh"
+
+                    # } else if (env.CURRENT_BRANCH_NAME == "refs/heads/main") {
+                    #     env.BUCKET_NAME = 'docs-gosh'
+                    # }
+                    # currentBuild.displayName = "${BUILD_NUMBER}_${env.CURRENT_BRANCH_NAME}"
+                    # echo "${env.CURRENT_BRANCH_NAME}"
+                    # env.TRIMMED_BRANCH_NAME = env.CURRENT_BRANCH_NAME.replace("refs/heads/", "")
+                    # echo "${TRIMMED_BRANCH_NAME}"
+                    # git branch: "${env.TRIMMED_BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
+                    # checkout scm
+
+                    # dir('site') {
+                    #     def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
+                    #     if (status == 0) {
+                    #         echo 'Bucket already exists! Just syncing.'
+                    #         sh "aws s3 sync . s3://${BUCKET_NAME}"
+                    #         if (env.CURRENT_BRANCH_NAME == "refs/heads/main") {
+                    #             sh "aws cloudfront create-invalidation --distribution-id E38B49XVCTNRVX --paths '/*'"
+                    #         }
+                    #     } else {
+                    #         sh """
+                    #             aws s3api create-bucket --bucket ${BUCKET_NAME} --region eu-west-2 --acl public-read --create-bucket-configuration LocationConstraint=eu-west-2
+                    #             aws s3 website s3://${BUCKET_NAME} --index-document index.html --error-document index.html
+                    #             sed 's/BUCKET_NAME/${BUCKET_NAME}/g' ../.ci/s3/policy.json.template > policy.json
+                    #             aws s3api put-bucket-policy --bucket ${BUCKET_NAME} --policy file://policy.json
+                    #             aws s3 sync . s3://${BUCKET_NAME}
+                    #             sed "s/BUCKET_NAME/\$BUCKET_NAME/g" ../.ci/nginx/proxy.s3.conf.template >> /opt/nginx/s3-proxy.conf
+                    #         """
+                    #     }
+                    #     echo "http://${BUCKET_NAME}.s3-website.eu-west-2.amazonaws.com"
+                    # }
