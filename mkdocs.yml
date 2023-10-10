@@ -23,10 +23,12 @@ nav:
   - AnyTree: anytree-all.md
     #- Working with AnyTree: working-with-gosh/anytree.md
     #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
+  - GOSH Ethereum L2: ethereum-L2.md
   - Links: links.md
 
 markdown_extensions:
     - admonition
+    - abbr
     - attr_list
     - pymdownx.highlight:
         anchor_linenums: true
@@ -35,6 +37,9 @@ markdown_extensions:
     - pymdownx.inlinehilite
     - pymdownx.snippets
     - pymdownx.superfences
+    - pymdownx.arithmatex:
+        generic: true
+    - tables
 
 theme:
   logo: images/gosh2.svg
@@ -54,3 +59,8 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
