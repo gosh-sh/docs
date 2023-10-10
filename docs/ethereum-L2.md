@@ -82,7 +82,7 @@ Let’s remember that Zero Knowledge Proofs are probabilistic. The Verifier chec
 Let's say we have `S` threads and `N` validators, out of which M are malicious. For each thread, we choose `L` validators that will sign the block. If a group of validators gathers at least `C` malicious ones, the attack is considered successful.  
 Let's calculate the probability of an attack on a single thread.
 
-The total number of ways to choose validators for a thread is $C _{L} ^{N}$
+The total number of ways to choose validators for a thread is $C _{N} ^{L}$
 
 Let `i` be the number of malicious validators gathered in a thread. To find the number of ways to choose at least `C` malicious validators, we need to multiply the number of ways to choose malicious validators by the number of ways to choose regular validators.
 
@@ -98,7 +98,7 @@ $$\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}$$
 
 The final probability of an attack on a single thread, without considering verifiers, is
 
-$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{L} ^{N}}$$
+$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}}$$
 
 Let $T = \frac{N}{R}$ where `R` is some number. A validator becomes a verifier if the remainder of some hash when divided by ${T}$ equals zero.
 
@@ -108,7 +108,7 @@ The probability of this is $(1 - \frac{1}{T}) ^{N-M}$
 
 Thus, the final probability of the attack is
 
-$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{L} ^{N}} * (1 - \frac{1}{T}) ^{N-M}$$
+$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}} * (1 - \frac{1}{T}) ^{N-M}$$
 
 Which is less of an a probability of successful attack on Bitcoin blockchain:
 
@@ -146,11 +146,8 @@ Which is less of an a probability of successful attack on Bitcoin blockchain:
 
 ## **Usage**
 Any DAO on GOSH can become Ethereum Layer 2 with a click of a button.
-DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project.
+DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project...............
 
-
-
-.................
 
 ## **Definitions**
 
