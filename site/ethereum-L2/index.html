@@ -800,19 +800,19 @@ The scheme for transferring assets from the GOSH to Etherium</p>
 <p>Let’s remember that Zero Knowledge Proofs are probabilistic. The Verifier check protocol is probabilistic as well. The ZKP does not prove that every operation on the L2 blockchain is correct because that would not only be costly but not necessarily increase the probability of the correctness in respect to Verifiers check.</p>
 <p>Let's say we have <code>S</code> threads and <code>N</code> validators, out of which M are malicious. For each thread, we choose <code>L</code> validators that will sign the block. If a group of validators gathers at least <code>C</code> malicious ones, the attack is considered successful.<br />
 Let's calculate the probability of an attack on a single thread.</p>
-<p>The total number of ways to choose validators for a thread is <span class="arithmatex">\(C _{L} ^{N}\)</span></p>
+<p>The total number of ways to choose validators for a thread is <span class="arithmatex">\(C _{N} ^{L}\)</span></p>
 <p>Let <code>i</code> be the number of malicious validators gathered in a thread. To find the number of ways to choose at least <code>C</code> malicious validators, we need to multiply the number of ways to choose malicious validators by the number of ways to choose regular validators.</p>
 <p>That is <span class="arithmatex">\(C _{M} ^{i} * C _{N-M} ^{L-i}\)</span></p>
 <p>Since we need to gather at least <code>C</code> malicious validators, the total number of ways will be the sum </p>
 <p>of <code>i</code> from <code>C</code> to <code>L</code> :</p>
 <div class="arithmatex">\[\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}\]</div>
 <p>The final probability of an attack on a single thread, without considering verifiers, is</p>
-<div class="arithmatex">\[P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{L} ^{N}}\]</div>
+<div class="arithmatex">\[P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}}\]</div>
 <p>Let <span class="arithmatex">\(T = \frac{N}{R}\)</span> where <code>R</code> is some number. A validator becomes a verifier if the remainder of some hash when divided by <span class="arithmatex">\({T}\)</span> equals zero.</p>
 <p>In each round, the probability for a particular validator to become a verifier is <span class="arithmatex">\(\frac{1}{T}\)</span>. For the attack to be successful, none of the honest validators should become a verifier.</p>
 <p>The probability of this is <span class="arithmatex">\((1 - \frac{1}{T}) ^{N-M}\)</span></p>
 <p>Thus, the final probability of the attack is</p>
-<div class="arithmatex">\[P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{L} ^{N}} * (1 - \frac{1}{T}) ^{N-M}\]</div>
+<div class="arithmatex">\[P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}} * (1 - \frac{1}{T}) ^{N-M}\]</div>
 <p>Which is less of an a probability of successful attack on Bitcoin blockchain:</p>
 <p><img alt="" src="../images/etherium_stage3_diagram.jpg" /></p>
 <div class="admonition note annotate">
@@ -879,8 +879,7 @@ Let's calculate the probability of an attack on a single thread.</p>
 </ul>
 <h2 id="usage"><strong>Usage</strong></h2>
 <p>Any DAO on GOSH can become Ethereum Layer 2 with a click of a button.
-DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project.</p>
-<p>.................</p>
+DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project...............</p>
 <h2 id="definitions"><strong>Definitions</strong></h2>
 <p><strong>Proposer</strong> is an off-chain program that any user can run on their own machine. It packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain.</p>
 <p>Proposer will always accumulate all transactions that are currently not applied to generate the proof, thus ensuring that all transactions of the opposite network are applied. If that is not the case the State Validation function will fail.</p>
