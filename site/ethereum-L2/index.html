@@ -566,14 +566,14 @@
         
           <li class="md-nav__item">
   <a href="#stage-2-optimistic-roll-up-kinda" class="md-nav__link">
-    Stage 2: Optimistic Roll-up, kinda
+    Stage 2: Optimistic roll-up, kinda
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stage-3-validium-zkp-roll-up" class="md-nav__link">
-    Stage 3: Validium ZKP Roll-up
+    Stage 3: Validium ZKP roll-up
   </a>
   
 </li>
@@ -684,14 +684,14 @@
         
           <li class="md-nav__item">
   <a href="#stage-2-optimistic-roll-up-kinda" class="md-nav__link">
-    Stage 2: Optimistic Roll-up, kinda
+    Stage 2: Optimistic roll-up, kinda
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stage-3-validium-zkp-roll-up" class="md-nav__link">
-    Stage 3: Validium ZKP Roll-up
+    Stage 3: Validium ZKP roll-up
   </a>
   
 </li>
@@ -747,8 +747,9 @@
 
 <h1 id="gosh-ethereum-l2"><strong>GOSH Ethereum L2</strong></h1>
 <h2 id="overview"><strong>Overview</strong></h2>
-<p>GOSH is an Asynchronous, highly scalable Validity Rollup which enables any asset on Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs are prepared on the user side by a <a href="./#definitions"><strong>Proposer</strong></a>.</p>
-<p>It then submitted to Independent Collator which receives user input and executes them on GOSH. Anyone can submit a resulting <strong>L2 (GOSH Blokchain)</strong> state root to <strong>L1 (Etherium Blokchain)</strong>. Randomly selected Verifiers run the state transition periodically and slash Collators in case of a fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. Anyone can publish L2 state root but only Collator can propose L2 state change.</p>
+<p>GOSH is an asynchronous, highly scalable validity rollup which enables any asset on Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a <a href="./#definitions" title="is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain"><strong>Proposer</strong></a>.
+It then submitted to Independent Collator which receives user input and executes them on GOSH.</p>
+<p>Anyone can submit a resulting <strong>L2 (GOSH Blokchain)</strong> state root to <strong>L1 (Etherium Blokchain)</strong>. Randomly selected Verifiers run the state transition periodically and slash Collators in case of a fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. Anyone can publish L2 state root but only Collator can propose L2 state change.</p>
 <p><strong>Constraints:</strong></p>
 <ul>
 <li>L1 can’t have the L2 entire state (L2 state is too large)</li>
@@ -760,30 +761,40 @@
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>At this stage we assume:<br />
-L2 fully trusts L1, it knows Validators (Committee) PubKeys and can always validate the chain of L1 blocks. We do not validate the smart contract execution on L2. We protect against any malicious 3rd party except for L1 and L2 Validators.</p>
+L2 fully trusts L1, it knows Validators (Committee) PubKeys and can always validate the chain of L1 blocks.<br />
+We do not validate the smart contract execution on L2. We protect against any malicious 3rd party except for L1 and L2 Validators.</p>
 </div>
-<p>As an example we will talk about ETH moving from Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general any asset  on Ethereum can be supported with necessary adjustments made to ELOCK smart contract Deposit/Withdrawal functions.</p>
-<p>Since GOSH uses ed25519 we use a double signature envelope scheme to prove signatures on GOSH to ELOCK Smart Contract on Ethereum.</p>
-<p><img alt="" src="../images/etherium_stage1_pic_L1-L2.jpg" /></p>
-<p><img alt="" src="../images/etherium_stage1_pic_L2-L1.jpg" /></p>
+<p>As an example we will talk about ETH moving from Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general any asset  on Ethereum can be supported with necessary adjustments made to <a href="./#definitions" title="is a GOSH L2 smart contract on Ethereum Blockchain">ELOCK</a> smart contract Deposit/Withdrawal functions.</p>
+<p>Since GOSH uses ed25519 we use a double signature envelope scheme to prove signatures on GOSH to ELOCK Smart Contract on Ethereum (<em>we could use ZKP to prove the ed25519 or a precompile proposed EIP665 whenever either of those solutions will be production ready</em>).</p>
+<p><img alt="" src="../images/etherium_stage1_pic_L1-L2.jpg" />
+The scheme for transferring assets from the Etherium to GOSH</p>
+<p><img alt="" src="../images/etherium_stage1_pic_L2-L1.jpg" />
+The scheme for transferring assets from the GOSH to Etherium</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><em>What we don’t cover at this Stage?</em><br />
-L2 contract execution is not validated (no validity or fraud proofs)<br />
-Funds retrieval function in case of L2 censored / stopped<br />
-L1 Funds retrieval is complicated and expansive  </p>
+<p><em>What we don’t cover at this Stage?</em>  </p>
+<ul>
+<li>L2 contract execution is not validated (no validity or fraud proofs)  </li>
+<li>Funds retrieval function in case of L2 censored / stopped  </li>
+<li>L1 Funds retrieval is complicated and expansive  </li>
+</ul>
 </div>
-<h3 id="stage-2-optimistic-roll-up-kinda"><strong>Stage 2: Optimistic Roll-up, kinda</strong></h3>
-<p>At this stage we add fraud and execution proofs for TIP-3 Contracts.</p>
-<p>The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence Optimistic Rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.</p>
-<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other Optimistic Rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network. We do not prove the whole network, but do we really need to? What difference does it make if the rest of state transition is corrupted if the contracts holding L1 balances are correct?</p>
+<h3 id="stage-2-optimistic-roll-up-kinda"><strong>Stage 2: Optimistic roll-up, kinda</strong></h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><em>What we don’t cover at this Stage?</em><br />
-Funds retrieval function in case of L2 censored / stopped<br />
-L1 Funds retrieval is complicated and expansive in case of immediate withdrawal  </p>
+<p>At this stage we add fraud and execution proofs for <a href="./#definitions" title="is a distributed token smart contract standard on GOSH blockchain">TIP-3</a> сontracts.</p>
 </div>
-<h3 id="stage-3-validium-zkp-roll-up"><strong>Stage 3: Validium ZKP Roll-up</strong></h3>
+<p>The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.</p>
+<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other оptimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network. We do not prove the whole network, but do we really need to? What difference does it make if the rest of state transition is corrupted if the contracts holding L1 balances are correct?</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><em>What we don’t cover at this Stage?</em>  </p>
+<ul>
+<li>Funds retrieval function in case of L2 censored / stopped  </li>
+<li>L1 funds retrieval is complicated and expansive in case of immediate withdrawal  </li>
+</ul>
+</div>
+<h3 id="stage-3-validium-zkp-roll-up"><strong>Stage 3: Validium ZKP roll-up</strong></h3>
 <p>At this stage we are adding external Verifiers and putting a bond of L2 Collators on Ethereum mainnet. Verifiers will be able to supply fraud proofs as well as data availability proofs.</p>
 <p>The Verifiers have the ability to slash the L2 Collators in case of misbehavior by supplying ZKPs proving the wrong block production, or by successfully challenging data availability proofs  making it effectively an Ethereum Sharding design, since GOSH is multithreaded, multisharded blockchain.</p>
 <p>Let’s remember that Zero Knowledge Proofs are probabilistic. The Verifier check protocol is probabilistic as well. The ZKP does not prove that every operation on the L2 blockchain is correct because that would not only be costly but not necessarily increase the probability of the correctness in respect to Verifiers check.</p>
@@ -797,7 +808,7 @@ Let's calculate the probability of an attack on a single thread.</p>
 <div class="arithmatex">\[\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}\]</div>
 <p>The final probability of an attack on a single thread, without considering verifiers, is</p>
 <div class="arithmatex">\[P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{L} ^{N}}\]</div>
-<p>Let <span class="arithmatex">\(T = NR\)</span> where <code>R</code> is some number. A validator becomes a verifier if the remainder of some hash when divided by <code>T</code> equals zero.</p>
+<p>Let <span class="arithmatex">\(T = \frac{N}{R}\)</span> where <code>R</code> is some number. A validator becomes a verifier if the remainder of some hash when divided by <span class="arithmatex">\({T}\)</span> equals zero.</p>
 <p>In each round, the probability for a particular validator to become a verifier is <span class="arithmatex">\(\frac{1}{T}\)</span>. For the attack to be successful, none of the honest validators should become a verifier.</p>
 <p>The probability of this is <span class="arithmatex">\((1 - \frac{1}{T}) ^{N-M}\)</span></p>
 <p>Thus, the final probability of the attack is</p>
@@ -835,7 +846,7 @@ Let's calculate the probability of an attack on a single thread.</p>
 </tr>
 <tr>
 <td><strong><code>All L1 transactions are provided to L2 from block A to block B</code></strong></td>
-<td>Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to GLOCK is correct and since we have hashes it's impossible to cheat</td>
+<td>Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to <a href="./#definitions" title="is a special TIP-3 Token Root Contract on GOSH Blockchain">GLOCK</a> is correct and since we have hashes it's impossible to cheat</td>
 </tr>
 <tr>
 <td><strong><code>Transaction counts and Balances are correct for L1 Block transmitted to L2</code></strong></td>
@@ -871,8 +882,9 @@ Let's calculate the probability of an attack on a single thread.</p>
 DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project.</p>
 <p>.................</p>
 <h2 id="definitions"><strong>Definitions</strong></h2>
-<p><strong>Proposer</strong> is an off-chain program that any user can run on their own machine. It packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain. Proposer will always accumulate all transactions that are currently not applied to generate the proof, thus ensuring that all transactions of the opposite network are applied. If that is not the case the State Validation function will fail.</p>
-<p><strong>ELOCK</strong> — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manage wIthdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.</p>
+<p><strong>Proposer</strong> is an off-chain program that any user can run on their own machine. It packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain.</p>
+<p>Proposer will always accumulate all transactions that are currently not applied to generate the proof, thus ensuring that all transactions of the opposite network are applied. If that is not the case the State Validation function will fail.</p>
+<p><strong>ELOCK</strong> — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manage withdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.</p>
 <p><strong>TIP-3</strong> — is a distributed token smart contract standard on GOSH blockchain. It is formally verified scalable token design for sharded architecture optimized for parallelization.</p>
 <p><strong>GLOCK</strong> — is a special TIP-3 Token Root Contract on GOSH Blockchain. Aside from managing TIP-3 distributed token it also manages the deposits and withdrawals of ELOCK assets. It receives external message from Proposers, with Ethereum blockchain proofs signed by Ethereum committee,  checks total transaction count consistency, checks Proposer message Merkle proofs, deploy or add to TIP-3 balances to corresponding User addresses.</p>
 <p><strong>WITHDRAWAL</strong> — is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.</p>
@@ -916,7 +928,7 @@ DAO members can choose to have their token available in Ethereum, effectively ma
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.expand", "content.code.copy"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.expand", "content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>

@@ -52,6 +52,7 @@ theme:
     - navigation.tabs
     - navigation.expand
     - content.code.copy
+    - content.tooltips
   palette:
     scheme: default
     primary: white
