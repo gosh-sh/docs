@@ -146,7 +146,29 @@ Which is less of an a probability of successful attack on Bitcoin blockchain:
 
 ## **Usage**
 Any DAO on GOSH can become Ethereum Layer 2 with a click of a button.
-DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project...............
+
+!!! info
+    This is only possible in the GOSH version at least 6.1.0
+
+To do this, go to the Etherium tab:
+
+![](images/etherium_usage_begin2.jpg)
+
+or select the appropriate section by clicking on your profile in the right corner:
+
+![](images/etherium_usage_begin1.jpg)
+
+Now we can test the ETH transfer in the alpha version.
+
+Сlick on:
+
+![](images/etherium_usage_begin3.jpg)
+
+
+
+
+
+<!-- DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project............... -->
 
 
 ## **Definitions**
