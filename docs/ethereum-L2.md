@@ -1,229 +1,315 @@
 # **GOSH Ethereum L2**
 
 
+## **integration with GOSH L2**
 
 
-## **Overview**
+### **Introduction**
 
-GOSH is an asynchronous, highly scalable validity rollup which enables any asset on Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a [**Proposer**](ethereum-L2.md#definitions " is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain").
-It then submitted to Independent Collator which receives user input and executes them on GOSH.
+Endpoint для использования с [Ever-SDK](https://docs.everos.dev/ever-sdk/)
 
-<!-- TODO -->[remake]
-Anyone can submit a resulting **L2 (GOSH Blokchain)** state root to **L1 (Etherium Blokchain)**. 
+```
+сеть main: https://network.gosh.sh
+```
 
-Randomly selected Verifiers run the state transition periodically and slash Collators in case of a fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. 
+Для каждого пользователя при регистрации в GOSH деплоится контракт [**Profile**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol).
 
-<!-- TODO -->[remake]
-Anyone can publish L2 state root but only Collator can propose L2 state change.
+Чтобы получить его адрес нужно:
 
+у контракта [**VersionController**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol), (1)
+{ .annotate }
 
+1.  address (permanent)
+    ```
+    0:5cbbbce41fc4290f3d4b085ab30912831b710fa2c681f6ea227d4a22f2b304f5
+    ```
 
-**Constraints:**
-
-
-* L1 can’t have the L2 entire state (L2 state is too large)
-* There must be a mechanism to move funds from L2 even if: L2 is not moving; L2 has banned specific accounts
-* EVM and TVM are different. TVM is a reference VM for the L2 chain. This means that even if L1 has a state it can’t execute transactions to verify correctness. But it can execute ZKP which will prove the correctness of operations in the particular circuit
-
-
-## **Proof Summary**
+    ABI можно получить по [ссылке](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.abi.json)
 
 
-| **What do we Prove**     | **How do we Prove it** |
-| ------------------------ | ------------------------------------ |
-| **`L1 Blocks are correct`**    | BLS Signatures check  |
-| **`L2 Blocks are correct`**    | Validator signatures + Verifiers Fraud Proofs |
-| **`L1 transaction are within the correct blocks`** | Merkle tree proof from Transaction hash to L1 block hash |
-| **`L2 transaction are within the correct blocks`** | Merkle tree proof from Transaction hash to L2 block hash |
-| **`All L1 transactions are provided to L2 from block A to block B`** | Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to [GLOCK](ethereum-L2.md#definitions "is a special TIP-3 Token Root Contract on GOSH Blockchain") is correct and since we have hashes it's impossible to cheat
-| **`Transaction counts and Balances are correct for L1 Block transmitted to L2`** | Merkle tree of account states for a particular L1 block |
-| **`All L2 Withdrawal Transactions are transferred to L1   from Block A to Block B`** | Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to ELOCK is correct and since we have hashes it's impossible to cheat
-| **`TIP-3 Deposit/Transfer/Withdrawal Transaction  Execution is correct`** | ZKP for TIP-3 Circuit |
-| **`Validator set change from last KeyBlock is correct`** | ZKP for Elector contract Circuit |
-| **`Validators Fraud Proofs`** | Fraud detection mechanism by Verifiers |
+вызывать метод:
+
+```
+getProfileAddr(string name) returns(address)
+```
+где:
+
+`name` - имя пользователя
+
+и получаем адрес контракта профиля пользователя.
 
 
 
+Затем нужно получить адрес [**SystemContract**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/systemcontract.sol) требуемой версии:
 
-## **Roadmap**/**Development process**
+для этого в контракте **VersionController** нужно вызвать метод:
 
-### **Stage 1: Trustless Bridge**   (**In production**) ![](images/green%20tick3.jpg)
+```
+getVersionAddrMap() returns(SystemContractAddr[])
+```
 
-!!! info
-    At this stage we assume:  
-    L2 fully trusts L1, it knows Validators (Committee) PubKeys and can always validate the chain of L1 blocks.  
-    We do not validate the smart contract execution on L2. We protect against any malicious 3rd party except for L1 and L2 Validators.
-
-As an example we will talk about ETH moving from Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general any asset  on Ethereum can be supported with necessary adjustments made to [ELOCK](ethereum-L2.md#definitions "is a GOSH L2 smart contract on Ethereum Blockchain") smart contract Deposit/Withdrawal functions.
-
-Since GOSH uses ed25519 we use a double signature envelope scheme to prove signatures on GOSH to ELOCK Smart Contract on Ethereum (*we could use ZKP to prove the ed25519 or a precompile proposed EIP665 whenever either of those solutions will be production ready*).
-
-
-
-![](images/etherium_stage1_pic_L1-L2.jpg)
-The scheme for transferring assets from the Etherium to GOSH
-
-
-![](images/etherium_stage1_pic_L2-L1.jpg)
-The scheme for transferring assets from the GOSH to Etherium
-
-
-
-!!! info 
-    *What we don’t cover at this Stage?*  
-
-    * L2 contract execution is not validated (no validity or fraud proofs)  
-    * Funds retrieval function in case of L2 censored / stopped  
-    * L1 Funds retrieval is complicated and expansive  
-
-
-
-### **Stage 2: Optimistic roll-up, kinda**
+В результате вернется список всех версий контрактов с их адресами:
 
 !!! info
-    At this stage we add fraud and execution proofs for [TIP-3](ethereum-L2.md#definitions "is a distributed token smart contract standard on GOSH blockchain") сontracts.
+    Сейчас текущая версия 6.1.0: (1)
+    { .annotate }
 
-The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.
- 
-At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other оptimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.
+    1.  address systemcontract
+        ```
+        0:e87874f4a9e46f9f16e0c09c824204836b31d60b16db050a8c7fe329bb43d120
+        ```
+
+
+### **Transfer tokens**
+
+
+#### * **inside the GOSH network**
+
+
+Перед переводом на другой GOSH-кошелек нужно проверить задеплоин ли кошелек получателя. для этого нужно вызвать в контракте:
+**RootTokenContract** метод [`getWalletAddress`]((ethereum-L2.md#tip3-_1)) указав публичный ключ получателя
+
+Если у получателя TIP3-кошелек не задеплоин, то нужно в контракте TIP3-кошелька `TONTokenWallet`(с которого будет осуществляться перевод) (1)
+{ .annotate }
+
+1.  ABI [here](../static/RootTokenContract.abi){:download="TONTokenWallet.abi"}
+
+вызвать метод:
+
+```
+void transferToRecipient(
+    address_opt answer_addr,
+    Tip3Creds   to,
+    uint128     tokens,
+    uint128     evers,
+    uint128     keep_evers,
+    bool        deploy,
+    uint128     return_ownership,
+    opt<cell>   notify_payload
+  )
+```
+
+В результате для получателя будет задеплоин пустой TIP3-кошелек.
+
+
+<!-- 
+`await this.run('transferToRecipient', {
+  _answer_id: 0,
+  answer_addr: null,
+  to: { pubkey, owner: null },
+  tokens: 0,
+  evers: BigInt(4.5 * 10 ** 9).toString(),
+  keep_evers: BigInt(4 * 10 ** 9).toString(),
+  deploy: true,
+  return_ownership: 0,
+  notify_payload: null,
+})` -->
+
+Затем, для перевода TIP3-токенов пользователю, нужно  
+в контракте **TONTokenWallet**  
+вызвать метод:
+
+```
+void transfer(
+    address_opt answer_addr,
+    address     to,
+    uint128     tokens,
+    uint128     evers,
+    uint128     return_ownership,
+    opt<cell>   notify_payload
+)
+```
+where:  
+    `answer_addr`      - (опциональный) Answer address (should be `null`)  
+    `to`               - Destination TIP3 wallet address  
+    `tokens`           - Amount of tokens to transfer  
+    `evers`            - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value  
+    `return_ownership` - Return ownership - to decrease lend ownership provided for the caller contract (additionally) (should be `0`)  
+    `notify_payload`   - Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification (should be `null`)  
+
+<!-- 
+`await this.run('transfer', {
+  _answer_id: 0,
+  answer_addr: null,
+  to: address,
+  tokens: amount.toString(),
+  evers: BigInt(4 * 10 ** 9).toString(),
+  return_ownership: 0,
+  notify_payload: null,
+})` -->
+
+#### * **from Etherium to GOSH**
+
+Для перевода ETH в GOSH необходимо  
+в контракте **ELock** (1)
+{ .annotate }
+
+1.  is a GOSH L2 smart contract on Ethereum Blockchain.
+    It receives deposits from users, manage withdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.
+    
+    address in Etherium:
+    ```
+    0x135d03AF576633B0C99FB9F0A0c6Aa9cE8D3C67E
+    ```
+
+    ABI [here](../static/Elock.json){:download="Elock.json"}
+
+вызвать метод with attach value, количество ETH, которые будут переведены в GOSH:
+
+```
+deposit(uint256 pubkey) public payable
+```
+
+где,  
+
+`pubkey` - публичный ключ получателя в GOSH  
+
+Затем необходимо [вычислить адрес TIP3-кошелька пользователя](ethereum-L2.md#tip3-_1) в GOSH и ожидать перевода токенов (`WETH` - wrapped `ETH`) на полученный адрес.
+
+!!! exsample annotate "example of calling an ELock contract in Etherium"
+
+    ``` cpp
+    const elock = new data.web3.instance.eth.Contract(
+        ELockAbi.abi,
+        AppConfig.elockaddr,
+    )
+
+    const edata = elock.methods.deposit(data.summary.to.user.value.pubkey).encodeABI()
+            
+    const receipt = await data.web3.instance.eth.sendTransaction({
+    from: data.web3.address,
+    to: AppConfig.elockaddr,
+    value: data.web3.instance.utils.toWei(data.summary.from.amount, 'ether'),
+    data: edata,
+    gasLimit: 100000,
+    maxPriorityFeePerGas: 25000,
+    })
+    ```
+
+
+#### * **from GOSH to Etherium**
+
+
+Для перевода `WETH` в Etherium необходимо  
+в контракте **TONTokenWallet** пользователя  
+вызвать метод:
+
+```
+void burnTokens(uint128 tokens, uint256 to)
+```
+где:  
+`tokens` - количество WETH, которые будут переведены в Etherium  
+`to`- адрес кошелька получателя в Etherium
+
+Затем ожидать поступления ETH на кошелек получателя в Etherium.
+
+
+
+### Getting the TIP3-wallet address by user name
+
+
+Зная адрес контракта **профиля** пользователя (1)
+{ .annotate }
+
+1.  ABI можно получить по [ссылке](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json)
+
+вызываем в нем метод:
+
+```
+getAccess() returns(mapping(uint256 => uint8))
+```
+
+получаем список всех публичных ключей пользователя
+
+!!! warning annotate "Important"
+    Из списка необходимо брать нулевой ключ
+
+Затем по публичному ключу можно будет определить [адрес TIP3-кошелька пользователя](ethereum-L2.md#tip3-_1).
+
+
+### **Getting the user's TIP3-wallet address using the user's public key**
+
+
+Для этого в контракте **RootTokenContract** (1)
+{ .annotate }
+
+1.  address
+    ```
+    0:1792014440934b9c4024c97221b49c50bd2e2db1426b612ba4c6694b144f5e77
+    ```
+
+    ABI [here](../static/RootTokenContract.abi){:download="RootTokenContract.abi"}
+
+вызываем метод:
+
+```
+address getWalletAddress(uint256 pubkey, address_opt owner)
+```
+
+где:  
+`pubkey` - публичный ключ пользователя  
+`owner` - опциональный параметр, не используется
+
+
+
+### **Getting a list of incoming messages of the contract**
+
+
+!!! note annotate "пример получения сообщений аккаунта:"
+    https://github.com/gosh-sh/gosh/blob/dev/web/src/blockchain/contract.ts#L90
 
 !!! info
-    *What we don’t cover at this Stage?*  
-
-    * Funds retrieval function in case of L2 censored / stopped  
-    * L1 funds retrieval is complicated and expansive in case of immediate withdrawal  
-
-
-### **Stage 3: Validium ZKP roll-up**
-
-
-At this stage we are adding external Verifiers and putting a bond of L2 Collators on Ethereum mainnet. Verifiers will be able to supply fraud proofs as well as data availability proofs.
-
-The Verifiers have the ability to slash the L2 Collators in case of misbehavior by supplying ZKPs proving the wrong block production, or by successfully challenging data availability proofs  making it effectively an Ethereum Sharding design, since GOSH is multithreaded, multisharded blockchain.
-
-<!-- Let’s remember that Zero Knowledge Proofs are probabilistic. The Verifier check protocol is probabilistic as well. The ZKP does not prove that every operation on the L2 blockchain is correct because that would not only be costly but not necessarily increase the probability of the correctness in respect to Verifiers check. -->
-
-<!-- Let's say we have `S` threads and `N` validators, out of which M are malicious. For each thread, we choose `L` validators that will sign the block. If a group of validators gathers at least `C` malicious ones, the attack is considered successful.  
-Let's calculate the probability of an attack on a single thread.
-
-The total number of ways to choose validators for a thread is $C _{N} ^{L}$
-
-Let `i` be the number of malicious validators gathered in a thread. To find the number of ways to choose at least `C` malicious validators, we need to multiply the number of ways to choose malicious validators by the number of ways to choose regular validators.
-
-
-That is $C _{M} ^{i} * C _{N-M} ^{L-i}$
-
-
-Since we need to gather at least `C` malicious validators, the total number of ways will be the sum 
-
-of `i` from `C` to `L` :
-
-$$\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}$$
-
-The final probability of an attack on a single thread, without considering verifiers, is
-
-$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}}$$
-
-Let $T = \frac{N}{R}$ where `R` is some number. A validator becomes a verifier if the remainder of some hash when divided by ${T}$ equals zero.
-
-In each round, the probability for a particular validator to become a verifier is $\frac{1}{T}$. For the attack to be successful, none of the honest validators should become a verifier.
-
-The probability of this is $(1 - \frac{1}{T}) ^{N-M}$
-
-Thus, the final probability of the attack is
-
-$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}} * (1 - \frac{1}{T}) ^{N-M}$$
-
-Which is less of an a probability of successful attack on Bitcoin blockchain:
-
-![](images/etherium_stage3_diagram.jpg) -->
-
-!!! note annotate "Important"
-    At this stage there is no need to trust L2 Collators with anything. L1 is able to verify all L2 state transitions and L2 can verify L1 contract state transitions. Funds are easily withdrawn from either blockchain. To break the system both L1 and L2 need to be corrupted or stopped simultaneously.
-
-
-
-## **Contracts**
-
-
-* **ELOCK** — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manage withdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.
-
-
-* **GLOCK** — is a special TIP-3 Token Root Contract on GOSH Blockchain. Aside from managing TIP-3 distributed token it also manages the deposits and withdrawals of ELOCK assets. It receives external message from Proposers, with Ethereum blockchain proofs signed by Ethereum committee,  checks total transaction count consistency, checks Proposer message Merkle proofs, deploy or add to TIP-3 balances to corresponding User addresses.
-
-
-* tip3root
-* tip3wallet
-
-
-## **Usage**
-Any DAO on GOSH can become Ethereum Layer 2 with a click of a button.
-
-!!! info
-    This is only possible in the GOSH version at least 6.1.0
-
-To make a transfer between wallets, go to the **Etherium** tab:
-
-![](images/etherium_usage_begin2.jpg)
-
-or select the this section by clicking on your profile in the right corner:
-
-![](images/etherium_usage_begin1.jpg)
-
-Now we can test the ETH transfer in the alpha version.
-
-Сlick on:
-
-![](images/etherium_usage_begin3.jpg)
-
-the "Cross-chain transfer" page will open for you.
-
-
-In the **Accounts** section, click **Connect** to log into a software cryptocurrency wallet **MetaMask**
-
-![](images/etherium_usage_connect.jpg)
-
-Choose the amount you want to send
-
-!!! note
-    The amount must be greater than or equal to 0.01
-
-
-!!! warning
-    The contract has not been formally verified yet. Please do not send a lot!
-
-![](images/etherium_usage_from.jpg)
-
-Еnter the wallet address or select GOSH username for easy transfer
-
-![](images/etherium_usage_to.jpg)
-
-After you make a deposit to the GOSH contract in ETHERIUM, the corresponding amount of WETH tokens (Wrapper Etherium tokens) will be transferred to your wallet on the GOSH network
-
-
-
-<!-- DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project............... -->
-
-
-## **Definitions**
-
-**TVM** — is a Custom Virtual Machine GOSH Blockchain uses. For the GOSH L2 release we have added special TVM Opcodes for Ethereum signatures and Hash function, thus TVM smart contract can run Signature Verifications and Calculate Hash functions from Ethereum Data. 
-
-<!-- TODO -->
-**Masterchain** is the (-1) work chain of the GOSH blockchain. It is needed for service contracts and validator contracts.
-
-**Shardchain** is shards into which the workchain is split depending on the network load. When the load is low, there are 16 (????) shards. When it increases, shards split and when they decrease they merge.
-
-**Proposer** is an off-chain program that any user can run on their own machine. It packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain.
-
-Proposer will always accumulate all transactions that are currently not applied to generate the proof, thus ensuring that all transactions of the opposite network are applied. If that is not the case the State Validation function will fail.
-
-**TIP-3** — is a distributed token smart contract standard on GOSH blockchain. It is formally verified scalable token design for sharded architecture optimized for parallelization.
-
-**WITHDRAWAL** — is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.
-
-**WETH TIP-3 Wallet** — is a set custom TIP-3 contracts that runs in GOSH Masterchain and in addition to standard functions has Lock/Unlock method. Lock is called when WETH needs to be transferred to Ethereum Blockchain. Lock is proved to ELOCK contract in order to allow for ETH native token withdrawals. 
-
-**VAULT** — is GOSH Shardchain smart contract that Wraps WETH TIP-3 tokens into tradable assets on GOSH Network
-
-
+    Использование пагинации в SDK
+    https://docs.everplatform.dev/samples/graphql-samples/accounts#pagination-parameters
+
+
+### **Get info about TIP3-wallet details**
+
+
+Для получения информации о кошельке:  
+в контракте **TONTokenWallet**
+
+вызывается метод:
+
+```
+details_info getDetails()
+```
+
+и получаем структуру данных:
+
+```
+struct details_info {
+  string            name;              ///< Token name.
+  string            symbol;            ///< Token short symbol.
+  uint8             decimals;          ///< Decimals for ui purposes. ex: balance 100 with decimals 2 will be printed as 1.00.
+  uint128           balance;           ///< Token balance of the wallet.
+  uint128           locked;            ///< Locked token balance of the wallet.
+  uint256           root_pubkey;       ///< Public key of the related RootTokenContract.
+  address           root_address;      ///< Address of the related RootTokenContract.
+  uint256           wallet_pubkey;     ///< Public key of wallet owner (User id for FlexWallet).
+  address_opt       owner_address;     ///< Owner contract address for internal ownership, will be 0:0..0 otherwise.
+  opt<uint256>      lend_pubkey;       ///< Lend ownership pubkey.
+  lend_owners_array lend_owners;       ///< All lend ownership records of the contract.
+  uint128           lend_balance;      ///< Summarized lend balance to all targets.
+                                       ///< Actual active balance will be `balance - lend_balance`.
+  opt<bind_info>    binding;           ///< Flex binding info.
+  uint256           code_hash;         ///< TIP3 wallet code hash to verify other wallets.
+  uint16            code_depth;        ///< TIP3 wallet code depth to verify other wallets.
+  int8              workchain_id;      ///< Workchain id.
+}
+```
+
+
+<!-- В каждом ДАО, в котором пользователь является членом, у него может быть до 64 кошельков.
+Кошелек с индексом 0 - основной, остальные - дополнительные.
+
+Чтобы получить адрес кошелька пользователя в конкретном ДАО у `systemcontract`
+
+abi: https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/systemcontract.abi.json
+
+вызывается  метод 
+`getAddrWallet(address pubaddr, address dao, uint128 index) returns(address)`,
+где 
+pubaddr - адрес контракта профиля пользователя,
+dao - адрес контракта ДАО
+index - индекс кошелька (0 - основной, 1-64 - дополнительные) -->
