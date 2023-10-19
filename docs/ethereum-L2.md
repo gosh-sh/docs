@@ -1,82 +1,68 @@
 # **GOSH Ethereum L2**
 
 
-## **integration with GOSH L2**
+## **Integration with GOSH L2**
 
 
 ### **Introduction**
 
-Endpoint для использования с [Ever-SDK](https://docs.everos.dev/ever-sdk/)
+Endpoint for use with [Ever-SDK](https://docs.everos.dev/ever-sdk/)
 
 ```
-сеть main: https://network.gosh.sh
+network main: https://network.gosh.sh
 ```
 
-Для каждого пользователя при регистрации в GOSH деплоится контракт [**Profile**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol).
-
-Чтобы получить его адрес нужно:
-
-у контракта [**VersionController**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol), (1)
+The contract [**Profile**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol) (1) is deployed for each user when registering with GOSH.
 { .annotate }
 
-1.  address (permanent)
-    ```
-    0:5cbbbce41fc4290f3d4b085ab30912831b710fa2c681f6ea227d4a22f2b304f5
-    ```
+1.  The ABI can be obtained by [link](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json)
 
-    ABI можно получить по [ссылке](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.abi.json)
-
-
-вызывать метод:
+To get its address, you need to call the method:
 
 ```
 getProfileAddr(string name) returns(address)
 ```
-где:
 
-`name` - имя пользователя
+where:
 
-и получаем адрес контракта профиля пользователя.
+`name` - user's name
+{ .ml-params }
+
+from the contract [**VersionController**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol), (1)
+{ .annotate }
+
+1.  is a contract version manager used when upgrading GOSH smart contracts  
+    
+    address (permanent)
+    ```
+    0:5cbbbce41fc4290f3d4b085ab30912831b710fa2c681f6ea227d4a22f2b304f5
+    ```
+
+    The ABI can be obtained by [link](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.abi.json)
 
 
 
-Затем нужно получить адрес [**SystemContract**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/systemcontract.sol) требуемой версии:
-
-для этого в контракте **VersionController** нужно вызвать метод:
-
-```
-getVersionAddrMap() returns(SystemContractAddr[])
-```
-
-В результате вернется список всех версий контрактов с их адресами:
-
-!!! info
-    Сейчас текущая версия 6.1.0: (1)
-    { .annotate }
-
-    1.  address systemcontract
-        ```
-        0:e87874f4a9e46f9f16e0c09c824204836b31d60b16db050a8c7fe329bb43d120
-        ```
+The result is the address of the user's **Profile** contract.
 
 
 ### **Transfer tokens**
 
 
-#### * **inside the GOSH network**
+#### **from GOSH to GOSH**
 
 
-Перед переводом на другой GOSH-кошелек нужно проверить задеплоин ли кошелек получателя. для этого нужно вызвать в контракте:
-**RootTokenContract** метод [`getWalletAddress`]((ethereum-L2.md#tip3-_1)) указав публичный ключ получателя
+Before transferring to another TIP3-wallet, you need to check whether the recipient's TIP3-wallet is already deployed.
 
-Если у получателя TIP3-кошелек не задеплоин, то нужно в контракте TIP3-кошелька `TONTokenWallet`(с которого будет осуществляться перевод) (1)
+To do this, you need to call the method [`getWalletAddress`](ethereum-L2.md#getting-the-users-tip3-wallet-address-using-the-users-public-key) in the **RootTokenContract**, the recipient's public key is specified.
+
+
+If the recipient's TIP3-wallet is not deployed, you need to call the method `transferToRecipient` in the TIP3-wallet contract **"TONTokenWallet"** (1) (from which the transfer will be made).
 { .annotate }
 
-1.  ABI [here](../static/RootTokenContract.abi){:download="TONTokenWallet.abi"}
+1.  ABI [here](../static/TONTokenWallet.abi){:download="TONTokenWallet.abi"}
 
-вызвать метод:
 
-```
+``` cpp
 void transferToRecipient(
     address_opt answer_addr,
     Tip3Creds   to,
@@ -86,14 +72,22 @@ void transferToRecipient(
     bool        deploy,
     uint128     return_ownership,
     opt<cell>   notify_payload
-  )
+)
 ```
 
-В результате для получателя будет задеплоин пустой TIP3-кошелек.
+where:
 
+`answer_addr` - Answer address, **(should be `null`)**  
+`to` - Recipient credentials (pubkey + owner **(should be `null`)**)  
+`tokens` - Amount of tokens to transfer, **(should be `0`)**  
+`evers` - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value  
+`keep_evers` - Evers to keep in destination wallet  
+`deploy` - **(should be `true`)** then the contract will send acceptTransfer message with StateInit to also deploy new tip3 wallet (if it doesn't already exist) with the provided recipient public key and recipient internal owner  
+`return_ownership` - Return ownership - to decrease lend ownership for the caller contract (additionally), **(should be `0`)**  
+`notify_payload` - (optional) < Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification, **(should be `0`)**  
+{ .ml-params }
 
-<!-- 
-`await this.run('transferToRecipient', {
+<!-- await this.run('transferToRecipient', {
   _answer_id: 0,
   answer_addr: null,
   to: { pubkey, owner: null },
@@ -103,13 +97,18 @@ void transferToRecipient(
   deploy: true,
   return_ownership: 0,
   notify_payload: null,
-})` -->
+}) -->
 
-Затем, для перевода TIP3-токенов пользователю, нужно  
-в контракте **TONTokenWallet**  
-вызвать метод:
+As a result, an empty TIP3-wallet will be deployed to the recipient.
 
-```
+
+!!! Warning
+    **It is important to wait until the contract status changes to "Аctive".**
+
+
+Then, for transfer the TIP3-tokens to the user, you need to call the method `transfer` in the **TONTokenWallet** contract.
+
+``` cpp
 void transfer(
     address_opt answer_addr,
     address     to,
@@ -119,13 +118,16 @@ void transfer(
     opt<cell>   notify_payload
 )
 ```
-where:  
-    `answer_addr`      - (опциональный) Answer address (should be `null`)  
-    `to`               - Destination TIP3 wallet address  
-    `tokens`           - Amount of tokens to transfer  
-    `evers`            - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value  
-    `return_ownership` - Return ownership - to decrease lend ownership provided for the caller contract (additionally) (should be `0`)  
-    `notify_payload`   - Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification (should be `null`)  
+
+where:
+
+`answer_addr`      - (опциональный) Answer address **(should be `null`)**  
+`to`               - Destination TIP3-wallet address  
+`tokens`           - Amount of tokens to transfer  
+`evers`            - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value  
+`return_ownership` - Return ownership - to decrease lend ownership provided for the caller contract (additionally) **(should be `0`)**  
+`notify_payload`   - Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification **(should be `null`)**  
+{ .ml-params }
 
 <!-- 
 `await this.run('transfer', {
@@ -138,35 +140,35 @@ where:
   notify_payload: null,
 })` -->
 
-#### * **from Etherium to GOSH**
+#### **from Ethereum to GOSH**
 
-Для перевода ETH в GOSH необходимо  
-в контракте **ELock** (1)
+
+For transfer `ETH` to GOSH, you need to call the method `deposit` in the **ELOCK** (1) contract, with attached value (the number of `ETH`, that will be transferred to GOSH).
 { .annotate }
 
 1.  is a GOSH L2 smart contract on Ethereum Blockchain.
     It receives deposits from users, manage withdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.
     
-    address in Etherium:
+    address in Ethereum:
     ```
     0x135d03AF576633B0C99FB9F0A0c6Aa9cE8D3C67E
     ```
 
     ABI [here](../static/Elock.json){:download="Elock.json"}
 
-вызвать метод with attach value, количество ETH, которые будут переведены в GOSH:
 
 ```
 deposit(uint256 pubkey) public payable
 ```
 
-где,  
+where:
 
-`pubkey` - публичный ключ получателя в GOSH  
+`pubkey` - the recipient's public key in GOSH  
+{ .ml-params }
 
-Затем необходимо [вычислить адрес TIP3-кошелька пользователя](ethereum-L2.md#tip3-_1) в GOSH и ожидать перевода токенов (`WETH` - wrapped `ETH`) на полученный адрес.
+Then it is necessary [to calculate the address of the user's TIP3-wallet in GOSH](ethereum-L2.md#getting-the-users-tip3-wallet-address-using-the-users-public-key) and wait the transfer of `WETH` tokens (wrapped `ETH`) to the received address.
 
-!!! exsample annotate "example of calling an ELock contract in Etherium"
+!!! exsample annotate "example of calling the ELock contract in Ethereum"
 
     ``` cpp
     const elock = new data.web3.instance.eth.Contract(
@@ -177,105 +179,102 @@ deposit(uint256 pubkey) public payable
     const edata = elock.methods.deposit(data.summary.to.user.value.pubkey).encodeABI()
             
     const receipt = await data.web3.instance.eth.sendTransaction({
-    from: data.web3.address,
-    to: AppConfig.elockaddr,
-    value: data.web3.instance.utils.toWei(data.summary.from.amount, 'ether'),
-    data: edata,
-    gasLimit: 100000,
-    maxPriorityFeePerGas: 25000,
+        from: data.web3.address,
+        to: AppConfig.elockaddr,
+        value: data.web3.instance.utils.toWei(data.summary.from.amount, 'ether'),
+        data: edata,
+        gasLimit: 100000,
+        maxPriorityFeePerGas: 25000,
     })
     ```
 
 
-#### * **from GOSH to Etherium**
+#### **from GOSH to Ethereum**
 
 
-Для перевода `WETH` в Etherium необходимо  
-в контракте **TONTokenWallet** пользователя  
-вызвать метод:
+For transfer "WETH" to Ethereum, you need to call the `burnTokens` method in the user contract **TONTokenWallet**
 
-```
+``` cpp
 void burnTokens(uint128 tokens, uint256 to)
 ```
-где:  
-`tokens` - количество WETH, которые будут переведены в Etherium  
-`to`- адрес кошелька получателя в Etherium
 
-Затем ожидать поступления ETH на кошелек получателя в Etherium.
+where:
+
+`tokens` - amount WETH, which will be transferred to Ethereum  
+`to` - the address of the recipient's wallet in Ethereum
+{ .ml-params }
+
+Then wait for the transfer of `ETH` to the recipient's wallet in Ethereum.
 
 
+### **Getting the TIP3-wallet address by user name**
 
-### Getting the TIP3-wallet address by user name
 
-
-Зная адрес контракта **профиля** пользователя (1)
+Knowing the address of the user's contract **Profile** (1) you call the method `getAccess()` in it.
 { .annotate }
 
-1.  ABI можно получить по [ссылке](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json)
+1.  The ABI can be obtained by [link](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json)
 
-вызываем в нем метод:
 
 ```
 getAccess() returns(mapping(uint256 => uint8))
 ```
 
-получаем список всех публичных ключей пользователя
+As a result, you get a list of all the user's public keys with their numbers.
 
 !!! warning annotate "Important"
-    Из списка необходимо брать нулевой ключ
+    It is necessary to take the zeroth pubkey from the list
 
-Затем по публичному ключу можно будет определить [адрес TIP3-кошелька пользователя](ethereum-L2.md#tip3-_1).
+Then, using the received user's public key, it will be possible [to determine the address of the user's TIP3-wallet](ethereum-L2.md#getting-the-users-tip3-wallet-address-using-the-users-public-key)
 
 
 ### **Getting the user's TIP3-wallet address using the user's public key**
 
 
-Для этого в контракте **RootTokenContract** (1)
+To do this, in the **RootTokenContract** (1)
 { .annotate }
 
 1.  address
+
     ```
     0:1792014440934b9c4024c97221b49c50bd2e2db1426b612ba4c6694b144f5e77
     ```
 
     ABI [here](../static/RootTokenContract.abi){:download="RootTokenContract.abi"}
 
-вызываем метод:
+calling method:
 
 ```
 address getWalletAddress(uint256 pubkey, address_opt owner)
 ```
 
-где:  
-`pubkey` - публичный ключ пользователя  
-`owner` - опциональный параметр, не используется
+where:
 
+`pubkey` - user's public key  
+`owner` - optional parameter, not used
+{ .ml-params }
 
 
 ### **Getting a list of incoming messages of the contract**
 
 
-!!! note annotate "пример получения сообщений аккаунта:"
-    https://github.com/gosh-sh/gosh/blob/dev/web/src/blockchain/contract.ts#L90
+!!! example
+    [of how to receive account messages](https://github.com/gosh-sh/gosh/blob/dev/web/src/blockchain/contract.ts#L90)
 
 !!! info
-    Использование пагинации в SDK
-    https://docs.everplatform.dev/samples/graphql-samples/accounts#pagination-parameters
+    [Using](https://docs.everplatform.dev/samples/graphql-samples/accounts#pagination-parameters) pagination in the SDK
+
 
 
 ### **Get info about TIP3-wallet details**
 
-
-Для получения информации о кошельке:  
-в контракте **TONTokenWallet**
-
-вызывается метод:
+For get information about the TIP3-wallet in the contract **TONTokenWallet**, the `getDetails` method is called:
 
 ```
 details_info getDetails()
 ```
 
-и получаем структуру данных:
+and you get the data structure:
 
 ```
 struct details_info {
@@ -298,18 +297,3 @@ struct details_info {
   int8              workchain_id;      ///< Workchain id.
 }
 ```
-
-
-<!-- В каждом ДАО, в котором пользователь является членом, у него может быть до 64 кошельков.
-Кошелек с индексом 0 - основной, остальные - дополнительные.
-
-Чтобы получить адрес кошелька пользователя в конкретном ДАО у `systemcontract`
-
-abi: https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/systemcontract.abi.json
-
-вызывается  метод 
-`getAddrWallet(address pubaddr, address dao, uint128 index) returns(address)`,
-где 
-pubaddr - адрес контракта профиля пользователя,
-dao - адрес контракта ДАО
-index - индекс кошелька (0 - основной, 1-64 - дополнительные) -->
