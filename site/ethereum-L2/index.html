@@ -680,10 +680,10 @@
       
         <li class="md-nav__item">
   <a href="#integration-with-gosh-l2" class="md-nav__link">
-    integration with GOSH L2
+    Integration with GOSH L2
   </a>
   
-    <nav class="md-nav" aria-label="integration with GOSH L2">
+    <nav class="md-nav" aria-label="Integration with GOSH L2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -702,22 +702,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inside-the-gosh-network" class="md-nav__link">
-    * inside the GOSH network
+  <a href="#from-gosh-to-gosh" class="md-nav__link">
+    from GOSH to GOSH
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-etherium-to-gosh" class="md-nav__link">
-    * from Etherium to GOSH
+  <a href="#from-ethereum-to-gosh" class="md-nav__link">
+    from Ethereum to GOSH
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-gosh-to-etherium" class="md-nav__link">
-    * from GOSH to Etherium
+  <a href="#from-gosh-to-ethereum" class="md-nav__link">
+    from GOSH to Ethereum
   </a>
   
 </li>
@@ -815,10 +815,10 @@
       
         <li class="md-nav__item">
   <a href="#integration-with-gosh-l2" class="md-nav__link">
-    integration with GOSH L2
+    Integration with GOSH L2
   </a>
   
-    <nav class="md-nav" aria-label="integration with GOSH L2">
+    <nav class="md-nav" aria-label="Integration with GOSH L2">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -837,22 +837,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#inside-the-gosh-network" class="md-nav__link">
-    * inside the GOSH network
+  <a href="#from-gosh-to-gosh" class="md-nav__link">
+    from GOSH to GOSH
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-etherium-to-gosh" class="md-nav__link">
-    * from Etherium to GOSH
+  <a href="#from-ethereum-to-gosh" class="md-nav__link">
+    from Ethereum to GOSH
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-gosh-to-etherium" class="md-nav__link">
-    * from GOSH to Etherium
+  <a href="#from-gosh-to-ethereum" class="md-nav__link">
+    from GOSH to Ethereum
   </a>
   
 </li>
@@ -911,65 +911,60 @@
 
 
 <h1 id="gosh-ethereum-l2"><strong>GOSH Ethereum L2</strong></h1>
-<h2 id="integration-with-gosh-l2"><strong>integration with GOSH L2</strong></h2>
+<h2 id="integration-with-gosh-l2"><strong>Integration with GOSH L2</strong></h2>
 <h3 id="introduction"><strong>Introduction</strong></h3>
-<p>Endpoint для использования с <a href="https://docs.everos.dev/ever-sdk/">Ever-SDK</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>сеть main: https://network.gosh.sh
+<p>Endpoint for use with <a href="https://docs.everos.dev/ever-sdk/">Ever-SDK</a></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>network main: https://network.gosh.sh
 </span></code></pre></div>
-<p>Для каждого пользователя при регистрации в GOSH деплоится контракт <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol"><strong>Profile</strong></a>.</p>
-<p>Чтобы получить его адрес нужно:</p>
-<p class="annotate">у контракта <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol"><strong>VersionController</strong></a>, (1)</p>
+<p class="annotate">The contract <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol"><strong>Profile</strong></a> (1) is deployed for each user when registering with GOSH.</p>
+<ol>
+<li>The ABI can be obtained by <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json">link</a></li>
+</ol>
+<p>To get its address, you need to call the method:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>getProfileAddr(string name) returns(address)
+</span></code></pre></div>
+<p>where:</p>
+<p class="ml-params"><code>name</code> - user's name</p>
+<p class="annotate">from the contract <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol"><strong>VersionController</strong></a>, (1)</p>
 <ol>
 <li>
+<p>is a contract version manager used when upgrading GOSH smart contracts  </p>
 <p>address (permanent)
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>0:5cbbbce41fc4290f3d4b085ab30912831b710fa2c681f6ea227d4a22f2b304f5
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>0:5cbbbce41fc4290f3d4b085ab30912831b710fa2c681f6ea227d4a22f2b304f5
 </span></code></pre></div></p>
-<p>ABI можно получить по <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.abi.json">ссылке</a></p>
+<p>The ABI can be obtained by <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.abi.json">link</a></p>
 </li>
 </ol>
-<p>вызывать метод:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>getProfileAddr(string name) returns(address)
-</span></code></pre></div>
-где:</p>
-<p><code>name</code> - имя пользователя</p>
-<p>и получаем адрес контракта профиля пользователя.</p>
-<p>Затем нужно получить адрес <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/systemcontract.sol"><strong>SystemContract</strong></a> требуемой версии:</p>
-<p>для этого в контракте <strong>VersionController</strong> нужно вызвать метод:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>getVersionAddrMap() returns(SystemContractAddr[])
-</span></code></pre></div>
-<p>В результате вернется список всех версий контрактов с их адресами:</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p class="annotate">Сейчас текущая версия 6.1.0: (1)</p>
-<ol>
-<li>address systemcontract
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>0:e87874f4a9e46f9f16e0c09c824204836b31d60b16db050a8c7fe329bb43d120
-</span></code></pre></div></li>
-</ol>
-</div>
+<p>The result is the address of the user's <strong>Profile</strong> contract.</p>
 <h3 id="transfer-tokens"><strong>Transfer tokens</strong></h3>
-<h4 id="inside-the-gosh-network">* <strong>inside the GOSH network</strong></h4>
-<p>Перед переводом на другой GOSH-кошелек нужно проверить задеплоин ли кошелек получателя. для этого нужно вызвать в контракте:
-<strong>RootTokenContract</strong> метод <a href="(ethereum-L2.md#tip3-_1)"><code>getWalletAddress</code></a> указав публичный ключ получателя</p>
-<p class="annotate">Если у получателя TIP3-кошелек не задеплоин, то нужно в контракте TIP3-кошелька <code>TONTokenWallet</code>(с которого будет осуществляться перевод) (1)</p>
+<h4 id="from-gosh-to-gosh"><strong>from GOSH to GOSH</strong></h4>
+<p>Before transferring to another TIP3-wallet, you need to check whether the recipient's TIP3-wallet is already deployed.</p>
+<p>To do this, you need to call the method <a href="./#getting-the-users-tip3-wallet-address-using-the-users-public-key"><code>getWalletAddress</code></a> in the <strong>RootTokenContract</strong>, the recipient's public key is specified.</p>
+<p class="annotate">If the recipient's TIP3-wallet is not deployed, you need to call the method <code>transferToRecipient</code> in the TIP3-wallet contract <strong>"TONTokenWallet"</strong> (1) (from which the transfer will be made).</p>
 <ol>
-<li>ABI <a download="TONTokenWallet.abi" href="../static/RootTokenContract.abi">here</a></li>
+<li>ABI <a download="TONTokenWallet.abi" href="../static/TONTokenWallet.abi">here</a></li>
 </ol>
-<p>вызвать метод:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>void transferToRecipient(
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    address_opt answer_addr,
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    Tip3Creds   to,
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    uint128     tokens,
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    uint128     evers,
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    uint128     keep_evers,
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    bool        deploy,
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    uint128     return_ownership,
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    opt&lt;cell&gt;   notify_payload
-</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  )
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">transferToRecipient</span><span class="p">(</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">address_opt</span><span class="w"> </span><span class="n">answer_addr</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Tip3Creds</span><span class="w">   </span><span class="n">to</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">tokens</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">evers</span><span class="p">,</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">keep_evers</span><span class="p">,</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kt">bool</span><span class="w">        </span><span class="n">deploy</span><span class="p">,</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">return_ownership</span><span class="p">,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">opt</span><span class="o">&lt;</span><span class="n">cell</span><span class="o">&gt;</span><span class="w">   </span><span class="n">notify_payload</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="p">)</span>
 </span></code></pre></div>
-<p>В результате для получателя будет задеплоин пустой TIP3-кошелек.</p>
-<!-- 
-`await this.run('transferToRecipient', {
+<p>where:</p>
+<p class="ml-params"><code>answer_addr</code> - Answer address, <strong>(should be <code>null</code>)</strong><br />
+<code>to</code> - Recipient credentials (pubkey + owner <strong>(should be <code>null</code>)</strong>)<br />
+<code>tokens</code> - Amount of tokens to transfer, <strong>(should be <code>0</code>)</strong><br />
+<code>evers</code> - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value<br />
+<code>keep_evers</code> - Evers to keep in destination wallet<br />
+<code>deploy</code> - <strong>(should be <code>true</code>)</strong> then the contract will send acceptTransfer message with StateInit to also deploy new tip3 wallet (if it doesn't already exist) with the provided recipient public key and recipient internal owner<br />
+<code>return_ownership</code> - Return ownership - to decrease lend ownership for the caller contract (additionally), <strong>(should be <code>0</code>)</strong><br />
+<code>notify_payload</code> - (optional) &lt; Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification, <strong>(should be <code>0</code>)</strong><br /></p>
+<!-- await this.run('transferToRecipient', {
   _answer_id: 0,
   answer_addr: null,
   to: { pubkey, owner: null },
@@ -979,27 +974,30 @@
   deploy: true,
   return_ownership: 0,
   notify_payload: null,
-})` -->
+}) -->
 
-<p>Затем, для перевода TIP3-токенов пользователю, нужно<br />
-в контракте <strong>TONTokenWallet</strong><br />
-вызвать метод:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>void transfer(
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    address_opt answer_addr,
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    address     to,
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    uint128     tokens,
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    uint128     evers,
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    uint128     return_ownership,
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    opt&lt;cell&gt;   notify_payload
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>)
+<p>As a result, an empty TIP3-wallet will be deployed to the recipient.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>It is important to wait until the contract status changes to "Аctive".</strong></p>
+</div>
+<p>Then, for transfer the TIP3-tokens to the user, you need to call the method <code>transfer</code> in the <strong>TONTokenWallet</strong> contract.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">transfer</span><span class="p">(</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="n">address_opt</span><span class="w"> </span><span class="n">answer_addr</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">address</span><span class="w">     </span><span class="n">to</span><span class="p">,</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">tokens</span><span class="p">,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">evers</span><span class="p">,</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">uint128</span><span class="w">     </span><span class="n">return_ownership</span><span class="p">,</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">opt</span><span class="o">&lt;</span><span class="n">cell</span><span class="o">&gt;</span><span class="w">   </span><span class="n">notify_payload</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="p">)</span>
 </span></code></pre></div>
-where:<br />
-<code>answer_addr</code>      - (опциональный) Answer address (should be <code>null</code>)<br />
-<code>to</code>               - Destination TIP3 wallet address<br />
+<p>where:</p>
+<p class="ml-params"><code>answer_addr</code>      - (опциональный) Answer address <strong>(should be <code>null</code>)</strong><br />
+<code>to</code>               - Destination TIP3-wallet address<br />
 <code>tokens</code>           - Amount of tokens to transfer<br />
 <code>evers</code>            - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value<br />
-<code>return_ownership</code> - Return ownership - to decrease lend ownership provided for the caller contract (additionally) (should be <code>0</code>)<br />
-<code>notify_payload</code>   - Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification (should be <code>null</code>)  </p>
+<code>return_ownership</code> - Return ownership - to decrease lend ownership provided for the caller contract (additionally) <strong>(should be <code>0</code>)</strong><br />
+<code>notify_payload</code>   - Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification <strong>(should be <code>null</code>)</strong><br /></p>
 <!-- 
 `await this.run('transfer', {
   _answer_id: 0,
@@ -1011,134 +1009,113 @@ where:<br />
   notify_payload: null,
 })` -->
 
-<h4 id="from-etherium-to-gosh">* <strong>from Etherium to GOSH</strong></h4>
-<p class="annotate">Для перевода ETH в GOSH необходимо<br />
-в контракте <strong>ELock</strong> (1)</p>
+<h4 id="from-ethereum-to-gosh"><strong>from Ethereum to GOSH</strong></h4>
+<p class="annotate">For transfer <code>ETH</code> to GOSH, you need to call the method <code>deposit</code> in the <strong>ELOCK</strong> (1) contract, with attached value (the number of <code>ETH</code>, that will be transferred to GOSH).</p>
 <ol>
 <li>
 <p>is a GOSH L2 smart contract on Ethereum Blockchain.
     It receives deposits from users, manage withdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.</p>
-<p>address in Etherium:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>0x135d03AF576633B0C99FB9F0A0c6Aa9cE8D3C67E
+<p>address in Ethereum:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>0x135d03AF576633B0C99FB9F0A0c6Aa9cE8D3C67E
 </span></code></pre></div></p>
 <p>ABI <a download="Elock.json" href="../static/Elock.json">here</a></p>
 </li>
 </ol>
-<p>вызвать метод with attach value, количество ETH, которые будут переведены в GOSH:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>deposit(uint256 pubkey) public payable
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>deposit(uint256 pubkey) public payable
 </span></code></pre></div>
-<p>где,  </p>
-<p><code>pubkey</code> - публичный ключ получателя в GOSH  </p>
-<p>Затем необходимо <a href="./#tip3-_1">вычислить адрес TIP3-кошелька пользователя</a> в GOSH и ожидать перевода токенов (<code>WETH</code> - wrapped <code>ETH</code>) на полученный адрес.</p>
+<p>where:</p>
+<p class="ml-params"><code>pubkey</code> - the recipient's public key in GOSH<br /></p>
+<p>Then it is necessary <a href="./#getting-the-users-tip3-wallet-address-using-the-users-public-key">to calculate the address of the user's TIP3-wallet in GOSH</a> and wait the transfer of <code>WETH</code> tokens (wrapped <code>ETH</code>) to the received address.</p>
 <div class="admonition exsample annotate">
-<p class="admonition-title">example of calling an ELock contract in Etherium</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">const</span><span class="w"> </span><span class="n">elock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">Contract</span><span class="p">(</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="n">ELockAbi</span><span class="p">.</span><span class="n">abi</span><span class="p">,</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">AppConfig</span><span class="p">.</span><span class="n">elockaddr</span><span class="p">,</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">)</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">const</span><span class="w"> </span><span class="n">edata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elock</span><span class="p">.</span><span class="n">methods</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">user</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">pubkey</span><span class="p">).</span><span class="n">encodeABI</span><span class="p">()</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
-</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">const</span><span class="w"> </span><span class="n">receipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">sendTransaction</span><span class="p">({</span>
-</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nl">from</span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">address</span><span class="p">,</span>
-</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="nl">to</span><span class="p">:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">.</span><span class="n">elockaddr</span><span class="p">,</span>
-</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="nl">value</span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">toWei</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">from</span><span class="p">.</span><span class="n">amount</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">ether</span><span class="err">&#39;</span><span class="p">),</span>
-</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="nl">data</span><span class="p">:</span><span class="w"> </span><span class="n">edata</span><span class="p">,</span>
-</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="nl">gasLimit</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
-</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="nl">maxPriorityFeePerGas</span><span class="p">:</span><span class="w"> </span><span class="mi">25000</span><span class="p">,</span>
-</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="p">})</span>
+<p class="admonition-title">example of calling the ELock contract in Ethereum</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">const</span><span class="w"> </span><span class="n">elock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">Contract</span><span class="p">(</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="n">ELockAbi</span><span class="p">.</span><span class="n">abi</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">AppConfig</span><span class="p">.</span><span class="n">elockaddr</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="k">const</span><span class="w"> </span><span class="n">edata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elock</span><span class="p">.</span><span class="n">methods</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">user</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">pubkey</span><span class="p">).</span><span class="n">encodeABI</span><span class="p">()</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="k">const</span><span class="w"> </span><span class="n">receipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">sendTransaction</span><span class="p">({</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nl">from</span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">address</span><span class="p">,</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nl">to</span><span class="p">:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">.</span><span class="n">elockaddr</span><span class="p">,</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="nl">value</span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">toWei</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">from</span><span class="p">.</span><span class="n">amount</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">ether</span><span class="err">&#39;</span><span class="p">),</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">    </span><span class="nl">data</span><span class="p">:</span><span class="w"> </span><span class="n">edata</span><span class="p">,</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="nl">gasLimit</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nl">maxPriorityFeePerGas</span><span class="p">:</span><span class="w"> </span><span class="mi">25000</span><span class="p">,</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="p">})</span>
 </span></code></pre></div>
 </div>
-<h4 id="from-gosh-to-etherium">* <strong>from GOSH to Etherium</strong></h4>
-<p>Для перевода <code>WETH</code> в Etherium необходимо<br />
-в контракте <strong>TONTokenWallet</strong> пользователя<br />
-вызвать метод:</p>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>void burnTokens(uint128 tokens, uint256 to)
+<h4 id="from-gosh-to-ethereum"><strong>from GOSH to Ethereum</strong></h4>
+<p>For transfer "WETH" to Ethereum, you need to call the <code>burnTokens</code> method in the user contract <strong>TONTokenWallet</strong></p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">burnTokens</span><span class="p">(</span><span class="n">uint128</span><span class="w"> </span><span class="n">tokens</span><span class="p">,</span><span class="w"> </span><span class="n">uint256</span><span class="w"> </span><span class="n">to</span><span class="p">)</span>
 </span></code></pre></div>
-где:<br />
-<code>tokens</code> - количество WETH, которые будут переведены в Etherium<br />
-<code>to</code>- адрес кошелька получателя в Etherium</p>
-<p>Затем ожидать поступления ETH на кошелек получателя в Etherium.</p>
-<h3 id="getting-the-tip3-wallet-address-by-user-name">Getting the TIP3-wallet address by user name</h3>
-<p class="annotate">Зная адрес контракта <strong>профиля</strong> пользователя (1)</p>
+<p>where:</p>
+<p class="ml-params"><code>tokens</code> - amount WETH, which will be transferred to Ethereum<br />
+<code>to</code> - the address of the recipient's wallet in Ethereum</p>
+<p>Then wait for the transfer of <code>ETH</code> to the recipient's wallet in Ethereum.</p>
+<h3 id="getting-the-tip3-wallet-address-by-user-name"><strong>Getting the TIP3-wallet address by user name</strong></h3>
+<p class="annotate">Knowing the address of the user's contract <strong>Profile</strong> (1) you call the method <code>getAccess()</code> in it.</p>
 <ol>
-<li>ABI можно получить по <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json">ссылке</a></li>
+<li>The ABI can be obtained by <a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json">link</a></li>
 </ol>
-<p>вызываем в нем метод:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>getAccess() returns(mapping(uint256 =&gt; uint8))
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>getAccess() returns(mapping(uint256 =&gt; uint8))
 </span></code></pre></div>
-<p>получаем список всех публичных ключей пользователя</p>
+<p>As a result, you get a list of all the user's public keys with their numbers.</p>
 <div class="admonition warning annotate">
 <p class="admonition-title">Important</p>
-<p>Из списка необходимо брать нулевой ключ</p>
+<p>It is necessary to take the zeroth pubkey from the list</p>
 </div>
-<p>Затем по публичному ключу можно будет определить <a href="./#tip3-_1">адрес TIP3-кошелька пользователя</a>.</p>
+<p>Then, using the received user's public key, it will be possible <a href="./#getting-the-users-tip3-wallet-address-using-the-users-public-key">to determine the address of the user's TIP3-wallet</a></p>
 <h3 id="getting-the-users-tip3-wallet-address-using-the-users-public-key"><strong>Getting the user's TIP3-wallet address using the user's public key</strong></h3>
-<p class="annotate">Для этого в контракте <strong>RootTokenContract</strong> (1)</p>
+<p class="annotate">To do this, in the <strong>RootTokenContract</strong> (1)</p>
 <ol>
 <li>
-<p>address
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>0:1792014440934b9c4024c97221b49c50bd2e2db1426b612ba4c6694b144f5e77
-</span></code></pre></div></p>
+<p>address</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>0:1792014440934b9c4024c97221b49c50bd2e2db1426b612ba4c6694b144f5e77
+</span></code></pre></div>
 <p>ABI <a download="RootTokenContract.abi" href="../static/RootTokenContract.abi">here</a></p>
 </li>
 </ol>
-<p>вызываем метод:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>address getWalletAddress(uint256 pubkey, address_opt owner)
+<p>calling method:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>address getWalletAddress(uint256 pubkey, address_opt owner)
 </span></code></pre></div>
-<p>где:<br />
-<code>pubkey</code> - публичный ключ пользователя<br />
-<code>owner</code> - опциональный параметр, не используется</p>
+<p>where:</p>
+<p class="ml-params"><code>pubkey</code> - user's public key<br />
+<code>owner</code> - optional parameter, not used</p>
 <h3 id="getting-a-list-of-incoming-messages-of-the-contract"><strong>Getting a list of incoming messages of the contract</strong></h3>
-<div class="admonition note annotate">
-<p class="admonition-title">пример получения сообщений аккаунта:</p>
-<p>https://github.com/gosh-sh/gosh/blob/dev/web/src/blockchain/contract.ts#L90</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><a href="https://github.com/gosh-sh/gosh/blob/dev/web/src/blockchain/contract.ts#L90">of how to receive account messages</a></p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>Использование пагинации в SDK
-https://docs.everplatform.dev/samples/graphql-samples/accounts#pagination-parameters</p>
+<p><a href="https://docs.everplatform.dev/samples/graphql-samples/accounts#pagination-parameters">Using</a> pagination in the SDK</p>
 </div>
 <h3 id="get-info-about-tip3-wallet-details"><strong>Get info about TIP3-wallet details</strong></h3>
-<p>Для получения информации о кошельке:<br />
-в контракте <strong>TONTokenWallet</strong></p>
-<p>вызывается метод:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>details_info getDetails()
+<p>For get information about the TIP3-wallet in the contract <strong>TONTokenWallet</strong>, the <code>getDetails</code> method is called:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>details_info getDetails()
 </span></code></pre></div>
-<p>и получаем структуру данных:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>struct details_info {
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>  string            name;              ///&lt; Token name.
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  string            symbol;            ///&lt; Token short symbol.
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  uint8             decimals;          ///&lt; Decimals for ui purposes. ex: balance 100 with decimals 2 will be printed as 1.00.
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>  uint128           balance;           ///&lt; Token balance of the wallet.
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>  uint128           locked;            ///&lt; Locked token balance of the wallet.
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>  uint256           root_pubkey;       ///&lt; Public key of the related RootTokenContract.
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  address           root_address;      ///&lt; Address of the related RootTokenContract.
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>  uint256           wallet_pubkey;     ///&lt; Public key of wallet owner (User id for FlexWallet).
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>  address_opt       owner_address;     ///&lt; Owner contract address for internal ownership, will be 0:0..0 otherwise.
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>  opt&lt;uint256&gt;      lend_pubkey;       ///&lt; Lend ownership pubkey.
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>  lend_owners_array lend_owners;       ///&lt; All lend ownership records of the contract.
-</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>  uint128           lend_balance;      ///&lt; Summarized lend balance to all targets.
-</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>                                       ///&lt; Actual active balance will be `balance - lend_balance`.
-</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>  opt&lt;bind_info&gt;    binding;           ///&lt; Flex binding info.
-</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>  uint256           code_hash;         ///&lt; TIP3 wallet code hash to verify other wallets.
-</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>  uint16            code_depth;        ///&lt; TIP3 wallet code depth to verify other wallets.
-</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>  int8              workchain_id;      ///&lt; Workchain id.
-</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>}
+<p>and you get the data structure:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>struct details_info {
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  string            name;              ///&lt; Token name.
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>  string            symbol;            ///&lt; Token short symbol.
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  uint8             decimals;          ///&lt; Decimals for ui purposes. ex: balance 100 with decimals 2 will be printed as 1.00.
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>  uint128           balance;           ///&lt; Token balance of the wallet.
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  uint128           locked;            ///&lt; Locked token balance of the wallet.
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>  uint256           root_pubkey;       ///&lt; Public key of the related RootTokenContract.
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  address           root_address;      ///&lt; Address of the related RootTokenContract.
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>  uint256           wallet_pubkey;     ///&lt; Public key of wallet owner (User id for FlexWallet).
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>  address_opt       owner_address;     ///&lt; Owner contract address for internal ownership, will be 0:0..0 otherwise.
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>  opt&lt;uint256&gt;      lend_pubkey;       ///&lt; Lend ownership pubkey.
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  lend_owners_array lend_owners;       ///&lt; All lend ownership records of the contract.
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>  uint128           lend_balance;      ///&lt; Summarized lend balance to all targets.
+</span><span id="__span-13-14"><a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>                                       ///&lt; Actual active balance will be `balance - lend_balance`.
+</span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>  opt&lt;bind_info&gt;    binding;           ///&lt; Flex binding info.
+</span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>  uint256           code_hash;         ///&lt; TIP3 wallet code hash to verify other wallets.
+</span><span id="__span-13-17"><a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>  uint16            code_depth;        ///&lt; TIP3 wallet code depth to verify other wallets.
+</span><span id="__span-13-18"><a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>  int8              workchain_id;      ///&lt; Workchain id.
+</span><span id="__span-13-19"><a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>}
 </span></code></pre></div>
-<!-- В каждом ДАО, в котором пользователь является членом, у него может быть до 64 кошельков.
-Кошелек с индексом 0 - основной, остальные - дополнительные.
-
-Чтобы получить адрес кошелька пользователя в конкретном ДАО у `systemcontract`
-
-abi: https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/systemcontract.abi.json
-
-вызывается  метод 
-`getAddrWallet(address pubaddr, address dao, uint128 index) returns(address)`,
-где 
-pubaddr - адрес контракта профиля пользователя,
-dao - адрес контракта ДАО
-index - индекс кошелька (0 - основной, 1-64 - дополнительные) -->
 
 
 
