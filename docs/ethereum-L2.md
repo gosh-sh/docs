@@ -1,6 +1,328 @@
 # **GOSH Ethereum L2**
 
 
+
+## **Overview**
+
+GOSH is an asynchronous, highly scalable validity rollup which enables any asset on Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a [**Proposer**](ethereum-L2.md#definitions " is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain").
+It then submitted to Independent Collator which receives user input and executes them on GOSH.
+
+<!-- TODO -->[remake]
+Anyone can submit a resulting **L2 (GOSH Blokchain)** state root to **L1 (Etherium Blokchain)**.
+
+Randomly selected Verifiers run the state transition periodically and slash Collators in case of a fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. 
+
+<!-- TODO -->[remake]
+Anyone can publish L2 state root but only Collator can propose L2 state change.
+
+
+
+**Constraints:**
+
+
+* L1 can’t have the L2 entire state (L2 state is too large)
+* There must be a mechanism to move funds from L2 even if: L2 is not moving; L2 has banned specific accounts
+* EVM and TVM are different. TVM is a reference VM for the L2 chain. This means that even if L1 has a state it can’t execute transactions to verify correctness. But it can execute ZKP which will prove the correctness of operations in the particular circuit
+
+
+## **Proof Summary**
+
+
+| **What do we Prove**     | **How do we Prove it** |
+| ------------------------ | ------------------------------------ |
+| **`L1 Blocks are correct`**    | BLS Signatures check  |
+| **`L2 Blocks are correct`**    | Validator signatures + Verifiers Fraud Proofs |
+| **`L1 transaction are within the correct blocks`** | Merkle tree proof from Transaction hash to L1 block hash |
+| **`L2 transaction are within the correct blocks`** | Merkle tree proof from Transaction hash to L2 block hash |
+| **`All L1 transactions are provided to L2 from block A to block B`** | Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to [GLOCK](ethereum-L2.md#definitions "is a special TIP-3 Token Root Contract on GOSH Blockchain") is correct and since we have hashes it's impossible to cheat
+| **`Transaction counts and Balances are correct for L1 Block transmitted to L2`** | Merkle tree of account states for a particular L1 block |
+| **`All L2 Withdrawal Transactions are transferred to L1   from Block A to Block B`** | Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to ELOCK is correct and since we have hashes it's impossible to cheat
+| **`TIP-3 Deposit/Transfer/Withdrawal Transaction  Execution is correct`** | ZKP for TIP-3 Circuit |
+| **`Validator set change from last KeyBlock is correct`** | ZKP for Elector contract Circuit |
+| **`Validators Fraud Proofs`** | Fraud detection mechanism by Verifiers |
+
+
+
+
+## **Roadmap**/**Development process**
+
+### **Stage 1: Trustless Bridge**   (**In production**) ![](images/green%20tick3.jpg)
+
+!!! info
+    At this stage we assume:  
+    L2 fully trusts L1, it knows Validators (Committee) PubKeys and can always validate the chain of L1 blocks.  
+    We do not validate the smart contract execution on L2. We protect against any malicious 3rd party except for L1 and L2 Validators.
+
+As an example we will talk about ETH moving from Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general any asset  on Ethereum can be supported with necessary adjustments made to [ELOCK](ethereum-L2.md#definitions "is a GOSH L2 smart contract on Ethereum Blockchain") smart contract Deposit/Withdrawal functions.
+
+Since GOSH uses ed25519 we use a double signature envelope scheme to prove signatures on GOSH to ELOCK Smart Contract on Ethereum (*we could use ZKP to prove the ed25519 or a precompile proposed EIP665 whenever either of those solutions will be production ready*).
+
+
+
+![](images/etherium_stage1_pic_L1-L2.jpg)
+The scheme for transferring assets from the Etherium to GOSH
+
+
+![](images/etherium_stage1_pic_L2-L1.jpg)
+The scheme for transferring assets from the GOSH to Etherium
+
+
+
+!!! info 
+    *What we don’t cover at this Stage?*  
+
+    * L2 contract execution is not validated (no validity or fraud proofs)  
+    * Funds retrieval function in case of L2 censored / stopped  
+    * L1 Funds retrieval is complicated and expansive  
+
+
+
+### **Stage 2: Optimistic roll-up, kinda**
+
+!!! info
+    At this stage we add fraud and execution proofs for [TIP-3](ethereum-L2.md#definitions "is a distributed token smart contract standard on GOSH blockchain") сontracts.
+
+The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.
+ 
+At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other оptimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.
+
+!!! info
+    *What we don’t cover at this Stage?*  
+
+    * Funds retrieval function in case of L2 censored / stopped  
+    * L1 funds retrieval is complicated and expansive in case of immediate withdrawal  
+
+
+### **Stage 3: Validium ZKP roll-up**
+
+
+At this stage we are adding external Verifiers and putting a bond of L2 Collators on Ethereum mainnet. Verifiers will be able to supply fraud proofs as well as data availability proofs.
+
+The Verifiers have the ability to slash the L2 Collators in case of misbehavior by supplying ZKPs proving the wrong block production, or by successfully challenging data availability proofs  making it effectively an Ethereum Sharding design, since GOSH is multithreaded, multisharded blockchain.
+
+<!-- Let’s remember that Zero Knowledge Proofs are probabilistic. The Verifier check protocol is probabilistic as well. The ZKP does not prove that every operation on the L2 blockchain is correct because that would not only be costly but not necessarily increase the probability of the correctness in respect to Verifiers check. -->
+
+<!-- Let's say we have `S` threads and `N` validators, out of which M are malicious. For each thread, we choose `L` validators that will sign the block. If a group of validators gathers at least `C` malicious ones, the attack is considered successful.  
+Let's calculate the probability of an attack on a single thread.
+
+The total number of ways to choose validators for a thread is $C _{N} ^{L}$
+
+Let `i` be the number of malicious validators gathered in a thread. To find the number of ways to choose at least `C` malicious validators, we need to multiply the number of ways to choose malicious validators by the number of ways to choose regular validators.
+
+
+That is $C _{M} ^{i} * C _{N-M} ^{L-i}$
+
+
+Since we need to gather at least `C` malicious validators, the total number of ways will be the sum 
+
+of `i` from `C` to `L` :
+
+$$\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}$$
+
+The final probability of an attack on a single thread, without considering verifiers, is
+
+$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}}$$
+
+Let $T = \frac{N}{R}$ where `R` is some number. A validator becomes a verifier if the remainder of some hash when divided by ${T}$ equals zero.
+
+In each round, the probability for a particular validator to become a verifier is $\frac{1}{T}$. For the attack to be successful, none of the honest validators should become a verifier.
+
+The probability of this is $(1 - \frac{1}{T}) ^{N-M}$
+
+Thus, the final probability of the attack is
+
+$$P = \frac{\displaystyle\sum_{i=C}^{L} C _M^i * C _{N-M}^{L-i}}{C _{N} ^{L}} * (1 - \frac{1}{T}) ^{N-M}$$
+
+Which is less of an a probability of successful attack on Bitcoin blockchain:
+
+![](images/etherium_stage3_diagram.jpg) -->
+
+!!! warning annotate "Important"
+    At this stage there is no need to trust L2 Collators with anything. L1 is able to verify all L2 state transitions and L2 can verify L1 contract state transitions. Funds are easily withdrawn from either blockchain. To break the system both L1 and L2 need to be corrupted or stopped simultaneously.
+
+
+<!-- TODO -->
+## **Contracts**
+
+
+* **ELOCK** — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manage withdrawals and locks user funds. ELOCK is also counting its total balance, total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.
+
+* **GLOCK** — is a set оf special contracts on GOSH Blockchain.
+Aside from managing TIP-3 distributed token they also manages the deposits and withdrawals assets of users.
+Contract `Checker.sol` receives external message from `Proposer` with Ethereum blockchain proofs signed by Ethereum Committee, checks total transaction count consistency, checks `Proposer` message Merkle proofs and deploys the contract `Proposal.sol` that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract `RootTokenContract.cpp`
+
+* **RootTokenContract** - is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.
+Also it deploys the contract TIP3 wallet contract (`TONTokenWallet.cpp`) and sends wrapped tokens there.
+
+* **TONTokenWallet** - is a custom TIP-3 contract that runs in GOSH Masterchain and in addition to standard functions has `burnTokens` method. It is called when WETH needs to be transferred to Ethereum Blockchain. Burn is proved to ELOCK contract in order to allow for ETH native token withdrawals. 
+
+<!-- 
+    Services take ether blocks from the last mark, calculate hashes, compile a list of transactions and send the checker for verification/
+
+    **сhecker.sol** -checks block hashes, and deploys a proposal, i.e. deposits a contract (with a proposal, process the proposed blocks, with such hashes, such transactions)
+
+    validators check and vote for the Ethereum blockchain in GOSH
+
+    the **proposal.sol** sends a message to the checker.sol that everything is in order
+
+    the checker fixes the last processed block
+
+    and start sending out transaction information from the previous proposal
+
+    (???) Every 32 blocks are sent for voting
+
+    *how is the sending of transactions:*
+
+    the checker receives a list of verified transactions
+    processes each transaction separately and sends a message to the root contract (RootTokenContract.cpp)
+
+    Each transaction contains the recipient's public key and the amount of tokens that will be wrapped
+
+    the root contract deployment tip 3 wallet (`TONTokenWallet.cpp`) and mint tokens there.
+
+    To withdraw the tokens in the contract, the `burnTokens` function is called with an indication of the amount of tokens and the recipient's address in it.
+
+     burnTokens(uint128 tokens, uint256 to)
+
+    tokens are sent to the root contract -->
+
+
+## **Commission**
+
+
+**for transfers to GOSH**
+
+When transferring assets to GOSH, checker.sol calculates the commission, and root mint the wrapped tokens to the user TIP3-wallet minus the commission. 
+
+calculated as:
+
+
+**for withdraw to Ethereum**
+
+The commission is calculated in the ELOCK contract.
+
+It consists of 2 parts:
+
+**Part 1** - the cost of the transaction for the transfer of `WETH` to the recipient
+
+calculated as: 
+
+the amount of gas for the transfer transaction (21000) * the current cost of gas at the time of transfer
+
+**Part 2**
+
+calculated as: 
+
+amount of validators' expenses / quantity of transfers to withdraw `WETH` in the current proposal
+
+<!-- 
+вычисляется: 21 000 (количество газа для транзакции трансфера) * текущую стоимость газа в данный момент (контракт ELOCK запрашивает ее у сети Ethertum на момент трансфера (функция в ELOCK `gasPrice()` ))
+
+2 часть - (сумма затрат валидаторов/ количество трансферов в выводов в текущем пропозле) = операционная стоимость затрат валидаторов на вывод деленная на количество транзакций переводов-->
+
+Then it is sent to the commission wallet.
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- (???)
+**RootTokenContract.cpp** Compiles into two contract versions: RootTokenContract.tvc (for external wallets) and FlexTokenRoot.tvc (for internal wallets).
+With different macroses.
+Also, Wrapper contract may be internal wallets root and perform conversion external->internal and back.
+
+Compiles into two contract versions: TONTokenWallet.tvc (external wallet) and FlexWallet.tvc (internal wallet).
+With different macroses. -->
+
+## **Usage**
+Any DAO on GOSH can become Ethereum Layer 2 with a click of a button.
+
+!!! info
+    This is only possible in the GOSH version at least 6.1.0
+
+### how to transfer ETH to GOSH
+To make a transfer between wallets, go to the **Etherium** tab:
+
+![](images/etherium_usage_begin2.jpg)
+
+or select the this section by clicking on your profile in the right corner:
+
+![](images/etherium_usage_begin1.jpg)
+
+Now we can test the ETH transfer in the alpha version.
+
+Сlick on:
+
+![](images/etherium_usage_begin3.jpg)
+
+the "Cross-chain transfer" page will open for you.
+
+
+In the **Accounts** section, click **Connect** to log into a software cryptocurrency wallet **MetaMask**
+
+![](images/etherium_usage_connect.jpg)
+
+Choose the amount you want to send
+
+!!! note
+    The amount must be greater than or equal to 0.01
+
+
+!!! warning
+    The contract has not been formally verified yet. Please do not send a lot!
+
+![](images/etherium_usage_from.jpg)
+
+Enter the wallet address or select GOSH username for easy transfer
+
+![](images/etherium_usage_to.jpg)
+
+After you make a deposit to the GOSH contract in Ethereum, the corresponding amount of WETH tokens (Wrapper Ethereum tokens) will be transferred to your wallet on the GOSH network
+
+![](images/etherium_usage_transfer_comleted.jpg)
+
+
+<!-- TODO WITHDRAWAL -->
+
+<!-- DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project............... -->
+
+<!-- 
+### how to transfer WETH to Ethereum
+### how to transfer WETH into GOSH
+ -->
+
+
+## **Definitions**
+
+
+**TVM** — is a Custom Virtual Machine GOSH Blockchain uses. For the GOSH L2 release we have added special TVM Opcodes for Ethereum signatures and Hash function, thus TVM smart contract can run Signature Verifications and Calculate Hash functions from Ethereum Data. 
+
+<!-- TODO -->
+**Masterchain** is the (-1) work chain of the GOSH blockchain. It is needed for service contracts and validator contracts.
+
+**Shardchain** is shards into which the workchain is split depending on the network load. When the load is low, there are 16 (????) shards. When it increases, shards split and when they decrease they merge.
+
+<!-- TODO do need detailed information about the services? -->
+**Proposer** is an off-chain program that any user can run on their own machine. It packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain.
+
+Proposer will always accumulate all transactions that are currently not applied to generate the proof, thus ensuring that all transactions of the opposite network are applied. If that is not the case the State Validation function will fail.
+
+**TIP-3** — is a distributed token smart contract standard on GOSH blockchain. It is formally verified scalable token design for sharded architecture optimized for parallelization.
+
+<!-- **WITHDRAWAL** — is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index. -->
+
+<!-- **WETH TIP-3 Wallet** — is a custom TIP-3 contract that runs in GOSH Masterchain and in addition to standard functions has `burnTokens` method. `burnTokens` is called when WETH needs to be transferred to Ethereum Blockchain. Burn is proved to ELOCK contract in order to allow for ETH native token withdrawals.  -->
+
+<!-- **VAULT** — is GOSH Shardchain smart contract that Wraps WETH TIP-3 tokens into tradable assets on GOSH Network -->
+
+
 ## **Integration with GOSH L2**
 
 More information about integration with GOSH L2 can be found [here](integrations/l2.md)
