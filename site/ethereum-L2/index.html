@@ -704,18 +704,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proof-summary" class="md-nav__link">
-    Proof Summary
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmapdevelopment-process" class="md-nav__link">
-    Roadmap/Development process
-  </a>
-  
-    <nav class="md-nav" aria-label="Roadmap/Development process">
+    <nav class="md-nav" aria-label="Roadmap">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -726,8 +719,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stage-2-optimistic-roll-up-kinda" class="md-nav__link">
-    Stage 2: Optimistic roll-up, kinda
+  <a href="#stage-2-optimistic-roll-up" class="md-nav__link">
+    Stage 2: Optimistic roll-up
   </a>
   
 </li>
@@ -756,6 +749,26 @@
     Commission
   </a>
   
+    <nav class="md-nav" aria-label="Commission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-transfers-to-gosh" class="md-nav__link">
+    for transfers to GOSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-withdraw-to-ethereum" class="md-nav__link">
+    for withdraw to Ethereum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -773,21 +786,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-to-transfer-weth-to-ethereum" class="md-nav__link">
+    how to transfer WETH to Ethereum
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
-    Definitions
+  <a href="#integration-with-gosh-l2" class="md-nav__link">
+    Integration with GOSH L2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#integration-with-gosh-l2" class="md-nav__link">
-    Integration with GOSH L2
+  <a href="#definitions" class="md-nav__link">
+    Definitions
   </a>
   
 </li>
@@ -941,18 +961,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proof-summary" class="md-nav__link">
-    Proof Summary
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmapdevelopment-process" class="md-nav__link">
-    Roadmap/Development process
-  </a>
-  
-    <nav class="md-nav" aria-label="Roadmap/Development process">
+    <nav class="md-nav" aria-label="Roadmap">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -963,8 +976,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#stage-2-optimistic-roll-up-kinda" class="md-nav__link">
-    Stage 2: Optimistic roll-up, kinda
+  <a href="#stage-2-optimistic-roll-up" class="md-nav__link">
+    Stage 2: Optimistic roll-up
   </a>
   
 </li>
@@ -993,6 +1006,26 @@
     Commission
   </a>
   
+    <nav class="md-nav" aria-label="Commission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-transfers-to-gosh" class="md-nav__link">
+    for transfers to GOSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-withdraw-to-ethereum" class="md-nav__link">
+    for withdraw to Ethereum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1010,21 +1043,28 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#how-to-transfer-weth-to-ethereum" class="md-nav__link">
+    how to transfer WETH to Ethereum
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
-    Definitions
+  <a href="#integration-with-gosh-l2" class="md-nav__link">
+    Integration with GOSH L2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#integration-with-gosh-l2" class="md-nav__link">
-    Integration with GOSH L2
+  <a href="#definitions" class="md-nav__link">
+    Definitions
   </a>
   
 </li>
@@ -1049,19 +1089,12 @@
 <p>GOSH is an asynchronous, highly scalable validity rollup which enables any asset on Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a <a href="./#definitions" title="is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain"><strong>Proposer</strong></a>.
 It then submitted to Independent Collator which receives user input and executes them on GOSH.</p>
 <!-- TODO -->
-<p>[remake]
-Anyone can submit a resulting <strong>L2 (GOSH Blokchain)</strong> state root to <strong>L1 (Etherium Blokchain)</strong>.</p>
-<p>Randomly selected Verifiers run the state transition periodically and slash Collators in case of a fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. </p>
+<p>Anyone can submit a resulting <strong>L2 (GOSH Blockchain)</strong> state root to <strong>L1 (Ethereum Blockchain)</strong>.
+Randomly selected Verifiers run the state transition periodically and slash Collators in case of a fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. 
+Anyone can publish L2 state root but only Collator can propose L2 state change.  </p>
 <!-- TODO -->
-<p>[remake]
-Anyone can publish L2 state root but only Collator can propose L2 state change.</p>
-<p><strong>Constraints:</strong></p>
-<ul>
-<li>L1 can’t have the L2 entire state (L2 state is too large)</li>
-<li>There must be a mechanism to move funds from L2 even if: L2 is not moving; L2 has banned specific accounts</li>
-<li>EVM and TVM are different. TVM is a reference VM for the L2 chain. This means that even if L1 has a state it can’t execute transactions to verify correctness. But it can execute ZKP which will prove the correctness of operations in the particular circuit</li>
-</ul>
-<h2 id="proof-summary"><strong>Proof Summary</strong></h2>
+
+<p><strong>Proof Summary</strong></p>
 <table>
 <thead>
 <tr>
@@ -1088,7 +1121,7 @@ Anyone can publish L2 state root but only Collator can propose L2 state change.<
 </tr>
 <tr>
 <td><strong><code>All L1 transactions are provided to L2 from block A to block B</code></strong></td>
-<td>Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to <a href="./#definitions" title="is a special TIP-3 Token Root Contract on GOSH Blockchain">GLOCK</a> is correct and since we have hashes it's impossible to cheat</td>
+<td>Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to <a href="./#contracts" title="is a special TIP-3 Token Root Contract on GOSH Blockchain">GLOCK</a> is correct and since we have hashes it's impossible to cheat</td>
 </tr>
 <tr>
 <td><strong><code>Transaction counts and Balances are correct for L1 Block transmitted to L2</code></strong></td>
@@ -1112,20 +1145,31 @@ Anyone can publish L2 state root but only Collator can propose L2 state change.<
 </tr>
 </tbody>
 </table>
-<h2 id="roadmapdevelopment-process"><strong>Roadmap</strong>/<strong>Development process</strong></h2>
+<h2 id="roadmap"><strong>Roadmap</strong></h2>
 <h3 id="stage-1-trustless-bridge-in-production"><strong>Stage 1: Trustless Bridge</strong>   (<strong>In production</strong>) <img alt="" src="../images/green%20tick3.jpg" /></h3>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li>L1 can’t have the L2 entire state (L2 state is too large)</li>
+<li>There must be a mechanism to move funds from L2 even if: L2 is not moving; L2 has banned specific accounts</li>
+<li>EVM and TVM are different. TVM is a reference VM for the L2 chain. This means that even if L1 has a state it can’t execute transactions to verify correctness. But it can execute ZKP which will prove the correctness of operations in the particular circuit</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>At this stage we assume:<br />
 L2 fully trusts L1, it knows Validators (Committee) PubKeys and can always validate the chain of L1 blocks.<br />
 We do not validate the smart contract execution on L2. We protect against any malicious 3rd party except for L1 and L2 Validators.</p>
 </div>
-<p>As an example we will talk about ETH moving from Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general any asset  on Ethereum can be supported with necessary adjustments made to <a href="./#definitions" title="is a GOSH L2 smart contract on Ethereum Blockchain">ELOCK</a> smart contract Deposit/Withdrawal functions.</p>
+<p>As an example we will talk about ETH moving from Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general any asset  on Ethereum can be supported with necessary adjustments made to <a href="./#contracts" title="is a GOSH L2 smart contract on Ethereum Blockchain">ELOCK</a> smart contract Deposit/Withdrawal functions.</p>
 <p>Since GOSH uses ed25519 we use a double signature envelope scheme to prove signatures on GOSH to ELOCK Smart Contract on Ethereum (<em>we could use ZKP to prove the ed25519 or a precompile proposed EIP665 whenever either of those solutions will be production ready</em>).</p>
-<p><img alt="" src="../images/etherium_stage1_pic_L1-L2.jpg" />
-The scheme for transferring assets from the Etherium to GOSH</p>
-<p><img alt="" src="../images/etherium_stage1_pic_L2-L1.jpg" />
-The scheme for transferring assets from the GOSH to Etherium</p>
+<!-- 
+![](images/etherium_stage1_pic_L1-L2.jpg)
+The scheme for transferring assets from the Ethereum to GOSH
+
+
+![](images/etherium_stage1_pic_L2-L1.jpg)
+The scheme for transferring assets from the GOSH to Ethereum
+ -->
+
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><em>What we don’t cover at this Stage?</em>  </p>
@@ -1135,13 +1179,13 @@ The scheme for transferring assets from the GOSH to Etherium</p>
 <li>L1 Funds retrieval is complicated and expansive  </li>
 </ul>
 </div>
-<h3 id="stage-2-optimistic-roll-up-kinda"><strong>Stage 2: Optimistic roll-up, kinda</strong></h3>
+<h3 id="stage-2-optimistic-roll-up"><strong>Stage 2: Optimistic roll-up</strong></h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>At this stage we add fraud and execution proofs for <a href="./#definitions" title="is a distributed token smart contract standard on GOSH blockchain">TIP-3</a> сontracts.</p>
+<p>At this stage we add fraud and execution proofs for <a href="./#definitions" title="is a distributed token smart contract standard on GOSH blockchain">TIP-3</a> contracts.</p>
 </div>
 <p>The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.</p>
-<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other оptimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.</p>
+<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other optimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><em>What we don’t cover at this Stage?</em>  </p>
@@ -1203,8 +1247,12 @@ Which is less of an a probability of successful attack on Bitcoin blockchain:
 <li>
 <p><strong>GLOCK</strong> — is a set оf special contracts on GOSH Blockchain.
 Aside from managing TIP-3 distributed token they also manages the deposits and withdrawals assets of users.
-Contract <code>Checker.sol</code> receives external message from <code>Proposer</code> with Ethereum blockchain proofs signed by Ethereum Committee, checks total transaction count consistency, checks <code>Proposer</code> message Merkle proofs and deploys the contract <code>Proposal.sol</code> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <code>RootTokenContract.cpp</code></p>
+Contract <code>Checker.sol</code> receives external message from <code>Proposer</code> with Ethereum blockchain proofs signed by Ethereum Committee, checks the hash of the blocks lined up in the chain and deploys the contract <code>Proposal.sol</code> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <code>RootTokenContract.cpp</code></p>
 </li>
+</ul>
+<!-- checks total transaction count consistency, checks `Proposer` message Merkle proofs  -->
+
+<ul>
 <li>
 <p><strong>RootTokenContract</strong> - is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.
 Also it deploys the contract TIP3 wallet contract (<code>TONTokenWallet.cpp</code>) and sends wrapped tokens there.</p>
@@ -1244,16 +1292,47 @@ Also it deploys the contract TIP3 wallet contract (<code>TONTokenWallet.cpp</cod
     tokens are sent to the root contract -->
 
 <h2 id="commission"><strong>Commission</strong></h2>
-<p><strong>for transfers to GOSH</strong></p>
-<p>When transferring assets to GOSH, checker.sol calculates the commission, and root mint the wrapped tokens to the user TIP3-wallet minus the commission. </p>
+<h3 id="for-transfers-to-gosh"><strong>for transfers to GOSH</strong></h3>
+<p>When transferring assets to GOSH, <code>checker.sol</code> sends the transfer amount and coefficients <code>a</code> and <code>b</code> to the <code>RootTokenContract.cpp</code> and it calculates the commission amount. Then mints the wrapped tokens to the user TIP3-wallet minus the commission. And the commission is sent to the wallet by the commission in GOSH.</p>
 <p>calculated as:</p>
-<p><strong>for withdraw to Ethereum</strong></p>
+<p><span class="arithmatex">\(\frac{a * x}{10 000} + b\)</span></p>
+<p>where:</p>
+<p><strong>a</strong>  - commission percentage = 10 (0.1%)</p>
+<p><strong>b</strong> - permanent commission (does not depend on the transfer amount, now = 0)</p>
+<p><strong>х</strong> - amount of tokens to transfer</p>
+<!-- 
+grantbatch(uint32 _answer_id, TransactionBatch[] transactions, uint128 a, uint128 b)
+
+
+void grant(
+    address   dest,   ///< Token wallet address
+    uint128   tokens, ///< Amount of tokens to be granted.
+    uint128   evers,  ///< Amount of evers to be attached to message.
+                      ///< If the method called by internal message, will be ignored
+                      ///<  (rest attached evers will be transmitted).
+    opt<cell> notify  ///< Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification.
+  ) = 14;
+
+  [[internal, external, answer_id]]
+  void grantBatch(
+    dict_array<TransactionBatch> transactions, ///< Amount of tokens to be granted.
+    uint128 a,
+    uint128 b
+  ) = 1014; -->
+
+<h3 id="for-withdraw-to-ethereum"><strong>for withdraw to Ethereum</strong></h3>
 <p>The commission is calculated in the ELOCK contract.</p>
 <p>It consists of 2 parts:</p>
-<p><strong>Part 1</strong> - the cost of the transaction for the transfer of <code>WETH</code> to the recipient</p>
+<ul>
+<li><em>Part 1</em> - the cost of the transaction for the transfer of <code>WETH</code> to the recipient</li>
+</ul>
 <p>calculated as: </p>
-<p>the amount of gas for the transfer transaction (21000) * the current cost of gas at the time of transfer</p>
-<p><strong>Part 2</strong></p>
+<p>$ 21000 * gasprice$</p>
+<p>where:</p>
+<p><strong>gasprice</strong> - gas price during withdraw transaction</p>
+<ul>
+<li><em>Part 2</em></li>
+</ul>
 <p>calculated as: </p>
 <p>amount of validators' expenses / quantity of transfers to withdraw <code>WETH</code> in the current proposal</p>
 <!-- 
@@ -1277,12 +1356,12 @@ With different macroses. -->
 <p>This is only possible in the GOSH version at least 6.1.0</p>
 </div>
 <h3 id="how-to-transfer-eth-to-gosh">how to transfer ETH to GOSH</h3>
-<p>To make a transfer between wallets, go to the <strong>Etherium</strong> tab:</p>
+<p>To make a transfer between wallets, go to the <strong>Ethereum</strong> tab:</p>
 <p><img alt="" src="../images/etherium_usage_begin2.jpg" /></p>
 <p>or select the this section by clicking on your profile in the right corner:</p>
 <p><img alt="" src="../images/etherium_usage_begin1.jpg" /></p>
 <p>Now we can test the ETH transfer in the alpha version.</p>
-<p>Сlick on:</p>
+<p>Click on:</p>
 <p><img alt="" src="../images/etherium_usage_begin3.jpg" /></p>
 <p>the "Cross-chain transfer" page will open for you.</p>
 <p>In the <strong>Accounts</strong> section, click <strong>Connect</strong> to log into a software cryptocurrency wallet <strong>MetaMask</strong></p>
@@ -1301,15 +1380,13 @@ With different macroses. -->
 <p><img alt="" src="../images/etherium_usage_to.jpg" /></p>
 <p>After you make a deposit to the GOSH contract in Ethereum, the corresponding amount of WETH tokens (Wrapper Ethereum tokens) will be transferred to your wallet on the GOSH network</p>
 <p><img alt="" src="../images/etherium_usage_transfer_comleted.jpg" /></p>
+<h3 id="how-to-transfer-weth-to-ethereum">how to transfer WETH to Ethereum</h3>
 <!-- TODO WITHDRAWAL -->
 
 <!-- DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project............... -->
 
-<!-- 
-### how to transfer WETH to Ethereum
-### how to transfer WETH into GOSH
- -->
-
+<h2 id="integration-with-gosh-l2"><strong>Integration with GOSH L2</strong></h2>
+<p>More information about integration with GOSH L2 can be found <a href="../integrations/l2/">here</a></p>
 <h2 id="definitions"><strong>Definitions</strong></h2>
 <p><strong>TVM</strong> — is a Custom Virtual Machine GOSH Blockchain uses. For the GOSH L2 release we have added special TVM Opcodes for Ethereum signatures and Hash function, thus TVM smart contract can run Signature Verifications and Calculate Hash functions from Ethereum Data. </p>
 <!-- TODO -->
@@ -1324,9 +1401,6 @@ With different macroses. -->
 <!-- **WETH TIP-3 Wallet** — is a custom TIP-3 contract that runs in GOSH Masterchain and in addition to standard functions has `burnTokens` method. `burnTokens` is called when WETH needs to be transferred to Ethereum Blockchain. Burn is proved to ELOCK contract in order to allow for ETH native token withdrawals.  -->
 
 <!-- **VAULT** — is GOSH Shardchain smart contract that Wraps WETH TIP-3 tokens into tradable assets on GOSH Network -->
-
-<h2 id="integration-with-gosh-l2"><strong>Integration with GOSH L2</strong></h2>
-<p>More information about integration with GOSH L2 can be found <a href="../integrations/l2/">here</a></p>
 
 
 
