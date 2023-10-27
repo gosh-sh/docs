@@ -23,8 +23,12 @@ nav:
   - AnyTree: anytree-all.md
     #- Working with AnyTree: working-with-gosh/anytree.md
     #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
-  #- GOSH Ethereum L2: ethereum-L2.md
-  - Integrations: integrations.md
+  - GOSH Ethereum L2: 
+    - Overview: ethereum-L2/overview.md
+    - User Guide: ethereum-L2/user-guide.md
+  - Integrations:
+    - GOSH GitHub Sync: integrations/sync.md
+    - GOSH Ethereum L2: integrations/l2.md
   - Links: links.md
 
 markdown_extensions:

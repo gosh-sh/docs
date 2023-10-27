@@ -1,0 +1,1314 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../anytree-all/">
+      
+      
+        <link rel="next" href="../user-guide/">
+      
+      
+      <link rel="icon" href="../../images/gosh2.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>Overview - GOSH</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GOSH" class="md-header__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../images/gosh2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GOSH
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Git Open Source Hodler
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../on-chain-architecture/gosh-wallet/" class="md-tabs__link">
+          
+  
+  On-chain Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../working-with-gosh/gosh-web/" class="md-tabs__link">
+          
+  
+  Working with GOSH
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../anytree-all/" class="md-tabs__link">
+        
+  
+    
+  
+  AnyTree
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  GOSH Ethereum L2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integrations/sync/" class="md-tabs__link">
+          
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../links/" class="md-tabs__link">
+        
+  
+    
+  
+  Links
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GOSH" class="md-nav__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../images/gosh2.svg" alt="logo">
+
+    </a>
+    GOSH
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Open Source Hodler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    On-chain Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            On-chain Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/gosh-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organizations - GOSH DAO and SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/gosh-smart-contracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH smart contracts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Working with GOSH
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Working with GOSH
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-gosh/gosh-web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-gosh/docker-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Extension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-gosh/git-remote-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Remote Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-gosh/anytree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-gosh/anytree-firewall-for-telepresence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree Firewall for Telepresence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../working-with-gosh/gosh-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anytree-all/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Ethereum L2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-trustless-bridge-in-production" class="md-nav__link">
+    Stage 1: Trustless Bridge   (In production)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-optimistic-roll-up" class="md-nav__link">
+    Stage 2: Optimistic roll-up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-validium-zkp-roll-up" class="md-nav__link">
+    Stage 3: Validium ZKP roll-up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contracts" class="md-nav__link">
+    Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commission" class="md-nav__link">
+    Commission
+  </a>
+  
+    <nav class="md-nav" aria-label="Commission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-deposit-to-gosh" class="md-nav__link">
+    for deposit to GOSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-withdraw-to-ethereum" class="md-nav__link">
+    for withdraw to Ethereum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-gosh-l2" class="md-nav__link">
+    Integration with GOSH L2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#added-new-tvm-opcodes" class="md-nav__link">
+    Added new TVM opcodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Integrations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH GitHub Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/l2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    Roadmap
+  </a>
+  
+    <nav class="md-nav" aria-label="Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stage-1-trustless-bridge-in-production" class="md-nav__link">
+    Stage 1: Trustless Bridge   (In production)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-2-optimistic-roll-up" class="md-nav__link">
+    Stage 2: Optimistic roll-up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-3-validium-zkp-roll-up" class="md-nav__link">
+    Stage 3: Validium ZKP roll-up
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contracts" class="md-nav__link">
+    Contracts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commission" class="md-nav__link">
+    Commission
+  </a>
+  
+    <nav class="md-nav" aria-label="Commission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-deposit-to-gosh" class="md-nav__link">
+    for deposit to GOSH
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-withdraw-to-ethereum" class="md-nav__link">
+    for withdraw to Ethereum
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-with-gosh-l2" class="md-nav__link">
+    Integration with GOSH L2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#added-new-tvm-opcodes" class="md-nav__link">
+    Added new TVM opcodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="overview"><strong>Overview</strong></h1>
+<p>GOSH is an asynchronous, highly scalable validity rollup that enables any asset on the Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a <a href="./#definitions" title="is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain"><strong>Proposer</strong></a>.
+It is then submitted to the Independent Collator which receives user input and executes them on GOSH.</p>
+<p>Anyone can submit a resulting <strong>L2 (GOSH Blockchain)</strong> state root to <strong>L1 (Ethereum Blockchain)</strong>.
+Randomly selected Verifiers run the state transition periodically and slash Collators in case of fraud via decision by L1. Verifiers are slashed for false fraud alerts. If Collator is censoring users' transactions, it is possible to force the transaction via L1. 
+Anyone can publish L2 state root but only Collator can propose L2 state change.</p>
+<p><strong>Proof Summary</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>What do we Prove</strong></th>
+<th><strong>How do we Prove it</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>L1 Blocks are correct</code></strong></td>
+<td>BLS Signatures check</td>
+</tr>
+<tr>
+<td><strong><code>L2 Blocks are correct</code></strong></td>
+<td>Validator signatures + Verifiers Fraud Proofs</td>
+</tr>
+<tr>
+<td><strong><code>L1 transaction are within the correct blocks</code></strong></td>
+<td>Merkle tree proof from Transaction hash to L1 block hash</td>
+</tr>
+<tr>
+<td><strong><code>L2 transaction are within the correct blocks</code></strong></td>
+<td>Merkle tree proof from Transaction hash to L2 block hash</td>
+</tr>
+<tr>
+<td><strong><code>All L1 transactions are provided to L2 from block A to block B</code></strong></td>
+<td>Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to <a href="./#contracts" title="is a special TIP-3 Token Root Contract on GOSH Blockchain">GLOCK</a> is correct and since we have hashes it's impossible to cheat</td>
+</tr>
+<tr>
+<td><strong><code>Transaction counts and Balances are correct for L1 Block transmitted to L2</code></strong></td>
+<td>Merkle tree of account states for a particular L1 block</td>
+</tr>
+<tr>
+<td><strong><code>All L2 Withdrawal Transactions are transferred to L1   from Block A to Block B</code></strong></td>
+<td>Txn count in block a and Txn count in block B are known we can verify that total transaction count transferred to ELOCK is correct and since we have hashes it's impossible to cheat</td>
+</tr>
+<tr>
+<td><strong><code>TIP-3 Deposit/Transfer/Withdrawal Transaction  Execution is correct</code></strong></td>
+<td>ZKP for TIP-3 Circuit</td>
+</tr>
+<tr>
+<td><strong><code>Validator set change from last KeyBlock is correct</code></strong></td>
+<td>ZKP for Elector contract Circuit</td>
+</tr>
+<tr>
+<td><strong><code>Validators Fraud Proofs</code></strong></td>
+<td>Fraud detection mechanism by Verifiers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="roadmap"><strong>Roadmap</strong></h2>
+<h3 id="stage-1-trustless-bridge-in-production"><strong>Stage 1: Trustless Bridge</strong>   (<strong>In production</strong>) <img alt="" src="../../images/green%20tick3.jpg" /></h3>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li>L1 can’t have the L2 entire state (L2 state is too large)</li>
+<li>There must be a mechanism to move funds from L2 even if: L2 is not moving; L2 has banned specific accounts</li>
+<li>EVM and TVM are different. TVM is a reference VM for the L2 chain. This means that even if L1 has a state it can’t execute transactions to verify correctness. But it can execute ZKP which will prove the correctness of operations in the particular circuit</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>At this stage we assume:<br />
+L2 fully trusts L1, it knows Validators (Committee) PubKeys and can always validate the chain of L1 blocks.<br />
+We do not validate the smart contract execution on L2. We protect against any malicious 3rd party except for L1 and L2 Validators.</p>
+</div>
+<p>As an example, we will talk about ETH moving from the Ethereum mainnet into WETH Asset on GOSH L2 Blockchain and back. In general, any asset on Ethereum can be supported with necessary adjustments made to <a href="./#contracts" title="is a GOSH L2 smart contract on Ethereum Blockchain">ELOCK</a> smart contract Deposit/Withdrawal functions.
+Since GOSH uses ed25519 we use a double signature envelope scheme to prove signatures on GOSH to ELOCK Smart Contract on Ethereum (<em>we could use ZKP to prove the ed25519 or a precompile proposed EIP665 whenever either of those solutions will be production ready</em>).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><em>What we don’t cover at this Stage?</em>  </p>
+<ul>
+<li>L2 contract execution is not validated (no validity or fraud proofs)  </li>
+<li>Funds retrieval function in case of L2 censored / stopped  </li>
+<li>L1 Funds retrieval is complicated and expansive  </li>
+</ul>
+</div>
+<h3 id="stage-2-optimistic-roll-up"><strong>Stage 2: Optimistic roll-up</strong></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>At this stage we add fraud and execution proofs for <a href="./#definitions" title="is a distributed token smart contract standard on GOSH blockchain">TIP-3</a> contracts.</p>
+</div>
+<p>The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.</p>
+<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other optimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><em>What we don’t cover at this Stage?</em>  </p>
+<ul>
+<li>Funds retrieval function in case of L2 censored/stopped  </li>
+<li>L1 funds retrieval is complicated and expansive in case of immediate withdrawal  </li>
+</ul>
+</div>
+<h3 id="stage-3-validium-zkp-roll-up"><strong>Stage 3: Validium ZKP roll-up</strong></h3>
+<p>At this stage, we are adding external Verifiers and putting a bond of L2 Collators on the Ethereum mainnet. Verifiers will be able to supply fraud proofs as well as data availability proofs.</p>
+<p>The Verifiers can slash the L2 Collators in case of misbehavior by supplying ZKPs proving the wrong block production, or by successfully challenging data availability proofs making it effectively an Ethereum Sharding design since GOSH is a multithreaded, multisharded blockchain.</p>
+<div class="admonition warning annotate">
+<p class="admonition-title">Important</p>
+<p>At this stage, there is no need to trust L2 Collators with anything. L1 can verify all L2 state transitions and L2 can verify L1 contract state transitions. Funds are easily withdrawn from either blockchain. To break the system both L1 and L2 need to be corrupted or stopped simultaneously.</p>
+</div>
+<!-- TODO -->
+<h2 id="contracts"><strong>Contracts</strong></h2>
+<ul>
+<li>
+<p><strong>ELOCK</strong> — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manages withdrawals, and locks user funds. ELOCK also counts its total balance, and total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.</p>
+</li>
+<li>
+<p><strong>GLOCK</strong> — is a set оf special contracts on GOSH Blockchain.
+Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.
+Contract <code>Checker.sol</code> receives an external message from <code>Proposer</code> with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract <code>Proposal.sol</code> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <code>RootTokenContract.cpp</code></p>
+</li>
+<li>
+<p><strong>RootTokenContract</strong> - is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.
+Also it deploys the contract TIP3 wallet contract (<code>TONTokenWallet.cpp</code>) and sends wrapped tokens there.</p>
+</li>
+<li>
+<p><strong>TONTokenWallet</strong> - is a custom TIP-3 contract that runs in GOSH Masterchain and in addition to standard functions has <code>burnTokens</code> method. It is called when WETH needs to be transferred to Ethereum Blockchain. Burn is proven to ELOCK contract in order to allow for ETH native token withdrawals. </p>
+</li>
+</ul>
+<h2 id="commission"><strong>Commission</strong></h2>
+<h3 id="for-deposit-to-gosh"><strong>for deposit to GOSH</strong></h3>
+<p>When transferring assets to GOSH, <code>checker.sol</code> sends the transfer amount and coefficients <code>a</code> and <code>b</code> to the <code>RootTokenContract.cpp</code> and it calculates the commission amount. Then mints the wrapped tokens to the user TIP3-wallet minus the commission. And the commission is sent to the wallet by the commission in GOSH.</p>
+<p>calculated as:</p>
+<p><span class="arithmatex">\(\frac{a * x}{10 000} + b\)</span></p>
+<p>where:</p>
+<p><strong>a</strong>  - commission percentage = 10 (0.1%)</p>
+<p><strong>b</strong> - permanent commission (does not depend on the transfer amount, now = 0)</p>
+<p><strong>х</strong> - amount of tokens to transfer</p>
+<h3 id="for-withdraw-to-ethereum"><strong>for withdraw to Ethereum</strong></h3>
+<p>The commission is calculated in the ELOCK contract.</p>
+<p>It consists of 2 parts:</p>
+<ul>
+<li><em>Part 1</em> - the cost of the transaction for the transfer of <code>WETH</code> to the recipient</li>
+</ul>
+<p>calculated as: </p>
+<p>$ 21000 * gasprice$</p>
+<p>where:</p>
+<p><strong>gasprice</strong> - gas price during withdraw transaction</p>
+<ul>
+<li><em>Part 2</em></li>
+</ul>
+<p>calculated as: </p>
+<p>amount of validators' expenses / quantity of transfers to withdraw <code>WETH</code> in the current proposal</p>
+<p>Then it is sent to the commission wallet.</p>
+<h2 id="integration-with-gosh-l2"><strong>Integration with GOSH L2</strong></h2>
+<p>More information about integration with GOSH L2 can be found <a href="../../integrations/l2/">here</a></p>
+<h2 id="definitions"><strong>Definitions</strong></h2>
+<p><strong>TVM</strong> is a Custom Virtual Machine GOSH Blockchain uses. For the GOSH L2 release we use extended TVM with <a href="./#added-new-tvm-opcodes">additional instructions</a>, thus TVM smart contract can run Signature Verifications and Calculate Hash functions from Ethereum Data.</p>
+<p><strong>Masterchain</strong> is the (-1) work chain of the GOSH blockchain. It is needed for service contracts and validator contracts.</p>
+<p><strong>Shardchain</strong> is shards into which the workchain is split depending on the network load. When it increases, shards split and when they decrease they merge.</p>
+<p><strong>Proposer</strong> is an off-chain program that any user can run on their machine. It packages all necessary data to prove to the GOSH chain that a particular transaction (let’s call them “L2 transactions”) on the Ethereum Network took place and vice versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain.</p>
+<p>Proposer will always accumulate all transactions that are currently not applied to generate the proof, thus ensuring that all transactions of the opposite network are applied. If that is not the case the State Validation function will fail.</p>
+<p><strong>TIP-3</strong> is a distributed token smart contract standard on the GOSH blockchain. It is a formally verified scalable token design for sharded architecture optimized for parallelization.</p>
+<h2 id="added-new-tvm-opcodes">Added new TVM opcodes</h2>
+<p><strong>KECCAK256</strong> - implements the <code>keccak256</code> hashing algorithm for the data provided in the TVM cell</p>
+<p><strong>VERGRTH16</strong> - verify <code>Groth16 zk-SNARK</code> proof</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.expand", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
