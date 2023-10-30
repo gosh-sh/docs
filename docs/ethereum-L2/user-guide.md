@@ -67,6 +67,11 @@ In the **Accounts** section, click **Connect** to log into a software cryptocurr
 
 ![](../images/ethereum_usage_withdraw_connect_metamask.jpg)
 
+!!! info
+
+    In the future, the balances of your wallets on GOSH and Ethereum will be displayed here
+
+
 In the **From** section, select the **GOSH** blockchain and enter the sender's wallet address or GOSH username along with the amount of WETH tokens you wish to withdraw:
 
 ![](../images/ethereum_usage_withdraw_from.jpg)
@@ -78,13 +83,28 @@ In the**To**section, make sure to choose the **Ethereum** blockchain network and
 
 Please click on the **Next** button to proceed.
 
+On the right, in the **Summary** section, you can see information about the amount of assets received and sent.
+
+![](../images/ethereum_usage_withdraw_sammary.jpg)
+
+The amount of the expected commission for the transfer and and the time before the withdrawal of assets is also indicated
+
+
+!!! info
+
+    Tokens are withdrawn every 3 hours
+
+
+
 <!-- TODO description
 
-![](../images/ethereum_usage_withdraw_sammary.jpg) 
+
 
 
 ![](../images/ethereum_usage_withdraw_step2_transf.jpg)-->
 
 Please wait until the process of sending WETH tokens and receiving ETH fully completed
+
+![](../images/ethereum_usage_withdraw_step3_compl.jpg)
 
 <!-- DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project............... -->
