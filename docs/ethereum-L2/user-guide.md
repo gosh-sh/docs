@@ -87,4 +87,6 @@ Please click on the **Next** button to proceed.
 
 Please wait until the process of sending WETH tokens and receiving ETH fully completed
 
+![](../images/ethereum_usage_withdraw_step3_compl.jpg)
+
 <!-- DAO members can choose to have their token available in Ethereum, effectively making any project its own L2. And because GOSH L2 supports ERC-20 Tokenization, we offer easy ecosystem integration for any project............... -->
