@@ -101,7 +101,7 @@ gosh init
 
 AnyTree builds the artifacts uses `SBOM file` that allows developers to see what they built and why and reproduce the same result.
 
-To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclones.org/docs/1.5/json/)
+To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/)
 
 !!! info
     The example file can be viewed here:
