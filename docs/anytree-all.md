@@ -85,7 +85,7 @@ or use quick start.
     * Docker
     * Python3 with pip (required to generate a `SBOM-file`)
 
-    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclones.org/docs/1.5/json/)
+    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/)
 
     !!! info
         The example file can be viewed here:  
@@ -187,7 +187,7 @@ Prerequisites:
     * Docker
     * Python3 with pip (required to generate a `SBOM-file`)
 
-    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclones.org/docs/1.5/json/)
+    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/)
 
     !!! info
         The example file can be viewed here:  
