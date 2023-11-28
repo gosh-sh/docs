@@ -29,6 +29,10 @@ nav:
   - Integrations:
     - GOSH GitHub Sync: integrations/sync.md
     - GOSH Ethereum L2: integrations/l2.md
+    - contracts: integrations/contracts.md
+  - Hacks & Grants:
+    - Overview: hacks-and-grants/overview.md
+    - User Guide: hacks-and-grants/user-guide.md
   - Links: links.md
 
 markdown_extensions:
@@ -56,6 +60,7 @@ theme:
   features:
     # - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
     - content.code.copy
     - content.tooltips
