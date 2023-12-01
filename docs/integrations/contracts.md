@@ -13,12 +13,14 @@
 { .ml-params }
 
 
-[**getAccess**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol#L353)() returns(mapping(uint256 => uint8))
+
+<a id="getaccess" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol#L353">**getAccess**</a>() returns(mapping(uint256 => uint8))
+
 
 RETURNS:  
 
 the list of all the user's public keys with their numbers.  
-It is necessary to take the zeroth pubkey from the list
+It is necessary **to take the zeroth pubkey** from the list
 { .ml-params }
 
 <!-- RETURN TYPE  
@@ -48,6 +50,8 @@ It is necessary to take the zeroth pubkey from the list
 
 
 <!-- <a id="getprofileaddr" />[**getProfileAddr**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224)(string name) returns(address) -->
+
+
 
 <a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224">**getProfileAddr**</a>(string name) returns(address)
 
@@ -92,10 +96,7 @@ the address of the user's **Profile** contract
     0x54a858bBD5968Eb755e54C45a3fe5B002bE3c254
     ```
 
-<!-- <a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224">**getProfileAddr**</a>(string name) returns(address) -->
 
-
-<!-- **************************************** -->
 
 <a id="deposit" href="">**deposit**</a>(uint256 pubkey)  
 
@@ -111,10 +112,32 @@ user's token wallet for minting wrapped tokens to it.
 { .ml-params }
 
 
-**depositERC20**(address token, uint256 value, uint256 pubkey)  
+!!! exsample annotate "example of calling the ELock contract in Ethereum"
 
-Allows a user to deposit ERC20 tokens into the Elock-contract for locking in it. The corresponding
-amount of wrapped tokens in GOSH will be minted for the amount of the blocked funds.  
+    ``` cpp
+    const elock = new data.web3.instance.eth.Contract(
+        ELockAbi.abi,
+        AppConfig.elockaddr,
+    )
+
+    const edata = elock.methods.deposit(data.summary.to.user.value.pubkey).encodeABI()
+            
+    const receipt = await data.web3.instance.eth.sendTransaction({
+        from: data.web3.address,
+        to: AppConfig.elockaddr,
+        value: data.web3.instance.utils.toWei(data.summary.from.amount, 'ether'),
+        data: edata,
+        gasLimit: 100000,
+        maxPriorityFeePerGas: 25000,
+    })
+    ```
+
+
+
+<a id="depositerc20" href="">**depositERC20**</a>(address token, uint256 value, uint256 pubkey)  
+
+***Allows a user to deposit ERC20 tokens into the Elock-contract for locking in it. The corresponding
+amount of wrapped tokens in GOSH will be minted for the amount of the blocked funds.***  
 Before calling deposit, the specified number of tokens must be available for transfer for the Elock
 address.
 { .ml-params }
@@ -122,22 +145,40 @@ address.
 
 PARAMETERS:  
 
-**token** (*address*) - address of the ERC20 token contract.  
-**value** (*uint256*) - deposited number of tokens.  
-**pubkey** (*uint256*) - the recipient's public key in GOSH. Used to derive the address of the
+* **`token`** (*address*) - address of the ERC20 token contract.  
+* **`value`** (*uint256*) - deposited number of tokens.  
+* **`pubkey`** (*uint256*) - the recipient's public key in GOSH. Used to derive the address of the
 user's token wallet for minting wrapped tokens to it.  
 { .ml-params }
 
-**getERC20Approvement**(address token, address recipient) returns (uint value, uint commission)  
 
-For the specified token and recipient, it returns the number of tokens available for withdrawal
-(withdrawERC20) and the commission to be transferred for the withdrawal function.
+
+
+
+
+<a id="withdrawerc20" href="">**withdrawERC20**</a>(address token)  
+
+***Requests the withdrawal of the specified tokens for the caller (`msg.sender`).***  
+Tokens must be approved for withdrawal. The commission must be attached to the function call.
 { .ml-params }
 
 PARAMETERS:  
 
-**token** (*address*) - address of the ERC20 token contract.  
-**recipient** (*address*) - the address of the recipient of the withdrawed tokens  
+* **`token`** (*address*) - address of the ERC20 token contract.  
+{ .ml-params }
+
+
+
+<a id="geterc20approvement" href="">**getERC20Approvement**</a>(address token, address recipient) returns (uint value, uint commission)  
+
+***For the specified token and recipient, it returns the number of tokens available for withdrawal
+(withdrawERC20) and the commission to be transferred for the withdrawal function.***
+{ .ml-params }
+
+PARAMETERS:  
+
+* **`token`** (*address*) - address of the ERC20 token contract.  
+* **`recipient`** (*address*) - the address of the recipient of the withdrawed tokens  
 { .ml-params }
 
 
@@ -148,57 +189,91 @@ RETURNS:
 { .ml-params }
 
 
-**withdrawERC20**(address token)  
-
-Requests the withdrawal of the specified tokens for the caller (`msg.sender`). Tokens must be
-approved for withdrawal. The commission must be attached to the function call.
-{ .ml-params }
-
-PARAMETERS:  
-
-**token** (*address*) - address of the ERC20 token contract.  
-{ .ml-params }
 
 
-<a id="gettokenroots">**getTokenRoots**()  
+<!-- <a id="gettokenroots" href="">**getTokenRoots**</a>() returns(address) -->
 
-This function returns an array of addresses where each address represents a supported ERC 20 token in GOSH Ethereum L2.  
+<a id="gettokenroots" href="">**getTokenRoots**</a>() returns (address[] memory roots)
+
+The function returns an array of addresses where each address represents a supported ERC20 token in GOSH Ethereum L2.  
 
 RETURNS:  
 
 **roots** (*address[]*) - list of addresses of ERС20 tokens  
+{ .ml-params }
 
 
-<!-- 
+
+
+
+
 ## **GLOCK**  
 is a set оf special contracts on GOSH Blockchain.
 Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.
-Contract **`Checker.sol`** receives an external message from **`Proposer`** with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract **`Proposal.sol`** that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract **`RootTokenContract.cpp`**
+Contract **`Checker.sol`** receives an external message from [**`Proposer`**](../ethereum-L2/overview.md#definitions " is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain") with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract **`Proposal.sol`** that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract **`RootTokenContract.cpp`**
 
 
-### **Checker.sol**
+### **Checker**
 
 
 <!-- [[source code]]() -->
 
-<!-- [[ABI]]() -->
+[[ABI]](../static/checker.abi.json){:download="checker.abi.json"}
+{ .ml-params }
+
+!!! info
+    **address in GOSH:**  
+
+    ```
+    0:17eb654c5fca0027d47a4564139df71bec46b2277d71f6674ecd9dc55e52fb78
+    ```
+
+
+<a id="getRootAddr" href="">**getRootAddr**</a>(RootData data) returns(address)
 <!-- 
+getRootAddr(RootData data) external view returns(address)
+        checker::getRootAddr({
+            name: ERC20_NAME,
+            symbol: ERC20_SYMBOL,
+            decimals: ERC20_DECIMALS,
+            ethroot: ERC20_ADDRESS
+        }) => TIP3Root
+ -->
+
+The function returns TIP-3 root contract address
+
+PARAMETERS
+
+* **`RootData.name`**     (*string*) - ERC20 token name;  
+* **`RootData.symbol`**   (*string*) - ERC20 token symbol;  
+* **`RootData.decimals`** (*uint8*)  - ERC20 token decimals;  
+* **`RootData.ethroot`**  (*uint256*)- ERC20 token address;  
+{ .ml-params }
+
+
+RETURNS
+
+address TIP-3 root for wrapped ERС20 token in GOSH 
+{ .ml-params }
+
+
+
+<!-- ### **Proposal.sol**
+
+[[source code]]()
+
+[[ABI]]()
+
 PARAMETERS
 RETURNS
-RETURN TYPE
-
-### **Proposal.sol**
-
-<!-- [[source code]]()
-
-[[ABI]]() -->
-<!-- 
-PARAMETERS
-RETURNS
-RETURN TYPE -->
+RETURN TYPE  -->
 
 
-## **RootTokenContract**
+
+
+
+
+## **RootTokenContract**  
 **is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.**  
 **Also it deploys the TIP-3 wallet contract (`TONTokenWallet.cpp`) and sends wrapped tokens there.**
 
@@ -216,9 +291,10 @@ RETURN TYPE -->
     ```  
 
 
+
 <a id="getwalletaddress" href="">**getWalletAddress**</a>(uint256 pubkey, address_opt owner)  
 
-The function for getting the user's TIP-3 wallet address
+***The function for getting the user's TIP-3 wallet address***
 { .ml-params }
 
 
@@ -255,9 +331,9 @@ user's wallet address
     bool        deploy,  
     uint128     return_ownership,  
     opt<cell>   notify_payload  
-)  
+)
 
-The function for deploying empty TIP-3 wallet to another user
+***The function for deploying empty TIP-3 wallet to another user***
 
 PARAMETERS:  
 
@@ -276,6 +352,8 @@ RETURN TYPE -->
 <!-- 
 <a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224">**getProfileAddr**</a>(string name) returns(address) -->
 
+
+
 <a id="transfer" href="">**transfer**</a>(  
     address_opt answer_addr,  
     address     to,  
@@ -285,6 +363,7 @@ RETURN TYPE -->
     opt<cell>   notify_payload  
 )  
 
+***The function transfers the TIP3-tokens between TIP-3 user wallets.***
 
 PARAMETERS:  
 
@@ -299,33 +378,32 @@ PARAMETERS:
 
 
 
+<a id="burntokens" href="">**burnTokens**</a>(uint128 tokens, uint256 to)
 
-
-
-For transfer "WETH" to Ethereum, you need to call the `burnTokens` method in the user contract **TONTokenWallet**
-
-``` cpp
-void burnTokens(uint128 tokens, uint256 to)
-```
-
-where:
-
-`tokens` - amount WETH, which will be transferred to Ethereum  
-`to` - the address of the recipient's wallet in Ethereum
+***The function burns tokens for transfer to Ethereum***  
 { .ml-params }
 
-Then wait for the transfer of `ETH` to the recipient's wallet in Ethereum.
+<!-- Then it remains to wait for the transfer of `ETH` to the recipient's wallet in Ethereum. -->
+PARAMETERS:  
+
+* **`tokens`** - amount WETH, which will be transferred to Ethereum  
+* **`to`** - the address of the recipient's wallet in Ethereum
+{ .ml-params }
 
 
 
 
-For get information about the TIP-3 wallet in the contract **TONTokenWallet**, the `getDetails` method is called:
+<a id="getdetails" href="">**getDetails**</a>()
 
-```
-details_info getDetails()
-```
+***The function returns information about the TIP-3 wallet***
+{ .ml-params }
 
-and you get the data structure:
+
+RETURNS:  
+
+the data structure:
+{ .ml-params }
+
 
 ```
 struct details_info {
@@ -348,6 +426,9 @@ struct details_info {
   int8              workchain_id;   // Workchain id.
 }
 ```
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
 
 
 

@@ -908,6 +908,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#glock" class="md-nav__link">
+    GLOCK
+  </a>
+  
+    <nav class="md-nav" aria-label="GLOCK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checker" class="md-nav__link">
+    Checker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#roottokencontract" class="md-nav__link">
     RootTokenContract
   </a>
@@ -1092,6 +1112,26 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#glock" class="md-nav__link">
+    GLOCK
+  </a>
+  
+    <nav class="md-nav" aria-label="GLOCK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checker" class="md-nav__link">
+    Checker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#roottokencontract" class="md-nav__link">
     RootTokenContract
   </a>
@@ -1127,10 +1167,10 @@
 <p><strong>this contract is deployed for each user when registering with GOSH. It stores the user's name and its public keys.</strong></p>
 <p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol">[source code]</a></p>
 <p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json">[ABI]</a></p>
-<p><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol#L353"><strong>getAccess</strong></a>() returns(mapping(uint256 =&gt; uint8))</p>
+<p><a id="getaccess" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol#L353"><strong>getAccess</strong></a>() returns(mapping(uint256 =&gt; uint8))</p>
 <p>RETURNS:  </p>
 <p class="ml-params">the list of all the user's public keys with their numbers.<br />
-It is necessary to take the zeroth pubkey from the list</p>
+It is necessary <strong>to take the zeroth pubkey</strong> from the list</p>
 <!-- RETURN TYPE  
 
 *mapping(uint256 => uint8)*
@@ -1174,10 +1214,6 @@ It is necessary to take the zeroth pubkey from the list</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>0x54a858bBD5968Eb755e54C45a3fe5B002bE3c254
 </span></code></pre></div>
 </div>
-<!-- <a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224">**getProfileAddr**</a>(string name) returns(address) -->
-
-<!-- **************************************** -->
-
 <p><a id="deposit" href=""><strong>deposit</strong></a>(uint256 pubkey)  </p>
 <p class="ml-params">Allows a user to deposit <code>Ether</code> (transfered as value) into the Elock-contract for locking in it.
 The corresponding amount of wrapped tokens (<code>WETH</code>) in GOSH will be minted for the amount of the
@@ -1187,61 +1223,105 @@ blocked funds.<br /></p>
 <li class="ml-params"><strong><code>pubkey</code></strong>  (<em>uint256</em>) - the recipient's public key in GOSH. Used to derive the address of the
 user's token wallet for minting wrapped tokens to it.<br /></li>
 </ul>
-<p><strong>depositERC20</strong>(address token, uint256 value, uint256 pubkey)  </p>
-<p class="ml-params">Allows a user to deposit ERC20 tokens into the Elock-contract for locking in it. The corresponding
-amount of wrapped tokens in GOSH will be minted for the amount of the blocked funds.<br />
+<div class="admonition exsample annotate">
+<p class="admonition-title">example of calling the ELock contract in Ethereum</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">const</span><span class="w"> </span><span class="n">elock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">Contract</span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">ELockAbi</span><span class="p">.</span><span class="n">abi</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">AppConfig</span><span class="p">.</span><span class="n">elockaddr</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">const</span><span class="w"> </span><span class="n">edata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">elock</span><span class="p">.</span><span class="n">methods</span><span class="p">.</span><span class="n">deposit</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">to</span><span class="p">.</span><span class="n">user</span><span class="p">.</span><span class="n">value</span><span class="p">.</span><span class="n">pubkey</span><span class="p">).</span><span class="n">encodeABI</span><span class="p">()</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">const</span><span class="w"> </span><span class="n">receipt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">sendTransaction</span><span class="p">({</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nl">from</span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">address</span><span class="p">,</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nl">to</span><span class="p">:</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">.</span><span class="n">elockaddr</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nl">value</span><span class="p">:</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">utils</span><span class="p">.</span><span class="n">toWei</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">summary</span><span class="p">.</span><span class="n">from</span><span class="p">.</span><span class="n">amount</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;</span><span class="n">ether</span><span class="err">&#39;</span><span class="p">),</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nl">data</span><span class="p">:</span><span class="w"> </span><span class="n">edata</span><span class="p">,</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nl">gasLimit</span><span class="p">:</span><span class="w"> </span><span class="mi">100000</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nl">maxPriorityFeePerGas</span><span class="p">:</span><span class="w"> </span><span class="mi">25000</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">})</span>
+</span></code></pre></div>
+</div>
+<p><a id="depositerc20" href=""><strong>depositERC20</strong></a>(address token, uint256 value, uint256 pubkey)  </p>
+<p class="ml-params"><strong><em>Allows a user to deposit ERC20 tokens into the Elock-contract for locking in it. The corresponding
+amount of wrapped tokens in GOSH will be minted for the amount of the blocked funds.</em></strong><br />
 Before calling deposit, the specified number of tokens must be available for transfer for the Elock
 address.</p>
 <p>PARAMETERS:  </p>
-<p class="ml-params"><strong>token</strong> (<em>address</em>) - address of the ERC20 token contract.<br />
-<strong>value</strong> (<em>uint256</em>) - deposited number of tokens.<br />
-<strong>pubkey</strong> (<em>uint256</em>) - the recipient's public key in GOSH. Used to derive the address of the
-user's token wallet for minting wrapped tokens to it.<br /></p>
-<p><strong>getERC20Approvement</strong>(address token, address recipient) returns (uint value, uint commission)  </p>
-<p class="ml-params">For the specified token and recipient, it returns the number of tokens available for withdrawal
-(withdrawERC20) and the commission to be transferred for the withdrawal function.</p>
+<ul>
+<li><strong><code>token</code></strong> (<em>address</em>) - address of the ERC20 token contract.  </li>
+<li><strong><code>value</code></strong> (<em>uint256</em>) - deposited number of tokens.  </li>
+<li class="ml-params"><strong><code>pubkey</code></strong> (<em>uint256</em>) - the recipient's public key in GOSH. Used to derive the address of the
+user's token wallet for minting wrapped tokens to it.<br /></li>
+</ul>
+<p><a id="withdrawerc20" href=""><strong>withdrawERC20</strong></a>(address token)  </p>
+<p class="ml-params"><strong><em>Requests the withdrawal of the specified tokens for the caller (<code>msg.sender</code>).</em></strong><br />
+Tokens must be approved for withdrawal. The commission must be attached to the function call.</p>
 <p>PARAMETERS:  </p>
-<p class="ml-params"><strong>token</strong> (<em>address</em>) - address of the ERC20 token contract.<br />
-<strong>recipient</strong> (<em>address</em>) - the address of the recipient of the withdrawed tokens<br /></p>
+<ul>
+<li class="ml-params"><strong><code>token</code></strong> (<em>address</em>) - address of the ERC20 token contract.<br /></li>
+</ul>
+<p><a id="geterc20approvement" href=""><strong>getERC20Approvement</strong></a>(address token, address recipient) returns (uint value, uint commission)  </p>
+<p class="ml-params"><strong><em>For the specified token and recipient, it returns the number of tokens available for withdrawal
+(withdrawERC20) and the commission to be transferred for the withdrawal function.</em></strong></p>
+<p>PARAMETERS:  </p>
+<ul>
+<li><strong><code>token</code></strong> (<em>address</em>) - address of the ERC20 token contract.  </li>
+<li class="ml-params"><strong><code>recipient</code></strong> (<em>address</em>) - the address of the recipient of the withdrawed tokens<br /></li>
+</ul>
 <p>RETURNS:  </p>
 <p class="ml-params"><strong>value</strong> (<em>uint256</em>) - the number of tokens approved for withdrawal.<br />
 <strong>commission</strong> (<em>uint256</em>) - the amount of commission for withdrawal.<br /></p>
-<p><strong>withdrawERC20</strong>(address token)  </p>
-<p class="ml-params">Requests the withdrawal of the specified tokens for the caller (<code>msg.sender</code>). Tokens must be
-approved for withdrawal. The commission must be attached to the function call.</p>
-<p>PARAMETERS:  </p>
-<p class="ml-params"><strong>token</strong> (<em>address</em>) - address of the ERC20 token contract.<br /></p>
-<p><a id="gettokenroots"><strong>getTokenRoots</strong>()  </p>
-<p>This function returns an array of addresses where each address represents a supported ERC 20 token in GOSH Ethereum L2.  </p>
+<!-- <a id="gettokenroots" href="">**getTokenRoots**</a>() returns(address) -->
+
+<p><a id="gettokenroots" href=""><strong>getTokenRoots</strong></a>() returns (address[] memory roots)</p>
+<p>The function returns an array of addresses where each address represents a supported ERC20 token in GOSH Ethereum L2.  </p>
 <p>RETURNS:  </p>
-<p><strong>roots</strong> (<em>address[]</em>) - list of addresses of ERС20 tokens  </p>
-<!-- 
-## **GLOCK**  
-is a set оf special contracts on GOSH Blockchain.
+<p class="ml-params"><strong>roots</strong> (<em>address[]</em>) - list of addresses of ERС20 tokens<br /></p>
+<h2 id="glock"><strong>GLOCK</strong></h2>
+<p>is a set оf special contracts on GOSH Blockchain.
 Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.
-Contract **`Checker.sol`** receives an external message from **`Proposer`** with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract **`Proposal.sol`** that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract **`RootTokenContract.cpp`**
-
-
-### **Checker.sol**
-
-
+Contract <strong><code>Checker.sol</code></strong> receives an external message from <a href="../../ethereum-L2/overview/#definitions" title="is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain"><strong><code>Proposer</code></strong></a> with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract <strong><code>Proposal.sol</code></strong> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <strong><code>RootTokenContract.cpp</code></strong></p>
+<h3 id="checker"><strong>Checker</strong></h3>
 <!-- [[source code]]() -->
 
-<!-- [[ABI]]() -->
+<p class="ml-params"><a download="checker.abi.json" href="../../static/checker.abi.json">[ABI]</a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>address in GOSH:</strong>  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>0:17eb654c5fca0027d47a4564139df71bec46b2277d71f6674ecd9dc55e52fb78
+</span></code></pre></div>
+</div>
+<p><a id="getRootAddr" href=""><strong>getRootAddr</strong></a>(RootData data) returns(address)</p>
 <!-- 
+getRootAddr(RootData data) external view returns(address)
+        checker::getRootAddr({
+            name: ERC20_NAME,
+            symbol: ERC20_SYMBOL,
+            decimals: ERC20_DECIMALS,
+            ethroot: ERC20_ADDRESS
+        }) => TIP3Root
+ -->
+
+<p>The function returns TIP-3 root contract address</p>
+<p>PARAMETERS</p>
+<ul>
+<li><strong><code>RootData.name</code></strong>     (<em>string</em>) - ERC20 token name;  </li>
+<li><strong><code>RootData.symbol</code></strong>   (<em>string</em>) - ERC20 token symbol;  </li>
+<li><strong><code>RootData.decimals</code></strong> (<em>uint8</em>)  - ERC20 token decimals;  </li>
+<li class="ml-params"><strong><code>RootData.ethroot</code></strong>  (<em>uint256</em>)- ERC20 token address;<br /></li>
+</ul>
+<p>RETURNS</p>
+<p class="ml-params">address TIP-3 root for wrapped ERС20 token in GOSH </p>
+<!-- ### **Proposal.sol**
+
+[[source code]]()
+
+[[ABI]]()
+
 PARAMETERS
 RETURNS
-RETURN TYPE
-
-### **Proposal.sol**
-
-<!-- [[source code]]()
-
-[[ABI]]() -->
-<!-- 
-PARAMETERS
-RETURNS
-RETURN TYPE -->
+RETURN TYPE  -->
 
 <h2 id="roottokencontract"><strong>RootTokenContract</strong></h2>
 <p><strong>is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.</strong><br />
@@ -1253,11 +1333,11 @@ RETURN TYPE -->
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><strong>address for TIP-3 token <code>ETH</code>:</strong></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>0:d6182377a82e7f159f1b9995b2582ac933791599a4da9d72cc2c7812f056592d
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>0:d6182377a82e7f159f1b9995b2582ac933791599a4da9d72cc2c7812f056592d
 </span></code></pre></div>
 </div>
 <p><a id="getwalletaddress" href=""><strong>getWalletAddress</strong></a>(uint256 pubkey, address_opt owner)  </p>
-<p class="ml-params">The function for getting the user's TIP-3 wallet address</p>
+<p class="ml-params"><strong><em>The function for getting the user's TIP-3 wallet address</em></strong></p>
 <p>PARAMETERS:  </p>
 <ul>
 <li class="ml-params"><strong><code>pubkey</code></strong> - user's public key</li>
@@ -1281,8 +1361,8 @@ RETURN TYPE -->
     bool        deploy,<br />
     uint128     return_ownership,<br />
     opt<cell>   notify_payload<br />
-)  </p>
-<p>The function for deploying empty TIP-3 wallet to another user</p>
+)</p>
+<p><strong><em>The function for deploying empty TIP-3 wallet to another user</em></strong></p>
 <p>PARAMETERS:  </p>
 <ul>
 <li><strong><code>answer_addr</code></strong> - Answer address, <strong>(should be <code>null</code>)</strong>  </li>
@@ -1308,6 +1388,7 @@ RETURN TYPE -->
     uint128     return_ownership,<br />
     opt<cell>   notify_payload<br />
 )  </p>
+<p><strong><em>The function transfers the TIP3-tokens between TIP-3 user wallets.</em></strong></p>
 <p>PARAMETERS:  </p>
 <ul>
 <li><strong><code>answer_addr</code></strong>      - (optional) Answer address <strong>(should be <code>null</code>)</strong>  </li>
@@ -1317,17 +1398,18 @@ RETURN TYPE -->
 <li><strong><code>return_ownership</code></strong> - Return ownership - to decrease lend ownership provided for the caller contract (additionally) <strong>(should be <code>0</code>)</strong>  </li>
 <li class="ml-params"><strong><code>notify_payload</code></strong>   - Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification <strong>(should be <code>null</code>)</strong><br /></li>
 </ul>
-<p>For transfer "WETH" to Ethereum, you need to call the <code>burnTokens</code> method in the user contract <strong>TONTokenWallet</strong></p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="n">burnTokens</span><span class="p">(</span><span class="n">uint128</span><span class="w"> </span><span class="n">tokens</span><span class="p">,</span><span class="w"> </span><span class="n">uint256</span><span class="w"> </span><span class="n">to</span><span class="p">)</span>
-</span></code></pre></div>
-<p>where:</p>
-<p class="ml-params"><code>tokens</code> - amount WETH, which will be transferred to Ethereum<br />
-<code>to</code> - the address of the recipient's wallet in Ethereum</p>
-<p>Then wait for the transfer of <code>ETH</code> to the recipient's wallet in Ethereum.</p>
-<p>For get information about the TIP-3 wallet in the contract <strong>TONTokenWallet</strong>, the <code>getDetails</code> method is called:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>details_info getDetails()
-</span></code></pre></div>
-<p>and you get the data structure:</p>
+<p><a id="burntokens" href=""><strong>burnTokens</strong></a>(uint128 tokens, uint256 to)</p>
+<p class="ml-params"><strong><em>The function burns tokens for transfer to Ethereum</em></strong><br /></p>
+<!-- Then it remains to wait for the transfer of `ETH` to the recipient's wallet in Ethereum. -->
+<p>PARAMETERS:  </p>
+<ul>
+<li><strong><code>tokens</code></strong> - amount WETH, which will be transferred to Ethereum  </li>
+<li class="ml-params"><strong><code>to</code></strong> - the address of the recipient's wallet in Ethereum</li>
+</ul>
+<p><a id="getdetails" href=""><strong>getDetails</strong></a>()</p>
+<p class="ml-params"><strong><em>The function returns information about the TIP-3 wallet</em></strong></p>
+<p>RETURNS:  </p>
+<p class="ml-params">the data structure:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>struct details_info {
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  string            name;           // Token name.
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  string            symbol;         // Token short symbol.
@@ -1348,6 +1430,8 @@ RETURN TYPE -->
 </span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>  int8              workchain_id;   // Workchain id.
 </span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>}
 </span></code></pre></div>
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
 
 

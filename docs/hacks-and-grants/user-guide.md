@@ -196,7 +196,7 @@ Then, in the form that opens, click **Add application form DAO**
 
 ![](../images/H&G_hacks_18_add_2.jpg)
 
-and enter the name of your DAO and the names of the repository that you require.
+and enter the name of your DAO and the name of the repository that you require.
 
 
 
