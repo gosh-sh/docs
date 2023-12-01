@@ -1345,7 +1345,7 @@ Contract <code>Checker.sol</code> receives an external message from <code>Propos
 </li>
 <li>
 <p><strong>RootTokenContract</strong> - is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.
-Also it deploys the contract TIP3 wallet contract (<code>TONTokenWallet.cpp</code>) and sends wrapped tokens there.</p>
+Also it deploys the contract TIP-3 wallet contract (<code>TONTokenWallet.cpp</code>) and sends wrapped tokens there.</p>
 </li>
 <li>
 <p><strong>TONTokenWallet</strong> - is a custom TIP-3 contract that runs in GOSH Masterchain and in addition to standard functions has <code>burnTokens</code> method. It is called when WETH needs to be transferred to Ethereum Blockchain. Burn is proven to ELOCK contract in order to allow for ETH native token withdrawals. </p>
@@ -1353,7 +1353,7 @@ Also it deploys the contract TIP3 wallet contract (<code>TONTokenWallet.cpp</cod
 </ul>
 <h2 id="commission"><strong>Commission</strong></h2>
 <h3 id="for-deposit-to-gosh"><strong>for deposit to GOSH</strong></h3>
-<p>When transferring assets to GOSH, <code>checker.sol</code> sends the transfer amount and coefficients <code>a</code> and <code>b</code> to the <code>RootTokenContract.cpp</code> and it calculates the commission amount. Then mints the wrapped tokens to the user TIP3-wallet minus the commission. And the commission is sent to the wallet by the commission in GOSH.</p>
+<p>When transferring assets to GOSH, <code>checker.sol</code> sends the transfer amount and coefficients <code>a</code> and <code>b</code> to the <code>RootTokenContract.cpp</code> and it calculates the commission amount. Then mints the wrapped tokens to the user TIP-3 wallet minus the commission. And the commission is sent to the wallet by the commission in GOSH.</p>
 <p>calculated as:</p>
 <p><span class="arithmatex">\(\frac{a * x}{10 000} + b\)</span></p>
 <p>where:</p>
