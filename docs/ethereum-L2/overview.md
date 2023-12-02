@@ -99,7 +99,7 @@ Contract `Checker.sol` receives an external message from `Proposer` with Ethereu
 
 
 * **RootTokenContract** - is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.
-Also it deploys the contract TIP3 wallet contract (`TONTokenWallet.cpp`) and sends wrapped tokens there.
+Also it deploys the contract TIP-3 wallet contract (`TONTokenWallet.cpp`) and sends wrapped tokens there.
 
 * **TONTokenWallet** - is a custom TIP-3 contract that runs in GOSH Masterchain and in addition to standard functions has `burnTokens` method. It is called when WETH needs to be transferred to Ethereum Blockchain. Burn is proven to ELOCK contract in order to allow for ETH native token withdrawals. 
 
@@ -110,7 +110,7 @@ Also it deploys the contract TIP3 wallet contract (`TONTokenWallet.cpp`) and sen
 ### **for deposit to GOSH**
 
 
-When transferring assets to GOSH, `checker.sol` sends the transfer amount and coefficients `a` and `b` to the `RootTokenContract.cpp` and it calculates the commission amount. Then mints the wrapped tokens to the user TIP3-wallet minus the commission. And the commission is sent to the wallet by the commission in GOSH.
+When transferring assets to GOSH, `checker.sol` sends the transfer amount and coefficients `a` and `b` to the `RootTokenContract.cpp` and it calculates the commission amount. Then mints the wrapped tokens to the user TIP-3 wallet minus the commission. And the commission is sent to the wallet by the commission in GOSH.
 
 
 calculated as:
