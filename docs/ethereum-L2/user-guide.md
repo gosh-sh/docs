@@ -46,12 +46,12 @@ The **Amount** field will indicate the transferred amount (minus the commission)
 
 ![](../images/ethereum_usage_to.jpg)
 
-After depositing the GOSH contract on Ethereum, you will receive the corresponding amount of WITH tokens (Wrapper Ethereum tokens) in your GOSH network wallet.
+After depositing the GOSH contract on Ethereum, you will receive the corresponding amount of WETH tokens (Wrapper Ethereum tokens) in your GOSH network wallet.
 
 ![](../images/ethereum_usage_transfer_comleted.jpg)
 
 
-## Withdraw WETH to Ethereum
+## Withdraw wrapped ETH to Ethereum
 
 To withdraw tokens from GOSH to Ethereum, go to the **Ethereum** tab on the DAO page
 
@@ -79,7 +79,7 @@ In the **From** section, select the **GOSH** blockchain and enter the sender's w
 ![](../images/ethereum_usage_withdraw_from.jpg)
 
 
-In the **To**section, make sure to choose the **Ethereum** blockchain network and verify the Receiver's wallet address for accuracy before proceeding. The `ETH` amount will be automatically calculated.
+In the **To** section, make sure to choose the **Ethereum** blockchain network and verify the Receiver's wallet address for accuracy before proceeding. The `ETH` amount will be automatically calculated.
 
 ![](../images/ethereum_usage_withdraw_to.jpg)
 

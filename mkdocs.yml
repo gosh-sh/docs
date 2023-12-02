@@ -34,7 +34,7 @@ nav:
   - Integrations:
     - GOSH GitHub Sync: integrations/sync.md
     - GOSH Ethereum L2: integrations/l2.md
-    - contracts: integrations/contracts.md
+    # - contracts: integrations/contracts.md
   - Links: links.md
 
 markdown_extensions:
