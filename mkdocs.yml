@@ -26,13 +26,15 @@ nav:
   - GOSH Ethereum L2: 
     - Overview: ethereum-L2/overview.md
     - User Guide: ethereum-L2/user-guide.md
+  - Hacks & Grants:
+    - Overview: hacks-and-grants/overview.md
+    - User Guide: hacks-and-grants/user-guide.md
+  - Acki Nacki:
+    - Overview: acki-nacki/overview.md
   - Integrations:
     - GOSH GitHub Sync: integrations/sync.md
     - GOSH Ethereum L2: integrations/l2.md
     - contracts: integrations/contracts.md
-  - Hacks & Grants:
-    - Overview: hacks-and-grants/overview.md
-    - User Guide: hacks-and-grants/user-guide.md
   - Links: links.md
 
 markdown_extensions:
