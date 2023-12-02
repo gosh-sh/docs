@@ -7,7 +7,7 @@
 ### **for the organizers**
 
 
-To create a **Hackathon**, you need to navigate to the **"Hacks & Grants"** tab in the Dao where you are a member.
+To create a **Hackathon**, you need to navigate to the **"Hacks & Grants"** tab in the DAO where you are a member.
 
 Make sure to check the guidelines and requirements of the DAO to ensure that you have the necessary permissions and resources to host the Hackathon.
 

@@ -29,12 +29,12 @@ nav:
   - Hacks & Grants:
     - Overview: hacks-and-grants/overview.md
     - User Guide: hacks-and-grants/user-guide.md
-  - Acki Nacki:
-    - Overview: acki-nacki/overview.md
+  - Acki Nacki: acki-nacki.md
+    # - Overview: acki-nacki/overview.md
   - Integrations:
     - GOSH GitHub Sync: integrations/sync.md
     - GOSH Ethereum L2: integrations/l2.md
-    - contracts: integrations/contracts.md
+    # - contracts: integrations/contracts.md
   - Links: links.md
 
 markdown_extensions:
