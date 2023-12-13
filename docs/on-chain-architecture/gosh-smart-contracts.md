@@ -4,11 +4,17 @@ GOSH is open-source and freely available on GitHub
 
 <!-- and, obviously, on GOSH. -->
 
+**GOSH is the most secure Git Implementation in existence.**  
+It stores, manages and processes all the editable GIT objects entirely on-chain. It verifies the correctness of all object mutations by invoking automatic checks and verifications by smart contracts.  
+
+GOSH provides developers with a secure and transparent platform to collaborate on open-source projects and ensure the security of their software development and delivery as part of the software supply chain.
+
+This is the general scheme of interaction between GOSH smart contracts:
 
 
 <figure markdown>
   [![The general scheme of the interaction of GOSH smart contracts](../images/general%20scheme%20mini.png){ width="300" }](../images/general%20scheme.png)
-  <figcaption>The general scheme of the interaction of GOSH smart contracts</figcaption>
+  <figcaption></figcaption>
 </figure>
 
 
