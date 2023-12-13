@@ -578,8 +578,9 @@ Before continuing, you need to transfer your tokens.
     Starting from the 5th version, tokens are transferred automatically.
 
 !!! warning
-    **If, at the time of the upgrade, you still have tokens that were locked into voting in previous versions of the DAO, then these tokens will be transferred only after the expiration of the proposal.**
+    **If you have tokens that were locked into voting in previous versions of the DAO at the time of the upgrade, please note that these tokens will be transferred only after the expiration of the proposal.**  
 
+<!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
 
 If you have a DAO version lower than the 4th inclusive, then to transfer tokens go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
 
@@ -644,6 +645,67 @@ To transfer a brief description of the DAO from the _index repository
 and
 
 check mark on the permission for additional token issuance - individual proposal -->
+
+
+#### __From version 6.1 to 6.2__
+
+!!! info "**Release notes for 6.2.0**"  
+
+    * [**Expert Tags**](gosh-web.md#expert-tags) have been introduced
+
+    The list of decisions supported in this version includes:
+
+    * [**Voting on Hackathon Results**](../hacks-and-grants/user-guide.md#expert-tags)
+
+    * [**Creating a Repository with Expert Tags**](gosh-web.md#create-repository-with-expert-tags)
+
+    * **The Upgrade System** has been improved
+
+    * some bugs have been fixed
+
+
+!!! warning
+    It's important to ensure that there are commits in the tasks and all proposals are completed before starting the update.
+
+Go to the Settings tab or follow the link in the upgrade message.
+
+![](../images/upgrade_DAO_6_2_0.jpg)
+
+Select the version you want to update and click **Create proposal for DAO upgrade**
+
+![](../images/upgrade_DAO_6_2_0_choice_version.jpg)
+
+You will be redirected to the page with the DAO event and will be able to vote for this proposal.
+
+After accepting the proposals, the DAO update process will begin.
+
+![](../images/upgrade_DAO_6_2_0_accepted_proposal_upgrd.jpg)
+
+
+!!! warning
+    **If you have tokens that were locked into voting in previous versions of the DAO at the time of the upgrade, please note that these tokens will be transferred only after the expiration of the proposal.**  
+    
+    
+<!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
+
+
+You should reload the page to continue updating your DAO.
+
+![](../images/upgrade_DAO_6_2_0_reload.jpg)
+
+
+Once you've done that, click on the **Complete upgrade** button in the message that appears
+
+![](../images/upgrade_DAO_6_2_0_complete_upgrade.jpg)
+
+Then, a new window will open up and you'll need to click on "Start upgrade complete process" to begin the data migration process between versions of DAOs. 
+
+![](../images/upgrade_DAO_6_2_0_complete_upgrade_start.jpg)
+
+As a result, multiple proposals will be created to transfer all data from your DAO to the new version  
+(*migrating the Index repository and all hackathons, upgrading the DAO repositories*)
+
+After all proposals are accepted, the DAO update process can be considered complete.
 
 
 ### __Proposals and voting in SMV (Soft Majority Vote)__
@@ -841,6 +903,13 @@ Inside the event, you can get details of Multi proposal.
 After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab.
 
 ![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
+
+
+
+#### __Expert Tags__
+
+You can now add an Expert Tag to your DAO, which will grant additional Karma Voting Powers to each member possessing such Tags for decisions that support Expert Tags.
+
 
 
 #### Transfer of tokens from DAO reserve
@@ -1095,8 +1164,6 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 
 ![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
 
-### __Delete Members from the DAO__
-
 
 
 
@@ -1168,6 +1235,13 @@ Add your opinion about the proposal to the discussion below and click **Send vot
 The created repository will appear in the list on the Repositories tab.
 
 ![](../images/gosh_web_Create_Repo_04_repo_created.jpg)
+
+
+#### __create repository with Expert Tags__
+
+This will provide every Tag holder with increased Karma Powers when voting on commits, and for branch protection and unprotection.
+
+
 
 ### __​Create Branch__
 

@@ -249,6 +249,11 @@ At the end of the **`Voting`** stage, the summing up will start, and the Hackath
 
 
 
+### **Expert Tags**
+
+Hackathons now support Tags. The voting on results will be influenced by people having such Tags attached to their profiles.
+
+
 ## Grant Program
 
 *coming soon*
