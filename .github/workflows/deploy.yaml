@@ -8,44 +8,30 @@ on:
       - dev
       - ci
 
-env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_DEFAULT_REGION: ${{ vars.AWS_DEFAULT_REGION }}
-  # default unless branch is 'main'
-  BUCKET_NAME: ${{ github.ref == 'refs/heads/main' && 'docs-gosh' || 'staging-docs-gosh' }}
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name: Setup policy
-        # pin python 3.11
-        uses: ajeffowens/jinja2-action@90dab3da2215932ea86d2875224f06bbd6798617
+      - uses: actions/setup-python@v4
         with:
-          template: .ci/s3/policy.json.j2
-          output_file: site/policy.json
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
 
-      - name: Check if S3 Bucket Exists
-        working-directory: site
-        run: |
-          if aws s3api head-bucket --bucket "$BUCKET_NAME" ; then
-            echo 'Bucket already exists! Just syncing.'
-          else
-            aws s3api create-bucket --bucket "$BUCKET_NAME" --acl public-read --create-bucket-configuration LocationConstraint="$AWS_DEFAULT_REGION"
-            aws s3 website s3://"$BUCKET_NAME" --index-document index.html --error-document index.html
-            aws s3api put-bucket-policy --bucket "$BUCKET_NAME" --policy file://policy.json
-          fi
-        shell: bash
+      - run: pip install mkdocs-material
+      - run: mkdocs build --site-dir ./public
 
-      - name: Sync with S3 Bucket
-        working-directory: site
-        run: aws s3 sync . s3://"$BUCKET_NAME"
-
-      - name: Create invalidation
-        if: github.ref == 'refs/heads/main'
-        run: |
-          aws cloudfront create-invalidation --distribution-id E38B49XVCTNRVX --paths '/*'
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3.3.2
+        with:
+          command: pages deploy --project-name docs-gosh --branch "${{ github.ref_name }}" --commit-hash "${{ github.sha }}" ./public
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
