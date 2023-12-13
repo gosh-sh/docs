@@ -1,9 +1,11 @@
 name: Deploy
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
+      - dev
       - ci
 
 jobs:
@@ -25,11 +27,11 @@ jobs:
             mkdocs-material-
 
       - run: pip install mkdocs-material
-      - run: mkdocs build --site-dir public
+      - run: mkdocs build --site-dir ./public
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3.3.2
         with:
-          command: pages deploy --project-name docs-gosh ./public
+          command: pages deploy --project-name docs-gosh --branch "${{ github.ref_name }}" --commit-hash "${{ github.sha }}" ./public
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
