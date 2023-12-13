@@ -1029,26 +1029,33 @@
 
 
 <h1 id="gosh-smart-contracts">GOSH smart contracts</h1>
-<p>GOSH is open-source and freely available on GitHub and, obviously, on GOSH.</p>
+<p>GOSH is open-source and freely available on GitHub </p>
+<!-- and, obviously, on GOSH. -->
+
+<figure>
+<p><a href="../../images/general%20scheme.png"><img alt="The general scheme of the interaction of GOSH smart contracts" src="../../images/general%20scheme%20mini.png" width="300" /></a>
+  </p>
+<figcaption>The general scheme of the interaction of GOSH smart contracts</figcaption>
+</figure>
 <p>GOSH consists of the following contracts (latest version):</p>
 <ul>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/versioncontroller.sol">VersionController </a>- a contract version manager used when upgrading GOSH smart contracts</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/systemcontract.sol">SystemContract </a>- main contract for hosting any specific version of GOSH smart contracts</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/profile.sol">Profile </a>- a contract for a user's profile on GOSH</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/profileindex.sol">ProfileIndex</a> - a contract for each user's public key</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/profiledao.sol">ProfileDao </a>- a contract of a DAO's profile on GOSH</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/goshwallet.sol">GOSHWallet </a>- user wallet for all user interactions with GOSH</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/goshdao.sol">GoshDao </a>- a contract storing organizations' objects</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/repository.sol">Repository </a>- a contract storing repositorys' objects</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/commit.sol">Commit </a>- a contract storing commits' objects</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/tree.sol">Tree </a>- a contract storing trees' objects</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/diff.sol">Diff </a>- a contract storing diffs' objects</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/snapshot.sol">Snapshot </a>- a contract storing snapshots' objects</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/main/v4_x/contracts/gosh/tag.sol">Tag</a> - a contract storing gits' tag object</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/daotag.sol">DaoTag</a> - a contract responsible for tags in a DAO</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/taggosh.sol">RepoTagGosh</a> - a contract responsible for tags in a repository</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/task.sol">Task</a> - a contract storing a task object</li>
-<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v4_x/contracts/gosh/topic.sol">Topic</a> - a contract storing the description of an object</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.sol">VersionController </a>- a contract version manager used when upgrading GOSH smart contracts</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/systemcontract.sol">SystemContract </a>- main contract for hosting any specific version of GOSH smart contracts</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.sol">Profile </a>- a contract for a user's profile on GOSH</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profileindex.sol">ProfileIndex</a> - a contract for each user's public key</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profiledao.sol">ProfileDao </a>- a contract of a DAO's profile on GOSH</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/goshwallet.sol">GOSHWallet </a>- user wallet for all user interactions with GOSH</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/goshdao.sol">GoshDao </a>- a contract storing organizations' objects</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/repository.sol">Repository </a>- a contract storing repositorys' objects</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/commit.sol">Commit </a>- a contract storing commits' objects</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/tree.sol">Tree </a>- a contract storing trees' objects</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/diff.sol">Diff </a>- a contract storing diffs' objects</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/snapshot.sol">Snapshot </a>- a contract storing snapshots' objects</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/tag.sol">Tag</a> - a contract storing gits' tag object</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/daotag.sol">DaoTag</a> - a contract responsible for tags in a DAO</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/taggosh.sol">RepoTagGosh</a> - a contract responsible for tags in a repository</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/task.sol">Task</a> - a contract storing a task object</li>
+<li><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/topic.sol">Topic</a> - a contract storing the description of an object</li>
 </ul>
 <!-- 
 TODO 

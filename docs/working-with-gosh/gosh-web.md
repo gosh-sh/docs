@@ -432,7 +432,7 @@ Depending on which version you currently have, choose the appropriate update met
 <!-- TODO
 transfer tokens from previous versions to a separate item and make a link -->
 
-#### __From version 1 to version 2__
+#### __from v. 1 to v. 2__
 
 You can switch to the **Upgrade** section from the new version message or go to the **Settings** tab.
 
@@ -466,7 +466,40 @@ After the proposal is accepted, the contract version will be upgraded.
 
 ![](../images/gosh_web_upgrade_04_4_DAO_v2.jpg)
 
-#### __From version 2 to version 3__
+#### __from v. 2 to v. 3__
+
+!!! info "**Release notes**"  
+
+    **Contracts**
+
+        * Added possibility of a DAO to be a member of another DAO
+
+        * Added possibility of DAO to be a Task performer. A DAO itself can now be a signer, reviewer, and manager of a Task in another DAO — Tasks now have the same functionality for DAOs as for individuals
+
+        * Improve native token management in contracts. This is mainly bug fixes for the back-end blockchain tokens that guarantee the operations of a smart contract
+
+        * Added possibility of task upgrade. Upgrades from Smart Contract version 2.0 to 3.0 required a redeployment of all Tasks. From now on all future upgrades will not affect previously created Tasks
+
+        * Task rewards do not increase karma. From now on Tasks will only serve to remunerate contributors with DAO Tokens but without increasing their Voting Karma
+
+        * Added a possibility to create index contracts. Version 3.0 now includes indexes that improve the performance of GOSH when used in a web browser
+
+    **Interface**
+
+        * DAOs can become members of other DAOs. DAOs have equal interface user flows for this operation
+
+        * A DAO can be set as a Task assignee, reviewer, and manager (DAO review, receive task bounty is not implemented yet). Web browsers now also fully support Task functionality
+
+        * DAO can create proposals and vote for proposals in parent DAO (not implemented yet)
+
+        * ask rewards do not increase karma
+
+        * If a DAO owns tokens of another DAOs “DAO supply” block will contain a button with details. The GOSH interface now has a block to allow DAO members to see which tokens the DAO holds
+
+    **Git Remote Helper**
+
+        * supports all functionality of Smart Contract Version 3.0
+
 
 The Tasks were added in contracts version 2.
 
@@ -547,7 +580,7 @@ After accepting the proposal, the tasks will be transferred from the previous ve
 <!-- !!! info
     The history of events from the previous version will not be transferred. -->
 
-#### __From version 3 to version 4__
+#### __From v. 3 to v. 4/5/6.0/6.1__
 
 Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
 
@@ -703,7 +736,7 @@ Then, a new window will open up and you'll need to click on "Start upgrade compl
 ![](../images/upgrade_DAO_6_2_0_complete_upgrade_start.jpg)
 
 As a result, multiple proposals will be created to transfer all data from your DAO to the new version  
-(*migrating the Index repository and all hackathons, upgrading the DAO repositories*)
+(*migrating the Index repository and all Hackathons, upgrading the DAO repositories*)
 
 After all proposals are accepted, the DAO update process can be considered complete.
 
