@@ -12,8 +12,24 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v3
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+
+      - run: pip install mkdocs-material
+      - run: mkdocs build --site-dir public
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3.3.2
         with:
-          workingDirectory: site
+          command: wrangler pages deploy --project-name docs-gosh ./public
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
