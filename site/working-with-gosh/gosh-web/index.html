@@ -661,22 +661,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-version-1-to-version-2" class="md-nav__link">
-    From version 1 to version 2
+  <a href="#from-v-1-to-v-2" class="md-nav__link">
+    from v. 1 to v. 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-version-2-to-version-3" class="md-nav__link">
-    From version 2 to version 3
+  <a href="#from-v-2-to-v-3" class="md-nav__link">
+    from v. 2 to v. 3
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-version-3-to-version-4" class="md-nav__link">
-    From version 3 to version 4
+  <a href="#from-v-3-to-v-456061" class="md-nav__link">
+    From v. 3 to v. 4/5/6.0/6.1
   </a>
   
 </li>
@@ -1507,22 +1507,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-version-1-to-version-2" class="md-nav__link">
-    From version 1 to version 2
+  <a href="#from-v-1-to-v-2" class="md-nav__link">
+    from v. 1 to v. 2
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-version-2-to-version-3" class="md-nav__link">
-    From version 2 to version 3
+  <a href="#from-v-2-to-v-3" class="md-nav__link">
+    from v. 2 to v. 3
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-version-3-to-version-4" class="md-nav__link">
-    From version 3 to version 4
+  <a href="#from-v-3-to-v-456061" class="md-nav__link">
+    From v. 3 to v. 4/5/6.0/6.1
   </a>
   
 </li>
@@ -2124,7 +2124,7 @@ and an invitation to update in the DAO.</p>
 <!-- TODO
 transfer tokens from previous versions to a separate item and make a link -->
 
-<h4 id="from-version-1-to-version-2"><strong>From version 1 to version 2</strong></h4>
+<h4 id="from-v-1-to-v-2"><strong>from v. 1 to v. 2</strong></h4>
 <p>You can switch to the <strong>Upgrade</strong> section from the new version message or go to the <strong>Settings</strong> tab.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_01_msg_v1tov2.jpg" /></p>
 <p>Select the version you want to upgrade and click <strong>Create proposal for DAO upgrade</strong>:</p>
@@ -2141,7 +2141,37 @@ transfer tokens from previous versions to a separate item and make a link -->
 <p><img alt="" src="../../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg" /></p>
 <p>After the proposal is accepted, the contract version will be upgraded.</p>
 <p><img alt="" src="../../images/gosh_web_upgrade_04_4_DAO_v2.jpg" /></p>
-<h4 id="from-version-2-to-version-3"><strong>From version 2 to version 3</strong></h4>
+<h4 id="from-v-2-to-v-3"><strong>from v. 2 to v. 3</strong></h4>
+<div class="admonition info">
+<p class="admonition-title"><strong>Release notes</strong></p>
+<p><strong>Contracts</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* Added possibility of a DAO to be a member of another DAO
+
+* Added possibility of DAO to be a Task performer. A DAO itself can now be a signer, reviewer, and manager of a Task in another DAO — Tasks now have the same functionality for DAOs as for individuals
+
+* Improve native token management in contracts. This is mainly bug fixes for the back-end blockchain tokens that guarantee the operations of a smart contract
+
+* Added possibility of task upgrade. Upgrades from Smart Contract version 2.0 to 3.0 required a redeployment of all Tasks. From now on all future upgrades will not affect previously created Tasks
+
+* Task rewards do not increase karma. From now on Tasks will only serve to remunerate contributors with DAO Tokens but without increasing their Voting Karma
+
+* Added a possibility to create index contracts. Version 3.0 now includes indexes that improve the performance of GOSH when used in a web browser
+</code></pre></div>
+<p><strong>Interface</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* DAOs can become members of other DAOs. DAOs have equal interface user flows for this operation
+
+* A DAO can be set as a Task assignee, reviewer, and manager (DAO review, receive task bounty is not implemented yet). Web browsers now also fully support Task functionality
+
+* DAO can create proposals and vote for proposals in parent DAO (not implemented yet)
+
+* ask rewards do not increase karma
+
+* If a DAO owns tokens of another DAOs “DAO supply” block will contain a button with details. The GOSH interface now has a block to allow DAO members to see which tokens the DAO holds
+</code></pre></div>
+<p><strong>Git Remote Helper</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* supports all functionality of Smart Contract Version 3.0
+</code></pre></div>
+</div>
 <p>The Tasks were added in contracts version 2.</p>
 <p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
 <div class="admonition warning">
@@ -2187,7 +2217,7 @@ Click <strong>Get repositories</strong>.</p>
 <!-- !!! info
     The history of events from the previous version will not be transferred. -->
 
-<h4 id="from-version-3-to-version-4"><strong>From version 3 to version 4</strong></h4>
+<h4 id="from-v-3-to-v-456061"><strong>From v. 3 to v. 4/5/6.0/6.1</strong></h4>
 <p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2297,7 +2327,7 @@ check mark on the permission for additional token issuance - individual proposal
 <p>Then, a new window will open up and you'll need to click on "Start upgrade complete process" to begin the data migration process between versions of DAOs. </p>
 <p><img alt="" src="../../images/upgrade_DAO_6_2_0_complete_upgrade_start.jpg" /></p>
 <p>As a result, multiple proposals will be created to transfer all data from your DAO to the new version<br />
-(<em>migrating the Index repository and all hackathons, upgrading the DAO repositories</em>)</p>
+(<em>migrating the Index repository and all Hackathons, upgrading the DAO repositories</em>)</p>
 <p>After all proposals are accepted, the DAO update process can be considered complete.</p>
 <h3 id="proposals-and-voting-in-smv-soft-majority-vote"><strong>Proposals and voting in SMV (Soft Majority Vote)</strong></h3>
 <p>Actions that require a DAO vote are performed by creating a proposal.</p>
