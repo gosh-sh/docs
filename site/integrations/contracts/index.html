@@ -1129,10 +1129,10 @@
 <!-- on-chain-architecture/gosh-smart-contracts/ -->
 
 <h2 id="profile"><strong>Profile</strong></h2>
-<p><strong>this contract is deployed for each user when registering with GOSH. It stores the user's name and its public keys.</strong></p>
-<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol">[source code]</a></p>
-<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.abi.json">[ABI]</a></p>
-<p><a id="getaccess" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/profile.sol#L353"><strong>getAccess</strong></a>() returns(mapping(uint256 =&gt; uint8))</p>
+<p class="ml-params"><strong>this contract is deployed for each user when registering with GOSH. It stores the user's name and its public keys.</strong></p>
+<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.sol">[source code]</a></p>
+<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.abi.json">[ABI]</a></p>
+<p><a id="getaccess" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.sol#L352"><strong>getAccess</strong></a>() returns(mapping(uint256 =&gt; uint8))</p>
 <p>RETURNS:  </p>
 <p class="ml-params">the list of all the user's public keys with their numbers.<br />
 It is necessary <strong>to take the zeroth pubkey</strong> from the list</p>
@@ -1142,19 +1142,17 @@ It is necessary <strong>to take the zeroth pubkey</strong> from the list</p>
 { .ml-params } -->
 
 <h2 id="versioncontroller"><strong>VersionController</strong></h2>
-<p><strong>a contract version manager used when upgrading GOSH smart contracts</strong></p>
-<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol">[source code]</a></p>
-<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.abi.json">[ABI]</a></p>
+<p class="ml-params"><strong>a contract version manager used when upgrading GOSH smart contracts</strong></p>
+<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.sol">[source code]</a></p>
+<p class="ml-params"><a href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.abi.json">[ABI]</a></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><strong>address (permanent):</strong>  </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>0:5cbbbce41fc4290f3d4b085ab30912831b710fa2c681f6ea227d4a22f2b304f5
 </span></code></pre></div>
 </div>
-<!-- <a id="getprofileaddr" />[**getProfileAddr**](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224)(string name) returns(address) -->
-
-<p><a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224"><strong>getProfileAddr</strong></a>(string name) returns(address)</p>
-<p class="ml-params">The function for getting the address of the user's <strong>Profile</strong></p>
+<p><a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.sol#L224"><strong>getProfileAddr</strong></a>(string name) returns(address)</p>
+<p class="ml-params"><strong><em>The function for getting the address of the user's </em>*Profile</strong>***</p>
 <p>PARAMETERS:  </p>
 <ul>
 <li class="ml-params"><strong><code>name</code></strong> (<em>string</em>) - user's name</li>
@@ -1180,7 +1178,7 @@ It is necessary <strong>to take the zeroth pubkey</strong> from the list</p>
 </span></code></pre></div>
 </div>
 <p><a id="deposit" href=""><strong>deposit</strong></a>(uint256 pubkey)  </p>
-<p class="ml-params">Allows a user to deposit <code>Ether</code> (transfered as value) into the Elock-contract for locking in it.
+<p class="ml-params"><strong><em>Allows a user to deposit <code>Ether</code> (transfered as value) into the Elock-contract for locking in it.</em></strong>
 The corresponding amount of wrapped tokens (<code>WETH</code>) in GOSH will be minted for the amount of the
 blocked funds.<br /></p>
 <p>PARAMETERS:  </p>
@@ -1188,7 +1186,7 @@ blocked funds.<br /></p>
 <li class="ml-params"><strong><code>pubkey</code></strong>  (<em>uint256</em>) - the recipient's public key in GOSH. Used to derive the address of the
 user's token wallet for minting wrapped tokens to it.<br /></li>
 </ul>
-<div class="admonition exsample annotate">
+<div class="admonition example annotate">
 <p class="admonition-title">example of calling the ELock contract in Ethereum</p>
 <div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">const</span><span class="w"> </span><span class="n">elock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">web3</span><span class="p">.</span><span class="n">instance</span><span class="p">.</span><span class="n">eth</span><span class="p">.</span><span class="n">Contract</span><span class="p">(</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">ELockAbi</span><span class="p">.</span><span class="n">abi</span><span class="p">,</span>
@@ -1208,8 +1206,7 @@ user's token wallet for minting wrapped tokens to it.<br /></li>
 </span></code></pre></div>
 </div>
 <p><a id="depositerc20" href=""><strong>depositERC20</strong></a>(address token, uint256 value, uint256 pubkey)  </p>
-<p class="ml-params"><strong><em>Allows a user to deposit ERC20 tokens into the Elock-contract for locking in it. The corresponding
-amount of wrapped tokens in GOSH will be minted for the amount of the blocked funds.</em></strong><br />
+<p class="ml-params"><strong><em>Allows a user to deposit ERC20 tokens into the Elock-contract for locking in it.  The corresponding amount of wrapped tokens in GOSH will be minted for the amount of the blocked funds.</em></strong><br />
 Before calling deposit, the specified number of tokens must be available for transfer for the Elock
 address.</p>
 <p>PARAMETERS:  </p>
@@ -1227,12 +1224,11 @@ Tokens must be approved for withdrawal. The commission must be attached to the f
 <li class="ml-params"><strong><code>token</code></strong> (<em>address</em>) - address of the ERC20 token contract.<br /></li>
 </ul>
 <p><a id="geterc20approvement" href=""><strong>getERC20Approvement</strong></a>(address token, address recipient) returns (uint value, uint commission)  </p>
-<p class="ml-params"><strong><em>For the specified token and recipient, it returns the number of tokens available for withdrawal
-(withdrawERC20) and the commission to be transferred for the withdrawal function.</em></strong></p>
+<p class="ml-params"><strong><em>For the specified token and recipient, it returns the number of tokens available for withdrawal (withdrawERC20) and the commission to be transferred for the withdrawal function.</em></strong></p>
 <p>PARAMETERS:  </p>
 <ul>
 <li><strong><code>token</code></strong> (<em>address</em>) - address of the ERC20 token contract.  </li>
-<li class="ml-params"><strong><code>recipient</code></strong> (<em>address</em>) - the address of the recipient of the withdrawed tokens<br /></li>
+<li class="ml-params"><strong><code>recipient</code></strong> (<em>address</em>) - the address of the recipient of the withdrawn tokens </li>
 </ul>
 <p>RETURNS:  </p>
 <p class="ml-params"><strong>value</strong> (<em>uint256</em>) - the number of tokens approved for withdrawal.<br />
@@ -1240,12 +1236,12 @@ Tokens must be approved for withdrawal. The commission must be attached to the f
 <!-- <a id="gettokenroots" href="">**getTokenRoots**</a>() returns(address) -->
 
 <p><a id="gettokenroots" href=""><strong>getTokenRoots</strong></a>() returns (address[] memory roots)</p>
-<p>The function returns an array of addresses where each address represents a supported ERC20 token in GOSH Ethereum L2.  </p>
+<p class="ml-params"><strong><em>The function returns an array of addresses where each address represents a supported ERC20 token in GOSH Ethereum L2.</em></strong><br /></p>
 <p>RETURNS:  </p>
 <p class="ml-params"><strong>roots</strong> (<em>address[]</em>) - list of addresses of ERС20 tokens<br /></p>
 <h2 id="glock"><strong>GLOCK</strong></h2>
-<p>is a set оf special contracts on GOSH Blockchain.
-Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.
+<p class="ml-params"><strong>is a set оf special contracts on GOSH Blockchain.</strong><br />
+Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.<br />
 Contract <strong><code>Checker.sol</code></strong> receives an external message from <a href="../../ethereum-L2/overview/#definitions" title="is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain"><strong><code>Proposer</code></strong></a> with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract <strong><code>Proposal.sol</code></strong> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <strong><code>RootTokenContract.cpp</code></strong></p>
 <h3 id="checker"><strong>Checker</strong></h3>
 <!-- [[source code]]() -->
@@ -1258,17 +1254,7 @@ Contract <strong><code>Checker.sol</code></strong> receives an external message 
 </span></code></pre></div>
 </div>
 <p><a id="getRootAddr" href=""><strong>getRootAddr</strong></a>(RootData data) returns(address)</p>
-<!-- 
-getRootAddr(RootData data) external view returns(address)
-        checker::getRootAddr({
-            name: ERC20_NAME,
-            symbol: ERC20_SYMBOL,
-            decimals: ERC20_DECIMALS,
-            ethroot: ERC20_ADDRESS
-        }) => TIP3Root
- -->
-
-<p>The function returns TIP-3 root contract address</p>
+<p class="ml-params"><strong><em>The function returns TIP-3 root contract address</em></strong></p>
 <p>PARAMETERS</p>
 <ul>
 <li><strong><code>RootData.name</code></strong>     (<em>string</em>) - ERC20 token name;  </li>
@@ -1289,12 +1275,11 @@ RETURNS
 RETURN TYPE  -->
 
 <h2 id="roottokencontract"><strong>RootTokenContract</strong></h2>
-<p><strong>is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.</strong><br />
+<p class="ml-params"><strong>is a smart contract on GOSH that manages user withdrawals. It receives TIP-3 transactions, verifies them and adds transactions to the counter index.</strong><br />
 <strong>Also it deploys the TIP-3 wallet contract (<code>TONTokenWallet.cpp</code>) and sends wrapped tokens there.</strong></p>
 <!-- [[source code]]() -->
 
 <p class="ml-params"><a download="RootTokenContract.abi" href="../../static/RootTokenContract.abi">[ABI]</a></p>
-<!-- TODO способ достать все руты -->
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><strong>address for TIP-3 token <code>ETH</code>:</strong></p>
@@ -1313,7 +1298,7 @@ RETURN TYPE  -->
 <!-- RETURN TYPE -->
 
 <h2 id="tontokenwallet"><strong>TONTokenWallet</strong></h2>
-<p><strong>is a custom TIP-3 contract that runs in GOSH Masterchain. Allows to manage TIP-3 tokens and transfers it to Ethereum for withdrawal</strong></p>
+<p class="ml-params"><strong>is a custom TIP-3 contract that runs in GOSH Masterchain. Allows to manage TIP-3 tokens and transfers it to Ethereum for withdrawal</strong></p>
 <!-- [[source code]]() -->
 
 <p class="ml-params"><a download="TONTokenWallet.abi" href="../../static/TONTokenWallet.abi">[ABI]</a></p>
@@ -1327,7 +1312,7 @@ RETURN TYPE  -->
     uint128     return_ownership,<br />
     opt<cell>   notify_payload<br />
 )</p>
-<p><strong><em>The function for deploying empty TIP-3 wallet to another user</em></strong></p>
+<p class="ml-params"><strong><em>The function for deploying empty TIP-3 wallet to another user</em></strong></p>
 <p>PARAMETERS:  </p>
 <ul>
 <li><strong><code>answer_addr</code></strong> - Answer address, <strong>(should be <code>null</code>)</strong>  </li>
@@ -1342,9 +1327,6 @@ RETURN TYPE  -->
 <!-- RETURNS
 RETURN TYPE -->
 
-<!-- 
-<a id="getprofileaddr" href="https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.1.0/contracts/gosh/versioncontroller.sol#L224">**getProfileAddr**</a>(string name) returns(address) -->
-
 <p><a id="transfer" href=""><strong>transfer</strong></a>(<br />
     address_opt answer_addr,<br />
     address     to,<br />
@@ -1353,7 +1335,7 @@ RETURN TYPE -->
     uint128     return_ownership,<br />
     opt<cell>   notify_payload<br />
 )  </p>
-<p><strong><em>The function transfers the TIP3-tokens between TIP-3 user wallets.</em></strong></p>
+<p class="ml-params"><strong><em>The function transfers the TIP3-tokens between TIP-3 user wallets.</em></strong></p>
 <p>PARAMETERS:  </p>
 <ul>
 <li><strong><code>answer_addr</code></strong>      - (optional) Answer address <strong>(should be <code>null</code>)</strong>  </li>
@@ -1395,8 +1377,6 @@ RETURN TYPE -->
 </span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>  int8              workchain_id;   // Workchain id.
 </span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>}
 </span></code></pre></div>
-<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-<!-- <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
 
 
