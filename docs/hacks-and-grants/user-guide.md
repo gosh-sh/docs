@@ -7,6 +7,15 @@
 ### **for the organizers**
 
 
+!!! warning "important"
+    * To create a Hackathon, you must be a member of the DAO.
+
+    * The DAO must have enough tokens in its reserve to allocate towards Hackathon rewards.
+
+    * The experts who will be part of the jury for the Hackathon must be registered participants of the DAO before the event commences.
+
+
+
 To create a **Hackathon**, you need to navigate to the **"Hacks & Grants"** tab in the DAO where you are a member.
 
 Make sure to check the guidelines and requirements of the DAO to ensure that you have the necessary permissions and resources to host the Hackathon.
@@ -19,13 +28,6 @@ and click **Create new** or start typing the name of the your Hackathon
 ![](../images/H&G_hacks_2_create_new_name.jpg)
 
 then click **New hackaton**
-
-
-!!! warning "important"
-    * To create a Hackathon, you must be a member of the DAO.
-
-    * The DAO must have enough tokens in its reserve to allocate towards Hackathon rewards.
-
 
 
 **On the page that opens, enter all the necessary  information about the event:**
@@ -48,13 +50,12 @@ Also here you have the opportunity to provide detailed information about any add
 <!-- TODO when will the opportunity be supported in dollars -->
 <!-- ![](../images/H&G_hacks_6_prizes.jpg) -->
 
-![](../images/H&G_hacks_6_prizes_dao-tokens.jpg)
+![](../images/H&G_hacks_6_prizes_dao-tokens_.jpg)
 
 
 
 !!! info
     It is not mandatory to provide information in the README, RULES, and PRICES sections, but including them can greatly improve the clarity and informativeness of your content. Therefore, we recommend filling them out whenever possible.
-
 
 
 
@@ -114,6 +115,12 @@ and in the window that opens, configure on 3 tabs:
 Then click **Apply dates**
 
 ![](../images/H&G_hacks_11_time_set.jpg)
+
+
+In the **Export tags** section, select all the necessary scope for which expert assessments are required.
+
+
+![](../images/H&G_hacks_11_1_add_expert_tags.jpg)
 
 Once you've set the dates and times, you can click on **Create proposal to publish**
 
@@ -251,7 +258,48 @@ At the end of the **`Voting`** stage, the summing up will start, and the Hackath
 
 ### **Expert Tags**
 
-Hackathons now support Tags. The voting on results will be influenced by people having such Tags attached to their profiles.
+Tags are created as evidence of the member's expertise and experience within this DAO.  
+
+This can be used when reviewing Tasks or judging Hackathons.  
+People having such As attached to their profiles will influence the voting on results.
+
+If you want to add expert Tags to your DAO simply go to the **Settings** tab in the **karma Tags** section and enter the name of the Tag in the appropriate field. 
+
+You can also specify the percentage by which the karma of the relevant expert will be increased when voting. It's important to note that the experts of the jury must be participants of the DAO before the Hackathon begins.
+
+To delete a Tag, click on the cross in the corresponding line.
+
+The addition of expert Tags can only be made possible through the voting of the DAO members. Therefore, you must leave a comment for the proposal and then click on the **Save changes and create proposal** button to initiate the process.
+
+![](../images/H&G_hacks_expert_tags_1_new_tag.jpg)
+
+You will redirected to the event page in the DAO tab. Now you can proceed with voting.
+
+![](../images/H&G_hacks_expert_tags_2_proposal.jpg)
+
+Any changes to the karma Tags of the DAO will be accepted through the vote.
+
+After the proposal is accepted, on the "Members" tab, you have the ability to assign Expert Tags to DAO members based on their experience.
+
+To assign Expert Tags to DAO members based on their experience, you'll need to navigate to the **Members** tab. 
+
+Once there, you can select the appropriate Tag from the drop-down list and assign it to the respective member.  
+This is a great way to highlight the skills and expertise of your DAO members and make it easier for others to identify who to turn to for specific tasks or advice.
+
+Please make sure to include a detailed description of the proposal regarding changes in allowances for members.  
+It is important to provide all the necessary information for members of DAO to make informed decisions making the voting process.
+
+Then click on the **Save changes and create proposal** button:
+
+![](../images/H&G_hacks_expert_tags_3_members.jpg)
+
+You will redirected to the event page in the DAO tab. Now you can proceed with voting.
+
+![](../images/H&G_hacks_expert_tags_4_vote_karma_tags.jpg)
+
+After the proposal is accepted
+
+
 
 
 ## Grant Program
