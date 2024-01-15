@@ -941,7 +941,7 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 
 #### __Expert Tags__
 
-You can now add an Expert Tag to your DAO, which will grant additional Karma Voting Powers to each member possessing such Tags for decisions that support Expert Tags.
+You can now [add an Expert Tag](../hacks-and-grants/user-guide.md#expert-tags) to your DAO, which will grant additional Karma Voting Powers to each member possessing such Tags for decisions that support Expert Tags.
 
 
 
