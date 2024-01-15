@@ -307,7 +307,7 @@ You will redirected to the event page in the DAO tab. Now you can proceed with v
 
 ![](../images/H&G_hacks_expert_tags_4_vote_karma_tags.jpg)
 
-After the proposal is accepted
+Expert Tags will be assigned to DAO members after the proposal is accepted and they will be able to use them for work.
 
 
 
