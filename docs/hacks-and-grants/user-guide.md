@@ -117,7 +117,7 @@ Then click **Apply dates**
 ![](../images/H&G_hacks_11_time_set.jpg)
 
 
-In the **Export tags** section, select all the necessary scope for which expert assessments are required.
+In the [**Export tags**](user-guide.md#expert-tags) section, select all the necessary scope for which expert assessments are required.
 
 
 ![](../images/H&G_hacks_11_1_add_expert_tags.jpg)
@@ -126,7 +126,8 @@ Once you've set the dates and times, you can click on **Create proposal to publi
 
 ![](../images/H&G_hacks_12_create_proposal_to_publish.jpg)
 
-
+<!-- TODO change when change data
+![](../images/H&G_hacks_12_create_proposal_to_publish.jpg) -->
 
 The preparation of the Hackathon repository and the creation of a proposal for its creation will begin.
 
@@ -258,10 +259,19 @@ At the end of the **`Voting`** stage, the summing up will start, and the Hackath
 
 ### **Expert Tags**
 
-Tags are created as evidence of the member's expertise and experience within this DAO.  
+Expert Tags are created as evidence of the member's expertise and experience within this DAO.  
 
-This can be used when reviewing Tasks or judging Hackathons.  
-People having such As attached to their profiles will influence the voting on results.
+By creating and attaching Tags to DAO members, you can count on their skills and experience to help other members of the DAO.
+
+Tags affect the number of votes that the expert will be able to use when voting.
+
+!!! info
+
+    If a DAO member has an attached Expert Tag, then when voting, he will be able to use tokens within his Karma, increased by the coefficient specified when creating this Tag.
+
+Tags will make it easier to find a performer to complete a Task or review it.
+
+Using expert tags when judging at Hackathons will allow you to take into account the weight of each expert's vote when voting for projects, which reduces the likelihood of a subjective impact of each expert's assessment on the final result and reduces the possibility of manipulation by the jury, i.e. judging will be more objective and independent of each other.
 
 If you want to add expert Tags to your DAO simply go to the **Settings** tab in the **karma Tags** section and enter the name of the Tag in the appropriate field. 
 
