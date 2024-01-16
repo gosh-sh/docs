@@ -259,6 +259,9 @@ At the end of the **`Voting`** stage, the summing up will start, and the Hackath
 
 ### **Expert Tags**
 
+<!-- TODO
+remove into settings & remame KARMA tags-->
+
 Expert Tags are created as evidence of the member's expertise and experience within this DAO.  
 
 By creating and attaching Tags to DAO members, you can count on their skills and experience to help other members of the DAO.

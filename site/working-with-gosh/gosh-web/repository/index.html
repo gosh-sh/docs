@@ -1,0 +1,1902 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../working-with-tokens-and-karma/">
+      
+      
+        <link rel="next" href="../members/">
+      
+      
+      <link rel="icon" href="../../../images/gosh2.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>Repositories - GOSH</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-repository" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="GOSH" class="md-header__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../../images/gosh2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GOSH
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Repositories
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../user-guide/git-open-source-hodler/" class="md-tabs__link">
+          
+  
+  User Guide(WIP)
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docker-extension/" class="md-tabs__link">
+        
+  
+    
+  
+  Docker Extension(WIP)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../git-remote-helper/" class="md-tabs__link">
+        
+  
+    
+  
+  Git Remote Helper(WIP)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../anytree-all/" class="md-tabs__link">
+          
+  
+  AnyTree(WIP)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../gosh-ai/" class="md-tabs__link">
+        
+  
+    
+  
+  GOSH AI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../on-chain-architecture/gosh-wallet/" class="md-tabs__link">
+          
+  
+  For developers(WIP)
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../links/" class="md-tabs__link">
+        
+  
+    
+  
+  Links
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="GOSH" class="md-nav__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../../images/gosh2.svg" alt="logo">
+
+    </a>
+    GOSH
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    User Guide(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/git-open-source-hodler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Open Source Hodler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/motivation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/objective/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/instruments-and-utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instruments and utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Working with GOSH
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Working with GOSH
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_1" id="__nav_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Web(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Web(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_1_2" id="__nav_1_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DAO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            DAO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-dao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create DAO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dao-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAO Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposals-and-voting-in-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proposals and voting in SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-with-tokens-and-karma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with tokens and Karma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    Create Repository
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-repository-with-expert-tags" class="md-nav__link">
+    create repository with Expert Tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-branch" class="md-nav__link">
+    ​Create Branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-file" class="md-nav__link">
+    Create File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-pull-request" class="md-nav__link">
+    Create Pull Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-protection-for-a-branch" class="md-nav__link">
+    Add protection for a branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-protection-for-a-branch" class="md-nav__link">
+    Remove protection for a branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments-to-file" class="md-nav__link">
+    Adding comments to file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments-to-pull-request" class="md-nav__link">
+    Adding comments to Pull Request
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dao-set-up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_2" id="__nav_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Ethereum L2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ethereum-L2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ethereum-L2/user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_3" id="__nav_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hacks & Grants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hacks & Grants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacks-and-grants/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacks-and-grants/user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Extension(WIP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-remote-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Remote Helper(WIP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AnyTree(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AnyTree(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../anytree-all/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTreeAll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anytree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anytree-firewall-for-telepresence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree Firewall for Telepresence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gosh-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For developers(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            For developers(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    On-chain Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            On-chain Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../on-chain-architecture/gosh-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../on-chain-architecture/organizations-gosh-dao-and-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organizations - GOSH DAO and SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../on-chain-architecture/gosh-smart-contracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH smart contracts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grh-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set up Git Remote Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Acki Nacki Protocol(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Acki Nacki Protocol(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../acki-nacki/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH GitHub Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/l2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    Create Repository
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-repository-with-expert-tags" class="md-nav__link">
+    create repository with Expert Tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-branch" class="md-nav__link">
+    ​Create Branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-file" class="md-nav__link">
+    Create File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-pull-request" class="md-nav__link">
+    Create Pull Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-protection-for-a-branch" class="md-nav__link">
+    Add protection for a branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-protection-for-a-branch" class="md-nav__link">
+    Remove protection for a branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments-to-file" class="md-nav__link">
+    Adding comments to file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-comments-to-pull-request" class="md-nav__link">
+    Adding comments to Pull Request
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Repositories</h1>
+
+<!-- ## __Working with Repository__ -->
+
+<h3 id="create-repository"><strong>Create Repository</strong></h3>
+<p>To create a repository in your DAO click <strong>Create new</strong> in the Repositories section or Overview section.​</p>
+<p><img alt="" src="../../../images/gosh_web_Create_Repo_01_new_repo.jpg" /></p>
+<p>Enter repository name and its description and click <strong>Create repository</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The repository name must contain only Latin letters, numbers,hyphen, underscore character<code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p><img alt="" src="../../../images/gosh_web_Create_Repo_02_name_repo.jpg" /></p>
+<p>A page with <strong>DAO</strong> events will open for you.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_Repo_03_event_create_repo.jpg" /></p>
+<p>Open the event click on its name.</p>
+<p><img alt="" src="../../../images/gosh_web_Event_02_all.jpg" /></p>
+<p>The page that opens displays the name of the proposal, its status, and the time of creation and as well as the end of voting.</p>
+<p><img alt="" src="../../../images/gosh_web_Event_03_status_time_details.jpg" /></p>
+<p>The scale shows the number of votes for the proposal and against.</p>
+<p><img alt="" src="../../../images/gosh_web_Event_04_result.jpg" /></p>
+<p>Specify the number of tokens less than or equal to your Karma for voting and accept or reject this proposal.</p>
+<p>Add your opinion about the proposal to the discussion below and click <strong>Send vote</strong></p>
+<p><img alt="" src="../../../images/gosh_web_Event_05_vote.jpg" /></p>
+<p>The created repository will appear in the list on the Repositories tab.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_Repo_04_repo_created.jpg" /></p>
+<h4 id="create-repository-with-expert-tags"><strong>create repository with Expert Tags</strong></h4>
+<p>This will provide every Tag holder with increased Karma Powers when voting on commits, and for branch protection and unprotection.</p>
+<h3 id="create-branch"><strong>​Create Branch</strong></h3>
+<p>Repository is created with default main branch. To create another branch, click on the <strong>branches</strong> counter.​</p>
+<p><img alt="" src="../../../images/gosh_web_Create_branch_01.jpg" /></p>
+<p>Select the branch to be forked, enter new branch name, and click​ <strong>Create branch</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The branch name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p><img alt="" src="../../../images/gosh_web_Create_branch_02_name.jpg" /></p>
+<p>Once the branch is created, it will appear in the branches list.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_branch_03_list_dranches.jpg" /></p>
+<p>Switch to it via drop down list.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_branch_04_switch_branches.jpg" /></p>
+<h3 id="create-file"><strong>Create File</strong></h3>
+<p>To create file, click <strong>Add file</strong> button.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_file_01_new_file.jpg" /></p>
+<p>Enter file contents and name.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_file_02_name_contents.jpg" /></p>
+<p>You can use <strong>Preview</strong> if needed. MD syntax is supported for preview.</p>
+<p>After scroll down and enter commit info:</p>
+<ul>
+<li>
+<p>Commit description - you can add a description of your commit;</p>
+</li>
+<li>
+<p>Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;</p>
+</li>
+<li>
+<p>Select task - if the branch is not protected and your file is a solution to a problem, you can choose a particular task;</p>
+</li>
+<li>
+<p>and add Assigners, Reviewers and Managers if necessary.</p>
+</li>
+</ul>
+<p>and click <strong>Commit changes</strong></p>
+<p><img alt="" src="../../../images/gosh_web_Create_file_03_commit_data.jpg" /></p>
+<p>If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO <a href="../#proposals-and-voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
+<!-- TODO
+If the branch is protect -->
+
+<p>Commit status will be displayed below.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_file_04_proces_create_file.jpg" /></p>
+<h3 id="create-pull-request"><strong>Create Pull Request</strong></h3>
+<p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to. Once selected, click <strong>Compare</strong>.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_PR_01.jpg" /></p>
+<p>The branches will be compared. Review the changes, set up the pull request and click Commit changes.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_PR_02_comparing.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Note</strong>: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.</p>
+<p>Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to <a href="../#proposals-and-voting-in-smv-soft-majority-vote">vote</a> on.</p>
+</div>
+<h3 id="add-protection-for-a-branch"><strong>Add protection for a branch</strong></h3>
+<p>If you want the changes to be added to the branch based on the voting results, then add protection to the branch.</p>
+<p>This can be done by creating an appropriate proposal.</p>
+<p>To do this, go from the <strong>Repositories</strong> tab to the repository you need.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_01_repos.jpg" /></p>
+<p>Then, on the Branches tab, click the <strong>Protect</strong> button for the branch to which you want to add protection.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_02_branches.jpg" /></p>
+<p>After creating the proposal, you will be redirected to the <strong>DAO</strong> page with events.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_03_events.jpg" /></p>
+<p>Inside the event, you can get details of proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_04_details_proposal.jpg" /></p>
+<p>After the proposal is accepted the branch is marked as protected.<br />
+A commit can be made to it only by voting.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_05_branches_protect.jpg" /></p>
+<h3 id="remove-protection-for-a-branch"><strong>Remove protection for a branch</strong></h3>
+<p>If the branch no longer needs protection, you can remove it by initiating appropriate proposals.</p>
+<p>To do this, go from the <strong>Repositories</strong> tab to the repository you need.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_01_repos.jpg" /></p>
+<p>Then, on the Branches tab, click the <strong>Unprotect</strong> button for the branch to which you want to add protection.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_remove_01_branches.jpg" /></p>
+<p>A vote will be created and you will be redirected to the <strong>DAO</strong> page with events.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_remove_02_event.jpg" /></p>
+<p>Inside the event, you can get details of proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_remove_03_details_proposal.jpg" /></p>
+<p>After accepting the proposal, the protection mark will be removed from the branch.<br />
+Now everyone can upload changes to the branch without voting.</p>
+<p><img alt="" src="../../../images/gosh_web_Protect_branch_remove_04_branch_unprotect.jpg" /></p>
+<h3 id="adding-comments-to-file"><strong>Adding comments to file</strong></h3>
+<p>You can add a comment to any line in the file.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Comments are linked to a specific comment.</p>
+</div>
+<p>To do this, open the file and hover over a line or block of lines and click on the blue icon that appears on the left.</p>
+<p>In the window that opens, enter your comment and click on the blue circle with an arrow to send it.</p>
+<p><img alt="" src="../../../images/gosh_web_Comments_01.jpg" /></p>
+<p>The comment line will be marked with a red icon on the left.</p>
+<p><img alt="" src="../../../images/gosh_web_Comments_02.jpg" /></p>
+<p>A thread of comments and replies to them will open on the right.</p>
+<p><img alt="" src="../../../images/gosh_web_Comments_03.jpg" /></p>
+<p>The discussion can be resolved. To do this, click the appropriate button:</p>
+<p><img alt="" src="../../../images/gosh_web_Comments_04_resolve.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The discussion can be resumed if a new comment has been added to it.</p>
+</div>
+<p>Up to 3 discussions can be expanded in one line.
+You can switch between them.</p>
+<p><img alt="" src="../../../images/gosh_web_Comments_05_more_comments.jpg" /></p>
+<h3 id="adding-comments-to-pull-request"><strong>Adding comments to Pull Request</strong></h3>
+<p>You can also add comments to Pull Request.
+To do this, go from the <strong>DAO</strong> events page to the <strong>Pull Request</strong> vote in the <strong>Pull request diff</strong> section.
+you can leave comments on any line or block of lines in the same way as in <a href="../#adding-comments-to-file">commenting on a file</a>.</p>
+<p><img alt="" src="../../../images/gosh_web_Comments_06_for_PR.jpg" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
