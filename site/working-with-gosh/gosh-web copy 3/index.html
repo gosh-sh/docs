@@ -1,0 +1,3034 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../images/gosh2.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>GOSH Web - GOSH</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gosh-web" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="GOSH" class="md-header__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../images/gosh2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GOSH
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              GOSH Web
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../user-guide/git-open-source-hodler/" class="md-tabs__link">
+          
+  
+  User Guide(WIP)
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../docker-extension/" class="md-tabs__link">
+        
+  
+    
+  
+  Docker Extension(WIP)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../git-remote-helper/" class="md-tabs__link">
+        
+  
+    
+  
+  Git Remote Helper(WIP)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../anytree-all/" class="md-tabs__link">
+          
+  
+  AnyTree(WIP)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../gosh-ai/" class="md-tabs__link">
+        
+  
+    
+  
+  GOSH AI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../on-chain-architecture/gosh-wallet/" class="md-tabs__link">
+          
+  
+  For developers(WIP)
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../links/" class="md-tabs__link">
+        
+  
+    
+  
+  Links
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GOSH" class="md-nav__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../images/gosh2.svg" alt="logo">
+
+    </a>
+    GOSH
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    User Guide(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Overview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/git-open-source-hodler/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Open Source Hodler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/motivation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Motivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/objective/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objective
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-guide/instruments-and-utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instruments and utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Working with GOSH
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Working with GOSH
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_1" id="__nav_1_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Web(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Web(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_1_2" id="__nav_1_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DAO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            DAO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/create-dao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create DAO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/dao-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAO Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/proposals-and-voting-in-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proposals and voting in SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/working-with-tokens-and-karma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with tokens and Karma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/dao-set-up/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_2" id="__nav_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Ethereum L2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethereum-L2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ethereum-L2/user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_3" id="__nav_1_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hacks & Grants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hacks & Grants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacks-and-grants/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacks-and-grants/user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Extension(WIP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-remote-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Remote Helper(WIP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AnyTree(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AnyTree(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anytree-all/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTreeAll
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anytree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anytree-firewall-for-telepresence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree Firewall for Telepresence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH AI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For developers(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            For developers(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    On-chain Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            On-chain Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/gosh-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organizations - GOSH DAO and SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/gosh-smart-contracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH smart contracts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/grh-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set up Git Remote Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Acki Nacki Protocol(WIP)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Acki Nacki Protocol(WIP)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH GitHub Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/l2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-account" class="md-nav__link">
+    Working with account
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with account">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-account" class="md-nav__link">
+    Create account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-public-key" class="md-nav__link">
+    View Public Key
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-dao" class="md-nav__link">
+    Working with DAO
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with DAO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-organization-dao" class="md-nav__link">
+    Create Organization (DAO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview-of-the-dao" class="md-nav__link">
+    Overview of the DAO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dao-set-up" class="md-nav__link">
+    DAO Set up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    Upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-information" class="md-nav__link">
+    Basic information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-1-to-v-2" class="md-nav__link">
+    from v. 1 to v. 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-2-to-v-3" class="md-nav__link">
+    from v. 2 to v. 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-3-to-v-456061" class="md-nav__link">
+    From v. 3 to v. 4/5/6.0/6.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-version-61-to-62" class="md-nav__link">
+    From version 6.1 to 6.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposals-and-voting-in-smv-soft-majority-vote" class="md-nav__link">
+    Proposals and voting in SMV (Soft Majority Vote)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-tokens-and-karma" class="md-nav__link">
+    Working with tokens and Karma
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with tokens and Karma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-minting-of-tokens-for-dao" class="md-nav__link">
+    Additional minting of tokens for DAO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-voiting-tokens-and-karma" class="md-nav__link">
+    Additional voiting tokens and Karma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expert-tags" class="md-nav__link">
+    Expert Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-of-tokens-from-dao-reserve" class="md-nav__link">
+    Transfer of tokens from DAO reserve
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-of-tokens-from-users-wallet" class="md-nav__link">
+    Transfer of tokens from user's wallet
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-dao-members" class="md-nav__link">
+    Working with DAO Members
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with DAO Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-members-to-dao" class="md-nav__link">
+    Adding Members to DAO
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Members to DAO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-by-gosh-username-or-e-mail" class="md-nav__link">
+    Adding by GOSH username or e-mail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invite-by-link" class="md-nav__link">
+    Invite by link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-dao-membership" class="md-nav__link">
+    Request DAO membership
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-members-from-the-dao" class="md-nav__link">
+    Delete Members from the DAO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-repository" class="md-nav__link">
+    Working with Repository
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    Create Repository
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Repository">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-repository-with-expert-tags" class="md-nav__link">
+    create repository with Expert Tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-branch" class="md-nav__link">
+    ​Create Branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-file" class="md-nav__link">
+    Create File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-pull-request" class="md-nav__link">
+    Create Pull Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-protection-for-a-branch" class="md-nav__link">
+    Add protection for a branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-protection-for-a-branch" class="md-nav__link">
+    Remove protection for a branch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-comments-to-file" class="md-nav__link">
+    Adding comments to file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-comments-to-pull-request" class="md-nav__link">
+    Adding comments to Pull Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-task" class="md-nav__link">
+    Working with Task
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with Task">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-task" class="md-nav__link">
+    Create Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delet-task" class="md-nav__link">
+    Deletе Task
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="gosh-web"><strong>GOSH Web</strong></h1>
+<p><a href="https://app.gosh.sh/">GOSH Web</a> is also a good way to get started with GOSH.</p>
+<p>It implements GOSH repository management as a simple web interface.</p>
+<p>You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.</p>
+<!-- 
+tabs:
+
+Overview -- 
+DAO         
+Repositories 
+Members   
+Tasks
+Settings 
+-->
+
+<!-- 
+Overview
+* DAO system repository
+* Recent proposals
+* Repositories
+    * create repo
+    * ...
+-----
+* DAO total supply ---
+* DAO reserve----
+* Your wallet balance----
+* Allowance---
+* Members1 + Invite members---
+
+DAO
+* DAO events---
+
+Repositories
+* DAO system repository ?
+* create repo---
+
+Members
+* Invite user to DAO---
+
+Tasks
+* create task
+
+Settings
+* DAO Set up
+    * Token setup----
+    * Proposal setup---
+    * Members setup---
+    * Save changes---
+
+* Upgrade
+    * Upgrade DAO 
+-->
+
+<h2 id="working-with-account"><strong>Working with account</strong></h2>
+<h3 id="create-account"><strong>Create account</strong></h3>
+<p>To get started with GOSH, you need an active Github-account.</p>
+<p>Click <strong>Create account with Github</strong> to start registering on GOSH</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_01.jpg" /></p>
+<p>After click <strong>Authorize gosh-sh</strong> </p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_02.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The special GOSH DAO Bot will help with registration in Gosh.
+It will deploy your DAO and upload your selected repositories to GOSH.</p>
+</div>
+<p>In the list of organizations received from Github, click on the organization</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_03.jpg" /></p>
+<p>and select repositories for upload into Gosh.</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_04.jpg" /></p>
+<p>Do this <strong>for each</strong> organization for which you want to upload repositories to Gosh.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>After registering on GOSH you will not be able to return to this step in this release.</p>
+<p>This will be available later</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you want other GOSH users to be able to find you by your email, give permission.</p>
+</div>
+<p>Then click <strong>Upload</strong></p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_05.jpg" /></p>
+<p>​If you are familiar with blockchain, you know what to do with a seed phrase.</p>
+<p>If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.</p>
+<p>To create the GOSH-account, the seed phrase will be generated for you. If you already have the GOSH-account, click <strong>Clear</strong> and enter your own one seed phrase.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Your seed phrase will be used to log into GOSH.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.</strong></p>
+</div>
+<p>Once you have written down your seed phrase, click <strong>Continue.</strong></p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_06_seedF.jpg" /></p>
+<p>Then choose your username in GOSH. <strong>This is your unique cryptographic identifier in Gosh.
+</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Please note that after creating your username it will be impossible to change it in the future.</strong></p>
+</div>
+<p>if your username is already taken, please choose another one.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The username must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p>And click <strong>Create account</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_07_createAk.jpg" /></p>
+<p>When entering the GOSH will ask you to set up a PIN code:</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Set a new PIN code for each new session.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_10_pin.jpg" /></p>
+<p>And unlock with PIN code.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the name of the organization or repository already exists, you will receive the message.
+Change the name, click <strong>save changes</strong> and confirm the action with a pin code.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_11_error_rename.jpg" /></p>
+<p>The Organizations page will open after your account is created.</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_08_wellcom.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>When the repositories are uploaded, a notification will be sent to your email.</strong></p>
+</div>
+<p>Follow the link in the letter.</p>
+<p><img alt="" src="../../images/docker_ext_create_acc_02_welcom_letter.jpg" /></p>
+<p>Enter the saved seed phrase and click <strong>Sign in</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_09_signIn.jpg" /></p>
+<p>Also set up a PIN code and unlock with PIN code.</p>
+<h3 id="view-public-key"><strong>View Public Key</strong></h3>
+<p>A user needs to know their public key, for example, when joining an organization.</p>
+<p>To view your public key go to the main page of your account and click <a href="https://app.gosh.sh/a/settings"><strong>Settings</strong></a>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_View_Public_Key_01.jpg" /></p>
+<h2 id="working-with-dao"><strong>Working with DAO</strong></h2>
+<p>​Once created, your organization will appear in the organization list. Click on it to continue.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_03_list_orgs.jpg" /></p>
+<p>The first mandatory member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.</p>
+<p>The second member is the creator, identified by their username.</p>
+<p>At any later time the list of members <a href="../gosh-web/#add-members-to-dao">can be expanded</a> by voting.</p>
+<h3 id="create-organization-dao"><strong>Create Organization (DAO)</strong></h3>
+<!-- The Organizations page will open after your account is created. -->
+
+<p>Click <strong>Сreate new DAO</strong> button in the Organizations section.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_01.jpg" /></p>
+<p>On the DAO settings page that opens, input:</p>
+<ul>
+<li>
+<p><strong>Organization name</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Organizations name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+</li>
+<li>
+<p><strong>Organization picture</strong></p>
+<p>The icon will be generated automatically.</p>
+</li>
+<li>
+<p><strong>Theme tags</strong></p>
+<p>You can add up to 3 tags separated by spaces. 
+According to them, GOSH users will be able to find your DAO.</p>
+</li>
+<li>
+<p><strong>Description</strong></p>
+<p>A short description that can be seen on the DAO tab under the heading.</p>
+<p>The extended description can be added to the Readme file into _index system repository from the <a href="../gosh-web/#overview-of-the-dao">Overview page</a> after creating the DAO.</p>
+</li>
+<li>
+<p><strong>Total supply</strong></p>
+<p>You also need to enter the number of tokens that will be issued for this DAO.</p>
+<p>The maximum value of the total supply can be the number 2^128.</p>
+</li>
+<li>
+<p><strong>Allow mint</strong></p>
+<p>This is a permission to emission DAO tokens.
+It is enabled by default.</p>
+<p>In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the <a href="../gosh-web/#dao-set-up"><strong>Settings</strong></a> section.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you uncheck this option, the number of tokens issued for this DAO will be capped to the number entered during the initial setup</p>
+</div>
+</li>
+</ul>
+<p>Click <strong>Create organization</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_02_set_up_DAO.jpg" /></p>
+<p>The DAO tab will open after its creation.</p>
+<h3 id="overview-of-the-dao"><strong>Overview of the DAO</strong></h3>
+<p>All information about your DAO and its activities will be displayed here.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_04_DAO-page.jpg" /></p>
+<p>Information about DAO assets is displayed on the right.</p>
+<ul>
+<li>
+<p><strong>DAO total supply</strong> - the total issue of tokens of this DAO.</p>
+</li>
+<li>
+<p><strong>DAO reserve</strong> - unallocated tokens.</p>
+<p>Push on the <strong>Send</strong> button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
+<!-- TODO --></p>
+<p>Push on the <strong>Mint</strong> button, you will <a href="../gosh-web/#additional-minting-of-tokens-for-dao">create an proposal to mint additional tokens</a> for this DAO.</p>
+</li>
+</ul>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_01_total_suply.jpg" /></p>
+<ul>
+<li>
+<p><strong>Your wallet balance</strong> - the amount of tokens you have in this DAO.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When creating a DAO, 20 tokens from the DAO reserve will be issued to your wallet.</p>
+</div>
+<p>Push on the <strong>SEND</strong> button, you will to transfer your tokens to the DAO reserve or to the GOSH user.</p>
+</li>
+</ul>
+<!-- TODO -->
+
+<ul>
+<li>
+<p><strong>Karma</strong> - the amount of tokens (upper limit) within which a DAO member can vote. </p>
+<p>It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.</p>
+</li>
+</ul>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_02_wallet_balance.jpg" /></p>
+<ul>
+<li>
+<p><strong>Members</strong> - total number of DAO members.</p>
+<p>From here you can also send an invitation to become a member of the DAO.
+<!-- TODO --></p>
+</li>
+</ul>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_03_members.jpg" /></p>
+<ul>
+<li><strong>Recent proposals</strong></li>
+</ul>
+<p>Information and status of the recent proposals will be displayed  in this section. 
+Click on the name of the proposal you can go to the event page and <a href="../gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">vote</a>.</p>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_05_recent_proposals.jpg" /></p>
+<ul>
+<li>In the <strong>Repositories</strong> section, you can quickly find or <a href="../gosh-web/#create-repository">create a repository</a>.</li>
+</ul>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_06_repositories.jpg" /></p>
+<ul>
+<li><strong>DAO system repository</strong></li>
+</ul>
+<p>The <strong>_index</strong> is a DAO system repository that is created automatically.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>After creating the DAO, it will already contain 
+a text file with a brief description of your DAO,
+which you added in the settings earlier.</p>
+</div>
+<p>To add a README for your DAO, go to the _index repository or follow the link in this section.</p>
+<!-- and [create a file](gosh-web.md#create-file) in the main branch. -->
+<!-- TODO
+replace to create file -->
+
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_04_readme_md.jpg" /></p>
+<p>Make sure you are in the <strong>main</strong> branch and click <strong>Add file</strong> button.</p>
+<p><img alt="" src="../../images/gosh_web_Readme_md_01.jpg" /></p>
+<p>Enter file contents and name.</p>
+<p><img alt="" src="../../images/gosh_web_Readme_md_02_content.jpg" /></p>
+<p>You can use <strong>Preview</strong> if needed. MD syntax is supported for preview.</p>
+<p>After scroll down and enter commit info:</p>
+<ul>
+<li>
+<p>Commit description - you can add a description of your commit;</p>
+</li>
+<li>
+<p>Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;</p>
+</li>
+</ul>
+<!-- ![](../images/gosh_web_Readme_md_03_data_commit.jpg) -->
+<p><img alt="" src="../../images/gosh_web_Readme_md_03_2_data_commit.jpg" /></p>
+<ul>
+<li>Select a task - if you want to attach your commit to the solution of the Task, then select the desired task from the list;</li>
+</ul>
+<p><img alt="" src="../../images/gosh_web_Task_11_select_tast.jpg" /></p>
+<ul>
+<li>and add Assigners, Reviewers and Managers if necessary.</li>
+</ul>
+<p><img alt="" src="../../images/gosh_web_Task_11_2_select_tast_participants.jpg" /></p>
+<p>If a Task has been selected, check the <strong>Create proposal</strong> box.</p>
+<p>And click <strong>Commit changes</strong></p>
+<p><img alt="" src="../../images/gosh_web_Readme_md_03_data_commit.jpg" /></p>
+<!-- ![](../images/gosh_web_Readme_md_04_commit_prosess.jpg) -->
+
+<p>After that a proposal to the pull request will be created.</p>
+<p><img alt="" src="../../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg" /></p>
+<p>When the proposal to the pull request is accepted, the description of the DAO will appear on the <strong>Overview</strong> tab.</p>
+<p><img alt="" src="../../images/gosh_web_Readme_md_05_owerviw.jpg" /></p>
+<h3 id="dao-set-up"><strong>DAO Set up</strong></h3>
+<p>You can continue with the initial setup the DAO in the Settings tab.</p>
+<!-- TODO it might be worth removing this screen -->
+<p><img alt="" src="../../images/gosh_web_Create_ORG_05_DAO_settings_01_all.jpg" /></p>
+<p>In the <strong>Token Setup</strong> section, you can create a proposal to ban the issue of tokens from this DAO by unchecking the box.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After the ban on the issue of DAO tokens, it will be impossible to allow the issue.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_05_DAO_settings_02_token_setup.jpg" /></p>
+<p>In the <strong>Proposal setup</strong> section you can enable/disable the option to view the voting results before it ends.</p>
+<p>And also allow or prohibit discussion when working with proposals.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_05_DAO_settings_03_proposal_setup.jpg" /></p>
+<p>In the <strong>Members setup</strong> section you can grant or deny external users the ability to request membership in this DAO.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_05_DAO_settings_04_member_setup.jpg" /></p>
+<p>Then add a comment on changing the settings for other members of the DAO and click <strong>Save changes and start proposal</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_05_DAO_settings_05_save_changes.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>All settings and actions in the DAO will be performed the <a href="../gosh-web/#voting-in-smv-soft-majority-vote">voting</a> procedure.</strong></p>
+</div>
+<h3 id="upgrade"><strong>Upgrade</strong></h3>
+<h4 id="basic-information"><strong>Basic information</strong></h4>
+<p>When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.</p>
+<p>The upgrade is initiated by the <a href="../gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">proposal</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure that the proposal for such an update has not yet been created.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Complete all proposle before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.</p>
+</div>
+<p>You can see a message about the availability of a new version 
+and an invitation to update in the DAO.</p>
+<p>Depending on which version you currently have, choose the appropriate update method.</p>
+<div class="admonition warning">
+<p>It is recommended to upgrade to the latest version.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All token holders after upgrading the DAO must transfer their tokens from previous versions.</p>
+</div>
+<!-- TODO
+transfer tokens from previous versions to a separate item and make a link -->
+
+<h4 id="from-v-1-to-v-2"><strong>from v. 1 to v. 2</strong></h4>
+<p>You can switch to the <strong>Upgrade</strong> section from the new version message or go to the <strong>Settings</strong> tab.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_01_msg_v1tov2.jpg" /></p>
+<p>Select the version you want to upgrade and click <strong>Create proposal for DAO upgrade</strong>:</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_02_in_settings.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_03_proposal.jpg" /></p>
+<p>After accepting the proposal, the procedure for updating your DAO will begin.</p>
+<p>Then you need to update all the Repositories.</p>
+<p>To do this, go to their tab and click <strong>Get repositories</strong></p>
+<p><img alt="" src="../../images/gosh_web_upgrade_04_1_get_repo.jpg" /></p>
+<p>and then click <strong>Start repositories upgrade</strong> to create a proposal.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_04_2_upgr_repo.jpg" /></p>
+<p>On the DAO tab, vote for the proposal to create a repository.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg" /></p>
+<p>After the proposal is accepted, the contract version will be upgraded.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_04_4_DAO_v2.jpg" /></p>
+<h4 id="from-v-2-to-v-3"><strong>from v. 2 to v. 3</strong></h4>
+<div class="admonition info">
+<p class="admonition-title"><strong>Release notes</strong></p>
+<p><strong>Contracts</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* Added possibility of a DAO to be a member of another DAO
+
+* Added possibility of DAO to be a Task performer. A DAO itself can now be a signer, reviewer, and manager of a Task in another DAO — Tasks now have the same functionality for DAOs as for individuals
+
+* Improve native token management in contracts. This is mainly bug fixes for the back-end blockchain tokens that guarantee the operations of a smart contract
+
+* Added possibility of task upgrade. Upgrades from Smart Contract version 2.0 to 3.0 required a redeployment of all Tasks. From now on all future upgrades will not affect previously created Tasks
+
+* Task rewards do not increase karma. From now on Tasks will only serve to remunerate contributors with DAO Tokens but without increasing their Voting Karma
+
+* Added a possibility to create index contracts. Version 3.0 now includes indexes that improve the performance of GOSH when used in a web browser
+</code></pre></div>
+<p><strong>Interface</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* DAOs can become members of other DAOs. DAOs have equal interface user flows for this operation
+
+* A DAO can be set as a Task assignee, reviewer, and manager (DAO review, receive task bounty is not implemented yet). Web browsers now also fully support Task functionality
+
+* DAO can create proposals and vote for proposals in parent DAO (not implemented yet)
+
+* ask rewards do not increase karma
+
+* If a DAO owns tokens of another DAOs “DAO supply” block will contain a button with details. The GOSH interface now has a block to allow DAO members to see which tokens the DAO holds
+</code></pre></div>
+<p><strong>Git Remote Helper</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* supports all functionality of Smart Contract Version 3.0
+</code></pre></div>
+</div>
+<p>The Tasks were added in contracts version 2.</p>
+<p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before starting the update make sure that there are commits in the Tasks.</p>
+</div>
+<p>Go to the Settings tab or follow the link in the upgrade message.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_05_msg_v2tov3.jpg" /></p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
+<p><img alt="" src="../../images/gosh_web_upgrade_06_settings_v2tov3.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_proposal_v2tov3.jpg" /></p>
+<p>Inside the event, you can get acquainted with the details of the proposal.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_2_proposal_details_v2tov3.jpg" /></p>
+<p>After accepting the proposals, the DAO update process will begin.<br />
+Before continuing, you need to transfer your tokens.</p>
+<p>To do this, go to the <strong>Overview</strong> tab in the <strong>Your wallet balance</strong> section and click <strong>Transfer from previous version</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg" /></p>
+<p>You can also do this on the <strong>Members</strong> tab.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg" /></p>
+<p>Then you need to update the DAO repositories and tags.<br />
+To do this, click <strong>upgrade</strong> in the information message</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_3_DAO_v3_msg_upgr_repo.jpg" /></p>
+<p>and go to the repository uprade page.<br />
+Click <strong>Get repositories</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg" /></p>
+<p>Then click <strong>Start repositories upgrade</strong> to create a proposal.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg" /></p>
+<p>The process will be displayed below:</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_7_process.jpg" /></p>
+<p>As a result, you will be redirected to the DAO events page.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_8_event.jpg" /></p>
+<p>The details of the Multi proposal can be found at the event.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_8_MP_details.jpg" /></p>
+<p>Then click <strong>tasks upgrade page</strong> in the information message</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg" /></p>
+<p>and click <strong>Start tasks upgrade</strong> on the page that opens.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg" /></p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_11_process.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_12_event.jpg" /></p>
+<p>After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 3 will be completed.</p>
+<!-- !!! info
+    The history of events from the previous version will not be transferred. -->
+
+<h4 id="from-v-3-to-v-456061"><strong>From v. 3 to v. 4/5/6.0/6.1</strong></h4>
+<p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before starting the update make sure that there are commits in the Tasks.</p>
+</div>
+<p>Go to the Settings tab or follow the link in the upgrade message.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_08_01_msg_v3tov4.jpg" /></p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
+<p><img alt="" src="../../images/gosh_web_upgrade_08_02_settings_v3tov4.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_08_03_proposal.jpg" /></p>
+<p>Inside the event, you can get acquainted with the details of the proposal.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_08_04_event_datails.jpg" /></p>
+<p>After accepting the proposals, the DAO update process will begin.<br />
+Before continuing, you need to transfer your tokens.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Starting from the 5th version, tokens are transferred automatically.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If you have tokens that were locked into voting in previous versions of the DAO at the time of the upgrade, please note that these tokens will be transferred only after the expiration of the proposal.</strong>  </p>
+</div>
+<!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
+
+<p>If you have a DAO version lower than the 4th inclusive, then to transfer tokens go to the <strong>Overview</strong> tab in the <strong>Your wallet balance</strong> section and click <strong>Transfer from previous version</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg" /></p>
+<p>You can also do this on the <strong>Members</strong> tab.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg" /></p>
+<p>Then you need to update the DAO repositories and tags.<br />
+To do this, click <strong>upgrade</strong> in the information message</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_08_05_DAO_v3_msg_upgr_repo.jpg" /></p>
+<p>and go to the repository uprade page.<br />
+Click <strong>Get repositories</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg" /></p>
+<p>Then click <strong>Start repositories upgrade</strong> to create a proposal.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg" /></p>
+<p>The process will be displayed below:</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_7_process.jpg" /></p>
+<p>As a result, you will be redirected to the DAO events page.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_8_event.jpg" /></p>
+<p>The details of the Multi proposal can be found at the event.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_8_MP_details.jpg" /></p>
+<p>Then click <strong>tasks upgrade page</strong> in the information message</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg" /></p>
+<p>and click <strong>Start tasks upgrade</strong> on the page that opens.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg" /></p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_11_process.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_upgrade_07_12_event.jpg" /></p>
+<p>After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 4 will be completed.</p>
+<!-- #### __From version 1 to version 5 (recommended)__ -->
+
+<!-- short description of DAO located in the _index repository
+
+You can leave a comment on the proposal.
+
+To transfer a brief description of the DAO from the _index repository
+
+and
+
+check mark on the permission for additional token issuance - individual proposal -->
+
+<h4 id="from-version-61-to-62"><strong>From version 6.1 to 6.2</strong></h4>
+<div class="admonition info">
+<p class="admonition-title"><strong>Release notes for 6.2.0</strong></p>
+<ul>
+<li><a href="../gosh-web/#expert-tags"><strong>Expert Tags</strong></a> have been introduced</li>
+</ul>
+<p>The list of decisions supported in this version includes:</p>
+<ul>
+<li>
+<p><a href="../../hacks-and-grants/user-guide/#expert-tags"><strong>Voting on Hackathon Results</strong></a></p>
+</li>
+<li>
+<p><a href="../gosh-web/#create-repository-with-expert-tags"><strong>Creating a Repository with Expert Tags</strong></a></p>
+</li>
+<li>
+<p><strong>The Upgrade System</strong> has been improved</p>
+</li>
+<li>
+<p>some bugs have been fixed</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It's important to ensure that there are commits in the tasks and all proposals are completed before starting the update.</p>
+</div>
+<p>Go to the Settings tab or follow the link in the upgrade message.</p>
+<p><img alt="" src="../../images/upgrade_DAO_6_2_0.jpg" /></p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
+<p><img alt="" src="../../images/upgrade_DAO_6_2_0_choice_version.jpg" /></p>
+<p>You will be redirected to the page with the DAO event and will be able to vote for this proposal.</p>
+<p>After accepting the proposals, the DAO update process will begin.</p>
+<p><img alt="" src="../../images/upgrade_DAO_6_2_0_accepted_proposal_upgrd.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If you have tokens that were locked into voting in previous versions of the DAO at the time of the upgrade, please note that these tokens will be transferred only after the expiration of the proposal.</strong>  </p>
+</div>
+<!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
+
+<p>You should reload the page to continue updating your DAO.</p>
+<p><img alt="" src="../../images/upgrade_DAO_6_2_0_reload.jpg" /></p>
+<p>Once you've done that, click on the <strong>Complete upgrade</strong> button in the message that appears</p>
+<p><img alt="" src="../../images/upgrade_DAO_6_2_0_complete_upgrade.jpg" /></p>
+<p>Then, a new window will open up and you'll need to click on "Start upgrade complete process" to begin the data migration process between versions of DAOs. </p>
+<p><img alt="" src="../../images/upgrade_DAO_6_2_0_complete_upgrade_start.jpg" /></p>
+<p>As a result, multiple proposals will be created to transfer all data from your DAO to the new version<br />
+(<em>migrating the Index repository and all Hackathons, upgrading the DAO repositories</em>)</p>
+<p>After all proposals are accepted, the DAO update process can be considered complete.</p>
+<h3 id="proposals-and-voting-in-smv-soft-majority-vote"><strong>Proposals and voting in SMV (Soft Majority Vote)</strong></h3>
+<p>Actions that require a DAO vote are performed by creating a proposal.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To create an proposal, you must have at least 20 tokens on your wallet balance.</p>
+</div>
+<ul>
+<li><a href="../gosh-web/#create-pull-request"><strong>Create a pull request</strong></a></li>
+<li><strong>Add branch protection</strong></li>
+<li><strong>Remove branch protection</strong></li>
+<li><a href="../gosh-web/#add-members-to-dao"><strong>Add DAO member</strong></a></li>
+<li><a href="../gosh-web/#delete-members-from-the-dao"><strong>Remove DAO member</strong></a></li>
+<li><a href="../gosh-web/#upgrade"><strong>Upgrade DAO</strong></a></li>
+<li><a href="../gosh-web/#deleting-task"><strong>Delete task</strong></a></li>
+<li><a href="../gosh-web/#create-task"><strong>Create task</strong></a></li>
+<li><a href="../gosh-web/#create-repository"><strong>Create repository</strong></a></li>
+<li><strong>Add voting tokens</strong></li>
+<li><strong>Add regular tokens</strong></li>
+<li><strong>Mint DAO tokens</strong></li>
+</ul>
+<!-- * **Add DAO tag**
+* **Remove DAO tag** -->
+<ul>
+<li><strong>Disable minting DAO tokens</strong></li>
+<li><strong>Change DAO member Karma</strong></li>
+</ul>
+<!-- !!! Warning
+    Be careful when distributing karma among the members of the TAO.
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
+
+<ul>
+<li>
+<p><strong>Multi proposal</strong> - includes several offers at once. </p>
+<p>For example: <a href="../gosh-web/#add-members-to-dao">adding members to the DAO by another DAO member</a></p>
+</li>
+</ul>
+<!-- * **Add repository tag**
+* **Remove repository tag**
+* **Update repository description** -->
+<ul>
+<li><strong>Allow event discussions</strong></li>
+<li><strong>Show event progress</strong></li>
+</ul>
+<!-- * **Upgrade repository tags** -->
+<ul>
+<li><a href="../gosh-web/#request-dao-membership"><strong>Ask DAO membership allowance</strong></a></li>
+</ul>
+<!-- 
+
+status:
+In progress
+Accepted
+Rejected
+
+
+TODO 
+kinds of proposals:
+1: 'Pull request',  // SETCOMMIT_PROPOSAL_KIND = 1
+2: 'Add branch protection',   //ADD_PROTECTED_BRANCH_PROPOSAL_KIND = 2
+3: 'Remove branch protection',   //DELETE_PROTECTED_BRANCH_PROPOSAL_KIND = 3
+                                 //SET_TOMBSTONE_PROPOSAL_KIND = 4
+5: 'Add DAO member',    //DEPLOY_WALLET_DAO_PROPOSAL_KIND = 5
+6: 'Remove DAO member',   //DELETE_WALLET_DAO_PROPOSAL_KIND = 6
+7: 'Upgrade DAO',     //SET_UPGRADE_PROPOSAL_KIND = 7
+//8: 'Change DAO config',
+//9: 'Confirm task',
+10: 'Delete task',    //TASK_DESTROY_PROPOSAL_KIND = 10
+11: 'Create task',    //TASK_DEPLOY_PROPOSAL_KIND = 11
+12: 'Create repository',  //DEPLOY_REPO_PROPOSAL_KIND = 12
+13: 'Add voting tokens',  //ADD_VOTE_TOKEN_PROPOSAL_KIND = 13
+14: 'Add regular tokens', //ADD_REGULAR_TOKEN_PROPOSAL_KIND = 14
+15: 'Mint DAO tokens',   //MINT_TOKEN_PROPOSAL_KIND = 15
+16: 'Add DAO tag',     //DAOTAG_PROPOSAL_KIND = 16
+17: 'Remove DAO tag',  //DAOTAG_DESTROY_PROPOSAL_KIND = 17
+18: 'Disable minting DAO tokens',  //ALLOW_MINT_PROPOSAL_KIND = 18
+19: 'Change DAO member allowance', //CHANGE_ALLOWANCE_PROPOSAL_KIND = 19
+20: 'Multi proposal',  //MULTI_PROPOSAL_KIND = 20
+21: 'Add repository tag',  //REPOTAG_PROPOSAL_KIND = 21
+22: 'Remove repository tag', //REPOTAG_DESTROY_PROPOSAL_KIND = 22
+23: 'Update repository description', //CHANGE_DESCRIPTION_PROPOSAL_KIND = 23
+24: 'Allow event discussions',  // CHANGE_ALLOW_DISCUSSION_PROPOSAL_KIND = 24
+25: 'Show event progress',  //CHANGE_HIDE_VOTING_PROPOSAL_KIND = 25
+26: 'Upgrade repository tags', //TAG_UPGRADE_PROPOSAL_KIND = 26
+27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
+-->
+
+<p>To vote for the proposal, some of your tokens must be be allocated to SMV (once the proposal is completed), you can get them back.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can vote for a proposal only once.</p>
+</div>
+<p>For example, to merge into main, <a href="../gosh-web/#create-pull-request">create a pull request</a> from some other branch. A proposal will be generated and will appear on the <strong>DAO</strong> tab.</p>
+<!-- TODO 
+change images -->
+
+<!-- ![](../images/gosh_web_Voiting_SMV_01.jpg) -->
+
+<p>Open the proposal and review the contents.</p>
+<!-- ![](../images/docker_ext_Voiting_SMV_02_proposal.jpg) -->
+
+<p>The voting period is indicated on the proposal page. This is the time allotted for <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/#soft-majority-voting">voting</a>. </p>
+<p>Unless a decisive majority of &gt;50% Global Karma Count is achieved early, votes will be counted at the end of this period.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Global Karma Count is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.</p>
+</div>
+<!-- 
+TODO update
+
+Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+
+Once you have made a decision, select the amount of tokens with which you are ready to vote and click **Vote for proposal**
+
+
+The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy. -->
+
+<p>Once you have made a decision, input the amount of tokens, select <strong>Approve</strong> or <strong>Reject</strong> and click <strong>Vote for proposal</strong>. Vote registration can take a bit of time.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.</p>
+<p>For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus with every member holding 100 tokens a proposal can never be instantly completed without the participation of members other than the proposal's author.</p>
+<p>On the other hand, so as not to depend on all members of an organization to vote, soft majority vote will complete with an approval at the end of the voting period, if 10% of the total token supply were used to vote for, and no one voted against.</p>
+<p>The more tokens are sent against the proposal, the higher the approving amount needs to be (up to 50% of the total supply  + 1 token) for the proposal to pass.</p>
+</div>
+<p>Other members of the Organization, who have transferred their tokens to SMV, will be able to vote for the proposal on this page in their own accounts.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.</p>
+</div>
+<p>Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.</p>
+<!-- ![](../images/docker_ext_Voiting_SMV_03_result.jpg) -->
+
+<h3 id="working-with-tokens-and-karma"><strong>Working with tokens and Karma</strong></h3>
+<h4 id="additional-minting-of-tokens-for-dao">Additional minting of tokens for DAO</h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The option allowing the minting of DAO tokens must be enabled on the <strong>Settings</strong> tab in the <strong>Token Settings section</strong>.</p>
+</div>
+<p>Click on the <strong>Mint</strong> button on the right on the <strong>Overview</strong> tab in the <strong>DAO Reserve</strong> section.
+You will create an proposal to mint additional tokens for this DAO.</p>
+<p>In the window that appears, enter the amount of tokens to emission and add a description of the DAO members. Then click <strong>Create proposal to mint tokens</strong></p>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_mint_01_create_proposal.jpg" /></p>
+<p>After creating the proposal, you will be redirected to the <strong>DAO</strong> tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_mint_02_event.jpg" /></p>
+<p>Inside the event, you can get details of proposal.</p>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_mint_03_proposal_details.jpg" /></p>
+<p>After the proposal is accepted, the changes will take effect.</p>
+<p><img alt="" src="../../images/gosh_web_OVERVIEW_mint_04_reserve.jpg" /></p>
+<h4 id="additional-voiting-tokens-and-karma">Additional voiting tokens and Karma</h4>
+<p>Any member of the DAO can send a request to change Karma.<br />
+To do this, go to the <strong>Members</strong> tab and change the number of Karma and token balance of one or more DAO members, including for yourself.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To create an proposal, you must have at least 20 tokens on your wallet balance.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_01_request.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be careful when distributing karma among the members of the DAO.<br />
+Avoid the possibility of a preponderance in the votes of one of the DAO members.<br />
+To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.</p>
+</div>
+<p>Then click <strong>Save changes and create proposal</strong>.<br />
+As a result, a Multi proposal will be created and you will be redirected to the event tab <strong>Dao</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_02_event.jpg" /></p>
+<p>Inside the event, you can get details of Multi proposal.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg" /></p>
+<p>After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the <strong>Members</strong> tab.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_04_check_user_data.jpg" /></p>
+<h4 id="expert-tags"><strong>Expert Tags</strong></h4>
+<p>You can now <a href="../../hacks-and-grants/user-guide/#expert-tags">add an Expert Tag</a> to your DAO, which will grant additional Karma Voting Powers to each member possessing such Tags for decisions that support Expert Tags.</p>
+<h4 id="transfer-of-tokens-from-dao-reserve">Transfer of tokens from DAO reserve</h4>
+<p>Tokens can be sent from the DAO reserve to</p>
+<ul>
+<li>a member of this DAO;</li>
+<li>any GOSH user, who has visited this DAO at least once.</li>
+</ul>
+<!-- * or another DAO. -->
+
+<p>To do this, on the <strong>Overview</strong> tab in the <strong>DAO reserve</strong> section, click <strong>Send</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_send_token_01_overview.jpg" /></p>
+<p>In the window that opens, enter the name of the GOSH user or the name of the DAO and the amount of tokens to send.</p>
+<p>If you want the recipient's Karma to increase jointly with the token balance, then check this box.<br />
+Also write a description for the token transfer. This will help the DAO members to make a decision when voting.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be careful when distributing karma among the members of the DAO.<br />
+Avoid the possibility of a preponderance in the votes of one of the DAO members.<br />
+To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.</p>
+</div>
+<p>Then click <strong>Create proposal to send tokens</strong></p>
+<p><img alt="" src="../../images/gosh_web_send_token_02_window_send.jpg" /></p>
+<p>After creating the offer, you will be redirected to the <strong>DAO</strong> page with events.</p>
+<p><img alt="" src="../../images/gosh_web_send_token_03_event.jpg" /></p>
+<p>Inside the event, you can see detailed information about the proposal.</p>
+<p><img alt="" src="../../images/gosh_web_send_token_04_detaol_event.jpg" /></p>
+<p>After the proposal is accepted, the tokens will be transferred to the balance wallet of the GOSH user or DAO.</p>
+<h4 id="transfer-of-tokens-from-users-wallet">Transfer of tokens from user's wallet</h4>
+<p>Tokens can be sent from the DAO reserve to</p>
+<ul>
+<li>a member of this DAO;</li>
+<li>any GOSH user, who has visited this DAO at least once.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Only regular tokens are transferred. You will not be able to vote with such tokens.</p>
+</div>
+<p>To send tokens from your wallet to the DAO, go to the <strong>Overview</strong> or <strong>DAO</strong> tab on the <strong>Your wallet balance</strong> section and click <strong>Send</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_send_token_05_from_wallet_overview.jpg" /></p>
+<p>In the window that opens, enter the name of the member of the DAO and the amount of tokens to send.
+Then click <strong>Send tokens</strong></p>
+<p><img alt="" src="../../images/gosh_web_send_token_06_window_send.jpg" /></p>
+<p>After that, the tokens will be transferred to the recipient's wallet balance.</p>
+<p><img alt="" src="../../images/gosh_web_send_token_07_balans_resipient.jpg" /></p>
+<h2 id="working-with-dao-members"><strong>Working with DAO Members</strong></h2>
+<h3 id="adding-members-to-dao"><strong>Adding Members to DAO</strong></h3>
+<p>Membership in the DAO can be obtained in several ways.</p>
+<p>The user can be invited to the DAO using a <a href="../gosh-web/#add-by-gosh-username-or-e-mail">special form</a> or by an <a href="../gosh-web/#invite-by-link">invitation link</a>.</p>
+<p>Also, the user can independently <a href="gosh-web/#request-dao-membership">create a membership request</a> in the DAO.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Adding a member to the DAO is possible only through an proposal.</p>
+</div>
+<p><em>Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.</em></p>
+<h4 id="adding-by-gosh-username-or-e-mail"><u>Adding by GOSH username or e-mail</u></h4>
+<p>A DAO member can create a proposle to add GOSH user into the DAO.</p>
+<p>To do this, go to the tab <strong>Members</strong> in the section <strong>Invite user to DAO</strong>.</p>
+<ul>
+<li>
+<p>If you know the GOSH username, then enter it.</p>
+</li>
+<li>
+<p>If you don't know the name or the user doesn't have a GOSH account yet, enter their email address.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The email address will change to the GOSH username if the user has given permission during registration so that it can be found by email.</p>
+</div>
+<p>Offer the amount of karma for him and please comment your decision.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can send an invitation proposal to several users at once.</p>
+</div>
+<p>And click <strong>Send invite</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_01_1.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>At the same time, a multi proposal will be created to add DAO members and provide voting tokens.</p>
+</div>
+<p>Go to the DAO tab and select the desired event for voting.</p>
+<!-- TODO
+insert a image before going to the events section -->
+
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_form_voting.jpg" /></p>
+<h4 id="invite-by-link"><u>Invite by link</u></h4>
+<p>You can invite a user to the DAO by generating an invitation link for them.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Enable "Allow external users to request DAO membership" option in <a href="../gosh-web/#dao-set-up">DAO settings</a> to enable invites by email/link.</p>
+</div>
+<p>To do this, on the tab <strong>Members</strong> in the section <strong>Invite user to DAO</strong> click on <strong>Get one-time invitation link</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The link to the invitation can only be used one time.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_01_2.jpg" /></p>
+<p>All active invitation links will be displayed in the section on the right.</p>
+<p>When the invited user creates a membership proposle in the DAO, the link entry disappears.</p>
+<p>You can also deactivate the link click on the <strong>Revoke</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_01_1_all_links.jpg" /></p>
+<p>When the user clicks the link, they will be able to create an account or log into GOSH.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_02_create_akk.jpg" /></p>
+<p>Then input a short nickname or and click <strong>Create account and continue</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_03_shot_nickname.jpg" /></p>
+<p>Enter a short comment who are you and click <strong>Accept invitation</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_04_shot_comm_who_are_U.jpg" /></p>
+<p>On the event page that opens, you can find a request for your acceptance as a member of the DAO.</p>
+<p>Click on it you can track the results of voting and discussions.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_05_Page_dao.jpg" /></p>
+<p>After the proposal is accepted, its status will change to <strong>Accepted</strong></p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_06_voitung_for_him_02.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You will be able to request voting tokens after you are accepted into the DAO by creating your proposal.</p>
+</div>
+<!-- TODO
+add a cross-reference to the karma change propos -->
+
+<h4 id="request-dao-membership"><u>Request DAO membership</u></h4>
+<p>You can create a membership request in the DAO yourself. To do this, you need to know the link to this DAO. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Only a registered user will be able to create a membership request.</p>
+</div>
+<p>Follow this link and you will see the overview tab of the DAO you are interested in.</p>
+<p>Click <strong>Request membership</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_request_to_DAO_01.jpg" /></p>
+<p>In the window that opens, write who you are and why you want to become a member of this DAO. This description will help the members of the DAO to make a decision when voting.</p>
+<p>Then click <strong>Create proposal</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_request_to_DAO_02_input_description.jpg" /></p>
+<p>On the event page that opens, you can find a request for your acceptance as a member of the DAO.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_request_to_DAO_03_dao_events.jpg" /></p>
+<p>After the DAO members vote, the status of your request will change to <strong>Accepted</strong> or <strong>Rejected</strong></p>
+<p>You can follow the voting and discussion by opening the event.</p>
+<!-- TODO
+searching for users by DAO
+![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
+
+<h3 id="delete-members-from-the-dao"><strong>Delete Members from the DAO</strong></h3>
+<p>To delete a member from the DAO, go to the <strong>Members</strong> tab and click on the cross to the desired member.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>To create an proposal, you must have at least 20 tokens on your wallet balance.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_memeber_delete_01.jpg" /></p>
+<p>Confirm the deletion by clicking OK.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_delete_02_confirm.jpg" /></p>
+<p>As a result, a Multi proposal will be created and you will be redirected to the event tab <strong>Dao</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_delete_03_event.jpg" /></p>
+<p>The details of the multi proposl can be seen by going to it.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_delete_04_event_detal.jpg" /></p>
+<p>After voting and accepting multi proposal, the user will be deleted from the list of members of the DAO. </p>
+<p><img alt="" src="../../images/gosh_web_memeber_delete_05_list_without_user.jpg" /></p>
+<p>The Karma of the deleted user will be equal to 0.<br />
+But the tokens, if they were, will stay on the balance of the user's wallet.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_delete_06_balance_user.jpg" /></p>
+<p>Then click <strong>Save changes and create proposal</strong>.<br />
+As a result, a Multi proposal will be created and you will be redirected to the event page <strong>Dao</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_02_event.jpg" /></p>
+<p>Inside the event, you can get details of Multi proposal.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg" /></p>
+<p>After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the <strong>Members</strong> tab</p>
+<p><img alt="" src="../../images/gosh_web_memeber_change_karma_04_check_user_data.jpg" /></p>
+<h3 id="whats-next"><strong>What's next?</strong></h3>
+<!-- TODO
+change -->
+
+<p>Set up <a href="../git-remote-helper/"><strong>Git Remote Helper</strong></a> and continue working with your repository.</p>
+<p>You'll need your wallet credentials. Go to the main page of your account and click <a href="https://app.gosh.sh/a/settings"><strong>User Settings</strong></a>.</p>
+<p>Scroll down to the <strong>Git remote config</strong> section, click <strong>Show</strong> and unlock with PIN code</p>
+<p><img alt="" src="../../images/gosh_web_Whats_next_01.jpg" /></p>
+<p>Download the configuration file by clicking on the icon<br />
+and save it to folder <code>~/.gosh</code></p>
+<p><img alt="" src="../../images/gosh_web_Whats_next_01_config.jpg" /></p>
+<p>To view the command to clone your repo, click the <strong>Clone</strong> button on your repo page.</p>
+<p><img alt="" src="../../images/gosh_web_Whats_next_02.jpg" /></p>
+<h2 id="working-with-repository"><strong>Working with Repository</strong></h2>
+<h3 id="create-repository"><strong>Create Repository</strong></h3>
+<p>To create a repository in your DAO click <strong>Create new</strong> in the Repositories section or Overview section.​</p>
+<p><img alt="" src="../../images/gosh_web_Create_Repo_01_new_repo.jpg" /></p>
+<p>Enter repository name and its description and click <strong>Create repository</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The repository name must contain only Latin letters, numbers,hyphen, underscore character<code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Create_Repo_02_name_repo.jpg" /></p>
+<p>A page with <strong>DAO</strong> events will open for you.</p>
+<p><img alt="" src="../../images/gosh_web_Create_Repo_03_event_create_repo.jpg" /></p>
+<p>Open the event click on its name.</p>
+<p><img alt="" src="../../images/gosh_web_Event_02_all.jpg" /></p>
+<p>The page that opens displays the name of the proposal, its status, and the time of creation and as well as the end of voting.</p>
+<p><img alt="" src="../../images/gosh_web_Event_03_status_time_details.jpg" /></p>
+<p>The scale shows the number of votes for the proposal and against.</p>
+<p><img alt="" src="../../images/gosh_web_Event_04_result.jpg" /></p>
+<p>Specify the number of tokens less than or equal to your Karma for voting and accept or reject this proposal.</p>
+<p>Add your opinion about the proposal to the discussion below and click <strong>Send vote</strong></p>
+<p><img alt="" src="../../images/gosh_web_Event_05_vote.jpg" /></p>
+<p>The created repository will appear in the list on the Repositories tab.</p>
+<p><img alt="" src="../../images/gosh_web_Create_Repo_04_repo_created.jpg" /></p>
+<h4 id="create-repository-with-expert-tags"><strong>create repository with Expert Tags</strong></h4>
+<p>This will provide every Tag holder with increased Karma Powers when voting on commits, and for branch protection and unprotection.</p>
+<h3 id="create-branch"><strong>​Create Branch</strong></h3>
+<p>Repository is created with default main branch. To create another branch, click on the <strong>branches</strong> counter.​</p>
+<p><img alt="" src="../../images/gosh_web_Create_branch_01.jpg" /></p>
+<p>Select the branch to be forked, enter new branch name, and click​ <strong>Create branch</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The branch name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Create_branch_02_name.jpg" /></p>
+<p>Once the branch is created, it will appear in the branches list.</p>
+<p><img alt="" src="../../images/gosh_web_Create_branch_03_list_dranches.jpg" /></p>
+<p>Switch to it via drop down list.</p>
+<p><img alt="" src="../../images/gosh_web_Create_branch_04_switch_branches.jpg" /></p>
+<h3 id="create-file"><strong>Create File</strong></h3>
+<p>To create file, click <strong>Add file</strong> button.</p>
+<p><img alt="" src="../../images/gosh_web_Create_file_01_new_file.jpg" /></p>
+<p>Enter file contents and name.</p>
+<p><img alt="" src="../../images/gosh_web_Create_file_02_name_contents.jpg" /></p>
+<p>You can use <strong>Preview</strong> if needed. MD syntax is supported for preview.</p>
+<p>After scroll down and enter commit info:</p>
+<ul>
+<li>
+<p>Commit description - you can add a description of your commit;</p>
+</li>
+<li>
+<p>Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;</p>
+</li>
+<li>
+<p>Select task - if the branch is not protected and your file is a solution to a problem, you can choose a particular task;</p>
+</li>
+<li>
+<p>and add Assigners, Reviewers and Managers if necessary.</p>
+</li>
+</ul>
+<p>and click <strong>Commit changes</strong></p>
+<p><img alt="" src="../../images/gosh_web_Create_file_03_commit_data.jpg" /></p>
+<p>If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO <a href="../gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
+<!-- TODO
+If the branch is protect -->
+
+<p>Commit status will be displayed below.</p>
+<p><img alt="" src="../../images/gosh_web_Create_file_04_proces_create_file.jpg" /></p>
+<h3 id="create-pull-request"><strong>Create Pull Request</strong></h3>
+<p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to. Once selected, click <strong>Compare</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Create_PR_01.jpg" /></p>
+<p>The branches will be compared. Review the changes, set up the pull request and click Commit changes.</p>
+<p><img alt="" src="../../images/gosh_web_Create_PR_02_comparing.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Note</strong>: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.</p>
+<p>Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to <a href="../gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">vote</a> on.</p>
+</div>
+<h3 id="add-protection-for-a-branch"><strong>Add protection for a branch</strong></h3>
+<p>If you want the changes to be added to the branch based on the voting results, then add protection to the branch.</p>
+<p>This can be done by creating an appropriate proposal.</p>
+<p>To do this, go from the <strong>Repositories</strong> tab to the repository you need.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_01_repos.jpg" /></p>
+<p>Then, on the Branches tab, click the <strong>Protect</strong> button for the branch to which you want to add protection.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_02_branches.jpg" /></p>
+<p>After creating the proposal, you will be redirected to the <strong>DAO</strong> page with events.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_03_events.jpg" /></p>
+<p>Inside the event, you can get details of proposal.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_04_details_proposal.jpg" /></p>
+<p>After the proposal is accepted the branch is marked as protected.<br />
+A commit can be made to it only by voting.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_05_branches_protect.jpg" /></p>
+<h3 id="remove-protection-for-a-branch"><strong>Remove protection for a branch</strong></h3>
+<p>If the branch no longer needs protection, you can remove it by initiating appropriate proposals.</p>
+<p>To do this, go from the <strong>Repositories</strong> tab to the repository you need.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_01_repos.jpg" /></p>
+<p>Then, on the Branches tab, click the <strong>Unprotect</strong> button for the branch to which you want to add protection.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_remove_01_branches.jpg" /></p>
+<p>A vote will be created and you will be redirected to the <strong>DAO</strong> page with events.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_remove_02_event.jpg" /></p>
+<p>Inside the event, you can get details of proposal.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_remove_03_details_proposal.jpg" /></p>
+<p>After accepting the proposal, the protection mark will be removed from the branch.<br />
+Now everyone can upload changes to the branch without voting.</p>
+<p><img alt="" src="../../images/gosh_web_Protect_branch_remove_04_branch_unprotect.jpg" /></p>
+<h3 id="adding-comments-to-file"><strong>Adding comments to file</strong></h3>
+<p>You can add a comment to any line in the file.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Comments are linked to a specific comment.</p>
+</div>
+<p>To do this, open the file and hover over a line or block of lines and click on the blue icon that appears on the left.</p>
+<p>In the window that opens, enter your comment and click on the blue circle with an arrow to send it.</p>
+<p><img alt="" src="../../images/gosh_web_Comments_01.jpg" /></p>
+<p>The comment line will be marked with a red icon on the left.</p>
+<p><img alt="" src="../../images/gosh_web_Comments_02.jpg" /></p>
+<p>A thread of comments and replies to them will open on the right.</p>
+<p><img alt="" src="../../images/gosh_web_Comments_03.jpg" /></p>
+<p>The discussion can be resolved. To do this, click the appropriate button:</p>
+<p><img alt="" src="../../images/gosh_web_Comments_04_resolve.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The discussion can be resumed if a new comment has been added to it.</p>
+</div>
+<p>Up to 3 discussions can be expanded in one line.
+You can switch between them.</p>
+<p><img alt="" src="../../images/gosh_web_Comments_05_more_comments.jpg" /></p>
+<h3 id="adding-comments-to-pull-request"><strong>Adding comments to Pull Request</strong></h3>
+<p>You can also add comments to Pull Request.
+To do this, go from the <strong>DAO</strong> events page to the <strong>Pull Request</strong> vote in the <strong>Pull request diff</strong> section.
+you can leave comments on any line or block of lines in the same way as in <a href="../gosh-web/#adding-comments-to-file">commenting on a file</a>.</p>
+<p><img alt="" src="../../images/gosh_web_Comments_06_for_PR.jpg" /></p>
+<h2 id="working-with-task"><strong>Working with Task</strong></h2>
+<h3 id="create-task"><strong>Create Task</strong></h3>
+<p>To create a Task, go to the Tasks tab and click <strong>Create Task</strong></p>
+<p><img alt="" src="../../images/gosh_web_Create_Task_01.jpg" /></p>
+<p>Then you need to fill in the Task conditions.</p>
+<p>The result of the Task should be a pull request to include changes in the repository.</p>
+<p>Select the repository for which the Task is being created.</p>
+<p><img alt="" src="../../images/gosh_web_Task_02_fill_repo.jpg" /></p>
+<p>Add the Task name.</p>
+<p>You can add 3 tags separated by spaces to quickly find the task.</p>
+<p><img alt="" src="../../images/gosh_web_Task_03_name_tags.jpg" /></p>
+<p>Then you need to evaluate the Task.</p>
+<p><strong>Task cost</strong> is the number of tokens that will be paid from the DAO reserve for its execution.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The members of the DAO agree between themselves how to evaluate the Tasks.</p>
+</div>
+<p>After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.</p>
+<p><strong>Commit author</strong> - the person who executes the Task.<br />
+<strong>Reviewer</strong> - the person who checks the correctness of the Task.<br />
+<strong>Manager</strong> - the person who manages the Task execution process.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The number of authors, areviewers and managers is set at your choice.  </p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Task_04_cost_distrb.jpg" /></p>
+<p>Select vesting and lock periods. </p>
+<p><strong>Lock (cliff)</strong> - the period after which the reward payments will begin. 
+The countdown will start after accepting the proposal about completing the Task.<br />
+<strong>Vesting</strong> - rules for transferring the fixed part of the tokens to the disposal of the contractor.</p>
+<p>For example, lock - 12 months, vesting - 2 months.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the members of the task must be a multiple of the number of months of investment.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Task_05_lock_vesting.jpg" /></p>
+<p>Add a comment the token distribution rules and click <strong>Create task and start proposal</strong></p>
+<p><img alt="" src="../../images/gosh_web_Task_06_comment.jpg" /></p>
+<p>After creating the proposal, you will be taken to the <strong>DAO</strong> tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_Task_07_event.jpg" /></p>
+<p>Inside the proposal you will be able to see all the conditions of the Task.<br />
+In the table you can see the period since which month and in what parts the payments will be made to the members of the Task.</p>
+<!-- ![](../images/gosh_web_Task_08_proposal.jpg) -->
+
+<p><img alt="" src="../../images/gosh_web_Task_09_event_details.jpg" /></p>
+<p>After accepting the proposal, the Task will appear in the list on the <strong>Tasks</strong> tab with the status <em>Awaiting commits</em>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When creating a Task the tokens (Task cost) from the DAO-reserve are written off and reserved on the Task-contract.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Task_10_list_tasks.jpg" /></p>
+<p>When the Author has completed the Task, he adds it to the commit.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>If you need to make several commits to complete a Task,, create a separate branch.  </p>
+</div>
+<p>And do <strong>Select task</strong> when creating the proposal to the pull request.</p>
+<p>Select the Task performed(s), reviewer(s), manager(s) if they worked on the task. The allocated shares of those who were not specified will be returned to the DAO-reserve.</p>
+<p><img alt="" src="../../images/gosh_web_Readme_md_03_data_commit.jpg" /></p>
+<p>After that a proposal to the pull request will be created.  </p>
+<p><img alt="" src="../../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg" /></p>
+<p>Detailed information can be viewed by going to it on the DAO tab with events.</p>
+<p><img alt="" src="../../images/gosh_web_Task_13_detail_proposal.jpg" /></p>
+<p>If the reviewer was specified during the commit, the event will wait for verification from them.</p>
+<p><img alt="" src="../../images/gosh_web_Task_14_event%20review.jpg" /></p>
+<p>Then, after the reviewer send the solution, it will be possible to vote for the proposal.<br />
+When the pull request is accepted, the Task status will change to <strong>Confirmed</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Task_15_task_status_confirmed.jpg" /></p>
+<p>After the lock period ends, the members of the Task can receive a reward.
+To do this, go to the <strong>Tasks</strong> tab in the completed Task and click <strong>Claim reward</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Lock period (cliff) has been set to zero, then you can click <strong>Claim reward</strong> immediately after accepting the pull request.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Task_16_claim_reward.jpg" /></p>
+<p>Thus the tokens will begin to be transferred to the wallets of the members of the completed Task in accordance with the vesting scheme when the lock period ends.</p>
+<h3 id="delet-task"><strong>Deletе Task</strong></h3>
+<p>To delete a Task, go to it on the <strong>Tasks</strong> tab.
+And click to <strong>Delete task</strong></p>
+<p><img alt="" src="../../images/gosh_web_Task_delete_01.jpg" /></p>
+<p>After creating a proposal about deleting a Task, you will be redirected to the event tab <strong>Dao</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Task_delete_02_event.jpg" /></p>
+<p>When the proposal is accepted, the Task will be deleted.<br />
+The tokens allocated for this Task will be returned to the DAO reserve.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
