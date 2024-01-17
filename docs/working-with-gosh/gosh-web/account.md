@@ -1,7 +1,7 @@
 
 [GOSH Web](https://app.gosh.sh/) implements GOSH repository management as a simple web interface.
 
-You will be able to create your GOSH Account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
+You will be able to create your **GOSH Account** and [**Decentralized Autonomous Organization (DAO)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
 
 
 ## __Create Account__

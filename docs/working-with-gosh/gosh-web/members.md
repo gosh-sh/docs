@@ -7,9 +7,9 @@
 
 Membership in the DAO can be obtained in several ways.
 
-The user can be invited to the DAO using a [special form](../gosh-web.md#add-by-gosh-username-or-e-mail) or by an [invitation link](../gosh-web.md#invite-by-link).
+The user can be invited to the DAO using a [special form](members.md#adding-by-gosh-username-or-e-mail) or by an [invitation link](members.md#invite-by-link).
 
-Also, the user can independently [create a membership request](../gosh-web/#request-dao-membership) in the DAO.
+Also, the user can independently [create a membership request](members.md#request-dao-membership) in the DAO.
 
 !!! info
     Adding a member to the DAO is possible only through an proposal.
