@@ -34,7 +34,7 @@ nav:
     #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
     - AnyTree: working-with-gosh/anytree.md
     - AnyTree Firewall for Telepresence: working-with-gosh/anytree-firewall-for-telepresence.md
-  - GOSH AI: working-with-gosh/gosh-ai.md
+  #- GOSH AI: working-with-gosh/gosh-ai.md
   - For developers(WIP):
     - On-chain Architecture:
       - GOSH Wallet: on-chain-architecture/gosh-wallet.md
