@@ -16,7 +16,7 @@ nav:
           # - DAO Set up and upgrade: working-with-gosh/gosh-web/dao-set-up.md
           - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
           - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
-        - Repositories: working-with-gosh/gosh-web/repository.md
+        - Repository: working-with-gosh/gosh-web/repository.md
         - Members: working-with-gosh/gosh-web/members.md
         - Tasks: working-with-gosh/gosh-web/task.md
         - Settings: working-with-gosh/gosh-web/dao-set-up.md
@@ -76,7 +76,7 @@ theme:
     # - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
+    # - navigation.expand
     - content.code.copy
     - content.tooltips
   palette:

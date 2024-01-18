@@ -6,7 +6,7 @@
 
 **GOSH** is a Layer 2 for any blockchain and a Decentralized Operating System where you build consensus around your idea. 
 
-Any open source tool can be plugged into **GOSH** to manage projects in a decentralized way using [**DAOs**](on-chain-architecture/organizations-gosh-dao-and-smv.md) and build an active community around your work, whether it’s code, music, documents, or videos; scientific research or democratic activism; revolution, evolution, progress or history.
+Any open source tool can be plugged into **GOSH** to manage projects in a decentralized way using [**DAOs**](on-chain-architecture/organizations-gosh-dao-and-smv.md) and build an active community around your work, whether it’s code, music, documents, or videos; scientific research or democratic activism; revolution, evolution, progress, or history.
 
 **GOSH** is an advanced scalable multi-threaded blockchain, and the first with a Freemium business model, offering powerful tools for everything from scientific research to finance and software security.
 
