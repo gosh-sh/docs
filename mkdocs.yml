@@ -1,12 +1,12 @@
 site_name: GOSH
 nav:
   - User Guide(WIP): 
-    - Overview:
-      - Git Open Source Hodler: user-guide/git-open-source-hodler.md
-      - Motivation: user-guide/motivation.md
-      - Objective: user-guide/objective.md
-      - Architecture: user-guide/architecture.md
-      - Instruments and utilities: user-guide/instruments-and-utilities.md
+    - Overview: index.md
+      #- Git Open Source Hodler: user-guide/git-open-source-hodler.md
+      #- Motivation: user-guide/motivation.md
+      #- Objective: user-guide/objective.md
+      #- Architecture: user-guide/architecture.md
+      #- Instruments and utilities: user-guide/instruments-and-utilities.md
     - Working with GOSH:
       - GOSH Web(WIP):
         - Account: working-with-gosh/gosh-web/account.md
@@ -16,7 +16,7 @@ nav:
           # - DAO Set up and upgrade: working-with-gosh/gosh-web/dao-set-up.md
           - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
           - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
-        - Repositories: working-with-gosh/gosh-web/repository.md
+        - Repository: working-with-gosh/gosh-web/repository.md
         - Members: working-with-gosh/gosh-web/members.md
         - Tasks: working-with-gosh/gosh-web/task.md
         - Settings: working-with-gosh/gosh-web/dao-set-up.md
@@ -26,7 +26,6 @@ nav:
       - Hacks & Grants:
         - Overview: hacks-and-grants/overview.md
         - User Guide: hacks-and-grants/user-guide.md
-  - Docker Extension(WIP): working-with-gosh/docker-extension.md
   - Git Remote Helper(WIP): working-with-gosh/git-remote-helper.md
   - AnyTree(WIP): 
     - AnyTreeAll: anytree-all.md
@@ -34,6 +33,7 @@ nav:
     #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
     - AnyTree: working-with-gosh/anytree.md
     - AnyTree Firewall for Telepresence: working-with-gosh/anytree-firewall-for-telepresence.md
+  - Docker Extension(WIP): working-with-gosh/docker-extension.md
   #- GOSH AI: working-with-gosh/gosh-ai.md
   - For developers(WIP):
     - On-chain Architecture:
@@ -76,7 +76,7 @@ theme:
     # - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.expand
+    # - navigation.expand
     - content.code.copy
     - content.tooltips
   palette:

@@ -1,22 +1,39 @@
 
-[GOSH Web](https://app.gosh.sh/) implements GOSH repository management as a simple web interface.
+<!-- [GOSH Web](https://app.gosh.sh/) implements GOSH repository management as a simple web interface.
 
-You will be able to create your GOSH Account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
+You will be able to create your **GOSH Account** and [**Decentralized Autonomous Organization (DAO)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone. -->
 
+
+<!-- Using the [GOSH Web interface](https://app.gosh.sh/), you can easily organize all the necessary components for your project in a [**Repository**](gosh-web.md#repository) inside your [**Decentralized Autonomous Organization (DAO)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md).
+
+First, you need to create your *GOSH Account** and DAO. -->
+
+
+To manage your projects in a decentralized way using the [**DAO**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md), you will need to organize all the necessary components in a [**Repository**](./repository.md) on GOSH.
+
+But to get started, you need to create your GOSH Account.
 
 ## __Create Account__
+
+To start registering on GOSH, simply visit the [**GOSH website**](https://app.gosh.sh) and click **Create account**:
+
+![](../../images/n_gosh_web_account_1_Create_account.jpg)
+
+Use one of the suggested methods:
+
+![](../../images/n_gosh_web_account_2_sign_in_with.jpg)
 
 
 ### __with GitHub__
 
-To get started with GOSH, you need an active Github-account.
+You can also register on GOSH using your Github account.
 
 Click **Create Account with Github** to start registering on GOSH
 
 ![](../../images/gosh_web_Authorize_Gosh_01.jpg)
 
 
-After click **Authorize gosh-sh** 
+After click **Authorize gosh-sh**
 
 ![](../../images/gosh_web_Authorize_Gosh_02.jpg)
 
@@ -48,9 +65,9 @@ Then click **Upload**
 
 ​If you are familiar with blockchain, you know what to do with a seed phrase.
 
-If you're new to blockchain, all you need to know, is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
 
-To create the GOSH-Account, the seed phrase will be generated for you. If you already have the GOSH-Account, click **Clear** and enter your own one seed phrase.
+To create the GOSH Account, the seed phrase will be generated for you. If you already have the GOSH Account, click **Clear** and enter your own one seed phrase.
 
 !!! info
     Your seed phrase will be used to log into GOSH.
@@ -117,7 +134,91 @@ Also set up a PIN code and unlock with PIN code.
 
 ### __with Google__
 
+Use your Google account to sign up for GOSH.
+
+To do this,enter your email address or phone number and click **Next** button:
+
+![](../../images/n_gosh_web_account_3_2_1_google_email.jpg)
+
+Confirm the selection with a password and proceed to the next step by clicking **Next**
+
+![](../../images/n_gosh_web_account_3_2_2_google_password.jpg)
+
+
+
 ### __with Linkedln__
+
+Use your Linkedln account to sign up for GOSH.
+
+To do this,enter your email address and password and click **Sign in** button:
+
+![](../../images/n_gosh_web_account_3_3_1_linkedin_email.jpg)
+
+Click on the **Allow** button to grant permission for the use of your data
+
+![](../../images/n_gosh_web_account_3_3_2_linkedin_allow.jpg)
+
+Specify the email address that is convenient for you to work with GOSH.
+
+Then choose your username in GOSH. **This will be your unique cryptographic identifier in Gosh.**
+
+!!! Danger
+    **Please note that after creating your username it will be impossible to change it in the future.**
+
+if your username is already taken, please choose another one.
+
+!!! warning
+    The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+then click **Continue**
+
+![](../../images/n_gosh_web_account_3_3_3_linkedin_nickname.jpg)
+
+On the next step, you will be offered the generated seed phrase. 
+
+​If you are familiar with blockchain, you know what to do with a seed phrase.
+
+If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+
+To create the GOSH Account, the seed phrase will be generated for you. If you already have the GOSH Account, click **Clear** and enter your own one seed phrase.
+
+!!! info
+    Your seed phrase will be used to log into GOSH.
+
+
+!!! danger
+    **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
+
+
+Once you have written down your seed phrase, check the box and click **Continue**
+
+![](../../images/n_gosh_web_account_3_3_4_linkedin_seed.jpg)
+
+
+Then please input the requested words from your phrase to ensure it is written correctly and click **Create account**
+
+![](../../images/n_gosh_web_account_3_3_5_linkedin_verify_seed.jpg)
+
+
+When entering the GOSH will ask you to set up a PIN code:
+
+!!! info
+    Set a new PIN code for each new session.
+
+![](../../images/n_gosh_web_account_3_3_6_linkedin_pin.jpg)
+
+And unlock with this PIN code.
+
+Congratulations, your GOSH account has been created.
+
+It remains to create a DAO. To do this, click on **Create DAO and complete**
+
+![](../../images/n_gosh_web_account_3_3_7_linkedin_create_dao.jpg)
+
+
+![](../../images/n_gosh_web_account_3_3_8_linkedin_done.jpg)
+
+Enter the DAO by clicking on it. A description of further work with TAO can be seen [here](./dao-overview.md)
 
 
 ## __View Public Key__
