@@ -124,7 +124,7 @@ Follow the link in the letter.
 
 Enter the saved seed phrase and click **Sign in**.
 
-![](../../images/gosh_web_Authorize_Gosh_09_signIn.jpg)
+![](../../images/n_gosh_web_Authorize_Gosh_09_signIn.jpg)
 
 Also set up a PIN code and unlock with PIN code.
 

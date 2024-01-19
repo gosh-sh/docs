@@ -28,7 +28,7 @@ nav:
         - User Guide: hacks-and-grants/user-guide.md
   - Git Remote Helper: working-with-gosh/git-remote-helper.md
   - AnyTree: 
-    - AnyTreeAll: anytree-all.md
+    #- AnyTreeAll: anytree-all.md
     #- Working with AnyTree: working-with-gosh/anytree.md
     #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
     - AnyTree: working-with-gosh/anytree.md
