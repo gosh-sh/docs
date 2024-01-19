@@ -21,7 +21,7 @@ The generated code is immutable, has timestamps and is stored in a decentralized
 
 
 
-Start your acquaintance with GOSH.AI from this [page](https://gosh.ai)
+Start your acquaintance with GOSH.AI from this [page](https://gosh.ai){:target="_blank"}
 
 Click the button **Try GOSH AI**
 
@@ -121,7 +121,7 @@ After uploading the repository, you can continue working with it
 
 After creating and processing the repository, you can enter into it and see what happened
 
-You can view the received files, [leave comments](gosh-web.md#adding-comments-to-file) on the files.
+You can view the received files, [leave comments](gosh-web/repository.md#adding-comments-to-file) on the files.
 
 After reviewing the files, send them to GOSH.AI for processing click by **Finish review, request changes**
 

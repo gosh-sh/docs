@@ -4,7 +4,7 @@ description: BuildKit frontend for GOSH
 
 # Build and Sign Images
 
-With the Help of a custom [Buildkit](https://github.com/tonlabs/gosh/tree/main/buildkit), you can build your Docker images directly from GOSH, and sign them so they can be verified by the GOSH docker extension.
+With the Help of a custom [Buildkit](https://github.com/tonlabs/gosh/tree/main/buildkit){:target="_blank"}, you can build your Docker images directly from GOSH, and sign them so they can be verified by the GOSH docker extension.
 
 Instead of a dockerfile, this Buildkit uses a special [goshfile](build-and-sign-images.md#2.-write-goshfile.yaml-this-specification-is-a-work-in-progress-and-subject-to-change) to ensure code is taken from GOSH.
 
@@ -18,7 +18,7 @@ export WALLET_PUBLIC=...
 export WALLET_SECRET=...
 ```
 
-You received these when creating your account in [GOSH Web](gosh-web.md) or [Docker Extension](docker-extension.md).
+You received these when creating your account in [GOSH Web](gosh-web/account.md) or [Docker Extension](docker-extension.md).
 
 #### 2. Create `goshfile.yaml` (this specification is a work in progress and subject to change)
 
@@ -101,8 +101,8 @@ docker run --rm teamgosh/sign-cli check \
 
 **NOTE**: Anyone who has the image can [validate](verify-images-in-docker-extension.md) it. The image has label WALLET\_PUBLIC and image's sha256 also publicly available.
 
-Additionally, [signer tool](https://github.com/tonlabs/gosh/tree/main/content-signature) can deploy a proof contract to GOSH blockchain that will be publicly available to all wanting to verify the image they pull from dockerhub.
+Additionally, [signer tool](https://github.com/tonlabs/gosh/tree/main/content-signature){:target="_blank"} can deploy a proof contract to GOSH blockchain that will be publicly available to all wanting to verify the image they pull from dockerhub.
 
 ### Examples
 
-[Publisher example](https://github.com/tonlabs/gosh/blob/main/buildkit/examples/publisher)
+[Publisher example](https://github.com/tonlabs/gosh/blob/main/buildkit/examples/publisher){:target="_blank"}

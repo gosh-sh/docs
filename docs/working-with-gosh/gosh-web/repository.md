@@ -103,7 +103,7 @@ After scroll down and enter commit info:
 
 ![](../../images/gosh_web_Create_file_03_commit_data.jpg)
 
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](../gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote) will be initiated.
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure) will be initiated.
 
 <!-- TODO
 If the branch is protect -->
@@ -128,7 +128,7 @@ The branches will be compared. Review the changes, set up the pull request and c
 !!! info
     **Note**: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
 
-    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](../gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote) on.
+    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure) on.
 
 
 ### __Add protection for a branch__
@@ -224,6 +224,6 @@ You can switch between them.
 
 You can also add comments to Pull Request.
 To do this, go from the **DAO** events page to the **Pull Request** vote in the **Pull request diff** section.
-you can leave comments on any line or block of lines in the same way as in [commenting on a file](../gosh-web.md#adding-comments-to-file).
+you can leave comments on any line or block of lines in the same way as in [commenting on a file](../gosh-web/repository.md#adding-comments-to-file).
 
 ![](../../images/gosh_web_Comments_06_for_PR.jpg)

@@ -7,7 +7,7 @@ GOSH is building a decentralized world computer which needs a decentralized back
 **Acki Nacki** also offers higher security guarantees than Bitcoin — Not just that, but the probability of a comet hitting the planet Earth and destroying life as we know it, is higher than the probability that **Acki Nacki** will be broken. -->
 
 
-*watch the event* [here](https://www.ackinacki.com/)
+*watch the event* [here](https://www.ackinacki.com/){:target="_blank"}
 
 The use cases enabled by GOSH demand so great an amount of data to be processed, that no blockchain technology today can actually cope with handling it entirely on-chain. Consequently, there is a need for a new blockchain architecture that will allow GOSH to do what cloud computing can do.
 

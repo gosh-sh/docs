@@ -68,7 +68,7 @@ Enable github-actions by creating a `/.github/workflows` folder in your GitHub r
 
 
 ```
-name: Sync with Gosh
+name: Sync with GOSH
 
 on:
   workflow_dispatch:
@@ -109,7 +109,7 @@ jobs:
           git push -vv gosh
 ```
 
-After this is done, all of the changes pushed to GitHub will be seen on Gosh (except the branches’ names). Starting from this first commit onwards, every change to your GitHub repository will be mirrored to GOSH. 
+After this is done, all of the changes pushed to GitHub will be seen on GOSH (except the branches’ names). Starting from this first commit onwards, every change to your GitHub repository will be mirrored to GOSH. 
 
 !!! example annotate "For example"
     If there were changes in a main branch in GitHub, these changes will appear in the github_main branch in GOSH and once DAO decides to accept those changes they can create a proposal to merge changes from the github_main branch into the main, inside GOSH.

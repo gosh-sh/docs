@@ -181,7 +181,7 @@
         <a href="../.." class="md-tabs__link">
           
   
-  User Guide(WIP)
+  User Guide
 
         </a>
       </li>
@@ -199,7 +199,7 @@
   
     
   
-  Git Remote Helper(WIP)
+  Git Remote Helper
 
       </a>
     </li>
@@ -216,7 +216,7 @@
         <a href="../../anytree-all/" class="md-tabs__link">
           
   
-  AnyTree(WIP)
+  AnyTree
 
         </a>
       </li>
@@ -234,7 +234,7 @@
   
     
   
-  Docker Extension(WIP)
+  Docker Extension
 
       </a>
     </li>
@@ -261,7 +261,7 @@
         <a href="../../on-chain-architecture/gosh-wallet/" class="md-tabs__link">
           
   
-  For developers(WIP)
+  For developers
 
         </a>
       </li>
@@ -352,7 +352,7 @@
             
   
   <span class="md-ellipsis">
-    User Guide(WIP)
+    User Guide
   </span>
   
 
@@ -362,7 +362,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
-            User Guide(WIP)
+            User Guide
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -444,7 +444,7 @@
             
   
   <span class="md-ellipsis">
-    GOSH Web(WIP)
+    GOSH Web
   </span>
   
 
@@ -454,7 +454,7 @@
         <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_2_1">
             <span class="md-nav__icon md-icon"></span>
-            GOSH Web(WIP)
+            GOSH Web
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -883,7 +883,7 @@
         
   
   <span class="md-ellipsis">
-    Git Remote Helper(WIP)
+    Git Remote Helper
   </span>
   
 
@@ -917,7 +917,7 @@
             
   
   <span class="md-ellipsis">
-    AnyTree(WIP)
+    AnyTree
   </span>
   
 
@@ -927,7 +927,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            AnyTree(WIP)
+            AnyTree
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1008,7 +1008,7 @@
         
   
   <span class="md-ellipsis">
-    Docker Extension(WIP)
+    Docker Extension
   </span>
   
 
@@ -1044,7 +1044,7 @@
             
   
   <span class="md-ellipsis">
-    For developers(WIP)
+    For developers
   </span>
   
 
@@ -1054,7 +1054,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            For developers(WIP)
+            For developers
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1204,7 +1204,7 @@
             
   
   <span class="md-ellipsis">
-    Acki Nacki Protocol(WIP)
+    Acki Nacki Protocol
   </span>
   
 
@@ -1214,7 +1214,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
-            Acki Nacki Protocol(WIP)
+            Acki Nacki Protocol
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1547,7 +1547,7 @@
 <p><img alt="" src="../../images/integration_sync_github_5_add_variable.jpg" /></p>
 <h3 id="set-up-github-actions"><strong>Set up github-actions</strong></h3>
 <p>Enable github-actions by creating a <code>/.github/workflows</code> folder in your GitHub repository. You can also create it in your user interface and copy the content below, and GitHub will create the folder for you automatically. Create a <code>gosh-sync.yaml</code> file inside, in this aforementioned folder and add this content:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>name: Sync with Gosh
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>name: Sync with GOSH
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>on:
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  workflow_dispatch:
@@ -1587,7 +1587,7 @@
 </span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>          git switch -C $GOSH_TMP_BRANCH
 </span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>          git push -vv gosh
 </span></code></pre></div>
-<p>After this is done, all of the changes pushed to GitHub will be seen on Gosh (except the branches’ names). Starting from this first commit onwards, every change to your GitHub repository will be mirrored to GOSH. </p>
+<p>After this is done, all of the changes pushed to GitHub will be seen on GOSH (except the branches’ names). Starting from this first commit onwards, every change to your GitHub repository will be mirrored to GOSH. </p>
 <div class="admonition example annotate">
 <p class="admonition-title">For example</p>
 <p>If there were changes in a main branch in GitHub, these changes will appear in the github_main branch in GOSH and once DAO decides to accept those changes they can create a proposal to merge changes from the github_main branch into the main, inside GOSH.</p>

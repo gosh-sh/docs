@@ -41,7 +41,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/anytree/dev/install.sh | bas
 <!-- 
 ### __Install AnyTree from binary releases__
 
-1. Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1) and download GOSH AnyTree for the required operating system.
+1. Follow the [link](https://github.com/gosh-sh/gosh-build-tools/releases/tag/0.1.1){:target="_blank"} and download GOSH AnyTree for the required operating system.
 
 2. Extract files from tar-file
 
@@ -69,7 +69,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/anytree/dev/install.sh | bas
       - `git`
       - `make`
 
-2. Clone [AnyTree](https://github.com/gosh-sh/anytree) repository
+2. Clone [AnyTree](https://github.com/gosh-sh/anytree){:target="_blank"} repository
 
 3. Run make install to build GOSH `anytree tool`
 
@@ -87,7 +87,7 @@ wget -O - https://raw.githubusercontent.com/gosh-sh/anytree/dev/install.sh | bas
 
 
 You need a GOSH repository.  
-If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding) or create a [GOSH-account](https://app.gosh.sh/) and [create a new one](gosh-web.md#create-repository).
+If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding){:target="_blank"} or create a [GOSH-account](https://app.gosh.sh/){:target="_blank"} and [create a new one](gosh-web/repository.md#create-repository){:target="_blank"}.
 
 Go to your GOSH-repository you project
 
@@ -107,7 +107,7 @@ To create artifacts, you will need an `SBOM file` created  according to the [Cyc
     The example file can be viewed here:
     https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
 
-If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py)  
+If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py){:target="_blank"}  
 (*scripts for other programming languages will coming soon*)
 
 
@@ -123,7 +123,7 @@ Prerequisites:
 * Python3 with pip (required to generate a `SBOM-file`)
 
 
-To generate a `SBOM file` for a Rust project, you can use the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py)
+To generate a `SBOM file` for a Rust project, you can use the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py){:target="_blank"}
 
 !!! info
     If necessary, install the dependencies for the script to work.  
@@ -184,8 +184,7 @@ options:
     Updated SBOM written to /home/user/gosh/v5_x/v5.1.0/git-remote-gosh/sbom.json
     ```
 
-    And generated `sbom.json` file in the following format  
-    https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
+    And generated `sbom.json` file in the following [format](https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json){:target="_blank"}  
 
 
     <!-- ![](../images/anytree_sbom_written_to.jpg) -->

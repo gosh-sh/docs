@@ -1,6 +1,6 @@
 site_name: GOSH
 nav:
-  - User Guide(WIP): 
+  - User Guide: 
     - Overview: index.md
       #- Git Open Source Hodler: user-guide/git-open-source-hodler.md
       #- Motivation: user-guide/motivation.md
@@ -8,7 +8,7 @@ nav:
       #- Architecture: user-guide/architecture.md
       #- Instruments and utilities: user-guide/instruments-and-utilities.md
     - Working with GOSH:
-      - GOSH Web(WIP):
+      - GOSH Web:
         - Account: working-with-gosh/gosh-web/account.md
         - DAO: 
           - Create DAO: working-with-gosh/gosh-web/create-dao.md
@@ -26,23 +26,24 @@ nav:
       - Hacks & Grants:
         - Overview: hacks-and-grants/overview.md
         - User Guide: hacks-and-grants/user-guide.md
-  - Git Remote Helper(WIP): working-with-gosh/git-remote-helper.md
-  - AnyTree(WIP): 
+  - Git Remote Helper: working-with-gosh/git-remote-helper.md
+  - AnyTree: 
     - AnyTreeAll: anytree-all.md
     #- Working with AnyTree: working-with-gosh/anytree.md
     #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
     - AnyTree: working-with-gosh/anytree.md
     - AnyTree Firewall for Telepresence: working-with-gosh/anytree-firewall-for-telepresence.md
-  - Docker Extension(WIP): working-with-gosh/docker-extension.md
+  - Docker Extension: working-with-gosh/docker-extension.md
   #- GOSH AI: working-with-gosh/gosh-ai.md
-  - For developers(WIP):
+  - For developers:
     - On-chain Architecture:
       - GOSH Wallet: on-chain-architecture/gosh-wallet.md
       - Organizations - GOSH DAO and SMV: on-chain-architecture/organizations-gosh-dao-and-smv.md
       - GOSH smart contracts: on-chain-architecture/gosh-smart-contracts.md
       - Set up Git Remote Helper: working-with-gosh/gosh-web/grh-config.md
-    - Acki Nacki Protocol(WIP):
+    - Acki Nacki Protocol:
       - Overview: acki-nacki/overview.md
+      #- Test network: acki-nacki/test_network.md
     - GOSH GitHub Sync: integrations/sync.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md

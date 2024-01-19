@@ -1,6 +1,6 @@
 # __GOSH Web__
 
-[GOSH Web](https://app.gosh.sh/) is also a good way to get started with GOSH.
+[GOSH Web](https://app.gosh.sh/){:target="_blank"} is also a good way to get started with GOSH.
 
 It implements GOSH repository management as a simple web interface.
 
@@ -78,18 +78,18 @@ After click **Authorize gosh-sh**
 ![](../images/gosh_web_Authorize_Gosh_02.jpg)
 
 !!! info
-    The special GOSH DAO Bot will help with registration in Gosh.
+    The special GOSH DAO Bot will help with registration in GOSH.
     It will deploy your DAO and upload your selected repositories to GOSH.
 
 In the list of organizations received from Github, click on the organization
 
 ![](../images/gosh_web_Authorize_Gosh_03.jpg)
 
-and select repositories for upload into Gosh.
+and select repositories for upload into GOSH.
 
 ![](../images/gosh_web_Authorize_Gosh_04.jpg)
 
-Do this **for each** organization for which you want to upload repositories to Gosh.
+Do this **for each** organization for which you want to upload repositories to GOSH.
 
 !!! danger
     After registering on GOSH you will not be able to return to this step in this release.
@@ -122,7 +122,7 @@ Once you have written down your seed phrase, click **Continue.**
 ![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
 
 
-Then choose your username in GOSH. **This is your unique cryptographic identifier in Gosh.
+Then choose your username in GOSH. **This is your unique cryptographic identifier in GOSH.
 **
 
 !!! Danger

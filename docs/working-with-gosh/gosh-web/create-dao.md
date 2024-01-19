@@ -28,7 +28,7 @@ On the DAO settings page that opens, input:
 
     A short description that can be seen on the DAO tab under the heading.
 
-    The extended description can be added to the Readme file into _index system repository from the [Overview page](../gosh-web.md#overview-of-the-dao) after creating the DAO.
+    The extended description can be added to the Readme file into _index system repository from the [Overview page](../gosh-web/dao-overview.md) after creating the DAO.
 
 * __Total supply__
 
@@ -41,7 +41,7 @@ On the DAO settings page that opens, input:
     This is a permission to emission DAO tokens.
     It is enabled by default.
 
-    In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the [**Settings**](../gosh-web.md#dao-set-up) section.
+    In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the [**Settings**](../gosh-web/dao-set-up.md) section.
 
     !!! warning
         If you uncheck this option, the number of tokens issued for this DAO will be capped to the number entered during the initial setup

@@ -7,10 +7,10 @@
 **this contract is deployed for each user when registering with GOSH. It stores the user's name and its public keys.**
 { .ml-params }
 
-[[source code]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.sol)
+[[source code]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.sol){:target="_blank"}
 { .ml-params }
 
-[[ABI]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.abi.json)
+[[ABI]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profile.abi.json){:target="_blank"}
 { .ml-params }
 
 
@@ -36,10 +36,10 @@ It is necessary **to take the zeroth pubkey** from the list
 **a contract version manager used when upgrading GOSH smart contracts**
 { .ml-params }
 
-[[source code]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.sol)
+[[source code]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.sol){:target="_blank"}
 { .ml-params }
 
-[[ABI]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.abi.json)
+[[ABI]](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/versioncontroller.abi.json){:target="_blank"}
 { .ml-params }
 
 !!! info
@@ -418,6 +418,42 @@ struct details_info {
 ```
 
 
+## **Giver for Acki Nacki test network**  
+
+**This is a giver for receiving test tokens on the https://ackinacki-testnet.tvmlabs.dev/**
+{ .ml-params }
+
+<!-- [[source code]]() -->
+
+[[ABI]](../static/TONTokenWallet.abi){:download="TONTokenWallet.abi"}
+{ .ml-params }
+
+
+<a id="transfertorecipient" href="">**transferToRecipient**</a>(  
+    address_opt answer_addr,  
+    Tip3Creds   to,  
+    uint128     tokens,  
+    uint128     evers,  
+    uint128     keep_evers,  
+    bool        deploy,  
+    uint128     return_ownership,  
+    opt<cell>   notify_payload  
+)
+
+***The function for deploying empty TIP-3 wallet to another user***
+{ .ml-params }
+
+PARAMETERS:  
+
+* **`answer_addr`** - Answer address, **(should be `null`)**  
+* **`to`** - Recipient credentials (pubkey + owner **(should be `null`)**)  
+* **`tokens`** - Amount of tokens to transfer, **(should be `0`)**  
+* **`evers`** - Native funds to process. For internal requests, this value is ignored and processing costs will be taken from attached value  
+* **`keep_evers`** - Evers to keep in destination wallet  
+* **`deploy`** - **(should be `true`)** then the contract will send acceptTransfer message with StateInit to also deploy new TIP-3 wallet (if it doesn't already exist) with the provided recipient public key and recipient internal owner  
+* **`return_ownership`** - Return ownership - to decrease lend ownership for the caller contract (additionally), **(should be `0`)**  
+* **`notify_payload`** - (optional) < Payload (arbitrary cell) - if specified, will be transmitted into dest owner's notification, **(should be `0`)**  
+sendTransaction
 
 
 
