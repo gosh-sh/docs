@@ -14,10 +14,10 @@ the total issue of tokens of this DAO.
 ### **DAO reserve**  
 unallocated tokens.
 
-    Push on the **Send** button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
-    <!-- TODO -->
+Push on the **Send** button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
+<!-- TODO -->
 
-    Push on the **Mint** button, you will [create an proposal to mint additional tokens](../gosh-web.md#additional-minting-of-tokens-for-dao) for this DAO.
+Push on the **Mint** button, you will [create an proposal to mint additional tokens](../gosh-web/working-with-tokens-and-karma.md#additional-minting-of-tokens-for-dao) for this DAO.
 
 ![](../../images/gosh_web_OVERVIEW_01_total_suply.jpg)
 
@@ -51,13 +51,13 @@ total number of DAO members.
 ### **Recent proposals**
 
 Information and status of the recent proposals will be displayed  in this section. 
-Click on the name of the proposal you can go to the event page and [vote](../gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
+Click on the name of the proposal you can go to the event page and [vote](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure).
 
 ![](../../images/gosh_web_OVERVIEW_05_recent_proposals.jpg)
 
 
 ### **Repositories**  
-In the **Repositories** section, you can quickly find or [create a repository](../gosh-web.md#create-repository).
+In the **Repositories** section, you can quickly find or [create a repository](../gosh-web/repository.md#create-repository).
 
 ![](../../images/gosh_web_OVERVIEW_06_repositories.jpg)
 
@@ -72,7 +72,7 @@ The **_index** is a DAO system repository that is created automatically.
 
 To add a README for your DAO, go to the _index repository or follow the link in this section.
 
-<!-- and [create a file](../gosh-web.md#create-file) in the main branch. -->
+<!-- and [create a file](../gosh-web/repository.md#create-file) in the main branch. -->
 <!-- TODO
 replace to create file -->
 

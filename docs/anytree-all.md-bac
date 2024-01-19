@@ -68,7 +68,7 @@ or use quick start.
 3. **Setup a GOSH project**
 
     You need a GOSH repository.  
-    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding) or create a [GOSH-account](https://app.gosh.sh/) and [create a new one](working-with-gosh/gosh-web.md#create-repository).
+    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding){:target="_blank"} or create a [GOSH-account](https://app.gosh.sh/){:target="_blank"} and [create a new one](working-with-gosh/gosh-web/repository.md).
 
     Go to your GOSH-repository
 
@@ -85,13 +85,12 @@ or use quick start.
     * Docker
     * Python3 with pip (required to generate a `SBOM-file`)
 
-    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/)
+    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/){:target="_blank"}
 
     !!! info
-        The example file can be viewed here:  
-        https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
+        The example file can be viewed [here](https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json){:target="_blank"}
 
-    If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py)  
+    If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py){:target="_blank"}  
     (*scripts for other programming languages will coming soon*)
 
     !!! Note
@@ -187,13 +186,12 @@ Prerequisites:
     * Docker
     * Python3 with pip (required to generate a `SBOM-file`)
 
-    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/)
+    To create artifacts, you will need an `SBOM file` created  according to the [Cyclone DX specification](https://cyclonedx.org/docs/1.5/json/){:target="_blank"}
 
     !!! info
-        The example file can be viewed here:  
-        https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
+        The example file can be viewed [here](https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json){:target="_blank"}{:target="_blank"}  
 
-    If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py)  
+    If you have a Rust project, you can generate an `SBOM file` using the script [generate-sbom.py](https://github.com/gosh-sh/anytree/blob/dev/tools/python/generate-sbom.py){:target="_blank"}  
     (*scripts for other programming languages will coming soon*)
 
     !!! Note
@@ -237,7 +235,7 @@ Prerequisites:
                             Path to output SBOM JSON file. Default - sbom.json
     --project-src PROJECT_SRC_PATH
                             Path to the Rust project source if not in root git directory. Not relates to local file system path. Relates to
-                            path inside repo structure. For example we can use v5_x/v5.1.0/git-remote-gosh which means https://github.com/gosh-
+                            path inside repo structure. For example we can use v5_x/v5.1.0/git-remote-gosh which means s://github.com/gosh-
                             sh/gosh/v5_x/v5.1.0/git-remote-gosh
     --project-commit PROJECT_COMMIT
                             Commit of the project. Default - commit parsed with 'git rev-parse HEAD' command in dir where Cargo.lock is
@@ -262,8 +260,7 @@ Prerequisites:
         Updated SBOM written to /home/user/gosh/v5_x/v5.1.0/git-remote-gosh/sbom.json
         ```
 
-        And generated `sbom.json` file in the following format  
-        https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json
+        And generated `sbom.json` file in the following [format](https://github.com/gosh-sh/anytree/blob/dev/tools/python/sbom.json){:target="_blank"}  
 
 
         <!-- ![](../images/anytree_sbom_written_to.jpg) -->

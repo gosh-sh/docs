@@ -1,21 +1,21 @@
 
-<!-- [GOSH Web](https://app.gosh.sh/) implements GOSH repository management as a simple web interface.
+<!-- [GOSH Web](https://app.gosh.sh/){:target="_blank"} implements GOSH repository management as a simple web interface.
 
 You will be able to create your **GOSH Account** and [**Decentralized Autonomous Organization (DAO)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone. -->
 
 
-<!-- Using the [GOSH Web interface](https://app.gosh.sh/), you can easily organize all the necessary components for your project in a [**Repository**](gosh-web.md#repository) inside your [**Decentralized Autonomous Organization (DAO)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md).
+<!-- Using the [GOSH Web interface](https://app.gosh.sh/){:target="_blank"}, you can easily organize all the necessary components for your project in a [**Repository**](gosh-web/repository.md) inside your [**Decentralized Autonomous Organization (DAO)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md).
 
 First, you need to create your *GOSH Account** and DAO. -->
 
 
 To manage your projects in a decentralized way using the [**DAO**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md), you will need to organize all the necessary components in a [**Repository**](./repository.md) on GOSH.
 
-But to get started, you need to create your GOSH Account.
+**But to get started, you need to create your GOSH Account.**
 
 ## __Create Account__
 
-To start registering on GOSH, simply visit the [**GOSH website**](https://app.gosh.sh) and click **Create account**:
+To start registering on GOSH, simply visit the [**GOSH website**](https://app.gosh.sh){:target="_blank"} and click **Create account**:
 
 ![](../../images/n_gosh_web_account_1_Create_account.jpg)
 
@@ -26,30 +26,27 @@ Use one of the suggested methods:
 
 ### __with GitHub__
 
-You can also register on GOSH using your Github account.
+Use your Github account to sign up for GOSH.
 
-Click **Create Account with Github** to start registering on GOSH
-
-![](../../images/gosh_web_Authorize_Gosh_01.jpg)
-
-
-After click **Authorize gosh-sh**
+To do this,enter your username or email address and password and click **Sign in** button:
 
 ![](../../images/gosh_web_Authorize_Gosh_02.jpg)
 
+and complete the authentication.
+
 !!! info
-    The special GOSH DAO Bot will help with registration in Gosh.
+    The special GOSH DAO Bot will help with registration in GOSH.
     It will deploy your DAO and upload your selected repositories to GOSH.
 
-In the list of organizations received from Github, click on the organization
+In the list of organizations received from Github, select the organization from which you want to make a DAO on GOSH
 
 ![](../../images/gosh_web_Authorize_Gosh_03.jpg)
 
-and select repositories for upload into Gosh.
+and then select repositories for upload into GOSH.
 
 ![](../../images/gosh_web_Authorize_Gosh_04.jpg)
 
-Do this **for each** organization for which you want to upload repositories to Gosh.
+Do this **for each** organization for which you want to upload repositories to GOSH.
 
 !!! danger
     After registering on GOSH you will not be able to return to this step in this release.
@@ -82,7 +79,7 @@ Once you have written down your seed phrase, click **Continue.**
 ![](../../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
 
 
-Then choose your username in GOSH. **This is your unique cryptographic identifier in Gosh.
+Then choose your username in GOSH. **This is your unique cryptographic identifier in GOSH.
 **
 
 !!! Danger
@@ -127,14 +124,14 @@ Follow the link in the letter.
 
 Enter the saved seed phrase and click **Sign in**.
 
-![](../../images/gosh_web_Authorize_Gosh_09_signIn.jpg)
+![](../../images/n_gosh_web_Authorize_Gosh_09_signIn.jpg)
 
 Also set up a PIN code and unlock with PIN code.
 
 
 ### __with Google__
 
-Use your Google account to sign up for GOSH.
+<!-- Use your Google account to sign up for GOSH.
 
 To do this,enter your email address or phone number and click **Next** button:
 
@@ -142,7 +139,7 @@ To do this,enter your email address or phone number and click **Next** button:
 
 Confirm the selection with a password and proceed to the next step by clicking **Next**
 
-![](../../images/n_gosh_web_account_3_2_2_google_password.jpg)
+![](../../images/n_gosh_web_account_3_2_2_google_password.jpg) -->
 
 
 
@@ -160,7 +157,7 @@ Click on the **Allow** button to grant permission for the use of your data
 
 Specify the email address that is convenient for you to work with GOSH.
 
-Then choose your username in GOSH. **This will be your unique cryptographic identifier in Gosh.**
+Then choose your username in GOSH. **This will be your unique cryptographic identifier in GOSH.**
 
 !!! Danger
     **Please note that after creating your username it will be impossible to change it in the future.**
@@ -226,7 +223,7 @@ Enter the DAO by clicking on it. A description of further work with TAO can be s
 
 A user needs to know their public key, for example, when joining an organization.
 
-To view your public key go to the main page of your Account and click [**Settings**](https://app.gosh.sh/a/settings).
+To view your public key go to the main page of your Account and click [**Settings**](https://app.gosh.sh/a/settings){:target="_blank"}.
 
 !!! danger
     Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.

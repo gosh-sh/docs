@@ -1,6 +1,6 @@
 # Git Open Source Hodler
 
-(Yes, it's [Hodler](https://en.wiktionary.org/wiki/hodl)).
+(Yes, it's [Hodler](https://en.wiktionary.org/wiki/hodl){:target="_blank"}).
 <!-- 
 **GOSH** is a blockchain built around securing the software supply chain and capturing the immense value in open source projects. This is achieved through record-setting blockchain tech, distributed programming, and a decentralized architecture - integrated into the same familiar git, meaning there is no change to the workflow. -->
 
@@ -12,7 +12,7 @@ Any open source tool can be plugged into **GOSH** to manage projects in a decent
 
 ## Motivation
 
-The Software Supply Chain is a high-impact area. Yet there exists a distinctive lack of secure, trustless, verifiable, and transparent delivery of source code/binaries to developers and users in all software fields. Storing your code on a git means it has an owner, a single point of control, which leads to security vulnerabilities. Currently there is no industrial solution available that is not centralized and thus not dependent on the decisions of a few actors. The main way in which GOSH solves this issue is through allowing developers to build consensus around their code, so the more code is written, the more secure it becomes.
+The Software Supply Chain is a high-impact area. Yet there exists a distinctive lack of secure, trustless, verifiable, and transparent delivery of source code/binaries to developers and users in all software fields. Storing your code on a git means it has an owner, a single point of control, which leads to security vulnerabilities. Currently, there is no industrial solution available that is not centralized and thus not dependent on the decisions of a few actors. The main way GOSH solves this issue is by allowing developers to build consensus around their code, so the more code is written, the more secure it becomes.
 
 ## Objective
 
@@ -33,7 +33,8 @@ To create a truly decentralized development environment so that open source repo
 
 A variety of utility tools to assist with all the aspects of the solution are under active development. Explore the tools available now to get started with GOSH:
 
-* create and manage your on-chain repositories through [GOSH Web](working-with-gosh/gosh-web.md) or directly in the [Docker Extension](working-with-gosh/docker-extension.md)
+* create and manage your on-chain repositories using [GOSH Web](https://app.gosh.sh){:target="_blank"} or directly in the [Docker Extension](https://hub.docker.com/extensions/teamgosh/docker-extension){:target="_blank"}
 * work with on-chain repository as if you use a regular git repository with [Git Remote Helper](working-with-gosh/git-remote-helper.md)
+* To ensure the security of your software supply chain, you can use [AnyTree](working-with-gosh/anytree.md). This is a software deployment system that is secured by the blockchain.
 <!-- * [build and sign](working-with-gosh/build-and-sign-images.md) images straight from GOSH -->
 <!-- * [verify images](working-with-gosh/verify-images-in-docker-extension.md) -->

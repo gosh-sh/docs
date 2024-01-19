@@ -1,5 +1,5 @@
 
-### __Proposals and voting in SMV (Soft Majority Vote)__
+## __Proposals and voting in SMV (Soft Majority Vote)__
 
 The main mechanism of interaction in the DAO is voting. Any action in a DAO requires a vote and is created through Proposals, and a [**soft-majority vote (SMV)**](../../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting) of all other DAO members may be required to approve it. 
 
@@ -10,17 +10,17 @@ The main mechanism of interaction in the DAO is voting. Any action in a DAO requ
 !!! warning
     To create an proposal, you must have at least 20 tokens on your wallet balance.
 
-### __Types of Proposals:__
+## __Types of Proposals:__
 
-* [**Create a pull request**](../gosh-web.md#create-pull-request)
+* [**Create a pull request**](../gosh-web/repository.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
-* [**Add DAO member**](../gosh-web.md#add-members-to-dao)
-* [**Remove DAO member**](../gosh-web.md#delete-members-from-the-dao)
-* [**Upgrade DAO**](../gosh-web.md#upgrade)
-* [**Delete task**](../gosh-web.md#deleting-task)
-* [**Create task**](../gosh-web.md#create-task)
-* [**Create repository**](../gosh-web.md#create-repository)
+* [**Add DAO member**](../gosh-web/members.md#adding-members-to-dao)
+* [**Remove DAO member**](../gosh-web/members.md#delete-members-from-the-dao)
+* [**Upgrade DAO**](../gosh-web/dao-set-up.md#upgrade)
+* [**Create task**](../gosh-web/task.md#create-task)
+* [**Delete task**](../gosh-web/task.md#deletе-task)
+* [**Create repository**](../gosh-web/repository.md#create-repository)
 * **Add voting tokens**
 * **Add regular tokens**
 * **Mint DAO tokens**
@@ -37,7 +37,7 @@ The main mechanism of interaction in the DAO is voting. Any action in a DAO requ
 
 * **Multi proposal** - includes several offers at once. 
 
-    For example: [adding members to the DAO by another DAO member](../gosh-web.md#add-members-to-dao)
+    For example: [providing the membership to the DAO by the member of the DAO](../gosh-web/members.md#adding-members-to-dao)
 
 
 <!-- * **Add repository tag**
@@ -46,7 +46,7 @@ The main mechanism of interaction in the DAO is voting. Any action in a DAO requ
 * **Allow event discussions**
 * **Show event progress**
 <!-- * **Upgrade repository tags** -->
-* [**Ask DAO membership allowance**](../gosh-web.md#request-dao-membership)
+* [**Ask DAO membership allowance**](../gosh-web/members.md#request-dao-membership)
 
 <!-- 
 
@@ -87,12 +87,13 @@ kinds of proposals:
 27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
 -->
 
+## __Voting procedure__
 To vote for the proposal, some of your tokens must be be allocated to SMV (once the proposal is completed), you can get them back.
 
 !!! info
     You can vote for a proposal only once.
 
-For example, to merge into main, [create a pull request](../gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **DAO** tab.
+For example, to merge into main, [create a pull request](../gosh-web/repository.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **DAO** tab.
 
 <!-- TODO 
 change images -->

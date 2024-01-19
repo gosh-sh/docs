@@ -48,7 +48,7 @@ Then add a comment on changing the settings for other members of the DAO and cli
 ![](../../images/gosh_web_Create_ORG_05_DAO_settings_05_save_changes.jpg)
 
 !!! info
-    __All settings and actions in the DAO will be performed the [voting](../gosh-web.md#voting-in-smv-soft-majority-vote) procedure.__
+    __All settings and actions in the DAO will be performed the [voting procedure](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure).__
 
 
 ### __Karma tags__
@@ -65,7 +65,7 @@ Then add a comment on changing the settings for other members of the DAO and cli
 #### __Basic information__
 When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
 
-The upgrade is initiated by the [proposal](../gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
+The upgrade is initiated by the [proposal](../gosh-web/proposals-and-voting-in-smv.md).
 
 !!! warning
     Make sure that the proposal for such an update has not yet been created.
@@ -338,13 +338,13 @@ check mark on the permission for additional token issuance - individual proposal
 
 !!! info "**Release notes for 6.2.0**"  
 
-    * [**Expert Tags**](../gosh-web.md#expert-tags) have been introduced
+    * [**Expert Tags**](../gosh-web/working-with-tokens-and-karma.md#expert-tags) have been introduced
 
     The list of decisions supported in this version includes:
 
     * [**Voting on Hackathon Results**](../../hacks-and-grants/user-guide.md#expert-tags)
 
-    * [**Creating a Repository with Expert Tags**](../gosh-web.md#create-repository-with-expert-tags)
+    * [**Creating a Repository with Expert Tags**](../gosh-web/repository.md#create-repository-with-expert-tags)
 
     * **The Upgrade System** has been improved
 

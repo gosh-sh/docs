@@ -26,14 +26,14 @@ There are two types of wallets GOSH users can deploy:
 
     A user with a Limited Wallet in the DAO can:
 
-    - [create a proposal to add yourself to the DAO](../working-with-gosh/gosh-web.md#request-dao-membership) (if it [is allowed in the dao](../working-with-gosh/gosh-web.md#dao-set-up));
+    - [create a proposal to add yourself to the DAO](../working-with-gosh/gosh-web/members.md#request-dao-membership) (if it [is allowed in the dao](../working-with-gosh/gosh-web/dao-set-up.md#dao-set-up));
 
-    - can be assigned as a reviewer to the [Task](../working-with-gosh/gosh-web.md#working-with-task);
+    - can be assigned as a reviewer to the [Task](../working-with-gosh/gosh-web/task.md#create-task);
 
     - can create a proposal on PR (coming soon).
 
 !!! info
     For a DAO member, not one wallet is deployed, but a whole system of 64 wallet contracts. This allows for parallelization when sending external messages.
 
-Refer to [GOSH Web](../working-with-gosh/gosh-web.md) or [Docker Extension](../working-with-gosh/docker-extension.md) sections to find out how to create your account and get started with GOSH.
+Refer to [GOSH Web](../working-with-gosh/gosh-web/) or [Docker Extension](../working-with-gosh/docker-extension.md) sections to find out how to create your account and get started with GOSH.
 

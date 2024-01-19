@@ -177,10 +177,10 @@ At the end of the **`Voting`** stage, the summing up will start, and the Hackath
 On the Hackathon page you will find all the necessary information, including a detailed description of the Hackathon, its rules and prizes that can be obtained.
 
 
-**If you're not a GOSH user** but want to participate in the Hackathon, you'll need to [**create an GOSH account**](../working-with-gosh/gosh-web.md#create-account) first.  
+**If you're not a GOSH user** but want to participate in the Hackathon, you'll need to [**create an GOSH account**](../working-with-gosh/gosh-web/account.md) first.  
 Then you can visit the Hackathon page to get started.
 
-During the Hackathon, all participants must complete certain tasks and then upload them to their [repositories](../working-with-gosh/gosh-web.md#working-with-repository) into their [DAO](../working-with-gosh/gosh-web.md#create-organization-dao).
+During the Hackathon, all participants must complete certain tasks and then upload them to their [repositories](../working-with-gosh/gosh-web/repository.md) into their [DAO](../working-with-gosh/gosh-web/create-dao.md).
 
 To participate in the Нackathon, you'll need to click on the **Add application** button.
 

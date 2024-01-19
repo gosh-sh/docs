@@ -5,7 +5,7 @@ change -->
 
 Set up [**Git Remote Helper**](../git-remote-helper.md) and continue working with your repository.
 
-You'll need your wallet credentials. Go to the main page of your account and click [**User Settings**](https://app.gosh.sh/a/settings).
+You'll need your wallet credentials. Go to the main page of your account and click [**User Settings**](https://app.gosh.sh/a/settings){:target="_blank"}.
 
 Scroll down to the **Git remote config** section, click **Show** and unlock with PIN code
 

@@ -42,7 +42,7 @@ If you have Windows, you can use the installation methods below.
 ### __Install helper from binary releases__
 
 
-1. Follow the [`link`](https://github.com/gosh-sh/gosh/releases)
+1. Follow the [`link`](https://github.com/gosh-sh/gosh/releases){:target="_blank"}
 and download the version of the Git Remote Helper for the required operating system (macOS, Linux, Windows).
 
 2. Extract files from tar-file
@@ -96,9 +96,9 @@ and download the version of the Git Remote Helper for the required operating sys
         !!! note
             For Windows users:
             
-            make sure that the appropriate [Perl version](https://github.com/openssl/openssl/blob/master/NOTES-PERL.md#perl-on-windows) is installed for your build environment.
+            make sure that the appropriate [Perl version](https://github.com/openssl/openssl/blob/master/NOTES-PERL.md#perl-on-windows){:target="_blank"} is installed for your build environment.
 
-2. Clone [`gosh`](https://github.com/gosh-sh/gosh) repository.
+2. Clone [`gosh`](https://github.com/gosh-sh/gosh){:target="_blank"} repository.
 
 3. Go to the `gosh` directory
 
@@ -185,9 +185,9 @@ export PATH=~/.gosh:$PATH
 ## __Setup user account__
 
 
-When creating your account in [GOSH Web](gosh-web.md) or [Docker extension](docker-extension.md) you received a GOSH wallet address and keys.
+When creating your account in [GOSH Web](gosh-web/account.md#create-account) or [Docker extension](docker-extension.md) you received a GOSH wallet address and keys.
 
-To be able to push to Gosh repositories, you need to set up these credentials for Git Remote Helper.
+To be able to push to GOSH repositories, you need to set up these credentials for Git Remote Helper.
 
 The Git Remote Helper expects that the wallet credentials are in the file `~/.gosh/config.json` or in the file specified in the environment variable `GOSH_CONFIG_PATH`,
 
@@ -224,7 +224,7 @@ gosh://SYSTEM_CONTRACT_ADDRESS/DAO_NAME/REPO_NAME
 ```
 ### __Set remote for existing local repository__
 
-Сopy the URL to configure the remote from the [web interface](https://app.gosh.sh/), after [creating a repository](gosh-web.md#create-repository) on GOSH.
+Сopy the URL to configure the remote from the [web interface](https://app.gosh.sh/){:target="_blank"}, after [creating a repository](gosh-web/repository.md#create-repository) on GOSH.
 
 ![](../images/git_remote_helper_url_set_R_for_existing_local_repository.jpg)
 

@@ -58,7 +58,7 @@ insert a image before going to the events section -->
 You can invite a user to the DAO by generating an invitation link for them.
 
 !!! warning
-    Enable "Allow external users to request DAO membership" option in [DAO settings](../gosh-web.md#dao-set-up) to enable invites by email/link.
+    Enable "Allow external users to request DAO membership" option in [DAO settings](../gosh-web/dao-set-up.md) to enable invites by email/link.
 
 To do this, on the tab **Members** in the section **Invite user to DAO** click on **Get one-time invitation link**.
 
