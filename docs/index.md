@@ -1,22 +1,10 @@
 # Git Open Source Hodler
 
 (Yes, it's [Hodler](https://en.wiktionary.org/wiki/hodl){:target="_blank"}).
-<!-- 
-**GOSH** is a blockchain built around securing the software supply chain and capturing the immense value in open source projects. This is achieved through record-setting blockchain tech, distributed programming, and a decentralized architecture - integrated into the same familiar git, meaning there is no change to the workflow. -->
 
-**GOSH** is a Layer 2 for any blockchain and a Decentralized Operating System where you build consensus around your idea. 
+**GOSH** — a Decentralized Cloud to build consensus around your documents.
 
-Any open source tool can be plugged into **GOSH** to manage projects in a decentralized way using [**DAOs**](on-chain-architecture/organizations-gosh-dao-and-smv.md) and build an active community around your work, whether it’s code, music, documents, or videos; scientific research or democratic activism; revolution, evolution, progress, or history.
-
-**GOSH** is an advanced scalable multi-threaded blockchain, and the first with a Freemium business model, offering powerful tools for everything from scientific research to finance and software security.
-
-## Motivation
-
-The Software Supply Chain is a high-impact area. Yet there exists a distinctive lack of secure, trustless, verifiable, and transparent delivery of source code/binaries to developers and users in all software fields. Storing your code on a git means it has an owner, a single point of control, which leads to security vulnerabilities. Currently, there is no industrial solution available that is not centralized and thus not dependent on the decisions of a few actors. The main way GOSH solves this issue is by allowing developers to build consensus around their code, so the more code is written, the more secure it becomes.
-
-## Objective
-
-To create a truly decentralized development environment so that open source repositories can be run, governed, and monetized collectively. All the while, mitigating security and transparency issues arising from a conventional software supply chain.
+A Git on-chain and DAO platform, GOSH offers a suite of ready-to-use embedded applications to write and deploy code, conduct peer reviews, run decentralized [Hackathons and Grant Programs](hacks-and-grants/overview.md), and much more. GOSH is a Public Chain with [Ethereum L2](ethereum-L2/overview.md) cross-chain functionality, built on the groundbreaking [Acki Nacki](https://www.ackinacki.com/){:target="_blank"} consensus protocol, which supports a Freemium business model (gas-free transactions).
 
 ## Architecture
 

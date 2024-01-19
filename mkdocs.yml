@@ -1,32 +1,32 @@
 site_name: GOSH
 nav:
-  - User Guide: 
+  - GOSH: 
     - Overview: index.md
       #- Git Open Source Hodler: user-guide/git-open-source-hodler.md
       #- Motivation: user-guide/motivation.md
       #- Objective: user-guide/objective.md
       #- Architecture: user-guide/architecture.md
       #- Instruments and utilities: user-guide/instruments-and-utilities.md
-    - Working with GOSH:
-      - GOSH Web:
-        - Account: working-with-gosh/gosh-web/account.md
-        - DAO: 
-          - Create DAO: working-with-gosh/gosh-web/create-dao.md
-          - DAO Overview: working-with-gosh/gosh-web/dao-overview.md
-          # - DAO Set up and upgrade: working-with-gosh/gosh-web/dao-set-up.md
-          - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
-          - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
-        - Repository: working-with-gosh/gosh-web/repository.md
-        - Members: working-with-gosh/gosh-web/members.md
-        - Tasks: working-with-gosh/gosh-web/task.md
-        - Settings: working-with-gosh/gosh-web/dao-set-up.md
-      - GOSH Ethereum L2: 
-        - Overview: ethereum-L2/overview.md
-        - User Guide: ethereum-L2/user-guide.md
-      - Hacks & Grants:
-        - Overview: hacks-and-grants/overview.md
-        - User Guide: hacks-and-grants/user-guide.md
-  - Git Remote Helper: working-with-gosh/git-remote-helper.md
+    #- Working with GOSH:
+    - GOSH Web:
+      - Account: working-with-gosh/gosh-web/account.md
+      - DAO: 
+        - Create DAO: working-with-gosh/gosh-web/create-dao.md
+        - DAO Overview: working-with-gosh/gosh-web/dao-overview.md
+        # - DAO Set up and upgrade: working-with-gosh/gosh-web/dao-set-up.md
+        - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
+        - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
+      - Repository: working-with-gosh/gosh-web/repository.md
+      - Members: working-with-gosh/gosh-web/members.md
+      - Tasks: working-with-gosh/gosh-web/task.md
+      - Settings: working-with-gosh/gosh-web/dao-set-up.md
+    - Git Remote Helper: working-with-gosh/git-remote-helper.md
+    - GOSH Ethereum L2: 
+      - Overview: ethereum-L2/overview.md
+      - User Guide: ethereum-L2/user-guide.md
+    - Hacks & Grants:
+      - Overview: hacks-and-grants/overview.md
+      - User Guide: hacks-and-grants/user-guide.md
   - AnyTree: 
     #- AnyTreeAll: anytree-all.md
     #- Working with AnyTree: working-with-gosh/anytree.md
