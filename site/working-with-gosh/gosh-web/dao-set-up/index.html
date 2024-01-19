@@ -1,0 +1,1832 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../task/">
+      
+      
+        <link rel="next" href="../../git-remote-helper/">
+      
+      
+      <link rel="icon" href="../../../images/gosh2.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
+    
+    
+      
+        <title>Settings - GOSH</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.35e1ed30.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M6 13h8l-3.5 3.5 1.42 1.42L17.84 12l-5.92-5.92L10.5 7.5 14 11H6v2Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dao-set-up" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="GOSH" class="md-header__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../../images/gosh2.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GOSH
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Settings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  GOSH
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../anytree/" class="md-tabs__link">
+          
+  
+  AnyTree
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../docker-extension/" class="md-tabs__link">
+        
+  
+    
+  
+  Docker Extension
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../on-chain-architecture/gosh-wallet/" class="md-tabs__link">
+          
+  
+  For developers
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../links/" class="md-tabs__link">
+        
+  
+    
+  
+  Links
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="GOSH" class="md-nav__button md-logo" aria-label="GOSH" data-md-component="logo">
+      
+  <img src="../../../images/gosh2.svg" alt="logo">
+
+    </a>
+    GOSH
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    GOSH
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2_2" id="__nav_1_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DAO
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            DAO
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../create-dao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create DAO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dao-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DAO Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposals-and-voting-in-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proposals and voting in SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../working-with-tokens-and-karma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Working with tokens and Karma
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../repository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repository
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../members/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Members
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../task/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Settings
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dao-set-up" class="md-nav__link">
+    DAO Set up
+  </a>
+  
+    <nav class="md-nav" aria-label="DAO Set up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-setup" class="md-nav__link">
+    Token Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-setup" class="md-nav__link">
+    Event setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#members-setup" class="md-nav__link">
+    Members setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karma-tags" class="md-nav__link">
+    Karma tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    Upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-information" class="md-nav__link">
+    Basic information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-1-to-v-2" class="md-nav__link">
+    from v. 1 to v. 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-2-to-v-3" class="md-nav__link">
+    from v. 2 to v. 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-3-to-v-456061" class="md-nav__link">
+    From v. 3 to v. 4/5/6.0/6.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-version-61-to-62" class="md-nav__link">
+    From version 6.1 to 6.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git-remote-helper/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Remote Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            GOSH Ethereum L2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ethereum-L2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ethereum-L2/user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Hacks & Grants
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Hacks & Grants
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacks-and-grants/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hacks-and-grants/user-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    AnyTree
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            AnyTree
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anytree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anytree-firewall-for-telepresence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AnyTree Firewall for Telepresence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker-extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Extension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    For developers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            For developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    On-chain Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            On-chain Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../on-chain-architecture/gosh-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../on-chain-architecture/organizations-gosh-dao-and-smv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organizations - GOSH DAO and SMV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../on-chain-architecture/gosh-smart-contracts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH smart contracts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grh-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Set up Git Remote Helper
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Acki Nacki Protocol
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Acki Nacki Protocol
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../acki-nacki/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH GitHub Sync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../integrations/l2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dao-set-up" class="md-nav__link">
+    DAO Set up
+  </a>
+  
+    <nav class="md-nav" aria-label="DAO Set up">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-setup" class="md-nav__link">
+    Token Setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-setup" class="md-nav__link">
+    Event setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#members-setup" class="md-nav__link">
+    Members setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karma-tags" class="md-nav__link">
+    Karma tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade" class="md-nav__link">
+    Upgrade
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-information" class="md-nav__link">
+    Basic information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-1-to-v-2" class="md-nav__link">
+    from v. 1 to v. 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-2-to-v-3" class="md-nav__link">
+    from v. 2 to v. 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-v-3-to-v-456061" class="md-nav__link">
+    From v. 3 to v. 4/5/6.0/6.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-version-61-to-62" class="md-nav__link">
+    From version 6.1 to 6.2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Settings</h1>
+
+<h3 id="dao-set-up"><strong>DAO Set up</strong></h3>
+<p>You can continue with the initial setup the DAO in the <strong>Settings</strong> tab.</p>
+<!-- TODO it might be worth removing this screen -->
+<p><img alt="" src="../../../images/gosh_web_Create_ORG_05_DAO_settings_01_all.jpg" /></p>
+<h4 id="tags"><strong>Tags</strong></h4>
+<!-- TODO -->
+
+<h4 id="token-setup"><strong>Token Setup</strong></h4>
+<p>In the <strong>Token Setup</strong> section, you can create a proposal to ban the issue of tokens from this DAO by unchecking the box.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After the ban on the issue of DAO tokens, it will be impossible to allow the issue.</p>
+</div>
+<p><img alt="" src="../../../images/gosh_web_Create_ORG_05_DAO_settings_02_token_setup.jpg" /></p>
+<h4 id="event-setup"><strong>Event setup</strong></h4>
+<p>In the <strong>Event setup</strong> section you can enable/disable the option to view the voting results before it ends.</p>
+<p>And also allow or prohibit discussion when working with proposals.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_ORG_05_DAO_settings_03_proposal_setup.jpg" /></p>
+<h4 id="members-setup"><strong>Members setup</strong></h4>
+<p>In the <strong>Members setup</strong> section you can grant or deny external users the ability to request membership in this DAO.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_ORG_05_DAO_settings_04_member_setup.jpg" /></p>
+<p>Then add a comment on changing the settings for other members of the DAO and click <strong>Save changes and start proposal</strong>.</p>
+<p><img alt="" src="../../../images/gosh_web_Create_ORG_05_DAO_settings_05_save_changes.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>All settings and actions in the DAO will be performed the <a href="../proposals-and-voting-in-smv/#voting-procedure">voting procedure</a>.</strong></p>
+</div>
+<h3 id="karma-tags"><strong>Karma tags</strong></h3>
+<!-- TODO -->
+
+<h3 id="notifications"><strong>notifications</strong></h3>
+<!-- TODO -->
+
+<h3 id="upgrade"><strong>Upgrade</strong></h3>
+<h4 id="basic-information"><strong>Basic information</strong></h4>
+<p>When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.</p>
+<p>The upgrade is initiated by the <a href="../proposals-and-voting-in-smv/">proposal</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure that the proposal for such an update has not yet been created.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Complete all proposal before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.</p>
+</div>
+<p>You can see a message about the availability of a new version 
+and an invitation to update in the DAO.</p>
+<p>Depending on which version you currently have, choose the appropriate update method.</p>
+<div class="admonition warning">
+<p>It is recommended to upgrade to the latest version.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All token holders after upgrading the DAO must transfer their tokens from previous versions.</p>
+</div>
+<!-- TODO
+transfer tokens from previous versions to a separate item and make a link -->
+
+<h4 id="from-v-1-to-v-2"><strong>from v. 1 to v. 2</strong></h4>
+<p>You can switch to the <strong>Upgrade</strong> section from the new version message or go to the <strong>Settings</strong> tab.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_01_msg_v1tov2.jpg" /></p>
+<p>Select the version you want to upgrade and click <strong>Create proposal for DAO upgrade</strong>:</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_02_in_settings.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_03_proposal.jpg" /></p>
+<p>After accepting the proposal, the procedure for updating your DAO will begin.</p>
+<p>Then you need to update all the Repositories.</p>
+<p>To do this, go to their tab and click <strong>Get repositories</strong></p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_04_1_get_repo.jpg" /></p>
+<p>and then click <strong>Start repositories upgrade</strong> to create a proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_04_2_upgr_repo.jpg" /></p>
+<p>On the DAO tab, vote for the proposal to create a repository.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg" /></p>
+<p>After the proposal is accepted, the contract version will be upgraded.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_04_4_DAO_v2.jpg" /></p>
+<h4 id="from-v-2-to-v-3"><strong>from v. 2 to v. 3</strong></h4>
+<div class="admonition info">
+<p class="admonition-title"><strong>Release notes</strong></p>
+<p><strong>Contracts</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* Added possibility of a DAO to be a member of another DAO
+
+* Added possibility of DAO to be a Task performer. A DAO itself can now be a signer, reviewer, and manager of a Task in another DAO — Tasks now have the same functionality for DAOs as for individuals
+
+* Improve native token management in contracts. This is mainly bug fixes for the back-end blockchain tokens that guarantee the operations of a smart contract
+
+* Added possibility of task upgrade. Upgrades from Smart Contract version 2.0 to 3.0 required a redeployment of all Tasks. From now on all future upgrades will not affect previously created Tasks
+
+* Task rewards do not increase karma. From now on Tasks will only serve to remunerate contributors with DAO Tokens but without increasing their Voting Karma
+
+* Added a possibility to create index contracts. Version 3.0 now includes indexes that improve the performance of GOSH when used in a web browser
+</code></pre></div>
+<p><strong>Interface</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* DAOs can become members of other DAOs. DAOs have equal interface user flows for this operation
+
+* A DAO can be set as a Task assignee, reviewer, and manager (DAO review, receive task bounty is not implemented yet). Web browsers now also fully support Task functionality
+
+* DAO can create proposals and vote for proposals in parent DAO (not implemented yet)
+
+* ask rewards do not increase karma
+
+* If a DAO owns tokens of another DAOs “DAO supply” block will contain a button with details. The GOSH interface now has a block to allow DAO members to see which tokens the DAO holds
+</code></pre></div>
+<p><strong>Git Remote Helper</strong></p>
+<div class="language-text highlight"><pre><span></span><code>* supports all functionality of Smart Contract Version 3.0
+</code></pre></div>
+</div>
+<p>The Tasks were added in contracts version 2.</p>
+<p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before starting the update make sure that there are commits in the Tasks.</p>
+</div>
+<p>Go to the Settings tab or follow the link in the upgrade message.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_05_msg_v2tov3.jpg" /></p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_06_settings_v2tov3.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_proposal_v2tov3.jpg" /></p>
+<p>Inside the event, you can get acquainted with the details of the proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_2_proposal_details_v2tov3.jpg" /></p>
+<p>After accepting the proposals, the DAO update process will begin.<br />
+Before continuing, you need to transfer your tokens.</p>
+<p>To do this, go to the <strong>Overview</strong> tab in the <strong>Your wallet balance</strong> section and click <strong>Transfer from previous version</strong>.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg" /></p>
+<p>You can also do this on the <strong>Members</strong> tab.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg" /></p>
+<p>Then you need to update the DAO repositories and tags.<br />
+To do this, click <strong>upgrade</strong> in the information message</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_3_DAO_v3_msg_upgr_repo.jpg" /></p>
+<p>and go to the repository uprade page.<br />
+Click <strong>Get repositories</strong>.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg" /></p>
+<p>Then click <strong>Start repositories upgrade</strong> to create a proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg" /></p>
+<p>The process will be displayed below:</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_7_process.jpg" /></p>
+<p>As a result, you will be redirected to the DAO events page.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_8_event.jpg" /></p>
+<p>The details of the Multi proposal can be found at the event.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_8_MP_details.jpg" /></p>
+<p>Then click <strong>tasks upgrade page</strong> in the information message</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg" /></p>
+<p>and click <strong>Start tasks upgrade</strong> on the page that opens.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg" /></p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_11_process.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_12_event.jpg" /></p>
+<p>After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 3 will be completed.</p>
+<!-- !!! info
+    The history of events from the previous version will not be transferred. -->
+
+<h4 id="from-v-3-to-v-456061"><strong>From v. 3 to v. 4/5/6.0/6.1</strong></h4>
+<p>Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before starting the update make sure that there are commits in the Tasks.</p>
+</div>
+<p>Go to the Settings tab or follow the link in the upgrade message.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_08_01_msg_v3tov4.jpg" /></p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_08_02_settings_v3tov4.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_08_03_proposal.jpg" /></p>
+<p>Inside the event, you can get acquainted with the details of the proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_08_04_event_datails.jpg" /></p>
+<p>After accepting the proposals, the DAO update process will begin.<br />
+Before continuing, you need to transfer your tokens.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Starting from the 5th version, tokens are transferred automatically.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If you have tokens that were locked into voting in previous versions of the DAO at the time of the upgrade, please note that these tokens will be transferred only after the expiration of the proposal.</strong>  </p>
+</div>
+<!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
+
+<p>If you have a DAO version lower than the 4th inclusive, then to transfer tokens go to the <strong>Overview</strong> tab in the <strong>Your wallet balance</strong> section and click <strong>Transfer from previous version</strong>.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg" /></p>
+<p>You can also do this on the <strong>Members</strong> tab.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_3_1_1_tokens_no_transf.jpg" /></p>
+<p>Then you need to update the DAO repositories and tags.<br />
+To do this, click <strong>upgrade</strong> in the information message</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_08_05_DAO_v3_msg_upgr_repo.jpg" /></p>
+<p>and go to the repository uprade page.<br />
+Click <strong>Get repositories</strong>.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg" /></p>
+<p>Then click <strong>Start repositories upgrade</strong> to create a proposal.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_6_start_upgr_repo.jpg" /></p>
+<p>The process will be displayed below:</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_7_process.jpg" /></p>
+<p>As a result, you will be redirected to the DAO events page.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_8_event.jpg" /></p>
+<p>The details of the Multi proposal can be found at the event.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_8_MP_details.jpg" /></p>
+<p>Then click <strong>tasks upgrade page</strong> in the information message</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_9_msg_upgr_task.jpg" /></p>
+<p>and click <strong>Start tasks upgrade</strong> on the page that opens.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_10_page_upgr_tasks.jpg" /></p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_11_process.jpg" /></p>
+<p>You will be taken to the DAO tab with events.</p>
+<p><img alt="" src="../../../images/gosh_web_upgrade_07_12_event.jpg" /></p>
+<p>After accepting the proposal, the tasks will be transferred from the previous version and the contract upgrade to version 4 will be completed.</p>
+<!-- #### __From version 1 to version 5 (recommended)__ -->
+
+<!-- short description of DAO located in the _index repository
+
+You can leave a comment on the proposal.
+
+To transfer a brief description of the DAO from the _index repository
+
+and
+
+check mark on the permission for additional token issuance - individual proposal -->
+
+<h4 id="from-version-61-to-62"><strong>From version 6.1 to 6.2</strong></h4>
+<div class="admonition info">
+<p class="admonition-title"><strong>Release notes for 6.2.0</strong></p>
+<ul>
+<li><a href="../working-with-tokens-and-karma/#expert-tags"><strong>Expert Tags</strong></a> have been introduced</li>
+</ul>
+<p>The list of decisions supported in this version includes:</p>
+<ul>
+<li>
+<p><a href="../../../hacks-and-grants/user-guide/#expert-tags"><strong>Voting on Hackathon Results</strong></a></p>
+</li>
+<li>
+<p><a href="../repository/#create-repository-with-expert-tags"><strong>Creating a Repository with Expert Tags</strong></a></p>
+</li>
+<li>
+<p><strong>The Upgrade System</strong> has been improved</p>
+</li>
+<li>
+<p>some bugs have been fixed</p>
+</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It's important to ensure that there are commits in the tasks and all proposals are completed before starting the update.</p>
+</div>
+<p>Go to the Settings tab or follow the link in the upgrade message.</p>
+<p><img alt="" src="../../../images/upgrade_DAO_6_2_0.jpg" /></p>
+<p>Select the version you want to update and click <strong>Create proposal for DAO upgrade</strong></p>
+<p><img alt="" src="../../../images/upgrade_DAO_6_2_0_choice_version.jpg" /></p>
+<p>You will be redirected to the page with the DAO event and will be able to vote for this proposal.</p>
+<p>After accepting the proposals, the DAO update process will begin.</p>
+<p><img alt="" src="../../../images/upgrade_DAO_6_2_0_accepted_proposal_upgrd.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>If you have tokens that were locked into voting in previous versions of the DAO at the time of the upgrade, please note that these tokens will be transferred only after the expiration of the proposal.</strong>  </p>
+</div>
+<!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
+
+<p>You should reload the page to continue updating your DAO.</p>
+<p><img alt="" src="../../../images/upgrade_DAO_6_2_0_reload.jpg" /></p>
+<p>Once you've done that, click on the <strong>Complete upgrade</strong> button in the message that appears</p>
+<p><img alt="" src="../../../images/upgrade_DAO_6_2_0_complete_upgrade.jpg" /></p>
+<p>Then, a new window will open up and you'll need to click on "Start upgrade complete process" to begin the data migration process between versions of DAOs. </p>
+<p><img alt="" src="../../../images/upgrade_DAO_6_2_0_complete_upgrade_start.jpg" /></p>
+<p>As a result, multiple proposals will be created to transfer all data from your DAO to the new version<br />
+(<em>migrating the Index repository and all Hackathons, upgrading the DAO repositories</em>)</p>
+<p>After all proposals are accepted, the DAO update process can be considered complete.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

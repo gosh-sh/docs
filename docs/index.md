@@ -1,18 +1,12 @@
 # Git Open Source Hodler
 
-(Yes, it's [Hodler](https://en.wiktionary.org/wiki/hodl)).
+(Yes, it's [Hodler](https://en.wiktionary.org/wiki/hodl){:target="_blank"}).
 
-**GOSH** is a blockchain built around securing the software supply chain and capturing the immense value in open source projects. This is achieved through record-setting blockchain tech, distributed programming, and a decentralized architecture - integrated into the same familiar git, meaning there is no change to the workflow.
+**GOSH** — a Decentralized Cloud to build consensus around your documents.
 
-### Motivation
+A Git on-chain and DAO platform, GOSH offers a suite of ready-to-use embedded applications to write and deploy code, conduct peer reviews, run decentralized [Hackathons and Grant Programs](hacks-and-grants/overview.md), and much more. GOSH is a Public Chain with [Ethereum L2](ethereum-L2/overview.md) cross-chain functionality, built on the groundbreaking [Acki Nacki](https://www.ackinacki.com/){:target="_blank"} consensus protocol, which supports a Freemium business model (gas-free transactions).
 
-The Software Supply Chain is a high-impact area. Yet there exists a distinctive lack of secure, trustless, verifiable, and transparent delivery of source code/binaries to developers and users in all software fields. Storing your code on a git means it has an owner, a single point of control, which leads to security vulnerabilities. Currently there is no industrial solution available that is not centralized and thus not dependent on the decisions of a few actors. The main way in which GOSH solves this issue is through allowing developers to build consensus around their code, so the more code is written, the more secure it becomes.
-
-### Objective
-
-To create a truly decentralized development environment so that open source repositories can be run, governed, and monetized collectively. All the while, mitigating security and transparency issues arising from a conventional software supply chain.
-
-### Architecture
+## Architecture
 
 1. Build a scalable multithreaded, multisharded content addressable blockchain
 2. Implement Git using [smart contracts](on-chain-architecture/gosh-smart-contracts.md)
@@ -23,11 +17,12 @@ To create a truly decentralized development environment so that open source repo
 7. Allow anyone to decide whose metadata to trust;
 8. Build chain/tree of trust: dependencies can be organized using the same architecture, and containers built
 
-### Instruments and utilities
+## Instruments and utilities
 
 A variety of utility tools to assist with all the aspects of the solution are under active development. Explore the tools available now to get started with GOSH:
 
-* create and manage your on-chain repositories through [GOSH Web](working-with-gosh/gosh-web.md) or directly in the [Docker Extension](working-with-gosh/docker-extension.md)
+* create and manage your on-chain repositories using [GOSH Web](https://app.gosh.sh){:target="_blank"} or directly in the [Docker Extension](https://hub.docker.com/extensions/teamgosh/docker-extension){:target="_blank"}
 * work with on-chain repository as if you use a regular git repository with [Git Remote Helper](working-with-gosh/git-remote-helper.md)
+* To ensure the security of your software supply chain, you can use [AnyTree](working-with-gosh/anytree.md). This is a software deployment system that is secured by the blockchain.
 <!-- * [build and sign](working-with-gosh/build-and-sign-images.md) images straight from GOSH -->
 <!-- * [verify images](working-with-gosh/verify-images-in-docker-extension.md) -->
