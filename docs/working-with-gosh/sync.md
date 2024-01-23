@@ -8,7 +8,7 @@ You can build Consensus around your code and organization through DAOs on GOSH w
 ## **Introduction**
 
 
-A year ago we introduced the Login with GitHub option to easily migrate your repositories to GOSH when you sign up. Now we are enhancing this capability enabling continuous synchronization of your GitHub and GOSH repositories.
+A year ago we introduced the [Login with GitHub](./gosh-web/account.md#with-github) option to easily migrate your repositories to GOSH when you sign up. Now we are enhancing this capability enabling continuous synchronization of your GitHub and GOSH repositories.
 
 Synchronize your GitHub repositories with GOSH, and work with both platforms side by side. Changes in a GitHub repository appear in GOSH, offering both the benefits from GitHub features, convenience, and efficiency; while not compromising the decentralization of code and governance, as assured by GOSH.
 

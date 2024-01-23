@@ -128,6 +128,8 @@ Enter the saved seed phrase and click **Sign in**.
 
 Also set up a PIN code and unlock with PIN code.
 
+You can also ensure continuous **synchronization of your GitHub and GOSH repositories.**  
+This is described in more detail [here](../sync.md).
 
 ### __with Google__
 
@@ -141,7 +143,9 @@ Confirm the selection with a password and proceed to the next step by clicking *
 
 ![](../../images/n_gosh_web_account_3_2_2_google_password.jpg) -->
 
+<!-- You can synchronize your GitHub repositories with GOSH, which allows you to work with both platforms side by side.
 
+Keeping both platforms in sync is also important, and you can ensure continuous synchronization of your GitHub and GOSH repositories using [GOSH GitHub Sync](../sync.md). -->
 
 ### __with Linkedln__
 
@@ -216,6 +220,9 @@ It remains to create a DAO. To do this, click on **Create DAO and complete**
 ![](../../images/n_gosh_web_account_3_3_8_linkedin_done.jpg)
 
 Enter the DAO by clicking on it. A description of further work with TAO can be seen [here](./dao-overview.md)
+
+You can synchronize your GitHub repositories with GOSH, which allows you to work with both platforms side by side.
+Keeping both platforms in sync is also important, and you can ensure continuous synchronization of your GitHub and GOSH repositories using [GOSH GitHub Sync](../sync.md).
 
 
 ## __View Public Key__
