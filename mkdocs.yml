@@ -20,6 +20,7 @@ nav:
       - Members: working-with-gosh/gosh-web/members.md
       - Tasks: working-with-gosh/gosh-web/task.md
       - Settings: working-with-gosh/gosh-web/dao-set-up.md
+    - GOSH GitHub Sync: working-with-gosh/sync.md
     - Git Remote Helper: working-with-gosh/git-remote-helper.md
     - GOSH Ethereum L2: 
       - Overview: ethereum-L2/overview.md
@@ -44,7 +45,6 @@ nav:
     - Acki Nacki Protocol:
       - Overview: acki-nacki/overview.md
       #- Test network: acki-nacki/test_network.md
-    - GOSH GitHub Sync: integrations/sync.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md
   - Links: links.md
