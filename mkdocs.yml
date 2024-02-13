@@ -44,7 +44,8 @@ nav:
       - Set up Git Remote Helper: working-with-gosh/gosh-web/grh-config.md
     - Acki Nacki Protocol:
       - Overview: acki-nacki/overview.md
-      #- Test network: acki-nacki/test_network.md
+      - Connection to network: acki-nacki/сonnection_to_network.md
+      - backup: acki-nacki/acki nacki backup.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md
   - Links: links.md
