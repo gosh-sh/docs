@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-task" class="md-skip">
+        <a href="#create-milestone" class="md-skip">
           Skip to content
         </a>
       
@@ -639,15 +639,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-task" class="md-nav__link">
-    Create Task
+  <a href="#create-milestone" class="md-nav__link">
+    Create Milestone
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#delet-task" class="md-nav__link">
-    Deletе Task
+  <a href="#delet-milestone" class="md-nav__link">
+    Deletе Milestone
   </a>
   
 </li>
@@ -1228,6 +1228,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../acki-nacki/%D1%81onnection_to_network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Connection to network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1307,15 +1327,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-task" class="md-nav__link">
-    Create Task
+  <a href="#create-milestone" class="md-nav__link">
+    Create Milestone
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#delet-task" class="md-nav__link">
-    Deletе Task
+  <a href="#delet-milestone" class="md-nav__link">
+    Deletе Milestone
   </a>
   
 </li>
@@ -1340,84 +1360,238 @@
 <!-- 
 ## __Working with Task__ -->
 
-<h3 id="create-task"><strong>Create Task</strong></h3>
-<p>To create a Task, go to the Tasks tab and click <strong>Create Task</strong></p>
-<p><img alt="" src="../../../images/gosh_web_Create_Task_01.jpg" /></p>
-<p>Then you need to fill in the Task conditions.</p>
-<p>The result of the Task should be a pull request to include changes in the repository.</p>
-<p>Select the repository for which the Task is being created.</p>
-<p><img alt="" src="../../../images/gosh_web_Task_02_fill_repo.jpg" /></p>
-<p>Add the Task name.</p>
-<p>You can add 3 tags separated by spaces to quickly find the task.</p>
-<p><img alt="" src="../../../images/gosh_web_Task_03_name_tags.jpg" /></p>
-<p>Then you need to evaluate the Task.</p>
-<p><strong>Task cost</strong> is the number of tokens that will be paid from the DAO reserve for its execution.</p>
+<p><strong>Milestone</strong> is an important tool for project management and achieving set goals. A Milestone is a set of Tasks that must be completed to reach a key stage in the project.</p>
+<p>The participants include:</p>
+<p><strong>Assigners</strong> who are responsible for task completion;
+<strong>Reviewers</strong> who check for accuracy;
+<strong>Managers</strong> who create and manage the Milestone and break it down into Tasks.</p>
+<p>Milestone is used to track progress, identify potential issues, and adjust plans as needed. It also helps maintain team motivation and ensures timely and budgeted project implementation.</p>
+<p>Once all Tasks in the Milestone are completed and Reviewers verify their accuracy, the Milestone will be completed. Each team member who completes Tasks within the Milestone will receive a reward according to predefined distribution rules.</p>
+<h3 id="create-milestone"><strong>Create Milestone</strong></h3>
+<!-- we have not created tasks to replace Project Management tools, but because we want to offer members the ability to have voting power adequately reflecting their contribution to a DAO, be it ‘product people’ who create tasks, developers who write code, and reviewers. -->
+
+<p>To create a Milestone, go to the Tasks tab and click <strong>Create milestone</strong></p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_01_create_milestone.jpg" /></p>
+<p>Then you need to fill in the Milestone conditions:</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions_0.jpg" /></p>
+<ul>
+<li>
+<p>Write the <strong>Milestone name</strong>.</p>
+</li>
+<li>
+<p>Write the username of the <strong>Manager</strong> who will lead the Milestone execution process.</p>
+</li>
+<li>
+<p>And specify the <strong>Manager reward</strong> - the amount of tokens he will receive upon completion of the Milestone.</p>
+</li>
+</ul>
+<!--the part of the Milestone budget that he will receive.   The remaining budget will then be distributed among the performers of the respective tasks. -->
+
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The members of the DAO agree between themselves how to evaluate the Tasks.</p>
+<p>The maximum quantity of tokens from the DAO reserve available for distribution is indicated for reference.</p>
 </div>
-<p>After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions_1.jpg" /></p>
+<ul>
+<li>Select the <strong>Repository</strong> where the pull requests will be created based on the results of work on this Milestone.</li>
+</ul>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions_2.jpg" /></p>
+<!-- Then you need to evaluate the Milеstone.  -->
+<ul>
+<li>Specify <strong>Budget</strong> - the amount of tokens that will be paid from the DAO reserve to its execution Assigners and Reviewers.</li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>The total Milestone budget consists of the <strong>Budget</strong> listed here and the <strong>Manager reward</strong></p>
+</div>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions_3.jpg" /></p>
+<ul>
+<li>Select <strong>Vesting</strong> - rules for governing the transfer of tokens at the disposal of the participants in equal portion.</li>
+</ul>
+<p><strong>Lock period (cliff)</strong> - the period after which the reward payments will begin. 
+The countdown will start after accepting the proposal about completing the Milestone.<br />
+<strong>Vesting period</strong> - the period during which remuneration will be paid to contractors in equal parts.</p>
+<p>For example, lock - 12 months, vesting - 20 months.  </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For the investment scheme to be correct, the Milеstone budget must be a multiple of the number of months of investment.</p>
+</div>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions_4.jpg" /></p>
+<ul>
+<li>By using up to 3 relevant keywords separated by spaces as <strong>tags</strong>, you can easily find and filter specific Milestone later on.</li>
+</ul>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions_5.jpg" /></p>
+<p>After filling in all the conditions, click <strong>Create milestone</strong></p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_02_conditions.jpg" /></p>
+<p>After creating the proposal, you will be redirected to the <strong>DAO</strong> tab on the event page.</p>
+<p>Inside the proposal you will be able to see all the conditions of the Milestone.
+In the table you can see the period since which month and in what parts the payments will be made to Milestone participants.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_03_event.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When creating the Milestone the tokens (Budget) from the DAO-reserve are written off and reserved on the Task-contract.</p>
+</div>
+<p>After accepting the proposal, the Milestone will appear in the list on the <strong>Tasks</strong> tab with the status <em>In progress</em>.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_04_list_tasts.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">Important!</p>
+<p>Each participant of the DAO can create a Milestone, but only the Manager assigned to this milestone can add Tasks to it.</p>
+</div>
+<p>Plan out what tasks your Milestone will consist of. Each task is assigned separately.  </p>
+<p>To add Tasks to the Milestone, open it by clicking on the one you need in the list. Then click the <strong>Add task...</strong></p>
+<p>To add Tasks to your Milestone, simply open the Milestone by clicking on the one you want in the list.<br />
+Then, click the "Add task..." button.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_05_add_tasks.jpg" /></p>
+<p>A window will open up where you can enter the task details. Make sure the name of the Milestone and the Repository where materials for the solution are collected are correct.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_06_task_01_name_repo.jpg" /></p>
+<p>Enter the <strong>Task name</strong>.<br />
+A <strong>Reward</strong> will be given for each Task completed, and <strong>Tags</strong> will be added for quick navigation.</p>
+<p>At the same time, you can decide on the number of tokens that the Task executor (<strong>Commit author</strong> for accepted merge), the <strong>reviewer</strong> and the <strong>manager</strong> will receive if they work on the Task.<br />
+To do this, click on the <strong>Distribution</strong></p>
 <p><strong>Commit author</strong> - the person who executes the Task.<br />
 <strong>Reviewer</strong> - the person who checks the correctness of the Task.<br />
 <strong>Manager</strong> - the person who manages the Task execution process.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_06_task_03_percents.jpg" /></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>The number of authors, areviewers and managers is set at your choice.  </p>
+<p>If the shares are not used, they will be returned to the DAO's reserve.</p>
 </div>
-<p><img alt="" src="../../../images/gosh_web_Task_04_cost_distrb.jpg" /></p>
-<p>Select vesting and lock periods. </p>
-<p><strong>Lock (cliff)</strong> - the period after which the reward payments will begin. 
-The countdown will start after accepting the proposal about completing the Task.<br />
-<strong>Vesting</strong> - rules for transferring the fixed part of the tokens to the disposal of the contractor.</p>
-<p>For example, lock - 12 months, vesting - 2 months.  </p>
+<p>After completing the filling, click <strong>Add task to milestone</strong></p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_06_task_02_distribution.jpg" /></p>
+<p>A Milestone with Tasks will look like this:</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_06_task_02_distribution.jpg" /></p>
+<p>Inside the Task you will be able to see all the conditions.
+In the table you can see the period starting from which month and in which parts the payment will be made to the Task executor.<br />
+Vesting and lock periods as in Milestone.</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_07_01.jpg" /></p>
+<p>Any member of the Dao can complete the Task and receive a reward. To do this, he needs to <a href="../repository/#create-branch">create a Branch</a> in the Repository specified in Milestone, <a href="../repository/#create-file">commit all files</a> with the solution and create and merge <a href="../repository/#create-pull-request">pull request</a></p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_08_01_create_file.jpg" /></p>
+<p>For each file, select the task to which it belongs:</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_08_02_select_task.jpg" /></p>
+<p>And also enter the names of those who worked on this Task</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_08_03_task_participants.jpg" /></p>
+<p>And click <strong>Commit changes</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the members of the task must be a multiple of the number of months of investment.</p>
+<p>If a task has been selected, then a proposal is required.<br />
+Select the appropriate checkbox.</p>
 </div>
-<p><img alt="" src="../../../images/gosh_web_Task_05_lock_vesting.jpg" /></p>
-<p>Add a comment the token distribution rules and click <strong>Create task and start proposal</strong></p>
-<p><img alt="" src="../../../images/gosh_web_Task_06_comment.jpg" /></p>
-<p>After creating the proposal, you will be taken to the <strong>DAO</strong> tab with events.</p>
-<p><img alt="" src="../../../images/gosh_web_Task_07_event.jpg" /></p>
-<p>Inside the proposal you will be able to see all the conditions of the Task.<br />
-In the table you can see the period since which month and in what parts the payments will be made to the members of the Task.</p>
-<!-- ![](../../images/gosh_web_Task_08_proposal.jpg) -->
+<!-- If the reviewer was specified during the commit, the event will wait for verification from them. -->
+<p>After the file has been created, the extraction request will await the reviewer's evaluation and approval of the proposal:</p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_08_04_pr_review%20_required.jpg" /></p>
+<!-- ![](../../images/n_gosh_web_Task_08_04_pr_review%20_required.jpg) -->
 
-<p><img alt="" src="../../../images/gosh_web_Task_09_event_details.jpg" /></p>
-<p>After accepting the proposal, the Task will appear in the list on the <strong>Tasks</strong> tab with the status <em>Awaiting commits</em>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>When creating a Task the tokens (Task cost) from the DAO-reserve are written off and reserved on the Task-contract.</p>
-</div>
-<p><img alt="" src="../../../images/gosh_web_Task_10_list_tasks.jpg" /></p>
-<p>When the Author has completed the Task, he adds it to the commit.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If you need to make several commits to complete a Task,, create a separate branch.  </p>
-</div>
-<p>And do <strong>Select task</strong> when creating the proposal to the pull request.</p>
-<p>Select the Task performed(s), reviewer(s), manager(s) if they worked on the task. The allocated shares of those who were not specified will be returned to the DAO-reserve.</p>
-<p><img alt="" src="../../../images/gosh_web_Readme_md_03_data_commit.jpg" /></p>
-<p>After that a proposal to the pull request will be created.  </p>
-<p><img alt="" src="../../../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg" /></p>
-<p>Detailed information can be viewed by going to it on the DAO tab with events.</p>
-<p><img alt="" src="../../../images/gosh_web_Task_13_detail_proposal.jpg" /></p>
-<p>If the reviewer was specified during the commit, the event will wait for verification from them.</p>
-<p><img alt="" src="../../../images/gosh_web_Task_14_event%20review.jpg" /></p>
+<!-- When the proposal is accepted, the status of the Task in Milestone will change to *Confirmed* -->
 <p>Then, after the reviewer send the solution, it will be possible to vote for the proposal.<br />
 When the pull request is accepted, the Task status will change to <strong>Confirmed</strong>.</p>
-<p><img alt="" src="../../../images/gosh_web_Task_15_task_status_confirmed.jpg" /></p>
-<p>After the lock period ends, the members of the Task can receive a reward.
-To do this, go to the <strong>Tasks</strong> tab in the completed Task and click <strong>Claim reward</strong>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If Lock period (cliff) has been set to zero, then you can click <strong>Claim reward</strong> immediately after accepting the pull request.</p>
-</div>
-<p><img alt="" src="../../../images/gosh_web_Task_16_claim_reward.jpg" /></p>
-<p>Thus the tokens will begin to be transferred to the wallets of the members of the completed Task in accordance with the vesting scheme when the lock period ends.</p>
-<h3 id="delet-task"><strong>Deletе Task</strong></h3>
-<p>To delete a Task, go to it on the <strong>Tasks</strong> tab.
-And click to <strong>Delete task</strong></p>
+<p><img alt="" src="../../../images/n_gosh_web_Task_09_task_confirmed.jpg" /></p>
+<!-- Assigners  Reviewers   Managers    Subtasks -->
+
+<!-- 
+Select the repository for which the Task is being created.
+
+![](../../images/gosh_web_Task_02_fill_repo.jpg)
+
+Add the Task name.
+
+You can add 3 tags separated by spaces to quickly find the task.
+
+![](../../images/gosh_web_Task_03_name_tags.jpg)
+
+Then you need to evaluate the Task.
+
+**Task cost** is the number of tokens that will be paid from the DAO reserve for its execution.
+
+!!! info
+    The members of the DAO agree between themselves how to evaluate the Tasks.
+
+After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
+
+**Commit author** - the person who executes the Task.  
+**Reviewer** - the person who checks the correctness of the Task.  
+**Manager** - the person who manages the Task execution process.
+
+!!! info
+    The number of authors, areviewers and managers is set at your choice.  
+
+![](../../images/gosh_web_Task_04_cost_distrb.jpg)
+
+Select vesting and lock periods. 
+
+**Lock (cliff)** - the period after which the reward payments will begin. 
+The countdown will start after accepting the proposal about completing the Task.  
+**Vesting** - rules for transferring the fixed part of the tokens to the disposal of the contractor.
+
+For example, lock - 12 months, vesting - 2 months.  
+
+!!! warning
+    In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the members of the task must be a multiple of the number of months of investment.
+
+![](../../images/gosh_web_Task_05_lock_vesting.jpg)
+
+Add a comment the token distribution rules and click **Create task and start proposal**
+
+![](../../images/gosh_web_Task_06_comment.jpg)
+
+After creating the proposal, you will be taken to the **DAO** tab with events.
+
+![](../../images/gosh_web_Task_07_event.jpg)
+
+Inside the proposal you will be able to see all the conditions of the Task.  
+In the table you can see the period since which month and in what parts the payments will be made to the members of the Task. -->
+
+<!-- ![](../../images/gosh_web_Task_08_proposal.jpg) -->
+
+<!-- ![](../../images/gosh_web_Task_09_event_details.jpg) -->
+
+<!-- After accepting the proposal, the Task will appear in the list on the **Tasks** tab with the status *Awaiting commits*.
+
+!!! info
+    When creating a Task the tokens (Task cost) from the DAO-reserve are written off and reserved on the Task-contract.
+
+![](../../images/gosh_web_Task_10_list_tasks.jpg) -->
+
+<!-- When the Author has completed the Task, he adds it to the commit.
+
+!!! info
+    If you need to make several commits to complete a Task,, create a separate branch.  
+
+And do **Select task** when creating the proposal to the pull request.
+
+Select the Task performed(s), reviewer(s), manager(s) if they worked on the task. The allocated shares of those who were not specified will be returned to the DAO-reserve.
+
+![](../../images/gosh_web_Readme_md_03_data_commit.jpg)
+
+After that a proposal to the pull request will be created.  
+
+![](../../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg)
+
+Detailed information can be viewed by going to it on the DAO tab with events.
+
+![](../../images/gosh_web_Task_13_detail_proposal.jpg) -->
+
+<!-- If the reviewer was specified during the commit, the event will wait for verification from them.
+
+![](../../images/gosh_web_Task_14_event%20review.jpg)
+
+Then, after the reviewer send the solution, it will be possible to vote for the proposal.  
+When the pull request is accepted, the Task status will change to **Confirmed**.
+
+![](../../images/gosh_web_Task_15_task_status_confirmed.jpg)
+
+After the lock period ends, the members of the Task can receive a reward.
+To do this, go to the **Tasks** tab in the completed Task and click **Claim reward**.
+
+!!! note
+    If Lock period (cliff) has been set to zero, then you can click **Claim reward** immediately after accepting the pull request.
+
+![](../../images/gosh_web_Task_16_claim_reward.jpg)
+
+Thus the tokens will begin to be transferred to the wallets of the members of the completed Task in accordance with the vesting scheme when the lock period ends. -->
+
+<h3 id="delet-milestone"><strong>Deletе Milestone</strong></h3>
+<p>To delete a Milestone, go to it on the <strong>Tasks</strong> tab, open it by clicking on the one you need in the list.
+Then click to <strong>Delete milestone</strong></p>
 <p><img alt="" src="../../../images/gosh_web_Task_delete_01.jpg" /></p>
 <p>After creating a proposal about deleting a Task, you will be redirected to the event tab <strong>Dao</strong>.</p>
 <p><img alt="" src="../../../images/gosh_web_Task_delete_02_event.jpg" /></p>
