@@ -45,7 +45,7 @@ nav:
     - Acki Nacki Protocol:
       - Overview: acki-nacki/overview.md
       - Connection to network: acki-nacki/сonnection_to_network.md
-      - backup: acki-nacki/acki nacki backup.md
+      # - backup: acki-nacki/acki nacki backup.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md
   - Links: links.md
