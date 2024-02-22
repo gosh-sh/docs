@@ -1,6 +1,5 @@
 ## **Quick Start**
 
-
 ### **Guide overview**
 
 This guide will help you get started with such essential Acki Nacki tools as:
