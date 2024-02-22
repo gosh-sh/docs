@@ -26,9 +26,9 @@ You will learn how to:
 Download  and install the TVM-CLI for the platform you need from [here](https://github.com/tvmlabs/tvm-cli/releases/tag/0.38.0)
 
 
-### **Create helloWorld contract**
+### **Create contract**
 
-Create file `helloWorld.sol` with followed content:
+Create file `helloWorld.sol` with following content:
 
 ```solidity
 pragma ton-solidity >= 0.35.0;
@@ -52,10 +52,10 @@ contract helloWorld {
         require(msg.pubkey() == tvm.pubkey(), 102);
         // The current smart contract agrees to buy some gas to finish the
         // current transaction. This actions required to process external
-        // messages, which bring no value (henceno gas) with themselves.
+        // messages, which bring no value (hence no gas) with themselves.
         tvm.accept();
 
-        timestamp = now;
+        timestamp = block.timestamp;
     }
 
     function renderHelloWorld () public pure returns (string) {
@@ -70,7 +70,7 @@ contract helloWorld {
         // Tells to the TVM that we accept this message.
         tvm.accept();
         // Update timestamp
-        timestamp = now;
+        timestamp = block.timestamp;
     }
 
     function sendValue(address dest, uint128 amount, bool bounce) public view {
@@ -84,25 +84,25 @@ contract helloWorld {
 
 ### **Install Solidity compiler**
 
-Download and install the Solidity compiler for required platform from [here](https://github.com/gosh-sh/TON-Solidity-Compiler/releases)
+<!-- TODO change link
+
+Download and install the Solidity compiler for required platform from [here](https://github.com/gosh-sh/TON-Solidity-Compiler/releases)-->
+
+Download and install the Solidity compiler for Linux from [here](https://github.com/gosh-sh/gosh/tree/dev/v6_x/v6.2.0/contracts/compiler)
+
+*(For other platforms is coming soon)*
 
 ### **Compiling**
 
 Compile the contract using Solidity compiler:
 
 ```shell
-solc helloWorld.sol
+sold helloWorld.sol
 ```
 
-The compiler produces `helloWorld.code` and `helloWorld.abi.json` to be used in the following steps.
+The compiler produces `helloWorld.code`, `helloWorld.tvc` and `helloWorld.abi.json` to be used in the following steps.
 
-Assemble and link with a standard library into TVM bytecode:
-
-```shell
-tvm_linker compile helloWorld.code --lib <path-to>/stdlib_sol.tvm
-```
-
-Binary code of your contract is recorded into `<helloWorldAddress>.tvc` file, where `<helloWorldAddress>` is a temporary address of the contract.
+Binary code of your contract is recorded into `helloWorld.tvc` file.
 
 ### **Deploy**
 
@@ -121,10 +121,13 @@ tvm-cli config --url ackinacki-testnet.tvmlabs.dev
 2) Generate address, keys and seed phrase for your contract:
 
 ```shell
-tvm-cli genaddr <helloWorldAddress>.tvc helloWorld.abi.json --genkey helloWorld.keys.json
+tvm-cli genaddr helloWorld.tvc --genkey helloWorld.keys.json
 ```
 
 Address of your contract in the blockchain is located after `Raw address:`
+
+![](../images/n_Acki_Nacki_c_t_n_genn_addr.jpg)
+
 
 !!! Warning "IMPORTANT" 
 
@@ -134,19 +137,18 @@ Address of your contract in the blockchain is located after `Raw address:`
     **Seed phrase** is also printed to stdout.  
     **Key pair** will be generated and saved to the file **`helloWorld.keys.json`**.
 
-!!! note 
-
-    You will need to send some tokens to the address before the actual deployment. Acki Nacki deploy is fee-based, so your new contract will be charged for this.
 
 3) Get some test-tokens to your account.
 
 
-We recommend creating a [Wallet contract](./#creating-your-own-giver) that will serve as your giver
+!!! note 
 
-To replenish it, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0)
+    You will need to send some tokens to the address before the actual deployment. Acki Nacki deploy is fee-based, so your new contract will be charged for this.  
+    ***(You will need about 10 tokens to deploy)***
 
-And transfer 10 tokens from your wallet to address 
+We recommend creating a [Wallet contract](./#creating-your-own-giver) that will serve as your giver.
 
+To replenish it, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
 
 4) Check the state of the pre-deployed contract. It should be `Uninit`:
@@ -155,18 +157,34 @@ And transfer 10 tokens from your wallet to address
 tvm-cli account <YourAddress>
 ```
 
+You will see something similar to the following:
+
+![](../images/n_Acki_Nacki_c_t_n_account_1.jpg)
+
 5) Deploy your contract to the early configured network with the following command:
 
 ```shell
-tvm-cli deploy --abi helloWorld.abi.json --sign helloWorld.keys.json <helloWorldAddress>.tvc {<constructor_arguments>}
+tvm-cli deploy --abi helloWorld.abi.json --sign helloWorld.keys.json helloWorld.tvc {}
 ```
 
+!!! info
+
+    If there are arguments in the contract constructor, then they must be specified in curly brackets  
+    {<constructor_arguments>}
+
+
+![](../images/n_Acki_Nacki_c_t_n_deploy.jpg)
+
 6) Check the contract state again. This time, it is should be `Active`.
+
+![](../images/n_Acki_Nacki_c_t_n_account_2.jpg)
 
 ### **View contract information with Explorer**
 
 Go to [Aсki Naсki explorer](https://ackinacki-testnet.tvmlabs.dev/landing) and search for <YourAddress> in search bar.  
 Open your account page. You will need it later to see its transactions and messages, that we will produce in the next steps.
+
+![](../images/n_Acki_Nacki_c_t_n_explorer.jpg)
 
 ### **Explore contract information with GraphQL**
 
@@ -191,25 +209,14 @@ query {
 }
 ```
 
-You will see:
+You will see something that looks similar following:
 
-```graphql
-{
-  "data": {
-    "accounts": [
-      {
-        "acc_type_name": "Active",
-        "balance": "0x1db0832ba",
-        "code": "te6ccgECEwEAAnkABCj/AIrtUyDjAyDA/+MCIMD+4wLyCxECARICoiHbPNMAAY4SgQIA1xgg+QFY+EIg+GX5EPKo3tM/AY4d+EMhuSCfMCD4I4ED6KiCCBt3QKC53pMg+GPg8jTYMNMfAfgjvPK50x8B2zz4R27yfAUDATQi0NcLA6k4ANwhxwDcIdMfId0B2zz4R27yfAMDQCCCEDtj1H67joDgIIIQaBflNbuOgOAgghBotV8/uuMCCwYEAlgw+EFu4wD4RvJzcfhm0fhC8uBl+EUgbpIwcN74Qrry4Gb4APgj+GrbPH/4ZwUPAHjtRNAg10nCAY4U0//TP9MA1wsf+Gp/+GH4Zvhj+GKOG/QFcPhqcAGAQPQO8r3XC//4YnD4Y3D4Zn/4YeICKCCCEFTWvRi64wIgghBoF+U1uuMCCAcBSts8+EqNBHAAAAAAAAAAAAAAAAA6BflNYMjOIc8LH8lw+wB/+GcQAnIw0ds8IcD/jikj0NMB+kAwMcjPhyDOjQQAAAAAAAAAAAAAAAANTWvRiM8WIc8UyXD7AN4w4wB/+GcJDwECiAoAFGhlbGxvV29ybGQCKCCCEDcxLkW64wIgghA7Y9R+uuMCDgwDSDD4QW7jAPpA1w1/ldTR0NN/39cMAJXU0dDSAN/R2zzjAH/4ZxANDwBU+EUgbpIwcN74Qrry4Gb4AFRxIMjPhYDKAHPPQM4B+gKAa89AyXD7AF8DAkAw+EFu4wDR+EUgbpIwcN74Qrry4Gb4APgj+GrbPH/4ZxAPAC74QsjL//hDzws/+EbPCwD4SgHLH8ntVAAu7UTQ0//TP9MA1wsf+Gp/+GH4Zvhj+GIBCvSkIPShEgAA",
-        "code_hash": "c517820144a4daf5a3414c9233556b2b0ad34cdd228f200ea68a4c0327e0bd29",
-        "data": "te6ccgEBAQEALwAAWTgmICsSnqjAQbjUmmVVEmSPyUN30ZWKek/J9LMFHs97AAABesq/uBawfEB6wA=="
-      }
-    ]
-  }
-}
-```
+![](../images/n_Acki_Nacki_c_t_n_graphql.jpg)
 
-You can specify any other fields in the result section that are available in GraphQL Schema. (Click `Docs` on the right side of your screen to explore it).
+!!! info
+
+    **You can specify any other fields in the result section that are available in GraphQL Schema.**  
+    Click **`Docs`** on the right side of your screen to explore it.
 
 
 ### **Run a getter function**
@@ -218,8 +225,9 @@ You can specify any other fields in the result section that are available in Gra
 tvm-cli run <YourAddress> timestamp {} --abi helloWorld.abi.json
 
 ```
+for example, the `timestamp` method:
 
-<!-- TODO insert a screenshot -->
+![](../images/n_Acki_Nacki_c_t_n_call_getter.jpg)
 
 ### **Call function**
 
@@ -227,6 +235,9 @@ tvm-cli run <YourAddress> timestamp {} --abi helloWorld.abi.json
 tvm-cli call <YourAddress> touch {} --abi helloWorld.abi.json --sign helloWorld.keys.json
 ```
 
+for example, the `touch` method:
+
+![](../images/n_Acki_Nacki_c_t_n_call_func.jpg)
 
 ### **Creating your own giver**
 To create your own giver, deploy (according to the instructions [above](./#create-helloworld-contract)) any contract of wallet,  
@@ -277,7 +288,7 @@ contract Wallet {
 
 Request test tokens [from us](https://t.me/+1tWNH2okaPthMWU0) for this wallet and pay for the deployment of contracts from this wallet in the future
 
-### **Transfering tokens from own giver**
+### **Transfer of tokens from own giver**
 
 ```shell
 tonos-cli call <walletAddress> sendTransaction '{"dest":"DestAddress", "value":10000000000, "bounce":false}' --abi wallet.abi.json --sign wallet.keys.json
