@@ -84,13 +84,9 @@ contract helloWorld {
 
 ### **Install Solidity compiler**
 
-<!-- TODO change link
 
-Download and install the Solidity compiler for required platform from [here](https://github.com/gosh-sh/TON-Solidity-Compiler/releases)-->
+Download and install the Solidity compiler for required platform from [here](https://github.com/gosh-sh/TON-Solidity-Compiler/releases)
 
-Download and install the Solidity compiler for Linux from [here](https://github.com/gosh-sh/gosh/tree/dev/v6_x/v6.2.0/contracts/compiler)
-
-*(For other platforms is coming soon)*
 
 ### **Compiling**
 
@@ -221,21 +217,24 @@ You will see something that looks similar following:
 
 ### **Run a getter function**
 
+for example, the `timestamp` method:
+
 ```shell
 tvm-cli run <YourAddress> timestamp {} --abi helloWorld.abi.json
 
 ```
-for example, the `timestamp` method:
+result:
 
 ![](../images/n_Acki_Nacki_c_t_n_call_getter.jpg)
 
 ### **Call function**
 
+for example, the `touch` method:
+
 ```shell
 tvm-cli call <YourAddress> touch {} --abi helloWorld.abi.json --sign helloWorld.keys.json
 ```
-
-for example, the `touch` method:
+result:
 
 ![](../images/n_Acki_Nacki_c_t_n_call_func.jpg)
 

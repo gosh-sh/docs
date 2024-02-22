@@ -25,9 +25,9 @@ If you have a GOSH account, then enter your own one seed phrase, if not, you can
 
 To get started with GOSH, you need an active Github-account.
 
-Click **Create account with Github.**
+Click **Create account**
 
-![](../images/gosh_web_Authorize_Gosh_01.jpg)
+![](../images/n_gosh_web_account_1_Create_account.jpg)
 
 After click **Authorize gosh-sh**
 

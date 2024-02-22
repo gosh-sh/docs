@@ -23,7 +23,7 @@ As the result of his work will be the creation of a binary file of project. It i
 
 
 
-1. **Install [**Git Remote Helper**](working-with-gosh/git-remote-helper.md#installation) using the installation script**
+1. **Install [**Git Remote Helper**](./git-remote-helper.md#installation) using the installation script**
 
     ``` sh
     wget -O - \
@@ -31,9 +31,9 @@ As the result of his work will be the creation of a binary file of project. It i
       | bash -s
     ```
 
-    [Checking](working-with-gosh/git-remote-helper.md#verifying-the-installation-result) the installation results.
+    [Checking](./git-remote-helper.md#verifying-the-installation-result) the installation results.
 
-2. **Install [**AnyTree**](working-with-gosh/anytree.md#installation-anytree) using the installation script**
+2. **Install [**AnyTree**](./anytree.md#installation-anytree) using the installation script**
 
     ``` sh
     wget -O - \
@@ -60,7 +60,7 @@ As the result of his work will be the creation of a binary file of project. It i
 3. **Setup a GOSH project**
 
     You need a GOSH repository.  
-    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding){:target="_blank"} or create a [GOSH-account](https://app.gosh.sh/){:target="_blank"} and [create a new one](working-with-gosh/gosh-web/repository.md).
+    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding){:target="_blank"} or create a [GOSH-account](https://app.gosh.sh/){:target="_blank"} and [create a new one](./gosh-web/repository.md).
 
     Go to your GOSH-repository
 
@@ -88,7 +88,7 @@ As the result of his work will be the creation of a binary file of project. It i
     !!! Note
         either copy script to your cargo project and run `python3 generate-sbom.py` or check and configure variables in script
 
-        ![](images/anytree_config_script.jpg)
+        ![](../images/anytree_config_script.jpg)
 
 
     !!! info
@@ -136,7 +136,7 @@ As the result of his work will be the creation of a binary file of project. It i
     !!! Warning
         **If the hash that was calculated when creating the SBOM file differs from the hash that AnyTree checks, an error like this will be output:**
 
-    ![](images/anytree_error_wrong_hash.jpg)
+    ![](../images/anytree_error_wrong_hash.jpg)
 
     !!! Tip
         Place the SBOM-file in the same folder where `GOSH.yaml` is located.
@@ -411,7 +411,7 @@ Prerequisites:
     !!! Note
         either copy script to your cargo project and run `python3 generate-sbom.py` or check and configure variables in script
 
-        ![](images/anytree_config_script.jpg)
+        ![](../images/anytree_config_script.jpg)
 
 
     !!! info
@@ -500,7 +500,7 @@ And your artifacts will be accessible in this folder
 !!! Warning
     If the hash that was calculated when creating the SBOM file differs from the hash that AnyTree checks, an error like this will be output:
 
-    ![](images/anytree_error_wrong_hash.jpg)
+    ![](../images/anytree_error_wrong_hash.jpg)
 
 
  
