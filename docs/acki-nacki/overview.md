@@ -116,7 +116,7 @@ The Acki-Nacki selection algorithm in the Acki Nacki blockchain involves calcula
 
 ### **The new block production and broadcast**
 
-In the new block production and broadcast process, a Block Producer (BP) releases a new block every 330 milliseconds by collecting unprocessed messages, executing transactions, and creating a block within certain limits. The BP signs the block with its BLS private key and broadcasts it to all Block Keepers (BKs). Upon receiving the block, a BK checks for a minimum timeout from the previous Attestation, computes an Attestation for the block, and sends it back to the BP. The minimum timeout is crucial to prevent a "too many blocks" safety attack where a malicious BP floods the network with blocks, potentially leading to the acceptance of a block with incorrect transactions.
+In the new block production and broadcast process, a Block Producer (BP) releases a new block every 330 milliseconds by collecting unprocessed messages, executing transactions, and creating a block within certain limits. The BP signs the block with its BLS private key and broadcasts it to all Block Keepers (BKs). Upon receiving the block, a BK  computes an Attestation for the block, and sends it back to the BP.
 
 
 ### **The block verification**
