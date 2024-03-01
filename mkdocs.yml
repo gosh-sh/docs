@@ -2,12 +2,6 @@ site_name: GOSH
 nav:
   - GOSH: 
     - Overview: index.md
-      #- Git Open Source Hodler: user-guide/git-open-source-hodler.md
-      #- Motivation: user-guide/motivation.md
-      #- Objective: user-guide/objective.md
-      #- Architecture: user-guide/architecture.md
-      #- Instruments and utilities: user-guide/instruments-and-utilities.md
-    #- Working with GOSH:
     - GOSH Web:
       - Account: working-with-gosh/gosh-web/account.md
       - DAO: 
@@ -44,7 +38,7 @@ nav:
       - Set up Git Remote Helper: working-with-gosh/gosh-web/grh-config.md
     - Acki Nacki Protocol:
       - Overview: acki-nacki/overview.md
-      - Connection to network: acki-nacki/сonnection_to_network.md
+      - Connection to network: acki-nacki/connection_to_network
       # - backup: acki-nacki/acki nacki backup.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md

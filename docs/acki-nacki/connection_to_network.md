@@ -177,7 +177,7 @@ tvm-cli deploy --abi helloWorld.abi.json --sign helloWorld.keys.json helloWorld.
 
 ### **View contract information with Explorer**
 
-Go to [Aсki Naсki explorer](https://ackinacki-testnet.tvmlabs.dev/landing) and search for <YourAddress> in search bar.  
+Go to [Acki Nacki explorer](https://ackinacki-testnet.tvmlabs.dev/landing) and search for <YourAddress> in search bar.  
 Open your account page. You will need it later to see its transactions and messages, that we will produce in the next steps.
 
 ![](../images/n_Acki_Nacki_c_t_n_explorer.jpg)
