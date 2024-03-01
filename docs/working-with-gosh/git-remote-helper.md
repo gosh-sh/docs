@@ -224,7 +224,7 @@ gosh://SYSTEM_CONTRACT_ADDRESS/DAO_NAME/REPO_NAME
 ```
 ### __Set remote for existing local repository__
 
-Сopy the URL to configure the remote from the [web interface](https://app.gosh.sh/){:target="_blank"}, after [creating a repository](gosh-web/repository.md#create-repository) on GOSH.
+Copy the URL to configure the remote from the [web interface](https://app.gosh.sh/){:target="_blank"}, after [creating a repository](gosh-web/repository.md#create-repository) on GOSH.
 
 ![](../images/git_remote_helper_url_set_R_for_existing_local_repository.jpg)
 

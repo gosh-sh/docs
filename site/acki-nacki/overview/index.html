@@ -12,7 +12,7 @@
         <link rel="prev" href="../../working-with-gosh/gosh-web/grh-config/">
       
       
-        <link rel="next" href="../%D1%81onnection_to_network/">
+        <link rel="next" href="../../integrations/l2/">
       
       
       <link rel="icon" href="../../images/gosh2.svg">
@@ -1462,7 +1462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%D1%81onnection_to_network/" class="md-nav__link">
+      <a href="../connection_to_network" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1847,7 +1847,7 @@ In Acki Nacki, participants can perform three roles: Block Producer, Block Keepe
 <p><strong>Account (contract)</strong> is a record in a distributed database.</p>
 <p><strong>Thread</strong> is a subset of nodes that serves a particular subset of Accounts.</p>
 <p><strong>Block</strong> is an object that contains new transactions which, once finalized, are stored in the blockchain as a permanent and immutable part of this decentralized ledger. Each block includes information such as transaction data, timestamp, common section, and a reference to the previous block, creating a chain of interconnected blocks.</p>
-<p><strong>Сommon section</strong> is the section of the block that contains information that needs to be shared among all network participants. </p>
+<p><strong>Common section</strong> is the section of the block that contains information that needs to be shared among all network participants. </p>
 <p><strong>Block Producer (BP)</strong> is a leader of a particular Thread responsible for block production.</p>
 <p><strong>Block Keeper (BK)</strong> is an entity having two functions: 
 Receives blocks from BP and sends out an Attestation with block hash and other metadata back to BP. BK does not check block transactions validity, it does not try to execute the block, only apply it to its local state with a mark 'Not Final'.
@@ -1872,7 +1872,7 @@ Apart from safety, dissemblance may retain honest nodes to make decisions foreve
 <h3 id="acki-nacki-selection-algorithm"><strong>Acki-Nacki Selection Algorithm</strong></h3>
 <p>The Acki-Nacki selection algorithm in the Acki Nacki blockchain involves calculating a value based on the block and the BP's secret key, then determining if it meets certain criteria to be considered Acki-Nacki. The process ensures randomness in selecting Acki-Nacki BPs, with each selection being an independent event. This method allows for control over the average number of Acki-Nacki per block.</p>
 <h3 id="the-new-block-production-and-broadcast"><strong>The new block production and broadcast</strong></h3>
-<p>In the new block production and broadcast process, a Block Producer (BP) releases a new block every 330 milliseconds by collecting unprocessed messages, executing transactions, and creating a block within certain limits. The BP signs the block with its BLS private key and broadcasts it to all Block Keepers (BKs). Upon receiving the block, a BK checks for a minimum timeout from the previous Attestation, computes an Attestation for the block, and sends it back to the BP. The minimum timeout is crucial to prevent a "too many blocks" safety attack where a malicious BP floods the network with blocks, potentially leading to the acceptance of a block with incorrect transactions.</p>
+<p>In the new block production and broadcast process, a Block Producer (BP) releases a new block every 330 milliseconds by collecting unprocessed messages, executing transactions, and creating a block within certain limits. The BP signs the block with its BLS private key and broadcasts it to all Block Keepers (BKs). Upon receiving the block, a BK  computes an Attestation for the block, and sends it back to the BP.</p>
 <h3 id="the-block-verification"><strong>The block verification</strong></h3>
 <p>Block verification in the protocol is conducted by Acki-Nacki entities selected through an algorithm. These entities must validate blocks and send Ack/Nack messages to the network to avoid being slashed. Third parties can also validate blocks with a bond but are not obligated to do so. If a Block Producer (BP) creates a block with complex execution, Acki-Nacki may delay verification which may lead to  incorrect transactions being accepted. To counter this safety attack, Verifiers will stop after 330 ms and send a special Nack with a "too complex" message, allowing the committee to penalize the BP if necessary.</p>
 <h3 id="acki-nacki-selection-proof"><strong>Acki-Nacki Selection Proof</strong></h3>

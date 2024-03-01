@@ -69,7 +69,7 @@ In Acki Nacki, participants can perform three roles: Block Producer, Block Keepe
 
 **Block** is an object that contains new transactions which, once finalized, are stored in the blockchain as a permanent and immutable part of this decentralized ledger. Each block includes information such as transaction data, timestamp, common section, and a reference to the previous block, creating a chain of interconnected blocks.
 
-**Сommon section** is the section of the block that contains information that needs to be shared among all network participants. 
+**Common section** is the section of the block that contains information that needs to be shared among all network participants. 
 
 **Block Producer (BP)** is a leader of a particular Thread responsible for block production.
 

@@ -196,7 +196,7 @@ RETURNS:
 
 RETURNS:  
 
-**roots** (*address[]*) - list of addresses of ERС20 tokens  
+**roots** (*address[]*) - list of addresses of ERC20 tokens  
 { .ml-params }
 
 
@@ -242,7 +242,7 @@ PARAMETERS
 
 RETURNS
 
-address TIP-3 root for wrapped ERС20 token in GOSH 
+address TIP-3 root for wrapped ERC20 token in GOSH 
 { .ml-params }
 
 

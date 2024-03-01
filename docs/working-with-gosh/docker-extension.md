@@ -286,7 +286,7 @@ When you need to update the GOSH verified images extension in Docker Desktop, yo
 To update the extension, go to the menu and select **Manage**
 ![](../images/docker_ext_update_01.jpg)
 
-В открывшейся вкладке нажмите **Update**
+click **Update**
 
 ![](../images/docker_ext_update_02.jpg)
 
