@@ -22,7 +22,7 @@ Enter the saved seed phrase and click **Sign in**.
 
 Also set up a **PIN code** and unlock with it.
 
-To сlick **Сreate new DAO** button on the page that opens
+To click **Create new DAO** button on the page that opens
 
 ![](../../images/n_gosh_web_Create_ORG_01_.jpg)
 
