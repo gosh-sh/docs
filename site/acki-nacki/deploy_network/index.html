@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../acki-nacki/deploy_network/">
+        <link rel="prev" href="../connection_to_network/">
       
       
-        <link rel="next" href="../../links/">
+        <link rel="next" href="../../integrations/l2/">
       
       
       <link rel="icon" href="../../images/gosh2.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>GOSH Ethereum L2 - GOSH</title>
+        <title>Deploy network - GOSH</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#generating-bls-keys" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GOSH Ethereum L2
+              Deploy network
             
           </span>
         </div>
@@ -1126,18 +1126,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
@@ -1151,7 +1153,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Acki Nacki Protocol
@@ -1164,7 +1166,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../acki-nacki/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1184,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../acki-nacki/connection_to_network/" class="md-nav__link">
+      <a href="../connection_to_network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,34 +1195,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../acki-nacki/deploy_network/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Deploy network
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -1243,7 +1217,7 @@
           
   
   <span class="md-ellipsis">
-    GOSH Ethereum L2
+    Deploy network
   </span>
   
 
@@ -1254,7 +1228,7 @@
         
   
   <span class="md-ellipsis">
-    GOSH Ethereum L2
+    Deploy network
   </span>
   
 
@@ -1274,37 +1248,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#generating-bls-keys" class="md-nav__link">
+    Generating BLS-keys
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transfer-tokens" class="md-nav__link">
-    Transfer tokens
-  </a>
-  
-    <nav class="md-nav" aria-label="Transfer tokens">
+    <nav class="md-nav" aria-label="Generating BLS-keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#from-gosh-to-gosh" class="md-nav__link">
-    from GOSH to GOSH
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-ethereum-to-gosh" class="md-nav__link">
-    from Ethereum to GOSH
+  <a href="#install-bls_keypair_gen" class="md-nav__link">
+    Install bls_keypair_gen
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-gosh-to-ethereum" class="md-nav__link">
-    from GOSH to Ethereum
+  <a href="#set-the-number-of-validators" class="md-nav__link">
+    Set the number of validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-python-script" class="md-nav__link">
+    Run the python script
   </a>
   
 </li>
@@ -1315,23 +1289,73 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-the-users-tip-3-wallet-address" class="md-nav__link">
-    Getting the user's TIP-3 wallet address:
+  <a href="#deploying-acki-nacki-with-ansible" class="md-nav__link">
+    Deploying Acki Nacki (with Ansible)
   </a>
   
-    <nav class="md-nav" aria-label="Getting the user's TIP-3 wallet address:">
+    <nav class="md-nav" aria-label="Deploying Acki Nacki (with Ansible)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-by-user-name" class="md-nav__link">
-    using by user name
+  <a href="#prerequisites_1" class="md-nav__link">
+    Prerequisites:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-the-users-public-key" class="md-nav__link">
-    using the user's public key
+  <a href="#build-the-hosts-inventory" class="md-nav__link">
+    Build the hosts inventory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-docker-on-servers" class="md-nav__link">
+    Deploying docker on servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-host-configuration" class="md-nav__link">
+    Preparing the host configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-front-services-on-the-bp-collator-node-1" class="md-nav__link">
+    Deploy front services on the BP (collator) (node 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-caddy-or-any-other-reverse-proxy" class="md-nav__link">
+    Deploying Caddy (or any other reverse-proxy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-and-starting-the-network-itself" class="md-nav__link">
+    Deploying and starting the network itself
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-installation-considerations" class="md-nav__link">
+    Post installation considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Post installation considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-firewall-ports-on-front-server" class="md-nav__link">
+    Setup firewall ports on front server
   </a>
   
 </li>
@@ -1340,25 +1364,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-a-list-of-incoming-messages-of-the-contract" class="md-nav__link">
-    Getting a list of incoming messages of the contract
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-info-about-tip-3-wallet-details" class="md-nav__link">
-    Get info about TIP-3 wallet details
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-tip-3-root-list" class="md-nav__link">
-    Get TIP-3 root list
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1366,6 +1374,34 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/l2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GOSH Ethereum L2
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1422,37 +1458,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#generating-bls-keys" class="md-nav__link">
+    Generating BLS-keys
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transfer-tokens" class="md-nav__link">
-    Transfer tokens
-  </a>
-  
-    <nav class="md-nav" aria-label="Transfer tokens">
+    <nav class="md-nav" aria-label="Generating BLS-keys">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#from-gosh-to-gosh" class="md-nav__link">
-    from GOSH to GOSH
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-ethereum-to-gosh" class="md-nav__link">
-    from Ethereum to GOSH
+  <a href="#install-bls_keypair_gen" class="md-nav__link">
+    Install bls_keypair_gen
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#from-gosh-to-ethereum" class="md-nav__link">
-    from GOSH to Ethereum
+  <a href="#set-the-number-of-validators" class="md-nav__link">
+    Set the number of validators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-the-python-script" class="md-nav__link">
+    Run the python script
   </a>
   
 </li>
@@ -1463,23 +1499,73 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-the-users-tip-3-wallet-address" class="md-nav__link">
-    Getting the user's TIP-3 wallet address:
+  <a href="#deploying-acki-nacki-with-ansible" class="md-nav__link">
+    Deploying Acki Nacki (with Ansible)
   </a>
   
-    <nav class="md-nav" aria-label="Getting the user's TIP-3 wallet address:">
+    <nav class="md-nav" aria-label="Deploying Acki Nacki (with Ansible)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-by-user-name" class="md-nav__link">
-    using by user name
+  <a href="#prerequisites_1" class="md-nav__link">
+    Prerequisites:
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#using-the-users-public-key" class="md-nav__link">
-    using the user's public key
+  <a href="#build-the-hosts-inventory" class="md-nav__link">
+    Build the hosts inventory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-docker-on-servers" class="md-nav__link">
+    Deploying docker on servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparing-the-host-configuration" class="md-nav__link">
+    Preparing the host configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-front-services-on-the-bp-collator-node-1" class="md-nav__link">
+    Deploy front services on the BP (collator) (node 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-caddy-or-any-other-reverse-proxy" class="md-nav__link">
+    Deploying Caddy (or any other reverse-proxy)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-and-starting-the-network-itself" class="md-nav__link">
+    Deploying and starting the network itself
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-installation-considerations" class="md-nav__link">
+    Post installation considerations
+  </a>
+  
+    <nav class="md-nav" aria-label="Post installation considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-firewall-ports-on-front-server" class="md-nav__link">
+    Setup firewall ports on front server
   </a>
   
 </li>
@@ -1488,25 +1574,9 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-a-list-of-incoming-messages-of-the-contract" class="md-nav__link">
-    Getting a list of incoming messages of the contract
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-info-about-tip-3-wallet-details" class="md-nav__link">
-    Get info about TIP-3 wallet details
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-tip-3-root-list" class="md-nav__link">
-    Get TIP-3 root list
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1525,125 +1595,149 @@
                   
 
 
-  <h1>GOSH Ethereum L2</h1>
+  <h1>Deploy network</h1>
 
-<!-- ## **To integrate with GOSH L2, you will need** -->
-
-<h2 id="introduction"><strong>Introduction</strong></h2>
-<p>Endpoint for use with <a href="https://docs.everos.dev/ever-sdk/" target="_blank">Ever-SDK</a></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>network main: https://network.gosh.sh
-</span></code></pre></div>
-<p>To explore the GOSH blockchain, you can use the <a href="https://gosh.live" target="_blank">GOSH explorer</a></p>
-<!-- TODO change link to contract -->
-<p>First you need to get the address of user's profile.<br />
-The contract <a href="../contracts/#profile"><strong>Profile</strong></a> is deployed for each user when registering with GOSH.</p>
-<p>To get its address, you need to call the method <a href="../contracts/#getprofileaddr"><strong><code>getProfileAddr</code></strong></a> of the <a href="../contracts/#versioncontroller"><strong>VersionController</strong></a> contract </p>
-<!-- The result is the address of the user's **Profile** contract. -->
-
-<h2 id="transfer-tokens"><strong>Transfer tokens</strong></h2>
-<h3 id="from-gosh-to-gosh"><strong>from GOSH to GOSH</strong></h3>
-<p>Before transferring to another TIP-3 wallet, you need to check whether the recipient's TIP-3 wallet is already deployed.</p>
-<p>To do this, you need to call the method <a href="../contracts/#getwalletaddress"><strong><code>getWalletAddress</code></strong></a> in the <a href="../contracts/#roottokencontract"><strong>RootTokenContract</strong></a>, the recipient's public key is specified.</p>
-<p>If the recipient's TIP-3 wallet is not deployed, you need to call the method <a href="../contracts/#transfertorecipient"><strong><code>transferToRecipient</code></strong></a> in the TIP-3 wallet contract <a href="../contracts/#tontokenwallet"><strong>"TONTokenWallet"</strong></a> (from which the transfer will be made).</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>await this.run(&#39;transferToRecipient&#39;, {
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    _answer_id: 0,
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    answer_addr: null,
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    to: { pubkey, owner: null },
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    tokens: 0,
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    evers: BigInt(4.5 * 10 ** 9).toString(),
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    keep_evers: BigInt(4 * 10 ** 9).toString(),
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    deploy: true,
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    return_ownership: 0,
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    notify_payload: null,
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>})
-</span></code></pre></div>
-</div>
-<p>As a result, an empty TIP-3 wallet will be deployed to the recipient.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>It is important to wait until the contract status changes to "Active".</strong></p>
-</div>
-<p>Then, for transfer the TIP-3 tokens to the user, you need to call the method <a href="../contracts/#transfer"><strong><code>transfer</code></strong></a> in the <a href="../contracts/#tontokenwallet"><strong>TONTokenWallet</strong></a> contract.</p>
-<div class="admonition example">
-<p class="admonition-title">Example</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>await this.run(&#39;transfer&#39;, {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    _answer_id: 0,
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    answer_addr: null,
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    to: address,
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    tokens: amount.toString(),
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    evers: BigInt(4 * 10 ** 9).toString(),
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    return_ownership: 0,
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    notify_payload: null,
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>})
-</span></code></pre></div>
-</div>
-<h3 id="from-ethereum-to-gosh"><strong>from Ethereum to GOSH</strong></h3>
-<p>For transfer tokens to GOSH, you need to call the method:</p>
+<h2 id="generating-bls-keys"><strong>Generating BLS-keys</strong></h2>
+<h3 id="prerequisites"><strong>Prerequisites:</strong></h3>
 <ul>
-<li>for <code>ETH</code>: <a href="../contracts/#deposit"><strong><code>deposit</code></strong></a></li>
-<li>for <code>ERC20</code> tokens: <a href="../contracts/#depositerc20"><strong><code>depositERC20</code></strong></a></li>
+<li>cargo</li>
+<li><a href="https://github.com/tvmlabs/tvm-cli/releases">tvm-cli</a></li>
+<li>python3</li>
 </ul>
-<p>in the <a href="../contracts/#elock"><strong>ELOCK</strong></a> contract.</p>
-<p>Then it is necessary <a href="./#using-the-users-public-key">to calculate the address of the user's TIP-3 wallet in GOSH</a> and wait the transfer of tokens to the received TIP3 user wallet in GOSH.</p>
-<h3 id="from-gosh-to-ethereum"><strong>from GOSH to Ethereum</strong></h3>
-<p>To transfer tokens to Ethereum, you will need to call method:</p>
-<ul>
-<li>for <code>ETH</code>: <a href="../contracts/#burntokens"><strong><code>burnTokens</code></strong></a></li>
-<li>
-<p>for <code>ERC20</code> tokens: <a href="../contracts/#withdrawerc20"><strong><code>withdrawERC20</code></strong></a></p>
-<p class="ml-params">(then to call <a href="../contracts/#geterc20approvement"><strong><code>getERC20Approvement</code></strong></a> to determine the commission that needs to be attached to the withdrawal function call)</p>
-</li>
-</ul>
-<p>in the user contract <a href="../contracts/#tontokenwallet"><strong>TONTokenWallet</strong></a></p>
-<p>Then wait for the receipt of tokens to the recipient's Ethereum wallet.</p>
-<h2 id="getting-the-users-tip-3-wallet-address"><strong>Getting the user's TIP-3 wallet address:</strong></h2>
-<!-- ## **Getting the TIP-3 wallet address by user name** -->
-<h3 id="using-by-user-name"><strong>using by user name</strong></h3>
-<p>Knowing the address of the user's contract <a href="../contracts/#profile"><strong>Profile</strong></a> you call the method <a href="../contracts/#getaccess"><strong><code>getAccess</code></strong></a> in it.</p>
-<p>As a result, you get a list of all the user's public keys with their numbers.</p>
-<div class="admonition warning annotate">
-<p class="admonition-title">Important</p>
-<p>It is necessary to take the zeroth pubkey from the list</p>
-</div>
-<p>Then, using the received user's public key, it will be possible <a href="./#using-the-users-public-key">to determine the address of the user's TIP-3 wallet</a></p>
-<!-- ## **Getting the user's TIP-3 wallet address using the user's public key** -->
-
-<h3 id="using-the-users-public-key"><strong>using the user's public key</strong></h3>
-<p>To do this, in the <a href="../contracts/#roottokencontract"><strong>RootTokenContract</strong></a> calling method <a href="../contracts/#getwalletaddress"><strong><code>getWalletAddress</code></strong></a>  </p>
-<!-- 
-
-To do this, in the **RootTokenContract** (1)
-{ .annotate }
-
-1.  address
-
-    <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>0:1792014440934b9c4024c97221b49c50bd2e2db1426b612ba4c6694b144f5e77
+<h3 id="install-bls_keypair_gen"><strong>Install bls_keypair_gen</strong></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>helpers/bls_keypair_gen
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cargo<span class="w"> </span>install<span class="w"> </span>--path<span class="w"> </span>.
 </span></code></pre></div>
-
-    ABI [here](../static/RootTokenContract.abi){:download="RootTokenContract.abi"}
- -->
-
-<h2 id="getting-a-list-of-incoming-messages-of-the-contract"><strong>Getting a list of incoming messages of the contract</strong></h2>
+<h3 id="set-the-number-of-validators"><strong>Set the number of validators</strong></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>../blockchain_config
+</span></code></pre></div>
+<p>Edit Python script (generate_keys_and_bc_config.py) to set the number of validators and output paths for BLS-keychain file and blockchain config file:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">NUMBER_OF_VALIDATORS</span> <span class="o">=</span> <span class="mi">12</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">OUTPUT_CONFIG</span> <span class="o">=</span> <span class="s1">&#39;blockchain.conf.json&#39;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">BLS_PUBLICS_PATH</span> <span class="o">=</span> <span class="s1">&#39;bls_publics_12.keys.json&#39;</span>
+</span></code></pre></div>
+<h3 id="run-the-python-script"><strong>Run the python script</strong></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python3<span class="w"> </span>generate_keys_and_bc_config.py
+</span></code></pre></div>
+<p>The set of the key pairs for the validators will be created in the current folder.</p>
+<h2 id="deploying-acki-nacki-with-ansible"><strong>Deploying Acki Nacki (with Ansible)</strong></h2>
+<h3 id="prerequisites_1"><strong>Prerequisites:</strong></h3>
+<ul>
+<li><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Ansible</a></li>
+</ul>
+<p>Put the <code>acki-nacki-vendored-main.zip</code> archive into the <code>files</code> folder for everything to work correctly without errors.</p>
+<h3 id="build-the-hosts-inventory"><strong>Build the hosts inventory</strong></h3>
+<p>Create (Build) the <code>inventory.yml</code> file.</p>
+<p>Specify all your hosts that will run Acki Nacki nodes, paying special attention to Block Producer (BP) (collator) node.</p>
 <div class="admonition example">
-<p class="admonition-title">Example</p>
-<p><a href="https://github.com/gosh-sh/gosh/blob/dev/web/src/blockchain/contract.ts#L90" target="_blank">of how to receive account messages</a></p>
+<p class="admonition-title">For example</p>
+<p>This way you can build the inventory file with some important moments commented:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">all</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">hosts</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">node[1:5].mydomain.com</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="c1"># this pattern should ideally match all the nodes to be deployed</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1"># replace with your SSH port and username, that should have sudo (passwordless or use -K)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">ansible_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">22</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="nt">ansible_user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="c1"># Archive name must match the name of the code zip archive downloaded from github and put in files folder</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="c1"># DO NOT rename archive after downloading from github!</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">ARCHIVE_NAME</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">acki-nacki-vendored-main</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="c1"># Root directory path, in general, should not be modified</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nt">ROOT_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/ackinacki</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="c1"># if you have a large fast volume on the server, it may be preferable to point this folder to it</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">MNT_DATA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/data</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1"># must point to the domain of the BP collator (first node)</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="nt">STATIC_STORAGES</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://node1.mydomain.com/storage/node-1/&quot;</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="c1"># must be a list of IP:10000 of every node in deployment</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nt">GOSSIP_SEEDS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1:10000,2.2.2.2:10000,3.3.3.3:10000,4.4.4.4:10000,5.5.5.5:10000</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="nt">BIND_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8500</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="nt">BIND_API_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8600</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="nt">BIND_GOSSIP_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10000</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nt">collators</span><span class="p">:</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nt">hosts</span><span class="p">:</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="c1"># must match the BP (collator) (first) node</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="nt">node1.mydomain.com</span><span class="p">:</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="nt">ACKINACKI_ARANGODB_PUBLIC_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8529</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="c1"># must point to the IP of the BP (collator) (first node)</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="nt">ARANGODB_ENDPOINT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1:8529</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="c1"># must point to the domain of the BP (collator) (first node)</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="nt">ARANGODB_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://node1.mydomain.com:8529</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="nt">nodes</span><span class="p">:</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="c1"># list all your nodes and their public IPs here</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="nt">hosts</span><span class="p">:</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="nt">node1.mydomain.com</span><span class="p">:</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"> </span><span class="c1"># the first BP (collator) node must have node ID 0</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">    </span><span class="nt">HOST_PUBLIC_IP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="nt">node2.mydomain.com</span><span class="p">:</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"> </span><span class="c1"># node IDs must be different for each node, and, preferably, be sequential</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">    </span><span class="nt">HOST_PUBLIC_IP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.2.2.2</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">    </span><span class="nt">node3.mydomain.com</span><span class="p">:</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">    </span><span class="nt">HOST_PUBLIC_IP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3.3.3.3</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">    </span><span class="nt">node4.mydomain.com</span><span class="p">:</span>
+</span><span id="__span-4-45"><a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</span><span id="__span-4-46"><a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">    </span><span class="nt">HOST_PUBLIC_IP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4.4.4.4</span>
+</span><span id="__span-4-47"><a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">    </span><span class="nt">node5.mydomain.com</span><span class="p">:</span>
+</span><span id="__span-4-48"><a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</span><span id="__span-4-49"><a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">    </span><span class="nt">HOST_PUBLIC_IP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5.5.5.5</span>
+</span></code></pre></div>
 </div>
+<h3 id="deploying-docker-on-servers"><strong>Deploying docker on servers</strong></h3>
+<p>To install the necessary <code>docker</code> and <code>docker compose</code> plugins on the servers, follow these steps:</p>
+<p>Install the <code>docker</code> role from Ansible galaxy:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ansible-galaxy<span class="w"> </span>role<span class="w"> </span>install<span class="w"> </span>geerlingguy.docker
+</span></code></pre></div>
+<p>Run the <code>ensure-docker</code> playbook to make sure that the necessary software is installed:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>ensure-docker.yml
+</span></code></pre></div>
+<h3 id="preparing-the-host-configuration"><strong>Preparing the host configuration</strong></h3>
+<p>For reliable behavior of nodes, it is needed to run the <code>prepare-hosts</code> playbook to adjust some parameters on the servers:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>prepare-hosts.yml
+</span></code></pre></div>
+<p>It is important to note that it should be run after installing docker, because it adjusts some limits of the service.</p>
+<h3 id="deploy-front-services-on-the-bp-collator-node-1"><strong>Deploy front services on the BP (collator)</strong> (node 1)</h3>
+<p>To make sure that no entities are missed on the front, first, front services must be deployed before starting the network.</p>
+<p>To do that, use the <code>deploy-front</code> playbook:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>deploy-front.yml
+</span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><a href="https://docs.everplatform.dev/samples/graphql-samples/accounts#pagination-parameters" target="_blank">Using</a> pagination in the SDK</p>
+<p>Later, if necessary to clean the data on front, you can use <code>redeploy-front</code> playbook.</p>
 </div>
-<h2 id="get-info-about-tip-3-wallet-details"><strong>Get info about TIP-3 wallet details</strong></h2>
-<!-- **************************************** -->
-<p>To get information about the TIP-3 wallet you will need to call the <a href="../contracts/#getdetails"><strong><code>getDetails</code></strong></a> method in the contract <a href="../contracts/#tontokenwallet"><strong>TONTokenWallet</strong></a></p>
-<h2 id="get-tip-3-root-list"><strong>Get TIP-3 root list</strong></h2>
-<p>To get a list of ERC20 token addresses that are supported in GOSH Ethereum L2, you need to call the <a href="../contracts/#gettokenroots"><strong><code>getTokenRoots</code></strong></a> method in the <a href="../contracts/#elock"><strong>ELOCK</strong></a> contract.</p>
-<p>For every ERC20 token in the given list, execute the following get-methods:<br />
-<a href=""><strong><code>name</code></strong></a>
-<a href=""><strong><code>symbol</code></strong></a>
-<a href=""><strong><code>decimals</code></strong></a></p>
-<p>After that, you need to call the method <a href="../contracts/#getrootaddr"><strong><code>getRootAddr</code></strong></a> in the <a href="../contracts/#checker"><strong>Checker</strong></a> contract with the received data</p>
+<h3 id="deploying-caddy-or-any-other-reverse-proxy"><strong>Deploying Caddy (or any other reverse-proxy)</strong></h3>
+<p>To provide straightforward secure access to endpoint and explorer, it is needed to deploy a revere proxy with certificate management.</p>
+<p>The easiest way is to use <code>Caddy</code>, and it is provided as a ready for deployment playbook <code>deploy-caddy</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>deploy-caddy.yml
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>It uses <code>ackinacki-net</code> created by <code>deploy-front</code>, therefore, it must be executed after previous step.</p>
+</div>
+<p>Alternatively, you can deploy any other reverse proxy with certificate management you like.</p>
+<h3 id="deploying-and-starting-the-network-itself"><strong>Deploying and starting the network itself</strong></h3>
+<p>Before doing this step you must <a href="./#generating-bls-keys"><strong>generate the BLS-keys</strong></a> for validators and put them into <code>files</code> directory.</p>
+<p>That is, the following files must be present in <code>files</code> directory (where <code>N</code> is number of nodes):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>blockchain.conf.json
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>bls_publics.keys.json
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>validator0.keys.json
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>validator0_bls.keys.json
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>...
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>validatorN-1.keys.json
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>validatorN-1_bls.keys.json
+</span></code></pre></div>
+<p>Then you can deploy nodes and start the network (make sure your front is up and running!) using the following playbook:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>start-nodes.yml
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that node compilation may take a significant amount of time, even if it looks like the progress froze.</p>
+</div>
+<p>In case in future you need to stop the nodes you can use <code>stop-nodes</code> playbook, or <code>clean-nodes</code> to stop and delete data.</p>
+<h3 id="post-installation-considerations"><strong>Post installation considerations</strong></h3>
+<h4 id="setup-firewall-ports-on-front-server"><strong>Setup firewall ports on front server</strong></h4>
+<p>For security reasons it is reasonable to restrict ports 8080 (nginx) and 8529 (arangodb) on the front server.</p>
+<p>Just make sure that access from docker containers is maintained, otherwise things may break.</p>
 
 
 
