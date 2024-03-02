@@ -1325,8 +1325,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deploy-front-services-on-the-bp-collator-node-1" class="md-nav__link">
-    Deploy front services on the BP (collator) (node 1)
+  <a href="#deploy-front-services-on-the-block-producer-node-1" class="md-nav__link">
+    Deploy front services on the Block Producer (node 1)
   </a>
   
 </li>
@@ -1339,8 +1339,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deploying-and-starting-the-network-itself" class="md-nav__link">
-    Deploying and starting the network itself
+  <a href="#deploying-and-starting-the-network" class="md-nav__link">
+    Deploying and starting the network
   </a>
   
 </li>
@@ -1535,8 +1535,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deploy-front-services-on-the-bp-collator-node-1" class="md-nav__link">
-    Deploy front services on the BP (collator) (node 1)
+  <a href="#deploy-front-services-on-the-block-producer-node-1" class="md-nav__link">
+    Deploy front services on the Block Producer (node 1)
   </a>
   
 </li>
@@ -1549,8 +1549,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deploying-and-starting-the-network-itself" class="md-nav__link">
-    Deploying and starting the network itself
+  <a href="#deploying-and-starting-the-network" class="md-nav__link">
+    Deploying and starting the network
   </a>
   
 </li>
@@ -1627,8 +1627,8 @@
 </ul>
 <p>Put the <code>acki-nacki-vendored-main.zip</code> archive into the <code>files</code> folder for everything to work correctly without errors.</p>
 <h3 id="build-the-hosts-inventory"><strong>Build the hosts inventory</strong></h3>
-<p>Create (Build) the <code>inventory.yml</code> file.</p>
-<p>Specify all your hosts that will run Acki Nacki nodes, paying special attention to Block Producer (BP) (collator) node.</p>
+<p>Build the <code>inventory.yml</code> file.</p>
+<p>Specify all your hosts that will run Acki Nacki nodes, paying special attention to <strong>Block Producer node</strong>.</p>
 <div class="admonition example">
 <p class="admonition-title">For example</p>
 <p>This way you can build the inventory file with some important moments commented:</p>
@@ -1645,7 +1645,7 @@
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nt">ROOT_DIR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/ackinacki</span>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="c1"># if you have a large fast volume on the server, it may be preferable to point this folder to it</span>
 </span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">MNT_DATA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/data</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1"># must point to the domain of the BP collator (first node)</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="c1"># must point to the domain of the Block Producer (first node)</span>
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="nt">STATIC_STORAGES</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://node1.mydomain.com/storage/node-1/&quot;</span>
 </span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="c1"># must be a list of IP:10000 of every node in deployment</span>
 </span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="nt">GOSSIP_SEEDS</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1:10000,2.2.2.2:10000,3.3.3.3:10000,4.4.4.4:10000,5.5.5.5:10000</span>
@@ -1655,19 +1655,19 @@
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
 </span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="nt">collators</span><span class="p">:</span>
 </span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="nt">hosts</span><span class="p">:</span>
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="c1"># must match the BP (collator) (first) node</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="c1"># must match the Block Producer (first) node</span>
 </span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="nt">node1.mydomain.com</span><span class="p">:</span>
 </span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="nt">ACKINACKI_ARANGODB_PUBLIC_PORT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8529</span>
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="c1"># must point to the IP of the BP (collator) (first node)</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="c1"># must point to the IP of the Block Producer (first node)</span>
 </span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="nt">ARANGODB_ENDPOINT</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1:8529</span>
-</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="c1"># must point to the domain of the BP (collator) (first node)</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="c1"># must point to the domain of the Block Producer (first node)</span>
 </span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="nt">ARANGODB_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://node1.mydomain.com:8529</span>
 </span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
 </span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="nt">nodes</span><span class="p">:</span>
 </span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="c1"># list all your nodes and their public IPs here</span>
 </span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="nt">hosts</span><span class="p">:</span>
 </span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="nt">node1.mydomain.com</span><span class="p">:</span>
-</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"> </span><span class="c1"># the first BP (collator) node must have node ID 0</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"> </span><span class="c1"># the first Block Producer node must have node ID 0</span>
 </span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">    </span><span class="nt">HOST_PUBLIC_IP</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1</span>
 </span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="nt">node2.mydomain.com</span><span class="p">:</span>
 </span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="nt">NODE_ID</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"> </span><span class="c1"># node IDs must be different for each node, and, preferably, be sequential</span>
@@ -1696,7 +1696,7 @@
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>prepare-hosts.yml
 </span></code></pre></div>
 <p>It is important to note that it should be run after installing docker, because it adjusts some limits of the service.</p>
-<h3 id="deploy-front-services-on-the-bp-collator-node-1"><strong>Deploy front services on the BP (collator)</strong> (node 1)</h3>
+<h3 id="deploy-front-services-on-the-block-producer-node-1"><strong>Deploy front services on the Block Producer (node 1)</strong></h3>
 <p>To make sure that no entities are missed on the front, first, front services must be deployed before starting the network.</p>
 <p>To do that, use the <code>deploy-front</code> playbook:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>deploy-front.yml
@@ -1715,7 +1715,7 @@
 <p>It uses <code>ackinacki-net</code> created by <code>deploy-front</code>, therefore, it must be executed after previous step.</p>
 </div>
 <p>Alternatively, you can deploy any other reverse proxy with certificate management you like.</p>
-<h3 id="deploying-and-starting-the-network-itself"><strong>Deploying and starting the network itself</strong></h3>
+<h3 id="deploying-and-starting-the-network"><strong>Deploying and starting the network</strong></h3>
 <p>Before doing this step you must <a href="./#generating-bls-keys"><strong>generate the BLS-keys</strong></a> for validators and put them into <code>files</code> directory.</p>
 <p>That is, the following files must be present in <code>files</code> directory (where <code>N</code> is number of nodes):</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>blockchain.conf.json
@@ -1727,16 +1727,17 @@
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>validatorN-1_bls.keys.json
 </span></code></pre></div>
 <p>Then you can deploy nodes and start the network (make sure your front is up and running!) using the following playbook:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>start-nodes.yml
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">cd</span><span class="w"> </span>ansible
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>ansible-playbook<span class="w"> </span>-i<span class="w"> </span>inventory.yml<span class="w"> </span>start-nodes.yml
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please note that node compilation may take a significant amount of time, even if it looks like the progress froze.</p>
 </div>
-<p>In case in future you need to stop the nodes you can use <code>stop-nodes</code> playbook, or <code>clean-nodes</code> to stop and delete data.</p>
+<p>In case in the future you need to stop the nodes you can use <code>stop-nodes</code> playbook, or <code>clean-nodes</code> to stop and delete data.</p>
 <h3 id="post-installation-considerations"><strong>Post installation considerations</strong></h3>
 <h4 id="setup-firewall-ports-on-front-server"><strong>Setup firewall ports on front server</strong></h4>
-<p>For security reasons it is reasonable to restrict ports 8080 (nginx) and 8529 (arangodb) on the front server.</p>
+<p>For security reasons it is reasonable to restrict ports <code>tcp/8080</code> (nginx) and <code>tcp/8529</code> (arangodb) on the front server.</p>
 <p>Just make sure that access from docker containers is maintained, otherwise things may break.</p>
 
 
