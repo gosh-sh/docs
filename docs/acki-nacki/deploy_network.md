@@ -52,9 +52,9 @@ Put the `acki-nacki-vendored-main.zip` archive into the `files` folder for every
 ### **Build the hosts inventory**
 
 
-Create (Build) the `inventory.yml` file.
+Build the `inventory.yml` file.
 
-Specify all your hosts that will run Acki Nacki nodes, paying special attention to Block Producer (BP) (collator) node.
+Specify all your hosts that will run Acki Nacki nodes, paying special attention to **Block Producer node**.
 
 
 !!! Example "For example"
@@ -75,7 +75,7 @@ Specify all your hosts that will run Acki Nacki nodes, paying special attention 
         ROOT_DIR: /opt/ackinacki
         # if you have a large fast volume on the server, it may be preferable to point this folder to it
         MNT_DATA: /var/data
-        # must point to the domain of the BP collator (first node)
+        # must point to the domain of the Block Producer (first node)
         STATIC_STORAGES: "http://node1.mydomain.com/storage/node-1/"
         # must be a list of IP:10000 of every node in deployment
         GOSSIP_SEEDS: 1.1.1.1:10000,2.2.2.2:10000,3.3.3.3:10000,4.4.4.4:10000,5.5.5.5:10000
@@ -85,19 +85,19 @@ Specify all your hosts that will run Acki Nacki nodes, paying special attention 
 
     collators:
     hosts:
-        # must match the BP (collator) (first) node
+        # must match the Block Producer (first) node
         node1.mydomain.com:
         ACKINACKI_ARANGODB_PUBLIC_PORT: 8529
-        # must point to the IP of the BP (collator) (first node)
+        # must point to the IP of the Block Producer (first node)
         ARANGODB_ENDPOINT: 1.1.1.1:8529
-        # must point to the domain of the BP (collator) (first node)
+        # must point to the domain of the Block Producer (first node)
         ARANGODB_URL: http://node1.mydomain.com:8529
 
     nodes:
     # list all your nodes and their public IPs here
     hosts:
         node1.mydomain.com:
-        NODE_ID: 0 # the first BP (collator) node must have node ID 0
+        NODE_ID: 0 # the first Block Producer node must have node ID 0
         HOST_PUBLIC_IP: 1.1.1.1
         node2.mydomain.com:
         NODE_ID: 1 # node IDs must be different for each node, and, preferably, be sequential
@@ -144,7 +144,7 @@ ansible-playbook -i inventory.yml prepare-hosts.yml
 It is important to note that it should be run after installing docker, because it adjusts some limits of the service.
 
 
-### **Deploy front services on the BP (collator)** (node 1)
+### **Deploy front services on the Block Producer (node 1)**
 
 
 To make sure that no entities are missed on the front, first, front services must be deployed before starting the network.
@@ -179,7 +179,7 @@ ansible-playbook -i inventory.yml deploy-caddy.yml
 Alternatively, you can deploy any other reverse proxy with certificate management you like.
 
 
-### **Deploying and starting the network itself**
+### **Deploying and starting the network**
 
 
 Before doing this step you must [**generate the BLS-keys**](deploy_network.md#generating-bls-keys) for validators and put them into `files` directory.
@@ -199,6 +199,7 @@ validatorN-1_bls.keys.json
 Then you can deploy nodes and start the network (make sure your front is up and running!) using the following playbook:
 
 ```bash
+cd ansible
 ansible-playbook -i inventory.yml start-nodes.yml
 ```
 
@@ -207,7 +208,7 @@ ansible-playbook -i inventory.yml start-nodes.yml
     Please note that node compilation may take a significant amount of time, even if it looks like the progress froze.
 
 
-In case in future you need to stop the nodes you can use `stop-nodes` playbook, or `clean-nodes` to stop and delete data.
+In case in the future you need to stop the nodes you can use `stop-nodes` playbook, or `clean-nodes` to stop and delete data.
 
 
 ### **Post installation considerations**
@@ -216,6 +217,6 @@ In case in future you need to stop the nodes you can use `stop-nodes` playbook, 
 #### **Setup firewall ports on front server**
 
 
-For security reasons it is reasonable to restrict ports 8080 (nginx) and 8529 (arangodb) on the front server.
+For security reasons it is reasonable to restrict ports `tcp/8080` (nginx) and `tcp/8529` (arangodb) on the front server.
 
 Just make sure that access from docker containers is maintained, otherwise things may break.
