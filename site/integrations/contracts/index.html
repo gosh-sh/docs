@@ -1173,12 +1173,48 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../acki-nacki/connection_to_network/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Connection to network
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Connection to network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General information
   </span>
   
 
@@ -1194,15 +1230,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../../acki-nacki/deploy_network/" class="md-nav__link">
+      <a href="../../acki-nacki/connection-to-network/quick-start-tvm-cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Deploy network
+    Quick start for TVM CLI
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/connection-to-network/quick-start-tvm-sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start for TVM SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/connection-to-network/create-and-compile-contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and compile contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/connection-to-network/create-giver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create giver
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1480,7 +1584,7 @@ Tokens must be approved for withdrawal. The commission must be attached to the f
 <p>RETURNS:  </p>
 <p class="ml-params"><strong>roots</strong> (<em>address[]</em>) - list of addresses of ERC20 tokens<br /></p>
 <h2 id="glock"><strong>GLOCK</strong></h2>
-<p class="ml-params"><strong>is a set оf special contracts on GOSH Blockchain.</strong><br />
+<p class="ml-params"><strong>is a set of special contracts on GOSH Blockchain.</strong><br />
 Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.<br />
 Contract <strong><code>Checker.sol</code></strong> receives an external message from <a href="../../ethereum-L2/overview/#definitions" title="is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain"><strong><code>Proposer</code></strong></a> with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract <strong><code>Proposal.sol</code></strong> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <strong><code>RootTokenContract.cpp</code></strong></p>
 <h3 id="checker"><strong>Checker</strong></h3>

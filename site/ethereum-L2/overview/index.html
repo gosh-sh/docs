@@ -1312,12 +1312,48 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../acki-nacki/connection_to_network/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_2" id="__nav_4_2_2_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     Connection to network
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Connection to network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General information
   </span>
   
 
@@ -1333,15 +1369,83 @@
   
   
     <li class="md-nav__item">
-      <a href="../../acki-nacki/deploy_network/" class="md-nav__link">
+      <a href="../../acki-nacki/connection-to-network/quick-start-tvm-cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Deploy network
+    Quick start for TVM CLI
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/connection-to-network/quick-start-tvm-sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick start for TVM SDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/connection-to-network/create-and-compile-contract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create and compile contract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acki-nacki/connection-to-network/create-giver/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create giver
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1642,7 +1746,7 @@ Since GOSH uses ed25519 we use a double signature envelope scheme to prove signa
 <p><strong>ELOCK</strong> — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manages withdrawals, and locks user funds. ELOCK also counts its total balance, and total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.</p>
 </li>
 <li>
-<p><strong>GLOCK</strong> — is a set оf special contracts on GOSH Blockchain.
+<p><strong>GLOCK</strong> — is a set of special contracts on GOSH Blockchain.
 Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.
 Contract <code>Checker.sol</code> receives an external message from <code>Proposer</code> with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract <code>Proposal.sol</code> that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract <code>RootTokenContract.cpp</code></p>
 </li>
@@ -1662,7 +1766,7 @@ Also it deploys the contract TIP-3 wallet contract (<code>TONTokenWallet.cpp</co
 <p>where:</p>
 <p><strong>a</strong>  - commission percentage = 10 (0.1%)</p>
 <p><strong>b</strong> - permanent commission (does not depend on the transfer amount, now = 0)</p>
-<p><strong>х</strong> - amount of tokens to transfer</p>
+<p><strong>x</strong> - amount of tokens to transfer</p>
 <h3 id="for-withdraw-to-ethereum"><strong>for withdraw to Ethereum</strong></h3>
 <p>The commission is calculated in the ELOCK contract.</p>
 <p>It consists of 2 parts:</p>
