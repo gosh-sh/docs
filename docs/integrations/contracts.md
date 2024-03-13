@@ -205,7 +205,7 @@ RETURNS:
 
 
 ## **GLOCK**  
-**is a set оf special contracts on GOSH Blockchain.**  
+**is a set of special contracts on GOSH Blockchain.**  
 Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.  
 Contract **`Checker.sol`** receives an external message from [**`Proposer`**](../ethereum-L2/overview.md#definitions " is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain") with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract **`Proposal.sol`** that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract **`RootTokenContract.cpp`**
 { .ml-params }

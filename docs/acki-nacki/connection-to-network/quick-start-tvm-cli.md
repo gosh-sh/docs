@@ -195,7 +195,7 @@ tonos-cli call <giverAddress> sendTransaction '{"dest":"DestAddress", "value":10
 
 ## **What's next?**
 
-Congratulations, тow your contract is up and running!  
+Congratulations, now your contract is up and running!  
 Now, you can get acquainted with:
 
 * [Solidity API for TVM](https://github.com/gosh-sh/TON-Solidity-Compiler/blob/master/API.md)

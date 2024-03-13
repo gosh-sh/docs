@@ -19,7 +19,7 @@ The main mechanism of interaction in the DAO is voting. Any action in a DAO requ
 * [**Remove DAO member**](../gosh-web/members.md#delete-members-from-the-dao)
 * [**Upgrade DAO**](../gosh-web/dao-set-up.md#upgrade)
 * [**Create task**](../gosh-web/task.md#create-task)
-* [**Delete task**](../gosh-web/task.md#deletе-task)
+* [**Delete task**](../gosh-web/task.md#delete-task)
 * [**Create repository**](../gosh-web/repository.md#create-repository)
 * **Add voting tokens**
 * **Add regular tokens**

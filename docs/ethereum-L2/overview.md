@@ -93,7 +93,7 @@ The Verifiers can slash the L2 Collators in case of misbehavior by supplying ZKP
 
 * **ELOCK** — is a GOSH L2 smart contract on Ethereum Blockchain. It receives deposits from users, manages withdrawals, and locks user funds. ELOCK also counts its total balance, and total transaction count and stores root Merkle proofs, withdrawal smart contract code hash, etc. for L2 synchronization.
 
-* **GLOCK** — is a set оf special contracts on GOSH Blockchain.
+* **GLOCK** — is a set of special contracts on GOSH Blockchain.
 Aside from managing TIP-3 distributed tokens they also manage the deposits and withdrawals assets of users.
 Contract `Checker.sol` receives an external message from `Proposer` with Ethereum blockchain proofs signed by the Ethereum Committee, checks the hash of the blocks lined up in the chain, and deploys the contract `Proposal.sol` that validators check and vote for the Ethereum blocks in GOSH then receives a list of verified transactions and send a message to the root contract `RootTokenContract.cpp`
 
@@ -123,7 +123,7 @@ where:
 
 **b** - permanent commission (does not depend on the transfer amount, now = 0)
 
-**х** - amount of tokens to transfer
+**x** - amount of tokens to transfer
 
 
 ### **for withdraw to Ethereum**
