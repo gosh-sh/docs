@@ -30,8 +30,9 @@ jobs:
       - run: mkdocs build --site-dir ./public
 
       - name: Deploy
-        uses: cloudflare/wrangler-action@v3.3.2
+        uses: cloudflare/wrangler-action@v3.4.1
         with:
+          wranglerVersion: "3.13.2"
           command: pages deploy --project-name docs-gosh --branch "${{ github.ref_name }}" --commit-hash "${{ github.sha }}" ./public
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
