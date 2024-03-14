@@ -3,7 +3,7 @@
 * Rust 1.76+
 * Cargo
 * [Wallet-contract](./create-giver.md) to be used as a giver with keys
-* Contract [`helloWorld.sol`](./create-and-compile-contract.md)
+* Contract, for example: [`helloWorld.sol`](./create-and-compile-contract.md)
 * [Demo application](https://github.com/gosh-sh/gosh-examples/tree/main/sdk/rust/helloWorld)
 
 
@@ -28,8 +28,11 @@
 
 !!! warning "Important"
 
-    **After you have created and deployed the wallet and helloWorld contracts, you should to place their ABI files in the `resources` folder.**
+    **After you have created and deployed the `wallet` and `helloWorld` contracts, you should to place their `ABI files` in the `resources` folder.**
 
+!!! info
+
+    To replenish the balance of wallet-contract, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
 ## **Setup giver**
 
