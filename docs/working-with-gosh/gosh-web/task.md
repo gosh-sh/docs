@@ -46,7 +46,7 @@ Then you need to fill in the Milestone conditions:
 
 ![](../../images/n_gosh_web_Task_02_conditions_2.jpg)
 
-<!-- Then you need to evaluate the Milеstone.  -->
+<!-- Then you need to evaluate the Milestone.  -->
 * Specify **Budget** - the amount of tokens that will be paid from the DAO reserve to its execution Assigners and Reviewers.
 
 

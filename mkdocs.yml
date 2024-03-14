@@ -7,7 +7,6 @@ nav:
       - DAO: 
         - Create DAO: working-with-gosh/gosh-web/create-dao.md
         - DAO Overview: working-with-gosh/gosh-web/dao-overview.md
-        # - DAO Set up and upgrade: working-with-gosh/gosh-web/dao-set-up.md
         - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
         - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
       - Repository: working-with-gosh/gosh-web/repository.md
@@ -38,8 +37,13 @@ nav:
       - Set up Git Remote Helper: working-with-gosh/gosh-web/grh-config.md
     - Acki Nacki Protocol:
       - Overview: acki-nacki/overview.md
-      - Connection to network: acki-nacki/connection_to_network
-      # - backup: acki-nacki/acki nacki backup.md
+      - Connection to network: 
+        - General information: acki-nacki/info.md
+        - Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
+        - Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
+        - Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
+        - Create giver: acki-nacki/connection-to-network/create-giver.md
+        #- Deploy network: acki-nacki/deploy-network.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md
   - Links: links.md

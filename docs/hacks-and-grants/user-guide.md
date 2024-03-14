@@ -182,7 +182,7 @@ Then you can visit the Hackathon page to get started.
 
 During the Hackathon, all participants must complete certain tasks and then upload them to their [repositories](../working-with-gosh/gosh-web/repository.md) into their [DAO](../working-with-gosh/gosh-web/create-dao.md).
 
-To participate in the Нackathon, you'll need to click on the **Add application** button.
+To participate in the Hackathon, you'll need to click on the **Add application** button.
 
 ![](../images/H&G_hacks_16_for_partic_add_aplic.jpg)
 
