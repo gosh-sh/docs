@@ -65,7 +65,7 @@ As a result, you will have 4 files:
 
 
 Let's deploy the contract to Acki Nacki development blockchain  
-at **ackinacki-testnet.tvmlabs.dev**
+at **`ackinacki-testnet.tvmlabs.dev`**
 
 
 1) Make sure TVM-CLI is in $PATH:
@@ -110,7 +110,7 @@ Address of your contract in the blockchain is located after `Raw address:`
 
 Please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0) and specify the **`<YourAddress>`**.
 
-4) Check the state of the pre-deployed contract. It should be `Uninit`:
+4) Check the state of the pre-deployed contract. It should be **`Uninit`**:
 
 ```shell
 tvm-cli account <YourAddress>
@@ -144,4 +144,4 @@ To replenish your giver, please contact us in [Channel on Telegram](https://t.me
 
 ## **Source code**
 
-You can find full source code of this contract [here](https://github.com/gosh-sh/gosh-examples/blob/main/Contracts/giver.sol)
+You can find full source code of this contract and its artifacts [here](https://github.com/gosh-sh/gosh-examples/tree/main/contracts/simpleWallet)
