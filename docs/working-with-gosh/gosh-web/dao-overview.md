@@ -43,7 +43,8 @@ the amount of tokens (upper limit) within which a DAO member can vote.
 total number of DAO members.
 
     From here you can also send an invitation to become a member of the DAO.
-    <!-- TODO -->
+
+<!-- TODO -->
 
 ![](../../images/gosh_web_OVERVIEW_03_members.jpg)
 

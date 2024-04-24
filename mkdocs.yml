@@ -2,48 +2,53 @@ site_name: GOSH
 nav:
   - GOSH: 
     - Overview: index.md
-    - GOSH Web:
-      - Account: working-with-gosh/gosh-web/account.md
-      - DAO: 
-        - Create DAO: working-with-gosh/gosh-web/create-dao.md
-        - DAO Overview: working-with-gosh/gosh-web/dao-overview.md
-        - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
-        - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
-      - Repository: working-with-gosh/gosh-web/repository.md
-      - Members: working-with-gosh/gosh-web/members.md
-      - Tasks: working-with-gosh/gosh-web/task.md
-      - Settings: working-with-gosh/gosh-web/dao-set-up.md
-    - GOSH GitHub Sync: working-with-gosh/sync.md
-    - Git Remote Helper: working-with-gosh/git-remote-helper.md
+    - Interacting with GOSH:
+      - GOSH Web:
+        - Account: working-with-gosh/gosh-web/account.md
+        - DAO: 
+          - Create DAO: working-with-gosh/gosh-web/create-dao.md
+          - DAO Overview: working-with-gosh/gosh-web/dao-overview.md
+          - Proposals and voting in SMV: working-with-gosh/gosh-web/proposals-and-voting-in-smv.md
+          - Working with tokens and Karma: working-with-gosh/gosh-web/working-with-tokens-and-karma.md
+        - Repository: working-with-gosh/gosh-web/repository.md
+        - Members: working-with-gosh/gosh-web/members.md
+        - Tasks: working-with-gosh/gosh-web/task.md
+        - Settings: working-with-gosh/gosh-web/dao-set-up.md
+      - Docker Extension: working-with-gosh/docker-extension.md
+      - GOSH GitHub Sync: working-with-gosh/sync.md
+      - Git Remote Helper: working-with-gosh/git-remote-helper.md
+    - Tools:
+      - Hacks & Grants:
+        - Overview: hacks-and-grants/overview.md
+        - User Guide: hacks-and-grants/user-guide.md
+      - AnyTree: 
+        #- AnyTreeAll: anytree-all.md
+        #- Working with AnyTree: working-with-gosh/anytree.md
+        #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
+        - AnyTree: working-with-gosh/anytree.md
+        - AnyTree Firewall for Telepresence: working-with-gosh/anytree-firewall-for-telepresence.md
+      - Integrity Credits:
+        - Overview: integrity-credits/overview.md
+        - User Guide: integrity-credits/user-guide.md
     - GOSH Ethereum L2: 
       - Overview: ethereum-L2/overview.md
       - User Guide: ethereum-L2/user-guide.md
-    - Hacks & Grants:
-      - Overview: hacks-and-grants/overview.md
-      - User Guide: hacks-and-grants/user-guide.md
-  - AnyTree: 
-    #- AnyTreeAll: anytree-all.md
-    #- Working with AnyTree: working-with-gosh/anytree.md
-    #- Working with AnyTree without GOSH: anytree/anytree-without-gosh.md
-    - AnyTree: working-with-gosh/anytree.md
-    - AnyTree Firewall for Telepresence: working-with-gosh/anytree-firewall-for-telepresence.md
-  - Docker Extension: working-with-gosh/docker-extension.md
   #- GOSH AI: working-with-gosh/gosh-ai.md
+  - Acki Nacki:
+    - Overview: acki-nacki/overview.md
+    - Connection to network: 
+      - General information: acki-nacki/info.md
+      - Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
+      - Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
+      - Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
+      - Create giver: acki-nacki/connection-to-network/create-giver.md
+      #- Deploy network: acki-nacki/deploy-network.md
   - For developers:
     - On-chain Architecture:
       - GOSH Wallet: on-chain-architecture/gosh-wallet.md
       - Organizations - GOSH DAO and SMV: on-chain-architecture/organizations-gosh-dao-and-smv.md
       - GOSH smart contracts: on-chain-architecture/gosh-smart-contracts.md
       - Set up Git Remote Helper: working-with-gosh/gosh-web/grh-config.md
-    - Acki Nacki Protocol:
-      - Overview: acki-nacki/overview.md
-      - Connection to network: 
-        - General information: acki-nacki/info.md
-        - Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
-        - Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
-        - Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
-        - Create giver: acki-nacki/connection-to-network/create-giver.md
-        #- Deploy network: acki-nacki/deploy-network.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md
   - Links: links.md
