@@ -2,17 +2,17 @@
 ## **Overview**
 
 
-GOSH introduces **AnyTree** — a software deployment system built to guarantee the security of your software supply chain
+**AnyTree** — a software deployment system built to guarantee the security of your software supply chain
 
-With AnyTree, any mutations of your code, down to every dependency, as well as operations, including builds and every artifact, are logged, timestamped, signed, and verified when used on GOSH
+With AnyTree, any mutations of your code, down to every dependency, as well as operations, including builds and every artifact, are logged, timestamped, signed, and verified.
 
-Deep SBOM extends the SBOM surface to include all build environments. It is impossible to inject malicious commits backwards on GOSH and miss dependency tampering during the CI/CD process when using Deep SBOM. Integrating GOSH Builder with AnyTree proves builds on a developer machine and a server (or a cloud) are identical
+Deep SBOM extends the SBOM surface to include all build environments. It is impossible to inject malicious commits backwards on GOSH and miss dependency tampering during the CI/CD process when using Deep SBOM. Integrating GOSH Builder with AnyTree proves builds on a developer machine and a server (or a cloud) are identical.
 
 <!-- creates reproducible containers in an isolated environment.  -->
 
 AnyTree utilizes standard Docker Containers secured by [**GOSH AnyTree Builder**](anytree.md#build-image) and is currently available as Beta on Linux and is coming soon to Windows and macOS.
 
-As the result of his work will be the creation of a binary file of project. It is describing not only what, but also how something was built.
+As a result the binary file will be created with an immutable record of not only 'what' but 'how' it was built.
 
 !!! info
     The current version of AnyTree only supports Linux.
