@@ -1,7 +1,7 @@
 # **Overview**
 
 
-GOSH is an asynchronous, highly scalable validity rollup that enables any asset on the Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a [**Proposer**](overview.md#definitions " is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain").
+GOSH is an asynchronous, highly scalable blockchain that enables any asset on the Ethereum blockchain to be transferred into GOSH and vice versa. All ZK Proofs (Zero-knowledge proofs) are prepared on the user side by a [**Proposer**](overview.md#definitions " is an off-chain program which packages all necessary data to prove to GOSH chain that a particular transaction (let’s call them “L2 transactions”) on Ethereum Network took place and vise versa — to prove to Ethereum ELOCK smart contract (i.e. Ethereum validators) that an L2 transaction took place on the GOSH Blockchain").
 It is then submitted to the Independent Collator which receives user input and executes them on GOSH.
 
 Anyone can submit a resulting **L2 (GOSH Blockchain)** state root to **L1 (Ethereum Blockchain)**.
