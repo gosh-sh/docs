@@ -1120,8 +1120,56 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#working-on-the-project" class="md-nav__link">
+    Working on the project
+  </a>
+  
+    <nav class="md-nav" aria-label="Working on the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#reviewing-documents" class="md-nav__link">
     Reviewing documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-forms" class="md-nav__link">
+    Editing forms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-into-main" class="md-nav__link">
+    Merge into main
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-tokens" class="md-nav__link">
+    Issue tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-tokens" class="md-nav__link">
+    Transfer tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    Registry
   </a>
   
 </li>
@@ -1819,8 +1867,56 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#working-on-the-project" class="md-nav__link">
+    Working on the project
+  </a>
+  
+    <nav class="md-nav" aria-label="Working on the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#reviewing-documents" class="md-nav__link">
     Reviewing documents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-forms" class="md-nav__link">
+    Editing forms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-into-main" class="md-nav__link">
+    Merge into main
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issue-tokens" class="md-nav__link">
+    Issue tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transfer-tokens" class="md-nav__link">
+    Transfer tokens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    Registry
   </a>
   
 </li>
@@ -1926,20 +2022,108 @@ In the next step, select the repository name and add a description for it.</p>
 <p>After the vote, if the proposal is accepted, a <strong>Repository</strong> for this project will be created. The <code>main</code> branch will be protected, and development ( <code>dev</code> ) branch will also be created. </p>
 <p>All project documentation and information about the project, as well as future token data, will be uploaded to this branch to facilitate further discussions about the project.</p>
 <p>Additionally, a Task will be created.</p>
-<h3 id="reviewing-documents"><strong>Reviewing documents</strong></h3>
+<h3 id="working-on-the-project">Working on the project</h3>
 <p>With everything now prepared, the participants in the task can proceed with their work on the project. </p>
 <p>Navigate to your project using the Repositories tab.</p>
 <p><img alt="" src="../../images/IC_9-1_repository_new.jpg" /></p>
 <p>Now, there are two branches in the repository: </p>
-<!-- ![](../images/IC_9-2_repository_IC_appl_form.jpg) -->
-
-<p><code>Main</code> - this branch is protected.<br />
-To work on documents and forms, please go to the <code>dev</code> branch.</p>
+<p><code>Main</code> branch is protected. To work on documents and forms, please switch to the <code>dev</code> branch.</p>
 <p><img alt="" src="../../images/IC_9-3_repository_2branches.jpg" /></p>
-<p>To view the uploaded documents, please navigate to the <strong>Documents</strong> folder.</p>
-<p>The <strong>Forms</strong> folder contains the templates you have selected (in <code>JSON</code> format) with filled-in information about the project and the future token.</p>
-<p>You can <a href="https://docs.gosh.sh/working-with-gosh/gosh-web/repository/#adding-comments-to-file">leave comments</a> on the uploaded documents to discuss them:</p>
+<h4 id="reviewing-documents"><strong>Reviewing documents</strong></h4>
+<p>To view the uploaded documents, navigate to the <strong>Documents</strong> folder.</p>
+<p><img alt="" src="../../images/IC_9-4_repo_.jpg" /></p>
+<p>In the list of files, select the necessary one:</p>
+<p><img alt="" src="../../images/IC_9-5_repo_content.jpg" /></p>
+<p>You can <a href="https://docs.gosh.sh/working-with-gosh/gosh-web/repository/#adding-comments-to-file">add comments</a> to uploaded documents in order to discuss them and share your thoughts:</p>
 <p><img alt="" src="../../images/IC_10_1review_docs_comment.jpg" /></p>
+<h4 id="editing-forms"><strong>Editing forms</strong></h4>
+<p>The <strong>Forms</strong> folder contains the templates you selected (in <code>JSON</code> format), with filled-in information about your project and the future token.</p>
+<p><img alt="" src="../../images/IC_9-4_repo.jpg" /></p>
+<p>While working with the forms, participants can open and edit them in the <strong>IC Application Forms</strong> section on the right:</p>
+<p><img alt="" src="../../images/IC_11-1_IC_application_form.jpg" /></p>
+<!-- ![](../images/IC_11-2_IC_application_form_edit.jpg) -->
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>All of this will be pushed without creating proposals because the work is in a separate development branch.</p>
+</div>
+<h4 id="merge-into-main"><strong>Merge into main</strong></h4>
+<p>If needed, and assuming you've already reached consensus on certain aspects, you can merge all the changes into the main branch.</p>
+<p>To accomplish this, the <strong>Project developer</strong> should navigate to the <strong>Merge</strong> tab in the project repository select merge <code>dev</code> branch into <code>main</code>, and click <strong>Compare</strong>:</p>
+<p><img alt="" src="../../images/IC_12-1_merge.jpg" /></p>
+<!-- The process of working on a project can be broken down into stages, with specific tasks assigned to each stage. -->
+
+<p>At the bottom of the window, which opens, enter the commit description and select the task that was created to work with this project (The Task executors will be displayed automatically):</p>
+<p><img alt="" src="../../images/IC_13-1_merge3_commit1.jpg" /></p>
+<p>Check the box to <strong>Create a proposal</strong> for voting and click <strong>Commit changes</strong>.</p>
+<p>As a result, a proposal will be created, which can be seen on the DAO tab:</p>
+<p><img alt="" src="../../images/IC_13-2PR-event.jpg" /></p>
+<p>When the pull request is accepted, the Task status will change to <strong>Confirmed</strong>.</p>
+<p><img alt="" src="../../images/IC_14-task-comfirmed.jpg" /></p>
+<p>The distribution of remuneration for this task will be carried out by the vesting scheme specified when the task was created.</p>
+<h3 id="issue-tokens"><strong>Issue tokens</strong></h3>
+<p>After all the documents have been merged into the main branch, you can start issuing tokens.</p>
+<p>To do this, the <strong>CI Issuance manager</strong> must go to the project repository and click in <strong>IC Application Forms</strong> on the <strong>Issue tokens</strong> button:</p>
+<p><img alt="" src="../../images/IC_15_Issue-tokens-0.jpg" /></p>
+<p>In the window that opens, you can specify who and how many issued tokens will be transferred. To do this, 
+click <strong>Add recipient</strong>:</p>
+<p><img alt="" src="../../images/IC_15_Issue_tokens-1.jpg" /></p>
+<p>Check the token data and click the <strong>Issue tokens</strong> button.</p>
+<p>The multi-proposal will be created for:<br />
+- the PR from the dev branch to the main;<br />
+- permission to issue a token.  </p>
+<p><img alt="" src="../../images/IC_16-proposal_issues_tokens_3.jpg" /></p>
+<p>If the multi-proposal is accepted, changes to the docks and forms are poured into the main branch, the TIP3-token contract is deployed and information about the issued tokens appears in the repository and they can be transferred.</p>
+<h3 id="transfer-tokens"><strong>Transfer tokens</strong></h3>
+<p>The DAO member who was designated as the recipient of the issued tokens will be able to see these tokens in their balance in the project's repository.</p>
+<p><img alt="" src="../../images/IC_17_balance_recipient_in_repo.jpg" /></p>
+<p>To send IC tokens, please click the <strong>Send</strong> button in the <strong>Repository tokens</strong> section, enter the recipient's name, and click <strong>Send</strong>.</p>
+<p><img alt="" src="../../images/IC_18_send_tokens.jpg" /></p>
+<p>The recipient will also be able to see the IC tokens in the project repository in the <strong>Repository tokens</strong> section:</p>
+<p><img alt="" src="../../images/IC_19_recipient_1.jpg" /></p>
+<h3 id="registry"><strong>Registry</strong></h3>
+<p>Based on the information entered in the fields of the form, a blockchain register will be created, which can be accessed on the special website.</p>
+<p>And then it will be read from there:</p>
+<p><img alt="" src="../../images/IC_20_registry_1.jpg" /></p>
+<p>If you click on a project in the <strong>Projects</strong> section, you will be taken to its repository on GOSH, where you can familiarize yourself with uploaded documents and files:</p>
+<p><img alt="" src="../../images/IC_21_0.jpg" /></p>
+<p>On the <strong>Tokens</strong> tab, you can see the token issued for this project:</p>
+<p><img alt="" src="../../images/IC_20_registry_2.jpg" /></p>
+<p>Information about the token holders can be found by clicking on Owners:</p>
+<p><img alt="" src="../../images/IC_22_registry_4_owners.jpg" /></p>
+<p>On the <strong>Transfers</strong> tab, you can view all transactions related to this token:</p>
+<p><img alt="" src="../../images/IC_20_registry_3.jpg" /></p>
+<!-- 
+
+
+### **Reviewing documents**
+
+With everything now prepared, the participants in the task can proceed with their work on the project. 
+
+Navigate to your project using the Repositories tab.
+
+![](../images/IC_9-1_repository_new.jpg)
+
+
+Now, there are two branches in the repository: 
+
+`Main` branch is protected. To work on documents and forms, please switch to the `dev` branch.
+
+![](../images/IC_9-3_repository_2branches.jpg)
+
+To view the uploaded documents, please navigate to the **Documents** folder.
+
+The **Forms** folder contains the templates you selected (in `JSON` format), with filled-in information about your project and the future token.
+
+![](../images/IC_9-4_repo.jpg)
+
+To edit them, go to the **IC Application Forms** section on the right.
+
+![](../images/IC_11-1_IC_application_form.jpg)
+
+You can [add comments](https://docs.gosh.sh/working-with-gosh/gosh-web/repository/#adding-comments-to-file) to uploaded documents in order to discuss them and share your thoughts:
+
+![](../images/IC_10_1review_docs_comment.jpg) -->
 
 
 
