@@ -159,7 +159,7 @@ All project documentation and information about the project, as well as future t
 
 Additionally, a Task will be created.
 
-### **Reviewing documents**
+### Working on the project
 
 With everything now prepared, the participants in the task can proceed with their work on the project. 
 
@@ -168,20 +168,209 @@ Navigate to your project using the Repositories tab.
 ![](../images/IC_9-1_repository_new.jpg)
 
 Now, there are two branches in the repository: 
-<!-- ![](../images/IC_9-2_repository_IC_appl_form.jpg) -->
 
-`Main` - this branch is protected.  
-To work on documents and forms, please go to the `dev` branch.
+`Main` branch is protected. To work on documents and forms, please switch to the `dev` branch.
+
+![](../images/IC_9-3_repository_2branches.jpg)
+
+
+#### **Reviewing documents**
+
+To view the uploaded documents, navigate to the **Documents** folder.
+
+![](../images/IC_9-4_repo_.jpg)
+
+In the list of files, select the necessary one:
+
+![](../images/IC_9-5_repo_content.jpg)
+
+You can [add comments](https://docs.gosh.sh/working-with-gosh/gosh-web/repository/#adding-comments-to-file) to uploaded documents in order to discuss them and share your thoughts:
+
+![](../images/IC_10_1review_docs_comment.jpg)
+
+
+#### **Editing forms**
+
+The **Forms** folder contains the templates you selected (in `JSON` format), with filled-in information about your project and the future token.
+
+![](../images/IC_9-4_repo.jpg)
+
+While working with the forms, participants can open and edit them in the **IC Application Forms** section on the right:
+
+![](../images/IC_11-1_IC_application_form.jpg)
+
+<!-- ![](../images/IC_11-2_IC_application_form_edit.jpg) -->
+
+!!! info 
+
+    All of this will be pushed without creating proposals because the work is in a separate development branch.
+
+
+#### **Merge into main**
+
+If needed, and assuming you've already reached consensus on certain aspects, you can merge all the changes into the main branch.
+
+To accomplish this, the **Project developer** should navigate to the **Merge** tab in the project repository select merge `dev` branch into `main`, and click **Compare**:
+
+![](../images/IC_12-1_merge.jpg)
+
+<!-- The process of working on a project can be broken down into stages, with specific tasks assigned to each stage. -->
+
+At the bottom of the window, which opens, enter the commit description and select the task that was created to work with this project (The Task executors will be displayed automatically):
+
+![](../images/IC_13-1_merge3_commit1.jpg)
+
+Check the box to **Create a proposal** for voting and click **Commit changes**.
+
+As a result, a proposal will be created, which can be seen on the DAO tab:
+
+![](../images/IC_13-2PR-event.jpg)
+
+When the pull request is accepted, the Task status will change to **Confirmed**.
+
+![](../images/IC_14-task-comfirmed.jpg)
+
+The distribution of remuneration for this task will be carried out by the vesting scheme specified when the task was created.
+
+
+### **Issue tokens**
+
+
+After all the documents have been merged into the main branch, you can start issuing tokens.
+
+To do this, the **CI Issuance manager** must go to the project repository and click in **IC Application Forms** on the **Issue tokens** button:
+
+![](../images/IC_15_Issue-tokens-0.jpg)
+
+In the window that opens, you can specify who and how many issued tokens will be transferred. To do this, 
+click **Add recipient**:
+
+![](../images/IC_15_Issue_tokens-1.jpg)
+
+Check the token data and click the **Issue tokens** button.
+
+The multi-proposal will be created for:  
+- the PR from the dev branch to the main;  
+- permission to issue a token.  
+
+![](../images/IC_16-proposal_issues_tokens_3.jpg)
+
+If the multi-proposal is accepted, changes to the docks and forms are poured into the main branch, the TIP3-token contract is deployed and information about the issued tokens appears in the repository and they can be transferred.
+
+
+
+### **Transfer tokens**
+
+
+The DAO member who was designated as the recipient of the issued tokens will be able to see these tokens in their balance in the project's repository.
+
+![](../images/IC_17_balance_recipient_in_repo.jpg)
+
+To send IC tokens, please click the **Send** button in the **Repository tokens** section, enter the recipient's name, and click **Send**.
+
+![](../images/IC_18_send_tokens.jpg)
+
+The recipient will also be able to see the IC tokens in the project repository in the **Repository tokens** section:
+
+![](../images/IC_19_recipient_1.jpg)
+
+
+
+
+### **Registry**
+
+Based on the information entered in the fields of the form, a blockchain register will be created, which can be accessed on the special website.
+
+And then it will be read from there:
+
+![](../images/IC_20_registry_1.jpg)
+
+If you click on a project in the **Projects** section, you will be taken to its repository on GOSH, where you can familiarize yourself with uploaded documents and files:
+
+![](../images/IC_21_0.jpg)
+
+On the **Tokens** tab, you can see the token issued for this project:
+
+![](../images/IC_20_registry_2.jpg)
+
+Information about the token holders can be found by clicking on Owners:
+
+![](../images/IC_22_registry_4_owners.jpg)
+
+On the **Transfers** tab, you can view all transactions related to this token:
+
+![](../images/IC_20_registry_3.jpg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+### **Reviewing documents**
+
+With everything now prepared, the participants in the task can proceed with their work on the project. 
+
+Navigate to your project using the Repositories tab.
+
+![](../images/IC_9-1_repository_new.jpg)
+
+
+Now, there are two branches in the repository: 
+
+`Main` branch is protected. To work on documents and forms, please switch to the `dev` branch.
 
 ![](../images/IC_9-3_repository_2branches.jpg)
 
 To view the uploaded documents, please navigate to the **Documents** folder.
 
-The **Forms** folder contains the templates you have selected (in `JSON` format) with filled-in information about the project and the future token.
+The **Forms** folder contains the templates you selected (in `JSON` format), with filled-in information about your project and the future token.
 
-You can [leave comments](https://docs.gosh.sh/working-with-gosh/gosh-web/repository/#adding-comments-to-file) on the uploaded documents to discuss them:
+![](../images/IC_9-4_repo.jpg)
 
-![](../images/IC_10_1review_docs_comment.jpg)
+To edit them, go to the **IC Application Forms** section on the right.
+
+![](../images/IC_11-1_IC_application_form.jpg)
+
+You can [add comments](https://docs.gosh.sh/working-with-gosh/gosh-web/repository/#adding-comments-to-file) to uploaded documents in order to discuss them and share your thoughts:
+
+![](../images/IC_10_1review_docs_comment.jpg) -->
+
+
+
+
+
+
+
 
 
 
