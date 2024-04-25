@@ -2,7 +2,7 @@
 ## **Overview**
 
 
-**AnyTree** — a software deployment system built to guarantee the security of your software supply chain
+**AnyTree** — a software deployment system built to guarantee the security of your software supply chain.
 
 With AnyTree, any mutations of your code, down to every dependency, as well as operations, including builds and every artifact, are logged, timestamped, signed, and verified.
 
