@@ -7,7 +7,7 @@ This guide will help you get started with such essential Acki Nacki tools as:
 * [TVM-CLI](https://github.com/tvmlabs/tvm-cli)  
 * [Solidity Compiler](https://github.com/gosh-sh/TON-Solidity-Compiler)  
 * [Acki Nacki Blockchain Explorer](https://ackinacki-testnet.tvmlabs.dev/landing)  
-* GraphQL API
+* Node GraphQL API
 <!-- TODO added link  -->
 
 You will learn how to:
@@ -23,7 +23,8 @@ You will learn how to:
 
 ## **Install TVM-CLI**
 
-Download  and install the TVM-CLI for the platform you need from [here](https://github.com/tvmlabs/tvm-cli/releases/tag/0.38.0)
+Download  and install the TVM-CLI for the platform you need from [here](https://github.com/tvmlabs/tvm-sdk/releases/tag/%40tvmlabs%2Ftvm-cli%400.39.0)
+
 
 
 ## **Create and compile contract**
