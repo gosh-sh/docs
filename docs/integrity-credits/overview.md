@@ -1,7 +1,7 @@
-High Integrity Biodiversity Credits developed by rePLANET using the Wallacea Methodology are the highest grade credits currently available.
+[**Integrity Credits**](https://www.integritycredits.com) is the connector for a nature-positive economic models and value chains.
 
-[**Integrity Credits**](https://www.integritycredits.com) is a platform for biodiversity projects, their review, credit issuance, and registry.
+A nature-positive economic model represents a transformative approach to economic planning and development, focusing on the conservation, restoration, and sustainable use of natural resources. This model aims to achieve a harmonious balance where economic growth contributes to rather than detracts from the natural environment. It involves integrating biodiversity and ecosystem services into economic systems and decision-making processes, ensuring that natural capital is preserved and enhanced.
 
-Collaborating with [**GOSH**](https://app.gosh.sh) provides a comprehensive solution for the platform, guaranteeing the security and integrity of the entire value chain through decentralized peer review, reliable loan issuance, advanced registration service, and flexible trading opportunities.
+The platform provides a comprehensive solution that ensures the security and integrity of the entire value chain. This encompasses key processes such as registration, decentralized scientific peer review, Monitoring, Reporting, and Verification (MRV), data collection, credit issuance, registration, and trading. By guaranteeing that each stage is secure, transparent, and unalterable, the technology enhances the trustworthiness and integrity of the biodiversity credits
 
-Governance on the platform is carried out through a **decentralized autonomous organization ([**DAO**](https://docs.gosh.sh/on-chain-architecture/organizations-gosh-dao-and-smv/#dao))** on the blockchain. It facilitates transparent information sharing on the design, measurement, and issuance of biodiversity credits, promoting open and accountable governance.
+Each initiative/project is governed by a ([**DAO**](https://docs.gosh.sh/on-chain-architecture/organizations-gosh-dao-and-smv/#dao)) on the blockchain ensuring traecebility and integrity of any nature asset.
