@@ -1,10 +1,11 @@
 ## **Prerequisites**
 
-* Rust 1.76+
-* Cargo
-* [Wallet-contract](./create-giver.md) to be used as a giver with keys
-* Contract, for example: [`helloWorld.sol`](./create-and-compile-contract.md)
-* [Demo application](https://github.com/gosh-sh/gosh-examples/tree/main/sdk/rust/helloWorld)
+* Node.js  
+* npm  
+* [TVM-CLI](https://github.com/tvmlabs/tvm-sdk/releases/tag/%40tvmlabs%2Ftvm-cli%400.39.0)  
+* [Wallet-contract](./create-giver.md) to be used as a giver with keys  
+* Contract, for example: [`helloWorld.sol`](./create-and-compile-contract.md)  
+* [Demo application](https://github.com/gosh-sh/gosh-examples/tree/main/sdk/javascript/helloWorld)  
 
 
 **This demo app implements the following logic:**
@@ -32,7 +33,7 @@
 
 !!! info
 
-    For testing your developed applications you can use Acki Nacki development blockchain at **ackinacki-testnet.tvmlabs.dev**  
+    For testing your developed applications you can use Acki Nacki development blockchain at **ackinacki-testnet.tvmlabs.dev**
 
     To replenish the balance of wallet-contract, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
@@ -50,7 +51,7 @@ GIVER_KEYS=PATH_TO_YOUR_WALLET_KEYS_FILE
 ## **Run it**
 
 ```sh
-cargo run
+npm run
 ```
 
 You will see a result similar to the following:
