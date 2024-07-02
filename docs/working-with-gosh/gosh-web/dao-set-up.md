@@ -2,7 +2,7 @@
 ### __DAO Set up__
 
 
-You can continue with the initial setup the DAO in the **Settings** tab.
+You can continue with the initial setup of the DAO in the **Settings** tab.
 
 <!-- TODO it might be worth removing this screen -->
 ![](../../images/gosh_web_Create_ORG_05_DAO_settings_01_all.jpg)
@@ -28,7 +28,7 @@ In the **Token Setup** section, you can create a proposal to ban the issue of to
 #### **Event setup**
 
 
-In the **Event setup** section you can enable/disable the option to view the voting results before it ends.
+In the **Event setup** section, you can enable/disable the option to view the voting results before it ends.
 
 And also allow or prohibit discussion when working with proposals.
 
@@ -38,7 +38,7 @@ And also allow or prohibit discussion when working with proposals.
 #### **Members setup**
 
 
-In the **Members setup** section you can grant or deny external users the ability to request membership in this DAO.
+In the **Members setup** section, you can grant or deny external users the ability to request membership in this DAO.
 
 ![](../../images/gosh_web_Create_ORG_05_DAO_settings_04_member_setup.jpg)
 
@@ -48,14 +48,14 @@ Then add a comment on changing the settings for other members of the DAO and cli
 ![](../../images/gosh_web_Create_ORG_05_DAO_settings_05_save_changes.jpg)
 
 !!! info
-    __All settings and actions in the DAO will be performed the [voting procedure](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure).__
+    __All settings and actions in the DAO will be performed in the [voting procedure](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure).__
+<!-- 
 
-
-### __Karma tags__
+### __Karma tags__ -->
 
 <!-- TODO -->
-
-### __notifications__
+<!-- 
+### __Notifications__ -->
 
 <!-- TODO -->
 
@@ -65,7 +65,7 @@ Then add a comment on changing the settings for other members of the DAO and cli
 #### __Basic information__
 When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
 
-The upgrade is initiated by the [proposal](../gosh-web/proposals-and-voting-in-smv.md).
+The [proposal](../gosh-web/proposals-and-voting-in-smv.md) initiates the upgrade.
 
 !!! warning
     Make sure that the proposal for such an update has not yet been created.
@@ -86,7 +86,7 @@ Depending on which version you currently have, choose the appropriate update met
 <!-- TODO
 transfer tokens from previous versions to a separate item and make a link -->
 
-#### __from v. 1 to v. 2__
+#### __- from v. 1 to v. 2__
 
 You can switch to the **Upgrade** section from the new version message or go to the **Settings** tab.
 
@@ -120,7 +120,7 @@ After the proposal is accepted, the contract version will be upgraded.
 
 ![](../../images/gosh_web_upgrade_04_4_DAO_v2.jpg)
 
-#### __from v. 2 to v. 3__
+#### __- from v. 2 to v. 3__
 
 !!! info "**Release notes**"  
 
@@ -132,9 +132,9 @@ After the proposal is accepted, the contract version will be upgraded.
 
         * Improve native token management in contracts. This is mainly bug fixes for the back-end blockchain tokens that guarantee the operations of a smart contract
 
-        * Added possibility of task upgrade. Upgrades from Smart Contract version 2.0 to 3.0 required a redeployment of all Tasks. From now on all future upgrades will not affect previously created Tasks
+        * Added possibility of task upgrade. Upgrades from Smart Contract version 2.0 to 3.0 required a redeployment of all Tasks. From now on, all future upgrades will not affect previously created Tasks
 
-        * Task rewards do not increase karma. From now on Tasks will only serve to remunerate contributors with DAO Tokens but without increasing their Voting Karma
+        * Task rewards do not increase karma. From now on, Tasks will only serve to remunerate contributors with DAO Tokens but without increasing their Voting Karma
 
         * Added a possibility to create index contracts. Version 3.0 now includes indexes that improve the performance of GOSH when used in a web browser
 
@@ -148,7 +148,7 @@ After the proposal is accepted, the contract version will be upgraded.
 
         * ask rewards do not increase karma
 
-        * If a DAO owns tokens of another DAOs “DAO supply” block will contain a button with details. The GOSH interface now has a block to allow DAO members to see which tokens the DAO holds
+        * If a DAO owns tokens of another DAOs, “DAO supply” block will contain a button with details. The GOSH interface now has a block to allow DAO members to see which tokens the DAO holds
 
     **Git Remote Helper**
 
@@ -160,7 +160,7 @@ The Tasks were added in contracts version 2.
 Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
 
 !!! warning
-    Before starting the update make sure that there are commits in the Tasks.
+    Before starting the update, make sure that there are commits in the Tasks.
 
 Go to the Settings tab or follow the link in the upgrade message.
 
@@ -194,7 +194,7 @@ To do this, click **upgrade** in the information message
 
 ![](../../images/gosh_web_upgrade_07_3_DAO_v3_msg_upgr_repo.jpg)
 
-and go to the repository uprade page.  
+and go to the repository upgrade page.  
 Click **Get repositories**.
 
 ![](../../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg)
@@ -234,7 +234,7 @@ After accepting the proposal, the tasks will be transferred from the previous ve
 <!-- !!! info
     The history of events from the previous version will not be transferred. -->
 
-#### __From v. 3 to v. 4/5/6.0/6.1__
+#### __- from v. 3 to v. 4/5/6.0/6.1__
 
 Uninitialized Tasks will not be migrated to the new version. You will need to create these tasks in the new version.
 
@@ -269,7 +269,7 @@ Before continuing, you need to transfer your tokens.
 
 <!-- This is important to keep in mind to ensure that your tokens are properly accounted for in the DAO's upgraded system. -->
 
-If you have a DAO version lower than the 4th inclusive, then to transfer tokens go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
+If you have a DAO version lower than the 4th inclusive, then to transfer tokens, go to the **Overview** tab in the **Your wallet balance** section and click **Transfer from previous version**.
 
 ![](../../images/gosh_web_upgrade_07_3_1_transfer_tokens.jpg)
 
@@ -282,7 +282,7 @@ To do this, click **upgrade** in the information message
 
 ![](../../images/gosh_web_upgrade_08_05_DAO_v3_msg_upgr_repo.jpg)
 
-and go to the repository uprade page.  
+and go to the repository upgrade page.  
 Click **Get repositories**.
 
 ![](../../images/gosh_web_upgrade_07_5_page_upgr_repo.jpg)
@@ -334,7 +334,7 @@ and
 check mark on the permission for additional token issuance - individual proposal -->
 
 
-#### __From version 6.1 to 6.2__
+#### __- from v. 6.1 to 6.2__
 
 !!! info "**Release notes for 6.2.0**"  
 
@@ -385,7 +385,7 @@ Once you've done that, click on the **Complete upgrade** button in the message t
 
 ![](../../images/upgrade_DAO_6_2_0_complete_upgrade.jpg)
 
-Then, a new window will open up and you'll need to click on "Start upgrade complete process" to begin the data migration process between versions of DAOs. 
+Then, a new window will open up, and you'll need to click on "Start upgrade complete process" to begin the data migration process between versions of DAOs. 
 
 ![](../../images/upgrade_DAO_6_2_0_complete_upgrade_start.jpg)
 

@@ -14,7 +14,7 @@ Synchronize your GitHub repositories with GOSH, and work with both platforms sid
 
 ## **How it works**
 
-Github-actions are triggered by changes in the github repository and execute their script. User’s changes will be pushed automatically to GOSH. The script will clone the repository, and its history, and push these branch changes to the matching branch in GOSH.
+GitHub-actions are triggered by changes in the github repository and execute their script. User’s changes will be pushed automatically to GOSH. The script will clone the repository, and its history, and push these branch changes to the matching branch in GOSH.
 
 
 ## **How To Set It Up**

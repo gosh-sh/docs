@@ -7,14 +7,14 @@
 ### __Create Repository__
 
 
-To create a repository in your DAO click **Create new** in the Repositories section or Overview section.​
+To create a repository in your DAO, click **Create new** in the Repositories section or Overview section.​
 
 ![](../../images/gosh_web_Create_Repo_01_new_repo.jpg)
 
 Enter repository name and its description and click **Create repository**.
 
 !!! warning
-    The repository name must contain only Latin letters, numbers,hyphen, underscore character`( a...z, 0...9, -, _ )`
+    The repository name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
 ![](../../images/gosh_web_Create_Repo_02_name_repo.jpg)
 
@@ -45,9 +45,10 @@ The created repository will appear in the list on the Repositories tab.
 ![](../../images/gosh_web_Create_Repo_04_repo_created.jpg)
 
 
-#### __create repository with Expert Tags__
+#### __Create repository with Expert Tags__
 
-This will provide every Tag holder with increased Karma Powers when voting on commits, and for branch protection and unprotection.
+
+This will provide every tag holder with increased Karma Powers when voting on commits and for branch protection and unprotection.
 
 
 
@@ -99,11 +100,11 @@ After scroll down and enter commit info:
 * and add Assigners, Reviewers and Managers if necessary.
 
 
- and click **Commit changes**
+Then click **Commit changes**.
 
 ![](../../images/gosh_web_Create_file_03_commit_data.jpg)
 
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure) will be initiated.
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise, a DAO [vote](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure) will be initiated.
 
 <!-- TODO
 If the branch is protect -->
@@ -163,7 +164,7 @@ A commit can be made to it only by voting.
 
 If the branch no longer needs protection, you can remove it by initiating appropriate proposals.
 
-To do this, go from the **Repositories** tab to the repository you need.
+To do this, navigate to the **Repositories** tab to the repository you need.
 
 ![](../../images/gosh_web_Protect_branch_01_repos.jpg)
 
@@ -171,7 +172,7 @@ Then, on the Branches tab, click the **Unprotect** button for the branch to whic
 
 ![](../../images/gosh_web_Protect_branch_remove_01_branches.jpg)
 
-A vote will be created and you will be redirected to the **DAO** page with events.
+A vote will be created, and you will be redirected to the **DAO** page with events.
 
 ![](../../images/gosh_web_Protect_branch_remove_02_event.jpg)
 
@@ -224,6 +225,6 @@ You can switch between them.
 
 You can also add comments to Pull Request.
 To do this, go from the **DAO** events page to the **Pull Request** vote in the **Pull request diff** section.
-you can leave comments on any line or block of lines in the same way as in [commenting on a file](../gosh-web/repository.md#adding-comments-to-file).
+You can leave comments on any line or block of lines in the same way as in [commenting on a file](../gosh-web/repository.md#adding-comments-to-file).
 
 ![](../../images/gosh_web_Comments_06_for_PR.jpg)

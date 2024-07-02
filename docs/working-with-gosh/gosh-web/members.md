@@ -12,7 +12,7 @@ The user can be invited to the DAO using a [special form](members.md#adding-by-g
 Also, the user can independently [create a membership request](members.md#request-dao-membership) in the DAO.
 
 !!! info
-    Adding a member to the DAO is possible only through an proposal.
+    Adding a member to the DAO is possible only through a proposal.
 
 
 *Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.*
@@ -21,19 +21,19 @@ Also, the user can independently [create a membership request](members.md#reques
 #### <u>Adding by GOSH username or e-mail</u>
 
 
-A DAO member can create a proposle to add GOSH user into the DAO.
+A DAO member can create a proposal to add GOSH user into the DAO.
 
 To do this, go to the tab **Members** in the section **Invite user to DAO**.
 
 * If you know the GOSH username, then enter it.
 
-* If you don't know the name or the user doesn't have a GOSH account yet, enter their email address.
+* If you don't know the name or the user doesn't have a GOSH account yet, enter their e-mail address.
 
 
 !!! info
-    The email address will change to the GOSH username if the user has given permission during registration so that it can be found by email.
+    The e-mail address will change to the GOSH username if the user has given permission during registration so that it can be found by e-mail.
 
-Offer the amount of karma for him and please comment your decision.
+Offer the amount of Karma for him, and please comment your decision.
 
 !!! info
     You can send an invitation proposal to several users at once.
@@ -58,7 +58,7 @@ insert a image before going to the events section -->
 You can invite a user to the DAO by generating an invitation link for them.
 
 !!! warning
-    Enable "Allow external users to request DAO membership" option in [DAO settings](../gosh-web/dao-set-up.md) to enable invites by email/link.
+    Enable "Allow external users to request DAO membership" option in [DAO settings](../gosh-web/dao-set-up.md) to enable invites by e-mail/link.
 
 To do this, on the tab **Members** in the section **Invite user to DAO** click on **Get one-time invitation link**.
 
@@ -70,9 +70,9 @@ To do this, on the tab **Members** in the section **Invite user to DAO** click o
 
 All active invitation links will be displayed in the section on the right.
 
-When the invited user creates a membership proposle in the DAO, the link entry disappears.
+When the invited user creates a membership proposal in the DAO, the link entry disappears.
 
-You can also deactivate the link click on the **Revoke**.
+You can also deactivate the link, click on the **Revoke**.
 
 ![](../../images/gosh_web_Invite_to_DAO_by_link_01_1_all_links.jpg)
 
@@ -87,14 +87,14 @@ Then input a short nickname or and click **Create account and continue**.
 ![](../../images/gosh_web_Invite_to_DAO_by_link_03_shot_nickname.jpg)
 
 
-Enter a short comment who are you and click **Accept invitation**.
+Enter a short comment, who are you and click **Accept invitation**.
 
 ![](../../images/gosh_web_Invite_to_DAO_by_link_04_shot_comm_who_are_U.jpg)
 
 
 On the event page that opens, you can find a request for your acceptance as a member of the DAO.
 
-Click on it you can track the results of voting and discussions.
+Click on it, you can track the results of voting and discussions.
 
 ![](../../images/gosh_web_Invite_to_DAO_by_link_05_Page_dao.jpg)
 
@@ -116,7 +116,7 @@ You can create a membership request in the DAO yourself. To do this, you need to
 !!!info
     Only a registered user will be able to create a membership request.
 
-Follow this link and you will see the overview tab of the DAO you are interested in.
+Follow this link, and you will see the overview tab of the DAO you are interested in.
 
 Click **Request membership**.
 
@@ -149,7 +149,7 @@ searching for users by DAO
 To delete a member from the DAO, go to the **Members** tab and click on the cross to the desired member.
 
 !!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
+    To create a proposal, you must have at least 20 tokens on your wallet balance.
 
 ![](../../images/gosh_web_memeber_delete_01.jpg)
 
@@ -157,11 +157,11 @@ Confirm the deletion by clicking OK.
 
 ![](../../images/gosh_web_memeber_delete_02_confirm.jpg)
 
-As a result, a Multi proposal will be created and you will be redirected to the event tab **Dao**.
+As a result, a Multi proposal will be created, and you will be redirected to the event tab **DAO**.
 
 ![](../../images/gosh_web_memeber_delete_03_event.jpg)
 
-The details of the multi proposl can be seen by going to it.
+The details of the multi proposal can be seen by going to it.
 
 ![](../../images/gosh_web_memeber_delete_04_event_detal.jpg)
 
@@ -177,7 +177,7 @@ But the tokens, if they were, will stay on the balance of the user's wallet.
 
 
 Then click **Save changes and create proposal**.  
-As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+As a result, a Multi proposal will be created, and you will be redirected to the DAO events.
 
 ![](../../images/gosh_web_memeber_change_karma_02_event.jpg)
 

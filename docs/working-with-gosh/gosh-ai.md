@@ -50,7 +50,7 @@ or create in the form that opens
 Then a form for sending an prompt is activated on the right.  
 Enter the name of the repository that will be created after processing the request.
 
-You can also specify an email address (an email will be sent to it after the repository is downloaded)
+You can also specify an e-mail address (an e-mail will be sent to it after the repository is downloaded)
 
 ![](../images/gosh_web_GOSHAI_04.jpg)
 

@@ -1126,14 +1126,14 @@
         
           <li class="md-nav__item">
   <a href="#stage-2-optimistic-roll-up" class="md-nav__link">
-    Stage 2: Optimistic roll-up
+    Stage 2: Optimistic Roll-up
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stage-3-validium-zkp-roll-up" class="md-nav__link">
-    Stage 3: Validium ZKP roll-up
+    Stage 3: Validium ZKP Roll-up
   </a>
   
 </li>
@@ -1748,14 +1748,14 @@
         
           <li class="md-nav__item">
   <a href="#stage-2-optimistic-roll-up" class="md-nav__link">
-    Stage 2: Optimistic roll-up
+    Stage 2: Optimistic Roll-up
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stage-3-validium-zkp-roll-up" class="md-nav__link">
-    Stage 3: Validium ZKP roll-up
+    Stage 3: Validium ZKP Roll-up
   </a>
   
 </li>
@@ -1914,25 +1914,25 @@ Since GOSH uses ed25519 we use a double signature envelope scheme to prove signa
 <ul>
 <li>L2 contract execution is not validated (no validity or fraud proofs)  </li>
 <li>Funds retrieval function in case of L2 censored / stopped  </li>
-<li>L1 Funds retrieval is complicated and expansive  </li>
+<li>L1 Funds retrieval is complicated and expensive  </li>
 </ul>
 </div>
-<h3 id="stage-2-optimistic-roll-up"><strong>Stage 2: Optimistic roll-up</strong></h3>
+<h3 id="stage-2-optimistic-roll-up"><strong>Stage 2: Optimistic Roll-up</strong></h3>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>At this stage we add fraud and execution proofs for <a href="./#definitions" title="is a distributed token smart contract standard on GOSH blockchain">TIP-3</a> contracts.</p>
 </div>
-<p>The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.</p>
-<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other optimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.</p>
+<p>The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic Roll-up). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.</p>
+<p>At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other optimistic Roll-ups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p><em>What we don’t cover at this Stage?</em>  </p>
 <ul>
 <li>Funds retrieval function in case of L2 censored/stopped  </li>
-<li>L1 funds retrieval is complicated and expansive in case of immediate withdrawal  </li>
+<li>L1 funds retrieval is complicated and expensive in case of immediate withdrawal  </li>
 </ul>
 </div>
-<h3 id="stage-3-validium-zkp-roll-up"><strong>Stage 3: Validium ZKP roll-up</strong></h3>
+<h3 id="stage-3-validium-zkp-roll-up"><strong>Stage 3: Validium ZKP Roll-up</strong></h3>
 <p>At this stage, we are adding external Verifiers and putting a bond of L2 Collators on the Ethereum mainnet. Verifiers will be able to supply fraud proofs as well as data availability proofs.</p>
 <p>The Verifiers can slash the L2 Collators in case of misbehavior by supplying ZKPs proving the wrong block production, or by successfully challenging data availability proofs making it effectively an Ethereum Sharding design since GOSH is a multithreaded, multisharded blockchain.</p>
 <div class="admonition warning annotate">

@@ -33,7 +33,7 @@ To fill out all the required fields on the page that opens:
 * __New organization name__
 
     !!! warning
-        The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+        The Organization's name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
 * __Organization picture__
 
@@ -48,7 +48,7 @@ To fill out all the required fields on the page that opens:
 
     A short description that can be seen on the DAO tab under the heading.
 
-    The extended description can be added to the Readme file into _index system repository from the [Overview page](../gosh-web/dao-overview.md) after creating the DAO.
+    The extended description can be added to the README file into _index system repository from the [Overview page](../gosh-web/dao-overview.md) after creating the DAO.
 
 * __Total supply__
 

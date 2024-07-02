@@ -56,7 +56,7 @@ The Dfinity consensus protocol has four layers: client identities, decentralized
 
 ## **Sharding**
 
-The Sharding a method aimed at boosting performance through data and execution partitioning, was pioneered by Ziliqa and further developed in Ethereum for state sharding. Protocols like TON, Near, and Elrond also employ sharding with parallel leader selection and state synchronization to enhance throughput. Despite these advancements, sharding and parallel execution technologies have yet to surpass a practical limit of around 100K TPS in controlled tests, indicating persistent scalability challenges in blockchain consensus mechanisms.
+The Sharding a method aimed at boosting performance through data and execution partitioning, was pioneered by Zilliqa and further developed in Ethereum for state sharding. Protocols like TON, Near, and Elrond also employ sharding with parallel leader selection and state synchronization to enhance throughput. Despite these advancements, sharding and parallel execution technologies have yet to surpass a practical limit of around 100K TPS in controlled tests, indicating persistent scalability challenges in blockchain consensus mechanisms.
 
 ## **Construction of Acki Nacki**
 
@@ -162,7 +162,7 @@ For example, one can input the number of BKs, the desired attack probability wit
 
 In the analysis of attacks, you have the opportunity to conduct experiments with parameters using the following [link](https://ackinacki-plots.gosh.sh/).  
 
-Here you can create graphs illustrating the relationship between the probability of a successful attack and the number of Acki-Nacki, comparision the Acki Nacki consensus with the Nacamoto consensus and the BFT consensus, and build a graphs of the Acki-Nacki Consensus input parameters
+Here you can create graphs illustrating the relationship between the probability of a successful attack and the number of Acki-Nacki, comparison the Acki Nacki consensus with the Nakamoto consensus and the BFT consensus, and build a graphs of the Acki-Nacki Consensus input parameters
 
 
 ## **Performance analysis**

@@ -23,7 +23,7 @@ If you have a GOSH account, then enter your own one seed phrase, if not, you can
 
 ![](../images/docker_ext_create_acc_01.jpg)
 
-To get started with GOSH, you need an active Github-account.
+To get started with GOSH, you need an active GitHub-account.
 
 Click **Create account**
 
@@ -33,7 +33,7 @@ After click **Authorize gosh-sh**
 
 ![](../images/gosh_web_Authorize_Gosh_02.jpg)
 
-In the list of organizations received from Github, click on the organization
+In the list of organizations received from GitHub, click on the organization
 
 ![](../images/gosh_web_Authorize_Gosh_03.jpg)
 
@@ -44,12 +44,12 @@ and select repositories for upload into GOSH
 Do this **for each** organization for which you want to upload repositories to GOSH.
 
 !!! danger
-    After registering on GOSH you will not be able to return to this step in this release.
+    After registering on GOSH, you will not be able to return to this step in this release.
 
     This will be available later
 
 !!! info
-    If you want other GOSH users to be able to find you by your email, give permission.
+    If you want other GOSH users to be able to find you by your e-mail, give permission.
 
 Then click **Upload**
 
@@ -69,7 +69,7 @@ To create the GOSH-account, the seed phrase will be generated for you.
 !!! info
     Your seed phrase will be used to log into GOSH.
 
-Once you have written down your seed phrase, click **Continue.**
+Once you have written down your seed phrase, click **Continue**.
 
 Then choose a short nickname or create a new one and click **Create account**.
 
@@ -79,9 +79,9 @@ Then choose a short nickname or create a new one and click **Create account**.
 ![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
 !!! info
-    __When the repositories are uploaded, a notification will be sent to your email.__
+    __When the repositories are uploaded, a notification will be sent to your e-mail.__
 
-Follow the link in the email.
+Follow the link in the e-mail.
 
 ![](../images/docker_ext_create_acc_02_welcom_letter.jpg)
 
@@ -99,32 +99,32 @@ Once done, you will be logged into GOSH.
 
 !!! info
     The GOSH DAO Bot will be a member of your organization.
-    In the future, it will track changes in your repositories on Github and synchronize them with GOSH.
+    In the future, it will track changes in your repositories on GitHub and synchronize them with GOSH.
 
     The Bot can be removed from the DAO members by voting.
-    But then there will be no automatic synchronization of repositories in GOSH if they have been changed in Github.
+    But then there will be no automatic synchronization of repositories in GOSH if they have been changed in GitHub.
 
 
 ## __Create Organization__
 
-The Organizations page will open after your account is created.
+The Organization page will open after your account has been created.
 
-Click **New organization** button in the Organizations section.
+Click the **New organization** button in the Organizations section.
 
 ![](../images/docker_ext_create_org_01_new_org.jpg)
 
-​Input Organization name and members.
+Input the Organization name and members.
 
 !!! warning
     The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
 The first mandatory member is the creator, identified by their username.
 
-The second member is the GOSH DAO Bot. It will synchronize repositories with github on GOSH.
+The second member is the GOSH DAO Bot. It will synchronize repositories with GitHub on GOSH.
 
-Any other members can be added at creation - just enter the username of each member in new line.
+Any other members can be added at creation - just enter the username of each member in a new line.
 
-At any later time the list of members [can be expanded](gosh-web/members.md#adding-members-to-dao) by voting.
+At any later time, the list of members [can be expanded](gosh-web/members.md#adding-members-to-dao) by voting.
 
 Click **Create organization**.
 
@@ -137,7 +137,7 @@ Click **Create organization**.
 
 ## __​Create Repository__
 
-To create a repository in your organization click **Create** in the Repositories section.
+To create a repository in your organization, click **Create** in the Repositories section.
 
 ![](../images/docker_ext_create_repo_01_new_repo.jpg)
 
@@ -151,11 +151,11 @@ Enter repository name and click **Create repository**.
 
 ## __Create Branch__
 
-Repository is created with default main branch. To create another branch, click on the **branches** counter.
+The Repository is created with default main branch. To create another branch, click on the **branches** counter.
 
 ![](../images/docker_ext_create_branch_01.jpg)
 
-Select the branch to be forked, enter new branch name, and click​ **Create branch**.
+Select the branch to be forked, enter a new branch name, and click​ **Create branch**.
 
 !!! warning
     The branch name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
@@ -172,7 +172,7 @@ Switch to it via drop down list.
 
 ## __Create File__
 
-To create file, click **Add file** button.
+To create а file, click **Add file** button.
 
 ![](../images/docker_ext_create_file_01_new_file.jpg)
 
@@ -188,7 +188,7 @@ Commit status will be displayed below.
 
 ![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
 
-If the branch you are working in requires no vote to commit to, the changes will be commited immediately/ Otherwise a DAO [vote](docker-extension.md#voting-in-smv-soft-majority-vote) will be initiated.
+If the branch you are working on does not require a vote to commit changes, they will be committed immediately. Otherwise, a DAO [vote](docker-extension.md#voting-in-smv-soft-majority-vote) will be initiated.
 
 ## __Create Pull Request__
 
@@ -196,7 +196,7 @@ Click on the **Pull requests** tab and set up the pull request: what branch to m
 
 ![](../images/docker_ext_create_PR_01.jpg)
 
-View the diff, scroll down to **Commit data**, enter details and click **Commit changes**.
+To view the diff, scroll down to **Commit data**, enter details and click **Commit changes**.
 
 ![](../images/docker_ext_create_PR_02_comparing.jpg)
 
@@ -230,7 +230,7 @@ Once you have made a decision, input the amount of tokens, select **Approve** or
 !!! info
     As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
 
-    For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus with every member holding 100 tokens a proposal can never be instantly completed without the participation of members other than the proposal's author.
+    For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus, with every member holding 100 tokens, a proposal can never be instantly completed without the participation of members other than the proposal's author.
 
     On the other hand, so as not to depend on all members of an organization to vote, soft majority vote will complete with an approval at the end of the voting period, if 10% of the total token supply were used to vote for, and no one voted against.
 
@@ -241,7 +241,7 @@ Other members of the Organization, who have transferred their tokens to SMV, wil
 !!! info
     Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.
 
-Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
+Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes, and the proposed action is performed.
 
 ![](../images/docker_ext_Voiting_SMV_03_result.jpg)
 
@@ -249,7 +249,7 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 A user needs to know their public key, for example, when joining an organization.
 
-To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings){:target="_blank"}.
+To view your public key, go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings){:target="_blank"}.
 
 !!! danger
     Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
@@ -261,7 +261,7 @@ To view your public key go to the main page of your account and click [**Setting
 
 Go to Organization **Settings** to the **Members** tab to manage your organization.
 
-To add member enter the username of each candidate from a new line and click **Add members** button.
+To add member, enter the username of each candidate from a new line and click **Add members** button.
 
 ![](../images/gosh_web_Add_Members_01.jpg)
 
