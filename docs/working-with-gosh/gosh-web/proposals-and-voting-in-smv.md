@@ -8,7 +8,7 @@ The main mechanism of interaction in the DAO is voting. Any action in a DAO requ
 <!-- Actions that require a DAO vote are performed by creating a proposal. -->
 
 !!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
+    To create a proposal, you must have at least 20 tokens on your wallet balance.
 
 ## __Types of Proposals:__
 
@@ -88,7 +88,7 @@ kinds of proposals:
 -->
 
 ## __Voting procedure__
-To vote for the proposal, some of your tokens must be be allocated to SMV (once the proposal is completed), you can get them back.
+To vote for the proposal, some of your tokens must be allocated to SMV (once the proposal is completed), you can get them back.
 
 !!! info
     You can vote for a proposal only once.
@@ -130,9 +130,9 @@ Once you have made a decision, input the amount of tokens, select **Approve** or
 !!! info
     As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
 
-    For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus with every member holding 100 tokens a proposal can never be instantly completed without the participation of members other than the proposal's author.
+    For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus, with every member holding 100 tokens, a proposal can never be instantly completed without the participation of members other than the proposal's author.
 
-    On the other hand, so as not to depend on all members of an organization to vote, soft majority vote will complete with an approval at the end of the voting period, if 10% of the total token supply were used to vote for, and no one voted against.
+    On the other hand, to avoid depending on the votes of all members of the organization, a soft majority vote would end with approval at the end of the voting period if 10% of the total number of tokens had been used to vote in favor and no one had voted against.
 
     The more tokens are sent against the proposal, the higher the approving amount needs to be (up to 50% of the total supply  + 1 token) for the proposal to pass.
 

@@ -1,10 +1,10 @@
 # Overview
 
-**GOSH** — **a revolutionary decentralized computing platform** accessible to everyone, everywhere.
+**GOSH** — **a revolutionary decentralized computing platform** that is accessible to everyone, everywhere.
 
 GOSH runs on the [**Acki Nacki**](acki-nacki/overview) protocol, ensuring scalability, fast finality and gasless transactions.
 
-A Git on-chain and [DAO](on-chain-architecture/organizations-gosh-dao-and-smv/#dao) platform, GOSH enables communities to reach consensus on decentralized processes and asset management.
+As Git on-chain and [DAO](on-chain-architecture/organizations-gosh-dao-and-smv/#dao) platform, GOSH enables communities to reach consensus on decentralized processes and asset management.
 
 Various tools have been developed to assist you in adopting GOSH for your decentralized processes and asset management:
 
@@ -15,7 +15,7 @@ Various tools have been developed to assist you in adopting GOSH for your decent
 
 GOSH offers an array of powerful [apps](https://gosh.sh/tools), including:  
 
-* [Integrity Credits](integrity-credits/overview.md): uses DAO in GOSH to provide expert assessment and loans for biodiversity conservation;
+* [Integrity Credits](integrity-credits/overview.md): uses DAO in GOSH to provide expert assessments and loans for biodiversity conservation;
 
 * [AnyTree](working-with-gosh/anytree.md): ensures the security of your software supply chain;
 

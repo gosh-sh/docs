@@ -60,7 +60,7 @@ As a result the binary file will be created with an immutable record of not only
 3. **Setup a GOSH project**
 
     You need a GOSH repository.  
-    If you haven't used a GOSH-repository you can upload your github-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding){:target="_blank"} or create a [GOSH-account](https://app.gosh.sh/){:target="_blank"} and [create a new one](./gosh-web/repository.md).
+    If you haven't used a GOSH-repository you can upload your GitHub-repository to GOSH through [onboarding](https://app.gosh.sh/onboarding){:target="_blank"} or create a [GOSH-account](https://app.gosh.sh/){:target="_blank"} and [create a new one](./gosh-web/repository.md).
 
     Go to your GOSH-repository
 
@@ -513,5 +513,5 @@ Rest assured, we are committed to promptly resolving this issue. Our dedicated t
 
 ### __Contact us__
 
-If you have any questions or issues using GOSH AnyTree, please email us at [help@gosh.sh](mailto:help@gosh.sh)
+If you have any questions or issues using GOSH AnyTree, please e-mail us at [help@gosh.sh](mailto:help@gosh.sh)
 

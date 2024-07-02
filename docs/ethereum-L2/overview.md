@@ -55,27 +55,27 @@ Since GOSH uses ed25519 we use a double signature envelope scheme to prove signa
 
     * L2 contract execution is not validated (no validity or fraud proofs)  
     * Funds retrieval function in case of L2 censored / stopped  
-    * L1 Funds retrieval is complicated and expansive  
+    * L1 Funds retrieval is complicated and expensive  
 
 
 
-### **Stage 2: Optimistic roll-up**
+### **Stage 2: Optimistic Roll-up**
 
 !!! info
     At this stage we add fraud and execution proofs for [TIP-3](overview.md#definitions "is a distributed token smart contract standard on GOSH blockchain") contracts.
 
-The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic rollup). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.
+The Proposer constructs the TIP-3 execution proof and sends it together with block proofs. If the execution is correctly proved the funds can be withdrawn immediately. If the Proposer does not wish to pay the gas fees for ZKP execution it can supply the withdrawal request without any proof but with a bond. In which case the withholding period will be activated (hence optimistic Roll-up). Another Proposer can verify the correctness of execution of the TIP-3 in the proposed batch and if found incorrect execution can supply the fraud proof (consisting of proof of the correct execution of the corrupted TIP-3 transaction and proof of block tree hashes which will be incompatible with hashes provided by the first Proposer) and collect the Proposer Bond.
  
-At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other optimistic rollups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.
+At this stage we have added a mechanism of Fraud proof of L2 validators making the network effectively on par with security assumptions of other optimistic Roll-ups, but also providing a mechanism for immediate Validation of token contract execution on L2 network.
 
 !!! info
     *What we don’t cover at this Stage?*  
 
     * Funds retrieval function in case of L2 censored/stopped  
-    * L1 funds retrieval is complicated and expansive in case of immediate withdrawal  
+    * L1 funds retrieval is complicated and expensive in case of immediate withdrawal  
 
 
-### **Stage 3: Validium ZKP roll-up**
+### **Stage 3: Validium ZKP Roll-up**
 
 
 At this stage, we are adding external Verifiers and putting a bond of L2 Collators on the Ethereum mainnet. Verifiers will be able to supply fraud proofs as well as data availability proofs.

@@ -5,9 +5,9 @@
 
 The participants include:
 
-**Assigners** who are responsible for task completion;
-**Reviewers** who check for accuracy;
-**Managers** who create and manage the Milestone and break it down into Tasks.
+* **Assigners**, who are responsible for task completion;  
+* **Reviewers**, who check for accuracy;  
+* **Managers**, who create and manage the Milestone and break it down into Tasks.
 
 Milestone is used to track progress, identify potential issues, and adjust plans as needed. It also helps maintain team motivation and ensures timely and budgeted project implementation.
 
@@ -83,8 +83,8 @@ After filling in all the conditions, click **Create milestone**
 
 After creating the proposal, you will be redirected to the **DAO** tab on the event page.
 
-Inside the proposal you will be able to see all the conditions of the Milestone.
-In the table you can see the period since which month and in what parts the payments will be made to Milestone participants.
+Inside the proposal, you will be able to see all the conditions of the Milestone.
+In the table, you can see the period since which month and in what parts the payments will be made to Milestone participants.
 
 ![](../../images/n_gosh_web_Task_03_event.jpg)
 
@@ -103,10 +103,10 @@ After accepting the proposal, the Milestone will appear in the list on the **Tas
 
 Plan out what tasks your Milestone will consist of. Each task is assigned separately.  
 
-To add Tasks to the Milestone, open it by clicking on the one you need in the list. Then click the **Add task...**
 
-To add Tasks to your Milestone, simply open the Milestone by clicking on the one you want in the list.  
-Then, click the "Add task..." button.
+
+To add tasks to your Milestone, simply open the Milestone by clicking on it in the list.  
+Then, click the **Add task...** button.
 
 ![](../../images/n_gosh_web_Task_05_add_tasks.jpg)
 
@@ -118,7 +118,7 @@ Enter the **Task name**.
 A **Reward** will be given for each Task completed, and **Tags** will be added for quick navigation.
 
 At the same time, you can decide on the number of tokens that the Task executor (**Commit author** for accepted merge), the **reviewer** and the **manager** will receive if they work on the Task.  
-To do this, click on the **Distribution**
+To do this, click on the **Distribution**.
 
 **Commit author** - the person who executes the Task.  
 **Reviewer** - the person who checks the correctness of the Task.  
@@ -146,7 +146,7 @@ Vesting and lock periods as in Milestone.
 
 ![](../../images/n_gosh_web_Task_07_01.jpg)
 
-Any member of the Dao can complete the Task and receive a reward. To do this, he needs to [create a Branch](./repository.md#create-branch) in the Repository specified in Milestone, [commit all files](./repository.md#create-file) with the solution and create and merge [pull request](./repository.md#create-pull-request)
+Any member of the DAO is welcome to complete the Task and receive a reward. To do so, they need to [create a Branch](./repository.md#create-branch) in the repository specified in Milestone, [commit all files](./repository.md#create-file) with the solution, and create and merge a [pull request](./repository.md#create-pull-request).
 
 
 ![](../../images/n_gosh_web_Task_08_01_create_file.jpg)
@@ -209,7 +209,7 @@ After attaching a pull request to the Task, the tokens will be distributed betwe
 **Manager** - the person who manages the Task execution process.
 
 !!! info
-    The number of authors, areviewers and managers is set at your choice.  
+    The number of authors, a reviewers and managers is set at your choice.  
 
 ![](../../images/gosh_web_Task_04_cost_distrb.jpg)
 
@@ -234,7 +234,7 @@ After creating the proposal, you will be taken to the **DAO** tab with events.
 
 ![](../../images/gosh_web_Task_07_event.jpg)
 
-Inside the proposal you will be able to see all the conditions of the Task.  
+Inside the proposal, you will be able to see all the conditions of the Task.  
 In the table you can see the period since which month and in what parts the payments will be made to the members of the Task. -->
 
 <!-- ![](../../images/gosh_web_Task_08_proposal.jpg) -->
@@ -287,7 +287,7 @@ To do this, go to the **Tasks** tab in the completed Task and click **Claim rewa
 Thus the tokens will begin to be transferred to the wallets of the members of the completed Task in accordance with the vesting scheme when the lock period ends. -->
 
 
-### __Deletе Milestone__
+### __Delete Milestone__
 
 
 To delete a Milestone, go to it on the **Tasks** tab, open it by clicking on the one you need in the list.
@@ -296,7 +296,7 @@ Then click to **Delete milestone**
 
 ![](../../images/gosh_web_Task_delete_01.jpg)
 
-After creating a proposal about deleting a Task, you will be redirected to the event tab **Dao**.
+After creating a proposal about deleting a Task, you will be redirected to the **DAO** events tab.
 
 ![](../../images/gosh_web_Task_delete_02_event.jpg)
 

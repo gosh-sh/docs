@@ -26,9 +26,9 @@ Use one of the suggested methods:
 
 ### __with GitHub__
 
-Use your Github account to sign up for GOSH.
+Use your GitHub account to sign up for GOSH.
 
-To do this,enter your username or email address and password and click **Sign in** button:
+To do this, enter your username or e-mail address and password and click **Sign in** button:
 
 ![](../../images/gosh_web_Authorize_Gosh_02.jpg)
 
@@ -38,7 +38,7 @@ and complete the authentication.
     The special GOSH DAO Bot will help with registration in GOSH.
     It will deploy your DAO and upload your selected repositories to GOSH.
 
-In the list of organizations received from Github, select the organization from which you want to make a DAO on GOSH
+In the list of organizations received from GitHub, select the organization from which you want to make a DAO on GOSH
 
 ![](../../images/gosh_web_Authorize_Gosh_03.jpg)
 
@@ -54,7 +54,7 @@ Do this **for each** organization for which you want to upload repositories to G
     This will be available later
 
 !!! info
-    If you want other GOSH users to be able to find you by your email, give permission.
+    If you want other GOSH users to be able to find you by your e-mail, give permission.
 
 Then click **Upload**
 
@@ -62,7 +62,7 @@ Then click **Upload**
 
 ​If you are familiar with blockchain, you know what to do with a seed phrase.
 
-If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions, can always be calculated from your seed phrase.
 
 To create the GOSH Account, the seed phrase will be generated for you. If you already have the GOSH Account, click **Clear** and enter your own one seed phrase.
 
@@ -83,9 +83,10 @@ Then choose your username in GOSH. **This is your unique cryptographic identifie
 **
 
 !!! Danger
-    **Please note that after creating your username it will be impossible to change it in the future.**
+    **Please note that once you create your username, it cannot be changed in the future.**
 
-if your username is already taken, please choose another one.
+If your desired username is already taken, please decide another one.
+
 
 !!! warning
     The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
@@ -94,7 +95,7 @@ And click **Create account**.
 
 ![](../../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
-When entering the GOSH will ask you to set up a PIN code:
+When entering, the GOSH will ask you to set up a PIN code:
 
 !!! info
     Set a new PIN code for each new session.
@@ -116,7 +117,7 @@ The Organizations page will open after your Account is created.
 
 
 !!! info
-    __When the repositories are uploaded, a notification will be sent to your email.__
+    __When the repositories are uploaded, a notification will be sent to your e-mail.__
 
 Follow the link in the letter.
 
@@ -129,7 +130,7 @@ Enter the saved seed phrase and click **Sign in**.
 Also set up a PIN code and unlock with PIN code.
 
 You can also ensure continuous **synchronization of your GitHub and GOSH repositories.**  
-To do this you can use [GOSH GitHub Sync](../sync.md).
+To do this, you can use [GOSH GitHub Sync](../sync.md).
 
 
 ### __with Google__
@@ -137,7 +138,7 @@ To do this you can use [GOSH GitHub Sync](../sync.md).
 
 You can use your Google account to sign up for GOSH click **Sign in with Google**
 
-Then,enter your email address or phone number and click **Next** button:
+Then, enter your e-mail address or phone number and click **Next** button:
 
 ![](../../images/n_gosh_web_account_3_2_1_google_email.jpg)
 
@@ -145,14 +146,14 @@ Confirm the selection with a password and proceed to the next step by clicking *
 
 ![](../../images/n_gosh_web_account_3_2_2_google_password.jpg)
 
-Specify the email address that is convenient for you to work with GOSH.
+Specify the e-mail address that is convenient for you to work with GOSH.
 
 Then choose your username in GOSH. **This will be your unique cryptographic identifier in GOSH.**
 
 !!! Danger
-    **Please note that after creating your username it will be impossible to change it in the future.**
+    **Please note that after creating your username, it will be impossible to change it in the future.**
 
-if your username is already taken, please choose another one.
+If your desired username is already taken, please choose another one.
 
 !!! warning
     The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
@@ -165,7 +166,7 @@ On the next step, you will be offered the generated seed phrase.
 
 ​If you are familiar with blockchain, you know what to do with a seed phrase.
 
-If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions, can always be calculated from your seed phrase.
 
 To create the GOSH Account, the seed phrase will be generated for you. If you already have the GOSH Account, click **Clear** and enter your own one seed phrase.
 
@@ -185,8 +186,8 @@ Then, please enter the required words from your phrase, separated by a space, to
 
 ![](../../images/n_gosh_web_account_3_2_5_google_verufy_seede.jpg)
 
-When entering the GOSH will ask you to set up a PIN code:
-
+When entering, the GOSH will ask you to set up a PIN code:
+Now it's time to create your first DAO. To do this, click on 'Create DAO' and complete the process
 !!! info
     Set a new PIN code for each new session.
 
@@ -196,7 +197,8 @@ And unlock with this PIN code.
 
 Congratulations, your GOSH account has been created.
 
-It remains to create a your first DAO. To do this, click on **Create DAO and complete**
+Now it's time to create your first DAO. To do this, click on **Create DAO and complete** and complete the process
+
 
 ![](../../images/n_gosh_web_account_3_2_7_google_create_dao.jpg)
 
@@ -204,7 +206,7 @@ On the page that opens, click on your DAO to open. A description of further work
 
 ![](../../images/n_gosh_web_account_3_2_8_google_done.jpg)
 
-You can synchronize your GitHub repositories with GOSH, which allows you to work with both platforms side by side. To do this you can use [GOSH GitHub Sync](../sync.md).
+You can synchronize your GitHub repositories with GOSH, which allows you to work with both platforms side by side. To do this, you can use [GOSH GitHub Sync](../sync.md).
 
 
 ### __with Linkedln__
@@ -212,7 +214,7 @@ You can synchronize your GitHub repositories with GOSH, which allows you to work
 
 Use your Linkedln account to sign up for GOSH.
 
-To do this,enter your email address and password and click **Sign in** button:
+To do this, enter your e-mail address and password and click **Sign in** button:
 
 ![](../../images/n_gosh_web_account_3_3_1_linkedin_email.jpg)
 
@@ -220,14 +222,14 @@ Click on the **Allow** button to grant permission for the use of your data
 
 ![](../../images/n_gosh_web_account_3_3_2_linkedin_allow.jpg)
 
-Specify the email address that is convenient for you to work with GOSH.
+Specify the e-mail address that is convenient for you to work with GOSH.
 
 Then choose your username in GOSH. **This will be your unique cryptographic identifier in GOSH.**
 
 !!! Danger
-    **Please note that after creating your username it will be impossible to change it in the future.**
+    **Please note that after creating your username, it will be impossible to change it in the future.**
 
-if your username is already taken, please choose another one.
+If your desired username is already taken, please choose another one.
 
 !!! warning
     The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
@@ -240,7 +242,7 @@ On the next step, you will be offered the generated seed phrase.
 
 ​If you are familiar with blockchain, you know what to do with a seed phrase.
 
-If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+If you're new to blockchain, all you need to know is that this is the key to your Account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions, can always be calculated from your seed phrase.
 
 To create the GOSH Account, the seed phrase will be generated for you. If you already have the GOSH Account, click **Clear** and enter your own one seed phrase.
 
@@ -273,7 +275,7 @@ And unlock with this PIN code.
 
 Congratulations, your GOSH account has been created.
 
-It remains to create a DAO. To do this, click on **Create DAO and complete**
+Now it's time to create your first DAO. To do this, click on **Create DAO and complete** the process.
 
 ![](../../images/n_gosh_web_account_3_3_7_linkedin_create_dao.jpg)
 
@@ -289,7 +291,7 @@ You can synchronize your GitHub repositories with GOSH, which allows you to work
 
 A user needs to know their public key, for example, when joining an organization.
 
-To view your public key go to the main page of your Account and click [**Settings**](https://app.gosh.sh/a/settings){:target="_blank"}.
+To view your public key, go to the main page of your Account and click [**Settings**](https://app.gosh.sh/a/settings){:target="_blank"}.
 
 !!! danger
     Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
