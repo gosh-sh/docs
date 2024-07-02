@@ -9,40 +9,42 @@ All information about your DAO and its activities will be displayed here.
 Information about DAO assets is displayed on the right.
 
 ### **DAO total supply**  
-the total issue of tokens of this DAO.
+The total issue of tokens of this DAO.
 
 ### **DAO reserve**  
-unallocated tokens.
+The unallocated tokens.
 
-Push on the **Send** button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
+Push on the **Send** button, you will create a proposal to transfer tokens from the DAO reserve to the DAO member.
 <!-- TODO -->
 
-Push on the **Mint** button, you will [create an proposal to mint additional tokens](../gosh-web/working-with-tokens-and-karma.md#additional-minting-of-tokens-for-dao) for this DAO.
+Push on the **Mint** button, you will [create a proposal to mint additional tokens](../gosh-web/working-with-tokens-and-karma.md#additional-minting-of-tokens-for-dao) for this DAO.
 
 ![](../../images/gosh_web_OVERVIEW_01_total_suply.jpg)
 
 
 ### **Your wallet balance**  
-the amount of tokens you have in this DAO.
+The amount of tokens you have in this DAO.
 
-    !!! info
-        When creating a DAO, 20 tokens from the DAO reserve will be issued to your wallet.
+
+!!! info
+    When creating a DAO, 20 tokens from the DAO reserve will be issued to your wallet.
 
     Push on the **SEND** button, you will to transfer your tokens to the DAO reserve or to the GOSH user.
 <!-- TODO -->
 
-### **Karma**  
-the amount of tokens (upper limit) within which a DAO member can vote. 
 
-    It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.
+### **Karma**  
+The amount of tokens (upper limit) within which a DAO member can vote. 
+
+It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.
 
 ![](../../images/gosh_web_OVERVIEW_02_wallet_balance.jpg)
 
 
 ### **Members**  
-total number of DAO members.
+The total number of DAO members.
 
-    From here you can also send an invitation to become a member of the DAO.
+From here, you can also send an invitation to become a member of the DAO.
 
 <!-- TODO -->
 
@@ -51,7 +53,7 @@ total number of DAO members.
 
 ### **Recent proposals**
 
-Information and status of the recent proposals will be displayed  in this section. 
+Information and status of the recent proposals will be displayed  in this section.  
 Click on the name of the proposal you can go to the event page and [vote](../gosh-web/proposals-and-voting-in-smv.md#voting-procedure).
 
 ![](../../images/gosh_web_OVERVIEW_05_recent_proposals.jpg)

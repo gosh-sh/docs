@@ -98,7 +98,7 @@ the address of the user's **Profile** contract
 
 <a id="deposit" href="">**deposit**</a>(uint256 pubkey)  
 
-***Allows a user to deposit `Ether` (transfered as value) into the Elock-contract for locking in it.***
+***Allows a user to deposit `Ether` (transferred as value) into the Elock-contract for locking in it.***
 The corresponding amount of wrapped tokens (`WETH`) in GOSH will be minted for the amount of the
 blocked funds.  
 { .ml-params }

@@ -1,15 +1,15 @@
 <!-- ### __Working with tokens and Karma__ -->
 
 
-#### Additional minting of tokens for DAO
+#### __Additional minting of tokens for DAO__
 
 !!! warning
     The option allowing the minting of DAO tokens must be enabled on the **Settings** tab in the **Token Settings section**.
 
 Click on the **Mint** button on the right on the **Overview** tab in the **DAO Reserve** section.
-You will create an proposal to mint additional tokens for this DAO.
+You will create a proposal to mint additional tokens for this DAO.
 
-In the window that appears, enter the amount of tokens to emission and add a description of the DAO members. Then click **Create proposal to mint tokens**
+In the window that appears, enter the amount of tokens to emission and add a description of the DAO members. Then click **Create proposal to mint tokens**.
 
 ![](../../images/gosh_web_OVERVIEW_mint_01_create_proposal.jpg)
 
@@ -25,13 +25,13 @@ After the proposal is accepted, the changes will take effect.
 
 ![](../../images/gosh_web_OVERVIEW_mint_04_reserve.jpg)
 
-#### Additional voiting tokens and Karma
+#### __Additional voting tokens and Karma__
 
 Any member of the DAO can send a request to change Karma.  
 To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
 
 !!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
+    To create a proposal, you must have at least 20 tokens on your wallet balance.
 
 ![](../../images/gosh_web_memeber_change_karma_01_request.jpg)
 
@@ -41,7 +41,7 @@ To do this, go to the **Members** tab and change the number of Karma and token b
     To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
 
 Then click **Save changes and create proposal**.  
-As a result, a Multi proposal will be created and you will be redirected to the event tab **Dao**.
+As a result, a Multi proposal will be created, and you will be redirected to the event tab **DAO**.
 
 ![](../../images/gosh_web_memeber_change_karma_02_event.jpg)
 
@@ -57,11 +57,11 @@ After accepting the multi proposal, the user will receive tokens and Karma from 
 
 #### __Expert Tags__
 
-You can now [add an **Karma Tags**](../../hacks-and-grants/user-guide.md#expert-tags) to your DAO, which will grant additional Karma Voting Powers to each member possessing such Tags for decisions that support Karma Tags.
+You can now [add a **Karma Tags**](../../hacks-and-grants/user-guide.md#expert-tags) to your DAO, which will grant additional Karma Voting Powers to each member possessing such tags for decisions that support Karma Tags.
 
 
 
-#### Transfer of tokens from DAO reserve
+#### __Transfer of tokens from DAO reserve__
 
 Tokens can be sent from the DAO reserve to
 
@@ -97,9 +97,9 @@ Inside the event, you can see detailed information about the proposal.
 
 After the proposal is accepted, the tokens will be transferred to the balance wallet of the GOSH user or DAO.
 
-#### Transfer of tokens from user's wallet
+#### __Transfer of tokens from user's wallet__
 
-Tokens can be sent from the DAO reserve to
+Tokens can be sent from the DAO reserve to:
 
 * a member of this DAO;
 * any GOSH user, who has visited this DAO at least once.
@@ -107,12 +107,15 @@ Tokens can be sent from the DAO reserve to
 !!! info
     Only regular tokens are transferred. You will not be able to vote with such tokens.
 
-To send tokens from your wallet to the DAO, go to the **Overview** or **DAO** tab on the **Your wallet balance** section and click **Send**.
+<!-- To send tokens from your wallet to the DAO, go to the **Overview** or **DAO** tab to the **Your wallet balance** section and click **Send**. -->
+
+To transfer tokens from your DAO wallet, go to the **Overview** or **DAO** tab, then under **Your wallet balance**, click **Send**.
 
 ![](../../images/gosh_web_send_token_05_from_wallet_overview.jpg)
 
-In the window that opens, enter the name of the member of the DAO and the amount of tokens to send.
-Then click **Send tokens**
+
+In the window that opens, please enter the name of the DAO member and the number of tokens to be transferred. Then click on the **Send Token** button.
+
 
 ![](../../images/gosh_web_send_token_06_window_send.jpg)
 

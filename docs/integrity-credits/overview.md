@@ -4,4 +4,4 @@ A nature-positive economic model represents a transformative approach to economi
 
 The platform provides a comprehensive solution that ensures the security and integrity of the entire value chain. This encompasses key processes such as registration, decentralized scientific peer review, Monitoring, Reporting, and Verification (MRV), data collection, credit issuance, registration, and trading. By guaranteeing that each stage is secure, transparent, and unalterable, the technology enhances the trustworthiness and integrity of the biodiversity credits
 
-Each initiative/project is governed by a ([**DAO**](https://docs.gosh.sh/on-chain-architecture/organizations-gosh-dao-and-smv/#dao)) on the blockchain ensuring traecebility and integrity of any nature asset.
+Each initiative/project is governed by a ([**DAO**](https://docs.gosh.sh/on-chain-architecture/organizations-gosh-dao-and-smv/#dao)) on the blockchain ensuring traceability and integrity of any nature asset.

@@ -66,9 +66,9 @@ Settings
 ### __Create account__
 
 
-To get started with GOSH, you need an active Github-account.
+To get started with GOSH, you need an active GitHub-account.
 
-Click **Create account with Github** to start registering on GOSH
+Click **Create account with GitHub** to start registering on GOSH
 
 ![](../images/gosh_web_Authorize_Gosh_01.jpg)
 
@@ -81,7 +81,7 @@ After click **Authorize gosh-sh**
     The special GOSH DAO Bot will help with registration in GOSH.
     It will deploy your DAO and upload your selected repositories to GOSH.
 
-In the list of organizations received from Github, click on the organization
+In the list of organizations received from GitHub, click on the organization
 
 ![](../images/gosh_web_Authorize_Gosh_03.jpg)
 
@@ -97,7 +97,7 @@ Do this **for each** organization for which you want to upload repositories to G
     This will be available later
 
 !!! info
-    If you want other GOSH users to be able to find you by your email, give permission.
+    If you want other GOSH users to be able to find you by your e-mail, give permission.
 
 Then click **Upload**
 
@@ -159,7 +159,7 @@ The Organizations page will open after your account is created.
 
 
 !!! info
-    __When the repositories are uploaded, a notification will be sent to your email.__
+    __When the repositories are uploaded, a notification will be sent to your e-mail.__
 
 Follow the link in the letter.
 
@@ -268,10 +268,10 @@ Information about DAO assets is displayed on the right.
 
 * **DAO reserve** - unallocated tokens.
 
-    Push on the **Send** button, you will create an proposal to transfer tokens from the DAO reserve to the DAO member.
+    Push on the **Send** button, you will create a proposal to transfer tokens from the DAO reserve to the DAO member.
     <!-- TODO -->
 
-    Push on the **Mint** button, you will [create an proposal to mint additional tokens](gosh-web.md#additional-minting-of-tokens-for-dao) for this DAO.
+    Push on the **Mint** button, you will [create a proposal to mint additional tokens](gosh-web.md#additional-minting-of-tokens-for-dao) for this DAO.
 
 ![](../images/gosh_web_OVERVIEW_01_total_suply.jpg)
 
@@ -417,7 +417,7 @@ The upgrade is initiated by the [proposal](gosh-web.md#proposals-and-voting-in-s
     Make sure that the proposal for such an update has not yet been created.
 
 !!! info
-    Complete all proposle before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.
+    Complete all proposal before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.
 
 You can see a message about the availability of a new version 
 and an invitation to update in the DAO.
@@ -747,7 +747,7 @@ After all proposals are accepted, the DAO update process can be considered compl
 Actions that require a DAO vote are performed by creating a proposal.
 
 !!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
+    To create a proposal, you must have at least 20 tokens on your wallet balance.
 
 
 * [**Create a pull request**](gosh-web.md#create-pull-request)
@@ -891,7 +891,7 @@ Once a majority has been reached early, or the voting period ended and the soft 
     The option allowing the minting of DAO tokens must be enabled on the **Settings** tab in the **Token Settings section**.
 
 Click on the **Mint** button on the right on the **Overview** tab in the **DAO Reserve** section.
-You will create an proposal to mint additional tokens for this DAO.
+You will create a proposal to mint additional tokens for this DAO.
 
 In the window that appears, enter the amount of tokens to emission and add a description of the DAO members. Then click **Create proposal to mint tokens**
 
@@ -909,13 +909,13 @@ After the proposal is accepted, the changes will take effect.
 
 ![](../images/gosh_web_OVERVIEW_mint_04_reserve.jpg)
 
-#### Additional voiting tokens and Karma
+#### Additional voting tokens and Karma
 
 Any member of the DAO can send a request to change Karma.  
 To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
 
 !!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
+    To create a proposal, you must have at least 20 tokens on your wallet balance.
 
 ![](../images/gosh_web_memeber_change_karma_01_request.jpg)
 
@@ -1020,7 +1020,7 @@ The user can be invited to the DAO using a [special form](gosh-web.md#add-by-gos
 Also, the user can independently [create a membership request](gosh-web/members.md#request-dao-membership) in the DAO.
 
 !!! info
-    Adding a member to the DAO is possible only through an proposal.
+    Adding a member to the DAO is possible only through a proposal.
 
 
 *Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.*
@@ -1029,17 +1029,17 @@ Also, the user can independently [create a membership request](gosh-web/members.
 #### <u>Adding by GOSH username or e-mail</u>
 
 
-A DAO member can create a proposle to add GOSH user into the DAO.
+A DAO member can create a proposal to add GOSH user into the DAO.
 
 To do this, go to the tab **Members** in the section **Invite user to DAO**.
 
 * If you know the GOSH username, then enter it.
 
-* If you don't know the name or the user doesn't have a GOSH account yet, enter their email address.
+* If you don't know the name or the user doesn't have a GOSH account yet, enter their e-mail address.
 
 
 !!! info
-    The email address will change to the GOSH username if the user has given permission during registration so that it can be found by email.
+    The e-mail address will change to the GOSH username if the user has given permission during registration so that it can be found by email.
 
 Offer the amount of karma for him and please comment your decision.
 
@@ -1078,7 +1078,7 @@ To do this, on the tab **Members** in the section **Invite user to DAO** click o
 
 All active invitation links will be displayed in the section on the right.
 
-When the invited user creates a membership proposle in the DAO, the link entry disappears.
+When the invited user creates a membership proposal in the DAO, the link entry disappears.
 
 You can also deactivate the link click on the **Revoke**.
 
@@ -1157,7 +1157,7 @@ searching for users by DAO
 To delete a member from the DAO, go to the **Members** tab and click on the cross to the desired member.
 
 !!! warning
-    To create an proposal, you must have at least 20 tokens on your wallet balance.
+    To create a proposal, you must have at least 20 tokens on your wallet balance.
 
 ![](../images/gosh_web_memeber_delete_01.jpg)
 
@@ -1239,7 +1239,7 @@ To create a repository in your DAO click **Create new** in the Repositories sect
 Enter repository name and its description and click **Create repository**.
 
 !!! warning
-    The repository name must contain only Latin letters, numbers,hyphen, underscore character`( a...z, 0...9, -, _ )`
+    The repository name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
 ![](../images/gosh_web_Create_Repo_02_name_repo.jpg)
 
