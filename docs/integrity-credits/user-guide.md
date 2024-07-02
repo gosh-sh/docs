@@ -151,7 +151,7 @@ As a result of your previous actions, a multi-proposal  will be created:
 
 You can vote for or against this multi-proposal on the **DAO** tab.
 
-Members of the DAO who have subscribed to the events of this DAO will receive a notification via the email address they provided.
+Members of the DAO who have subscribed to the events of this DAO will receive a notification via the e-mail address they provided.
 
 After the vote, if the proposal is accepted, a **Repository** for this project will be created. The `main` branch will be protected, and development ( `dev` ) branch will also be created. 
 

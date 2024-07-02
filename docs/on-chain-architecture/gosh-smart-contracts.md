@@ -27,7 +27,7 @@ GOSH consists of the following contracts (latest version):
 * [ProfileDao ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/profiledao.sol){:target="_blank"} - a contract of a DAO's profile on GOSH
 * [GOSHWallet ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/goshwallet.sol){:target="_blank"} - user wallet for all user interactions with GOSH
 * [GoshDao ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/goshdao.sol){:target="_blank"} - a contract storing organizations' objects
-* [Repository ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/repository.sol){:target="_blank"} - a contract storing repositorys' objects
+* [Repository ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/repository.sol){:target="_blank"} - A contract storing repository object
 * [Commit ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/commit.sol){:target="_blank"} - a contract storing commits' objects
 * [Tree ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/tree.sol){:target="_blank"} - a contract storing trees' objects
 * [Diff ](https://github.com/gosh-sh/gosh/blob/dev/v6_x/v6.2.0/contracts/gosh/diff.sol){:target="_blank"} - a contract storing diffs' objects

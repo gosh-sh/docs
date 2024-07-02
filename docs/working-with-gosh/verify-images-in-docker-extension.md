@@ -1,6 +1,6 @@
 # Verify Images in Docker Extension
 
-Once you have pulled a GOSH image someone else [built](build-and-sign-images.md) and uploaded to dockerhub, you can verify, that it was build from the exact code on GOSH that it claims to be built from.
+Once you have pulled a GOSH image someone else [built](build-and-sign-images.md) and uploaded to Docker Hub, you can verify, that it was build from the exact code on GOSH that it claims to be built from.
 
 To do that, go to **Containers** Tab in Docker Extension.
 
