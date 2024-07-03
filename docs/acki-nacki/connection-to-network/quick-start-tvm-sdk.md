@@ -32,6 +32,8 @@
 
 !!! info
 
+    For testing your developed applications you can use Acki Nacki development blockchain at **ackinacki-testnet.tvmlabs.dev**  
+
     To replenish the balance of wallet-contract, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
 ## **Setup giver**

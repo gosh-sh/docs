@@ -47,6 +47,7 @@ nav:
         - General information: acki-nacki/info.md
         - Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
         - Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
+        - Quick start for TVM SDK JavaScript: acki-nacki/connection-to-network/quick-start-tvm-sdk-JavaScript.md
         - Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
         - Create giver: acki-nacki/connection-to-network/create-giver.md
         #- Deploy network: acki-nacki/deploy-network.md
