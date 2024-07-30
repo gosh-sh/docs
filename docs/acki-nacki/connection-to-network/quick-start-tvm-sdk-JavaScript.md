@@ -1,25 +1,28 @@
 ## **Prerequisites**
 
-* Rust v.1.76+  
-* Node.js v.18
-* [Wallet-contract](./create-giver.md) to be used as a giver with keys  
-* Contract, for example: [`helloWorld.sol`](./create-and-compile-contract.md)  
-* [Demo application](https://github.com/gosh-sh/gosh-examples/tree/main/sdk/javascript/helloWorld)  
+* Rust v1.76+  
+* Node.js v18.19.1
+* Python 3  
+* Python 3 setuptools  
+<!-- TODO giver to wallet -->
+* [Wallet-contract](./create-giver.md) to be used for payment for deploying contract  
+* Demo contract [`helloWorld.sol`](./create-and-compile-contract.md)  
+* [Demo application](https://github.com/tvmlabs/sdk-examples/tree/main/apps/javascript/helloWorld)  
 
 
-**This demo app implements the following logic:**
+**This demo app implements the following scenario:**
 
 1. Creates and initializes an instance of the SDK client;
 
 2. Deploys the `helloWorld` contract:
 
-    3.1 Generates key pair for the contract;
+    2.1 Generates key pair for the contract;
 
-    3.2 Calculates future address of the contract;
+    2.2 Calculates future address of the contract;
 
-    3.3 Sends to the future address of the contract some tokens required for deploy;
+    2.3 Sends to the future address of the contract some tokens required for deploy;
 
-    3.4 Deploys the `helloWorld` contract;
+    2.4 Deploys the `helloWorld` contract;
 
 3. Gets account info and print balance of the `helloWorld` contract
 
@@ -32,10 +35,9 @@
 7. Sends some tokens from `helloWorld` contract to a random account
 
 
-
 !!! warning "Important"
 
-    **For the application to work, you should to place `ABI files` of the `wallet` and `helloWorld` contracts in the `contracts` folder.**
+    **For the application to work, you should to place `ABI files` of the `wallet` and `helloWorld` contracts into the `contracts` folder.**
 
 !!! info
 
@@ -45,10 +47,55 @@
     To replenish the balance of wallet-contract, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
 
-## **Setup giver**
+We will do all the work in this quick start in a separate `~/test-sdk` folder.
+Let's create it:
 
-Before you start, you should setup a wallet-contract to be used as a giver.  
-Edit `.env` file with following content:
+```
+cd ~
+mkdir test-sdk
+```
+
+## **Prepare SDK binding for JavaScript**
+
+
+1.Clone the repository to a separate directory:  
+
+```
+cd ~/test-sdk
+git clone https://github.com/tvmlabs/tvm-sdk-js.git
+```
+
+2.Run build:
+
+```
+cd tvm-sdk-js/packages/lib-node/build
+cargo run
+```
+
+As a result, the builded binding `eversdk.node` will be placed into the folder `~/test-sdk/tv-sdk-js/packages/lib-node`.
+
+
+## **Prepare demo application**
+
+
+1.Clone repository contains the demo application:
+
+```
+cd ~/test-sdk
+git clone https://github.com/tvmlabs/sdk-examples.git
+cd sdk-examples/apps/javascript/helloWorld
+```
+
+2.By this point, you should have deployed a wallet from which the balances of your demo contracts will be replenished.  
+You can do this by following [the instructions](./create-giver.md).
+
+
+3.Configure wallet for using in the demo app:
+
+For demo app working, you should configure the wallet.
+To do this, in the demo folder, edit `.env` file with following content:
+
+<!-- TODO rename giver to wallet -->
 
 ```
 CONTRACT_CODE=PATH_TO_HELLOWORLD_CONTRACT_CODE    # helloWorld.tvc
@@ -56,46 +103,25 @@ GIVER_ADDRESS=YOUR_WALLET_ADDRESS
 GIVER_KEYS=PATH_TO_YOUR_WALLET_KEYS_FILE
 ```
 
-## **Preparation for work**
-
-1. Install the packages `@eversdk/core` and `@eversdk/lib-node` for the Node.js application:
+3.Install the packages `@eversdk/core` and `@eversdk/lib-node` for the demo application:
 
 ```
 npm install --save @eversdk/core @eversdk/lib-node
 ```
 
-2. Replace the binary file in `@eversdk/lib-node` with an Acki Nacki-compatible one:
-
-2.1. Clone the repository to a separate directory:
+4.Replace the binary file in `@eversdk/lib-node` with an Acki Nacki-compatible one, which was builded early:  
 
 ```
-git clone https://github.com/gosh-sh/ever-sdk-js
-```
-
-2.2. Switch to the "feature/masterchain-free" branch:
-
-```
-cd ever-sdk-js
-git checkout feature/masterchain-free
-```
-
-3. Run the build:
-
-```
-cd packages/lib-node/build
-cargo run
-```
-
-4. Copy the built file to the specified folder: `<YOUR_NODEJS_APP>/node_modules/@eversdk/lib-node`:
-
-```
-cp ../eversdk.node <YOUR_NODEJS_APP>/node_modules/@eversdk/lib-node/
+cp ~/test-sdk/tv-sdk-js/packages/lib-node/eversdk.node ~/test-sdk/gosh-examples/sdk/javascript/helloWorld/node_modules/@eversdk/lib-node/
 ```
 
 
 ## **Run it**
 
+Go to the folder with the demo application and run it:
+
 ```
+cd ~/test-sdk/gosh-examples/sdk/javascript/helloWorld
 node index.js
 ```
 
