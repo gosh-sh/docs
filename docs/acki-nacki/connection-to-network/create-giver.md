@@ -1,9 +1,10 @@
 ## **Create wallet-contract**
 
 
-To create your own giver, using any contract of wallet.
 
-For example, create file `giver.sol` with following content:
+To create your own wallet, use for example, the contract of a `Simple wallet`.  
+
+Create a file called `wallet.sol` with the following content:
 
 ```solidity
 pragma ton-solidity >= 0.35.0;
@@ -55,10 +56,10 @@ Compile this contract using the following [instruction](./create-and-compile-con
 
 As a result, you will have 4 files:
 
-* `giver.sol` - source code of your wallet-contract;
-* `giver.code` - it contains the assembly code of the contract;
-* `giver.tvc` - binary code of your contract (the contents of this file will be deployed on network);
-* `giver.abi.json` - describe the interface of the contract.
+* `wallet.code` - it contains the assembly code of the contract;
+* `wallet.tvc` - binary code of your contract (the contents of this file will be deployed on network);
+* `wallet.sol` - source code of your wallet-contract;
+* `wallet.abi.json` - describe the interface of the contract.
 
 
 ## **Deploy**
@@ -76,14 +77,15 @@ export PATH=$PATH:<PATH_TO>/tvm-cli
 tvm-cli config --url ackinacki-testnet.tvmlabs.dev
 ```
 
-2) Generate address, keys and seed phrase for your giver:
+2) Generate address, keys and seed phrase for your wallet:
 
 ```shell
-tvm-cli genaddr giver.tvc --genkey giver.keys.json
+tvm-cli genaddr wallet.tvc --genkey wallet.keys.json
 ```
 
 Address of your contract in the blockchain is located after `Raw address:`
 
+<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_genn_addr.jpg)
 
 !!! Warning "IMPORTANT" 
@@ -92,7 +94,7 @@ Address of your contract in the blockchain is located after `Raw address:`
     We will refer to it as **`<YourAddress>`** below.  
     
     **Seed phrase** is also printed to stdout.  
-    **Key pair** will be generated and saved to the file **`giver.keys.json`**.
+    **Key pair** will be generated and saved to the file **`wallet.keys.json`**.
 
 
 !!! danger
@@ -117,13 +119,13 @@ tvm-cli account <YourAddress>
 ```
 
 You will see something similar to the following:
-
+<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_account.jpg)
 
 5) Deploy your contract to the early configured network with the following command:
 
 ```shell
-tvm-cli deploy --abi giver.abi.json --sign giver.keys.json giver.tvc {}
+tvm-cli deploy --abi wallet.abi.json --sign wallet.keys.json wallet.tvc {}
 ```
 
 !!! info
@@ -131,16 +133,17 @@ tvm-cli deploy --abi giver.abi.json --sign giver.keys.json giver.tvc {}
     The arguments of the constructor must be specified in curly brackets:  
     `{<constructor arguments>}`
 
-
+<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_deploy.jpg)
 
 6) Check the contract state again. This time, it is should be `Active`.
 
+<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_account2.jpg)
 
 ## **Request test tokens for future use**
 
-To replenish your giver, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
+To replenish your wallet, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
 ## **Source code**
 
