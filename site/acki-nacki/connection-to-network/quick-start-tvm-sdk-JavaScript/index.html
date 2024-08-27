@@ -1444,6 +1444,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../create-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../quick-start-tvm-cli/" class="md-nav__link">
         
   
@@ -1533,9 +1553,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prepare-sdk-binding-for-javascript" class="md-nav__link">
-    Prepare SDK binding for JavaScript
+  <a href="#build-core-tvm-library-for-nodejs" class="md-nav__link">
+    Build core TVM library for Node.js
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-wallet" class="md-nav__link">
+    Create a wallet
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a wallet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-test-tokens-for-future-use" class="md-nav__link">
+    Request test tokens for future use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1580,26 +1620,6 @@
   
   <span class="md-ellipsis">
     Create and compile contract
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../create-giver/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Create giver
   </span>
   
 
@@ -1703,9 +1723,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#prepare-sdk-binding-for-javascript" class="md-nav__link">
-    Prepare SDK binding for JavaScript
+  <a href="#build-core-tvm-library-for-nodejs" class="md-nav__link">
+    Build core TVM library for Node.js
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-wallet" class="md-nav__link">
+    Create a wallet
+  </a>
+  
+    <nav class="md-nav" aria-label="Create a wallet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-test-tokens-for-future-use" class="md-nav__link">
+    Request test tokens for future use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1754,12 +1794,6 @@
 <li>Python 3  </li>
 <li>Python 3 setuptools  </li>
 </ul>
-<!-- TODO giver to wallet -->
-<ul>
-<li><a href="../create-giver/">Wallet-contract</a> to be used for payment for deploying contract  </li>
-<li>Demo contract <a href="../create-and-compile-contract/"><code>helloWorld.sol</code></a>  </li>
-<li><a href="https://github.com/tvmlabs/sdk-examples/tree/main/apps/javascript/helloWorld">Demo application</a>  </li>
-</ul>
 <p><strong>This demo app implements the following scenario:</strong></p>
 <ol>
 <li>
@@ -1788,10 +1822,10 @@
 <p>Sends some tokens from <code>helloWorld</code> contract to a random account</p>
 </li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Important</p>
-<p><strong>For the application to work, you should to place <code>ABI files</code> of the <code>wallet</code> and <code>helloWorld</code> contracts into the <code>contracts</code> folder.</strong></p>
-</div>
+<!-- !!! warning "Important"
+
+    **For the application to work, you should to place `ABI files` of the `wallet` and `helloWorld` contracts into the `contracts` folder.** -->
+
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>For testing your developed applications, you can use Acki Nacki development blockchain<br />
@@ -1803,7 +1837,7 @@ Let's create it:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd ~
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir test-sdk
 </span></code></pre></div>
-<h2 id="prepare-sdk-binding-for-javascript"><strong>Prepare SDK binding for JavaScript</strong></h2>
+<h2 id="build-core-tvm-library-for-nodejs"><strong>Build core TVM library for Node.js</strong></h2>
 <p>1.Clone the repository to a separate directory:  </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd ~/test-sdk
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git clone https://github.com/tvmlabs/tvm-sdk-js.git
@@ -1812,66 +1846,122 @@ Let's create it:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd tvm-sdk-js/packages/lib-node/build
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>cargo run
 </span></code></pre></div>
-<p>As a result, the builded binding <code>eversdk.node</code> will be placed into the folder <code>~/test-sdk/tv-sdk-js/packages/lib-node</code>.</p>
+<p>As a result, the builded binding <code>tvmsdk.node</code> will be placed into the folder <code>~/test-sdk/tvm-sdk-js/packages/lib-node</code>.</p>
+<h2 id="create-a-wallet"><strong>Create a wallet</strong></h2>
+<p>By this point, you should have deployed a wallet from which the balances of your demo contracts will be replenished.  </p>
+<p>Create a separate folder for it:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd ~
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>mkdir wallet
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>cd wallet
+</span></code></pre></div>
+<p>And download the <a href="https://raw.githubusercontent.com/tvmlabs/sdk-examples/main/contracts/simpleWallet/wallet.tvc" target="_blank">wallet code file</a> and the <a href="https://github.com/tvmlabs/sdk-examples/blob/main/contracts/simpleWallet/wallet.abi.json" target="_blank">abi file</a> and put it in the wallet folder.</p>
+<p>Then deploy the contract to Acki Nacki development blockchain<br />
+at <strong><code>ackinacki-testnet.tvmlabs.dev</code></strong>:</p>
+<p>1) Make sure TVM-CLI is in $PATH:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:&lt;PATH_TO&gt;/tvm-cli
+</span></code></pre></div>
+<p>2) Configure network:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tvm-cli config --url ackinacki-testnet.tvmlabs.dev
+</span></code></pre></div>
+<p>3) Generate address, keys and seed phrase for your wallet:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>tvm-cli<span class="w"> </span>genaddr<span class="w"> </span>wallet.tvc<span class="w"> </span>--genkey<span class="w"> </span>wallet.keys.json
+</span></code></pre></div>
+<p>Address of your contract in the blockchain is located after <code>Raw address:</code></p>
+<p><img alt="" src="../../../images/n_Acki_Nacki_c_t_n_giver_genn_addr.jpg" /></p>
+<div class="admonition warning">
+<p class="admonition-title">IMPORTANT</p>
+<p><strong>Save <code>Raw address</code> value</strong> - you will need it to deploy your contract and to work with it.<br />
+We will refer to it as <strong><code>&lt;YourAddress&gt;</code></strong> below.  </p>
+<p><strong>Seed phrase</strong> is also printed to stdout.<br />
+<strong>Key pair</strong> will be generated and saved to the file <strong><code>wallet.keys.json</code></strong>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.<br />
+Also, save the file with a pair of keys in a safe place.</strong></p>
+</div>
+<p>4) Request test tokens</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Acki Nacki deploy is fee-based, so your new contract will be charged for this.<br />
+You will need to request some tokens to the address before the actual deployment.<br />
+Contracts take value in nanotokens.<br />
+<strong><em>(You will need approximately 10 tokens to deploy)</em></strong></p>
+</div>
+<p>Please contact us in <a href="https://t.me/+1tWNH2okaPthMWU0">Channel on Telegram</a> and specify the <strong><code>&lt;YourAddress&gt;</code></strong>.</p>
+<p>5) Check the state of the pre-deployed contract. It should be <strong><code>Uninit</code></strong>:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>tvm-cli<span class="w"> </span>account<span class="w"> </span>&lt;YourAddress&gt;
+</span></code></pre></div>
+<p>You will see something similar to the following:</p>
+<p><img alt="" src="../../../images/n_Acki_Nacki_c_t_n_giver_account.jpg" /></p>
+<p>5) Deploy your contract to the early configured network with the following command:</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>tvm-cli<span class="w"> </span>deploy<span class="w"> </span>--abi<span class="w"> </span>wallet.abi.json<span class="w"> </span>--sign<span class="w"> </span>wallet.keys.json<span class="w"> </span>wallet.tvc<span class="w"> </span><span class="o">{}</span>
+</span></code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The arguments of the constructor must be specified in curly brackets:<br />
+<code>{&lt;constructor arguments&gt;}</code></p>
+</div>
+<p><img alt="" src="../../../images/n_Acki_Nacki_c_t_n_giver_deploy.jpg" /></p>
+<p>6) Check the contract state again. This time, it is should be <code>Active</code>.</p>
+<p><img alt="" src="../../../images/n_Acki_Nacki_c_t_n_giver_account2.jpg" /></p>
+<h3 id="request-test-tokens-for-future-use"><strong>Request test tokens for future use</strong></h3>
+<p>To replenish your wallet, please contact us in <a href="https://t.me/+1tWNH2okaPthMWU0">Channel on Telegram</a>.</p>
+<p>You can find full source code of this contract and its artifacts <a href="https://github.com/tvmlabs/sdk-examples/tree/main/contracts/simpleWallet">here</a>  </p>
 <h2 id="prepare-demo-application"><strong>Prepare demo application</strong></h2>
 <p>1.Clone repository contains the demo application:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cd ~/test-sdk
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git clone https://github.com/tvmlabs/sdk-examples.git
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>cd sdk-examples/apps/javascript/helloWorld
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cd ~/test-sdk
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git clone https://github.com/tvmlabs/sdk-examples.git
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>cd sdk-examples/js/nodejs/helloWorld
 </span></code></pre></div>
-<p>2.By this point, you should have deployed a wallet from which the balances of your demo contracts will be replenished.<br />
-You can do this by following <a href="../create-giver/">the instructions</a>.</p>
-<p>3.Configure wallet for using in the demo app:</p>
-<p>For demo app working, you should configure the wallet.
-To do this, in the demo folder, edit <code>.env</code> file with following content:</p>
-<!-- TODO rename giver to wallet -->
-
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CONTRACT_CODE=PATH_TO_HELLOWORLD_CONTRACT_CODE    # helloWorld.tvc
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>GIVER_ADDRESS=YOUR_WALLET_ADDRESS
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>GIVER_KEYS=PATH_TO_YOUR_WALLET_KEYS_FILE
+<p>2.Configure wallet for using in the demo app:</p>
+<!-- For demo app working, you should configure the wallet. -->
+<p>To do this, in the demo folder, edit <code>.env</code> file with following content:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>WALLET_ADDRESS=YOUR_WALLET_ADDRESS
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>WALLET_KEYS=FULL_PATH_TO_YOUR_WALLET_KEYS_FILE # should be absolute path
 </span></code></pre></div>
-<p>3.Install the packages <code>@eversdk/core</code> and <code>@eversdk/lib-node</code> for the demo application:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm install --save @eversdk/core @eversdk/lib-node
+<p>3.Install the packages <code>@tvmsdk/core</code> and <code>@tvmsdk/lib-node</code> for the demo application:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm install
 </span></code></pre></div>
-<p>4.Replace the binary file in <code>@eversdk/lib-node</code> with an Acki Nacki-compatible one, which was builded early:  </p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cp ~/test-sdk/tv-sdk-js/packages/lib-node/eversdk.node ~/test-sdk/gosh-examples/sdk/javascript/helloWorld/node_modules/@eversdk/lib-node/
+<p>4.Replace the binary file in <code>@tvmsdk/lib-node</code> with an Acki Nacki-compatible one, which was builded early:  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cp ~/test-sdk/tvm-sdk-js/packages/lib-node/tvmsdk.node ~/test-sdk/sdk-examples/js/nodejs/helloWorld/node_modules/@tvmsdk/lib-node/
 </span></code></pre></div>
 <h2 id="run-it"><strong>Run it</strong></h2>
 <p>Go to the folder with the demo application and run it:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>cd ~/test-sdk/gosh-examples/sdk/javascript/helloWorld
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>node index.js
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>cd ~/test-sdk/sdk-examples/js/nodejs/helloWorld
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>node index.js
 </span></code></pre></div>
 <p>You will see a result similar to the following:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>giver keys fname: ../../../contracts/simpleWallet/giver.keys.json
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Future address of helloWorld contract is: 0:c2ba017472be9e5ea043a38a51aa17aa931ffb76981320ba978eeded443cafde
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Transfering 1000000000 tokens from giver to 0:c2ba017472be9e5ea043a38a51aa17aa931ffb76981320ba978eeded443cafde
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Success. Tokens were transfered
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Deploying helloWorld contract
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Success. Contract was deployed
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>helloWorld balance is 986483999
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>Run `getTimestamp` get method
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>`timestamp` value is {
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>  value0: &#39;0x0000000000000000000000000000000000000000000000000000000066851f5d&#39;
-</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>}
-</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>Calling touch function
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>Success. TransactionId is: 3afd14790d92e449d3f76f0de079efd2ec464438dc415077e85045261fe39c76
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>Waiting for account update
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>Success. Account was updated, it took 0 sec.
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>Run `getTimestamp` get method
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>Updated `timestamp` value is {
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>  value0: &#39;0x0000000000000000000000000000000000000000000000000000000066851f60&#39;
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>}
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>Sending 100000000 tokens to 0:d0d1ab370d669dcf715be4de9c80c7972ddd250636b2f97550ca9bed752880be
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>Success. Target account will recieve: 99000000 tokens
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>Normal exit
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>wallet keys fname: /home/username/wallet/wallet.keys.json
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>Future address of helloWorld contract is: 0:90e7941f8eb4806097598e1653a97fc6f8951423e4f12b417d67b4b186633771
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Transferring 1000000000 tokens from wallet to 0:90e7941f8eb4806097598e1653a97fc6f8951423e4f12b417d67b4b186633771
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Success. Tokens were transferred
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>Deploying helloWorld contract
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Success. Contract was deployed
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>helloWorld balance is 986483999
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>Run `getTimestamp` get method
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>`timestamp` value is {
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>  value0: &#39;0x0000000000000000000000000000000000000000000000000000000066cdf75f&#39;
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>}
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>Calling touch function
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>Success. TransactionId is: c7b7cb19d4b7f4d56c854c593dfe68c4f2cfc508af6a766a5c841d2fbfde417a
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>Waiting for account update
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>Success. Account was updated, it took 0 sec.
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>Run `getTimestamp` get method
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>Updated `timestamp` value is {
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>  value0: &#39;0x0000000000000000000000000000000000000000000000000000000066cdf763&#39;
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>}
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>Sending 100000000 tokens to 0:2b8436113a37866f5f8258f0e1645872a2a7168ef8b8115405de804a368477f8
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>Success. Target account will receive: 99000000 tokens
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>Normal exit
 </span></code></pre></div>
 <h2 id="source-code"><strong>Source code</strong></h2>
-<p>The source code of all the components used can be found <a href="https://github.com/gosh-sh/gosh-examples">here</a></p>
+<p>The source code of all the components used can be found <a href="https://github.com/tvmlabs/sdk-examples">here</a></p>
 
 
 

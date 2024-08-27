@@ -54,11 +54,11 @@ contract Wallet {
 
 Compile this contract using the following [instruction](./create-and-compile-contract.md)
 
-As a result, you will have 4 files:
+As a result, you will have files:
 
-* `wallet.code` - it contains the assembly code of the contract;
+<!-- * `wallet.code` - it contains the assembly code of the contract; -->
 * `wallet.tvc` - binary code of your contract (the contents of this file will be deployed on network);
-* `wallet.sol` - source code of your wallet-contract;
+<!-- * `wallet.sol` - source code of your wallet-contract; -->
 * `wallet.abi.json` - describe the interface of the contract.
 
 
@@ -73,11 +73,15 @@ at **`ackinacki-testnet.tvmlabs.dev`**
 
 ```shell
 export PATH=$PATH:<PATH_TO>/tvm-cli
+```
 
+2) Configure network:
+
+```
 tvm-cli config --url ackinacki-testnet.tvmlabs.dev
 ```
 
-2) Generate address, keys and seed phrase for your wallet:
+3) Generate address, keys and seed phrase for your wallet:
 
 ```shell
 tvm-cli genaddr wallet.tvc --genkey wallet.keys.json
@@ -85,7 +89,6 @@ tvm-cli genaddr wallet.tvc --genkey wallet.keys.json
 
 Address of your contract in the blockchain is located after `Raw address:`
 
-<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_genn_addr.jpg)
 
 !!! Warning "IMPORTANT" 
@@ -119,7 +122,7 @@ tvm-cli account <YourAddress>
 ```
 
 You will see something similar to the following:
-<!-- TODO update image -->
+
 ![](../../images/n_Acki_Nacki_c_t_n_giver_account.jpg)
 
 5) Deploy your contract to the early configured network with the following command:
@@ -133,12 +136,10 @@ tvm-cli deploy --abi wallet.abi.json --sign wallet.keys.json wallet.tvc {}
     The arguments of the constructor must be specified in curly brackets:  
     `{<constructor arguments>}`
 
-<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_deploy.jpg)
 
 6) Check the contract state again. This time, it is should be `Active`.
 
-<!-- TODO update image -->
 ![](../../images/n_Acki_Nacki_c_t_n_giver_account2.jpg)
 
 ## **Request test tokens for future use**
@@ -147,4 +148,4 @@ To replenish your wallet, please contact us in [Channel on Telegram](https://t.m
 
 ## **Source code**
 
-You can find full source code of this contract and its artifacts [here](https://github.com/gosh-sh/gosh-examples/tree/main/contracts/simpleWallet)
+You can find full source code of this contract and its artifacts [here](https://github.com/tvmlabs/sdk-examples/blob/main/contracts/simpleWallet)

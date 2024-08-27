@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../info/">
+        <link rel="prev" href="../create-wallet/">
       
       
         <link rel="next" href="../quick-start-tvm-sdk/">
@@ -1442,6 +1442,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../create-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1542,8 +1562,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transfer-of-tokens-from-own-giver" class="md-nav__link">
-    Transfer of tokens from own giver
+  <a href="#transfer-of-tokens-from-own-wallet" class="md-nav__link">
+    Transfer of tokens from own wallet
   </a>
   
 </li>
@@ -1615,26 +1635,6 @@
   
   <span class="md-ellipsis">
     Create and compile contract
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../create-giver/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Create giver
   </span>
   
 
@@ -1787,8 +1787,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#transfer-of-tokens-from-own-giver" class="md-nav__link">
-    Transfer of tokens from own giver
+  <a href="#transfer-of-tokens-from-own-wallet" class="md-nav__link">
+    Transfer of tokens from own wallet
   </a>
   
 </li>
@@ -1837,10 +1837,12 @@
 <li>Run a getter-function</li>
 <li>Make a transfer</li>
 <li>Explore contract data in Explorer and GraphQL playground</li>
-<li>Configure your own giver</li>
+<li>Configure your own wallet</li>
 </ul>
 <h2 id="install-tvm-cli"><strong>Install TVM-CLI</strong></h2>
-<p>Download  and install the TVM-CLI for the platform you need from <a href="https://github.com/tvmlabs/tvm-sdk/releases/tag/%40tvmlabs%2Ftvm-cli%400.39.0">here</a></p>
+<p>Download  and install the TVM-CLI for the platform you need from <a href="https://github.com/tvmlabs/tvm-sdk/releases">here</a></p>
+<!-- (https://github.com/tvmlabs/tvm-sdk/releases/tag/%40tvmlabs%2Ftvm-cli%400.39.0) -->
+
 <h2 id="create-and-compile-contract"><strong>Create and compile contract</strong></h2>
 <p>Create and compile a contract using the following <a href="../create-and-compile-contract/">instruction</a>.</p>
 <p>As a result, you will have 4 files:</p>
@@ -1881,7 +1883,7 @@ Also, save the file with a pair of keys in a safe place.</strong></p>
 <p>You will need to send some tokens to the address before the actual deployment. Acki Nacki deploy is fee-based, so your new contract will be charged for this.<br />
 <strong><em>(You will need about 10 tokens to deploy)</em></strong></p>
 </div>
-<p>We recommend creating a <a href="../create-giver/">wallet-contract</a> that will serve as your giver.</p>
+<p>We recommend creating a <a href="../create-wallet/">wallet-contract</a> that will serve as your wallet.</p>
 <p>To replenish it, please contact us in <a href="https://t.me/+1tWNH2okaPthMWU0">Channel on Telegram</a>.</p>
 <p>4) Check the state of the pre-deployed contract. It should be <code>Uninit</code>:</p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tvm-cli<span class="w"> </span>account<span class="w"> </span>&lt;YourAddress&gt;
@@ -1941,8 +1943,8 @@ result:</p>
 </span></code></pre></div>
 result:</p>
 <p><img alt="" src="../../../images/n_Acki_Nacki_c_t_n_call_func.jpg" /></p>
-<h2 id="transfer-of-tokens-from-own-giver"><strong>Transfer of tokens from own giver</strong></h2>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>tonos-cli<span class="w"> </span>call<span class="w"> </span>&lt;giverAddress&gt;<span class="w"> </span>sendTransaction<span class="w"> </span><span class="s1">&#39;{&quot;dest&quot;:&quot;DestAddress&quot;, &quot;value&quot;:10000000000, &quot;bounce&quot;:false}&#39;</span><span class="w"> </span>--abi<span class="w"> </span>giver.abi.json<span class="w"> </span>--sign<span class="w"> </span>giver.keys.json
+<h2 id="transfer-of-tokens-from-own-wallet"><strong>Transfer of tokens from own wallet</strong></h2>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>tonos-cli<span class="w"> </span>call<span class="w"> </span>&lt;walletAddress&gt;<span class="w"> </span>sendTransaction<span class="w"> </span><span class="s1">&#39;{&quot;dest&quot;:&quot;DestAddress&quot;, &quot;value&quot;:10000000000, &quot;bounce&quot;:false}&#39;</span><span class="w"> </span>--abi<span class="w"> </span>wallet.abi.json<span class="w"> </span>--sign<span class="w"> </span>wallet.keys.json
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>

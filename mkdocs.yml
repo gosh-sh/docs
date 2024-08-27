@@ -45,11 +45,11 @@ nav:
     - Acki Nacki:
       - Connection to network: 
         - General information: acki-nacki/info.md
+        - Create wallet: acki-nacki/connection-to-network/create-wallet.md
         - Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
         - Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
         - Quick start for TVM SDK JavaScript: acki-nacki/connection-to-network/quick-start-tvm-sdk-JavaScript.md
         - Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
-        - Create giver: acki-nacki/connection-to-network/create-giver.md
         #- Deploy network: acki-nacki/deploy-network.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md

@@ -78,4 +78,4 @@ Binary code of your contract is recorded into `helloWorld.tvc` file.
 
 ## **Source code**
 
-You can find full source code of this contract and its artifacts [here](https://github.com/gosh-sh/gosh-examples/tree/main/contracts/helloWorld)
+You can find full source code of this contract and its artifacts [here](https://github.com/tvmlabs/sdk-examples/blob/main/contracts/helloWorld)
