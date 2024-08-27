@@ -1444,6 +1444,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../create-wallet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Create wallet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../quick-start-tvm-cli/" class="md-nav__link">
         
   
@@ -1513,8 +1533,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-giver" class="md-nav__link">
-    Setup giver
+  <a href="#configure-wallet-for-using-in-the-demo-app" class="md-nav__link">
+    Configure wallet for using in the demo app:
   </a>
   
 </li>
@@ -1573,26 +1593,6 @@
   
   <span class="md-ellipsis">
     Create and compile contract
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../create-giver/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Create giver
   </span>
   
 
@@ -1696,8 +1696,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup-giver" class="md-nav__link">
-    Setup giver
+  <a href="#configure-wallet-for-using-in-the-demo-app" class="md-nav__link">
+    Configure wallet for using in the demo app:
   </a>
   
 </li>
@@ -1737,9 +1737,9 @@
 <ul>
 <li>Rust 1.76+</li>
 <li>Cargo</li>
-<li><a href="../create-giver/">Wallet-contract</a> to be used as a giver with keys</li>
+<li><a href="../create-wallet/">Wallet-contract</a> to be used as a wallet with keys</li>
 <li>Contract, for example: <a href="../create-and-compile-contract/"><code>helloWorld.sol</code></a></li>
-<li><a href="https://github.com/gosh-sh/gosh-examples/tree/main/sdk/rust/helloWorld">Demo application</a></li>
+<li><a href="https://github.com/tvmlabs/sdk-examples/tree/main/rust/helloWorld">Demo application</a></li>
 </ul>
 <p><strong>This demo app implements the following logic:</strong></p>
 <ol>
@@ -1747,7 +1747,7 @@
 <p>Creates and initialize an instance of the SDK client;</p>
 </li>
 <li>
-<p>Creates a giver contract instance (will be used for send tokens to helloWorld contract);</p>
+<p>Creates a wallet contract instance (will be used for send tokens to helloWorld contract);</p>
 </li>
 <li>
 <p>Deploys the helloWorld contract:</p>
@@ -1769,9 +1769,8 @@
 <p>For testing your developed applications you can use Acki Nacki development blockchain at <strong>ackinacki-testnet.tvmlabs.dev</strong>  </p>
 <p>To replenish the balance of wallet-contract, please contact us in <a href="https://t.me/+1tWNH2okaPthMWU0">Channel on Telegram</a>.</p>
 </div>
-<h2 id="setup-giver"><strong>Setup giver</strong></h2>
-<p>Before you start, you should setup a wallet-contract to be used as a giver.<br />
-Edit <code>.env</code> file with following content:</p>
+<h2 id="configure-wallet-for-using-in-the-demo-app"><strong>Configure wallet for using in the demo app:</strong></h2>
+<p>To do this, in the demo folder, edit <code>.env</code> file with following content:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>CONTRACT_CODE=PATH_TO_HELLOWORLD_CONTRACT_CODE    # helloWorld.tvc
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>GIVER_ADDRESS=YOUR_WALLET_ADDRESS
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>GIVER_KEYS=PATH_TO_YOUR_WALLET_KEYS_FILE
@@ -1781,7 +1780,7 @@ Edit <code>.env</code> file with following content:</p>
 </span></code></pre></div>
 <p>You will see a result similar to the following:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Future address: 0:41b8b9d954bfd2c9646fd3e6fc56c73cc091fd5acbcee6b1c2593b4d8beecddf
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Requesting tokens from giver-contract...
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Requesting tokens from wallet-contract...
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Transaction id: 9167ef30059487d8dbfbd3e505d3fa3944218a748b9f8bc9a5344983555da377
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Contract status: Uninit (ready to deploy)
@@ -1792,7 +1791,7 @@ Edit <code>.env</code> file with following content:</p>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Timestamp result[2]: 1710358284
 </span></code></pre></div></p>
 <h2 id="source-code"><strong>Source code</strong></h2>
-<p>The source code of all the components used can be found <a href="https://github.com/gosh-sh/gosh-examples">here</a></p>
+<p>The source code of all the components used can be found <a href="https://github.com/tvmlabs/sdk-examples">here</a></p>
 
 
 

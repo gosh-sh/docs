@@ -418,9 +418,9 @@ struct details_info {
 ```
 
 
-## **Giver for Acki Nacki test network**  
+## **Wallet for Acki Nacki test-network**  
 
-**This is a giver for receiving test tokens on the https://ackinacki-testnet.tvmlabs.dev/**
+**This is a wallet for receiving test tokens on the https://ackinacki-testnet.tvmlabs.dev/**
 { .ml-params }
 
 <!-- [[source code]]() -->
