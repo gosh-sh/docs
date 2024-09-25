@@ -1,6 +1,6 @@
 # __Git Remote Helper__
 
-Git Remote Helper (this is a standard mechanism for working with non-standard code storages) is a [`git-client helper`](https://git-scm.com/docs/gitremote-helpers#_description) to interact with remote repositories hosted on the GOSH blockchain. 
+Git Remote Helper (this is a standard mechanism for working with non-standard code storages) is a [`git-client helper`](https://git-scm.com/docs/gitremote-helpers#_description) to interact with remote repositories hosted on the GOSH blockchain.
 
 
 ## __Installation__
@@ -62,7 +62,7 @@ and download the version of the Git Remote Helper for the required operating sys
       ```
 
       ```
-      mv git-remote-gosh_v?_0_0 /usr/local/bin
+      mv git-remote-gosh_v?_?_0 /usr/local/bin
       ```
 
     and move dispatcher.ini to ~/.gosh/ folder:
@@ -78,7 +78,7 @@ and download the version of the Git Remote Helper for the required operating sys
 
 <!-- !!! info
     There are 3 sources from where you can get the code.
-    * GitHub 
+    * GitHub
     * GOSH
     * app.gosh.sh (visually)
     Auditing any file in each of the source will help make sure that the code is secure. -->
@@ -95,7 +95,7 @@ and download the version of the Git Remote Helper for the required operating sys
 
         !!! note
             For Windows users:
-            
+
             make sure that the appropriate [Perl version](https://github.com/openssl/openssl/blob/master/NOTES-PERL.md#perl-on-windows){:target="_blank"} is installed for your build environment.
 
 2. Clone [`gosh`](https://github.com/gosh-sh/gosh){:target="_blank"} repository.
@@ -174,7 +174,7 @@ which git-remote-gosh
 ```
 
 If the Git Remote Helper is not available, then add path with `git-remote-gosh`
-    
+
 for availability via `$PATH`:
 
 ```
