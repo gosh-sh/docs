@@ -34,22 +34,22 @@ nav:
       - Overview: ethereum-L2/overview.md
       - User Guide: ethereum-L2/user-guide.md
   #- GOSH AI: working-with-gosh/gosh-ai.md
-  - Acki Nacki:
-    - Overview: acki-nacki/overview.md
+  #- Acki Nacki:
+  #  - Overview: acki-nacki/overview.md
   - For developers:
     - On-chain Architecture:
       - GOSH Wallet: on-chain-architecture/gosh-wallet.md
       - Organizations - GOSH DAO and SMV: on-chain-architecture/organizations-gosh-dao-and-smv.md
       - GOSH smart contracts: on-chain-architecture/gosh-smart-contracts.md
       - Set up Git Remote Helper: working-with-gosh/gosh-web/grh-config.md
-    - Acki Nacki:
-      - Connection to network: 
-        - General information: acki-nacki/info.md
-        - Create wallet: acki-nacki/connection-to-network/create-wallet.md
-        - Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
-        - Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
-        - Quick start for TVM SDK JavaScript: acki-nacki/connection-to-network/quick-start-tvm-sdk-JavaScript.md
-        - Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
+    #- Acki Nacki:
+      #- Connection to network: 
+        #- General information: acki-nacki/info.md
+        #- Create wallet: acki-nacki/connection-to-network/create-wallet.md
+        #- Quick start for TVM CLI: acki-nacki/connection-to-network/quick-start-tvm-cli.md
+        #- Quick start for TVM SDK: acki-nacki/connection-to-network/quick-start-tvm-sdk.md
+        #- Quick start for TVM SDK JavaScript: acki-nacki/connection-to-network/quick-start-tvm-sdk-JavaScript.md
+        #- Create and compile contract: acki-nacki/connection-to-network/create-and-compile-contract.md
         #- Deploy network: acki-nacki/deploy-network.md
     - GOSH Ethereum L2: integrations/l2.md
     # - contracts: integrations/contracts.md
