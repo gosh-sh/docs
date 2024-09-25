@@ -2,16 +2,16 @@
 
 * Rust 1.76+
 * Cargo
-* [Wallet-contract](./create-giver.md) to be used as a giver with keys
+* [Wallet-contract](./create-wallet.md) to be used as a wallet with keys
 * Contract, for example: [`helloWorld.sol`](./create-and-compile-contract.md)
-* [Demo application](https://github.com/gosh-sh/gosh-examples/tree/main/sdk/rust/helloWorld)
+* [Demo application](https://github.com/tvmlabs/sdk-examples/tree/main/rust/helloWorld)
 
 
 **This demo app implements the following logic:**
 
 1. Creates and initialize an instance of the SDK client;
 
-2. Creates a giver contract instance (will be used for send tokens to helloWorld contract);
+2. Creates a wallet contract instance (will be used for send tokens to helloWorld contract);
 
 3. Deploys the helloWorld contract:
 
@@ -32,12 +32,13 @@
 
 !!! info
 
+    For testing your developed applications you can use Acki Nacki development blockchain at **ackinacki-testnet.tvmlabs.dev**  
+
     To replenish the balance of wallet-contract, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
-## **Setup giver**
+## **Configure wallet for using in the demo app:**
 
-Before you start, you should setup a wallet-contract to be used as a giver.  
-Edit `.env` file with following content:
+To do this, in the demo folder, edit `.env` file with following content:
 
 ```
 CONTRACT_CODE=PATH_TO_HELLOWORLD_CONTRACT_CODE    # helloWorld.tvc
@@ -54,7 +55,7 @@ cargo run
 You will see a result similar to the following:
 ```
 Future address: 0:41b8b9d954bfd2c9646fd3e6fc56c73cc091fd5acbcee6b1c2593b4d8beecddf
-Requesting tokens from giver-contract...
+Requesting tokens from wallet-contract...
 Transaction id: 9167ef30059487d8dbfbd3e505d3fa3944218a748b9f8bc9a5344983555da377
 
 Contract status: Uninit (ready to deploy)
@@ -67,4 +68,4 @@ Timestamp result[2]: 1710358284
 
 ## **Source code**
 
-The source code of all the components used can be found [here](https://github.com/gosh-sh/gosh-examples)
+The source code of all the components used can be found [here](https://github.com/tvmlabs/sdk-examples)

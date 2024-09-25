@@ -4,7 +4,7 @@
 
 This guide will help you get started with such essential Acki Nacki tools as:
 
-* [TVM-CLI](https://github.com/tvmlabs/tvm-cli)  
+* [TVM-CLI](https://github.com/tvmlabs/tvm-sdk/tree/main/tvm_cli)  
 * [Solidity Compiler](https://github.com/gosh-sh/TON-Solidity-Compiler)  
 * [Acki Nacki Blockchain Explorer](https://ackinacki-testnet.tvmlabs.dev/landing)  
 * Node GraphQL API
@@ -18,13 +18,13 @@ You will learn how to:
 * Run a getter-function
 * Make a transfer
 * Explore contract data in Explorer and GraphQL playground
-* Configure your own giver
+* Configure your own wallet
 
 
 ## **Install TVM-CLI**
 
-Download  and install the TVM-CLI for the platform you need from [here](https://github.com/tvmlabs/tvm-sdk/releases/tag/%40tvmlabs%2Ftvm-cli%400.39.0)
-
+Download  and install the TVM-CLI for the platform you need from [here](https://github.com/tvmlabs/tvm-sdk/releases)
+<!-- (https://github.com/tvmlabs/tvm-sdk/releases/tag/%40tvmlabs%2Ftvm-cli%400.39.0) -->
 
 
 ## **Create and compile contract**
@@ -83,7 +83,7 @@ Address of your contract in the blockchain is located after `Raw address:`
     You will need to send some tokens to the address before the actual deployment. Acki Nacki deploy is fee-based, so your new contract will be charged for this.  
     ***(You will need about 10 tokens to deploy)***
 
-We recommend creating a [wallet-contract](./create-giver.md) that will serve as your giver.
+We recommend creating a [wallet-contract](./create-wallet.md) that will serve as your wallet.
 
 To replenish it, please contact us in [Channel on Telegram](https://t.me/+1tWNH2okaPthMWU0).
 
@@ -180,10 +180,10 @@ result:
 ![](../../images/n_Acki_Nacki_c_t_n_call_func.jpg)
 
 
-## **Transfer of tokens from own giver**
+## **Transfer of tokens from own wallet**
 
 ```shell
-tonos-cli call <giverAddress> sendTransaction '{"dest":"DestAddress", "value":10000000000, "bounce":false}' --abi giver.abi.json --sign giver.keys.json
+tonos-cli call <walletAddress> sendTransaction '{"dest":"DestAddress", "value":10000000000, "bounce":false}' --abi wallet.abi.json --sign wallet.keys.json
 ```
 
 !!! info
